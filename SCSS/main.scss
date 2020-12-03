@@ -1,2 +1,23 @@
 @import "./mixins";
 
+body{
+    display: flex;
+}
+.hidden{
+    display:none;
+}
+.itemDiv{
+    width: 100px; 
+    height: 100px; 
+    margin: 25px;
+    border: 1px solid black; 
+}
+
+#shoppingCart{
+   display :flex; 
+    flex-wrap: wrap; 
+    border: 1px solid red;
+    width: 100px;
+     
+}
+
