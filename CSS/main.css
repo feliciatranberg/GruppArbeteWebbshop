@@ -1,0 +1,63 @@
+/* line 3, scss/main.scss */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif; }
+
+/* * Banner */
+/* line 14, scss/main.scss */
+.banner-bild {
+  background-image: url(/IMAGES/hero.JPG);
+  height: 80%;
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute; }
+
+/* line 25, scss/main.scss */
+.nav-container {
+  width: 100%; }
+
+/* line 29, scss/main.scss */
+.topnav {
+  overflow: hidden;
+  background-color: rgba(122, 122, 117, 0.2);
+  position: relative;
+  width: 100%; }
+
+/* line 36, scss/main.scss */
+.topnav #myLinks {
+  text-align: center;
+  display: none; }
+
+/* line 41, scss/main.scss */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block; }
+
+/* line 49, scss/main.scss */
+.topnav a.icon {
+  background: rgba(122, 122, 117, 0.2);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+/* line 57, scss/main.scss */
+.topnav a:hover {
+  background-color: rgba(122, 122, 117, 0.2);
+  color: black; }
+
+/* line 62, scss/main.scss */
+.active {
+  background-color: transparent;
+  color: white;
+  background-color: rgba(122, 122, 117, 0.2); }
