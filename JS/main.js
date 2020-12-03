@@ -16,7 +16,7 @@ let shirt4 = new shopItem("tshirt","2:2","ambivalens4","black","medium","99")
 
 let demoProductArr = [shirt1,shirt2,shirt3,shirt4]
 let checkoutArr = [];
-//localStorage.clear();
+
 $(function(){
 
    ($("<button>"))
@@ -98,8 +98,6 @@ $(function(){
 
 function checkoutCreator(){
     let checkout = ($("#shoppingCart"))
-        /*.attr("id","shoppingCart")
-        .appendTo(shoppingCartDiv);*/
         let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr)
       
         
@@ -133,13 +131,3 @@ function checkoutCreator(){
         
 
 }
-/*
-function handleClick(checkoutArrFromLS){
-    let i = 0;
-    checkoutArrFromLS.splice(i,1)
-    console.log(checkoutArrFromLS);
-  
-    ($("#shoppingCart")).empty();
-    checkoutCreator();
-}
-*/
