@@ -74,7 +74,7 @@ body, html {
   17%{opacity:0;}
   33%{opacity:1;}
   50%{opacity:1;}
-  67%{opacity:0;}
+  67%{opacity:0;} 
   100%{opacity:0;}
 }
 
@@ -98,6 +98,9 @@ body, html {
 .product-image {
  padding: 10px;
  text-align: center;
+ img {
+   width: 100%;
+ }
 }
 
 .button {  

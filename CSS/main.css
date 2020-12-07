@@ -91,6 +91,8 @@ section {
 .product-image {
   padding: 10px;
   text-align: center; }
+  .product-image img {
+    width: 100%; }
 
 .button {
   font-size: 17px;
