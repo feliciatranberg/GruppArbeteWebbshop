@@ -1,69 +1,137 @@
 @import "./mixins";
 
-body {
+body, html {
+       
         margin: 0;
         padding: 0;
         height: 100%;
         width: 100%;
         background: white;
         color: black;
-    font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
   }
 
-     /* * Banner */
-     .banner-bild {
-        background-image: url(/IMAGES/hero.JPG);
-        height: 80%;
-        width: 100%;
-        background-position: top;
-        background-repeat: no-repeat; 
-        background-size: cover;     
-        position: absolute;
+  /* NAVIGERING */
 
-  } 
-
-  .nav-container {
-    width: 100%; 
-}
-    
-  .topnav {
-    overflow: hidden;
-    background-color: rgba(122, 122, 117, 0.2);
-    position: relative;
+  .nav-bar {
     width: 100%;
-  }
+    display: flex;
+    justify-content: space-evenly;
   
-  .topnav #myLinks {
-      text-align: center;
-    display: none;
-  }
-  
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
+   a {
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color:black;
+    font-size: 20px;
     text-decoration: none;
-    font-size: 17px;
-    display: block;
+    }
+  
+    a:hover {
+     color: grey;
+    }
   }
   
-  .topnav a.icon {
-    background: rgba(122, 122, 117, 0.2);
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
+/* BANNER */
+
+  section {
+    height: 100%;
+    margin: 0;
+    padding: 0;
   }
   
-  .topnav a:hover {
-    background-color:rgba(122, 122, 117, 0.2);;
-    color: black;
+  .slide-show-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
   }
-  
-  .active {
-    background-color: transparent;
-    color: white;
-    background-color: rgba(122, 122, 117, 0.2);
-   
+ 
+  .wrapper-one,
+  .wrapper-two,
+  .wrapper-three {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+ 
+  .wrapper-one {
+    background-image: url("/images/hero-1.jpg");
+}
+.wrapper-two {
+    background-image: url("/images/hero-2.jpg");
+  animation: slideTwoAnim 5s infinite;
+}
+.wrapper-three {
+    background-image: url("/images/hero-3.jpg");
+  animation: slideThreeAnim 5s infinite;
+}
+
+@keyframes slideTwoAnim {
+  0%{opacity:0;}
+  17%{opacity:0;}
+  33%{opacity:1;}
+  50%{opacity:1;}
+  67%{opacity:0;}
+  100%{opacity:0;}
+}
+
+@keyframes slideThreeAnim {
+  0%{opacity:0;}
+  50%{opacity:0;}
+  67%{opacity:1;}
+  83%{opacity:1;}
+  100%{opacity:0;}
+}
+
+/* PRODUKTBILDER SAMT LÄNK TILL PRODUKTSIDORNA */
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
   }
+
+.product-image {
+ padding: 10px;
+ text-align: center;
+}
+
+.button {  
+  font-size: 17px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;  
+  }
+
+.button a:hover {
+  color:grey;
+}
+
+/* ANPASSNING FÖR MOBIL */
+
+@include phone-only {
+.image-container {
+  width: 100%;
+  display: block;
+}
+.product-image {
+  padding: 20px;
+}
+ section {
+  height: 50%;
+  margin: 0;
+  padding: 0;
+}
+ }
+
+
 
 

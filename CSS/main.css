@@ -1,5 +1,6 @@
+@charset "UTF-8";
 /* line 3, scss/main.scss */
-body {
+body, html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -8,56 +9,127 @@ body {
   color: black;
   font-family: Arial, Helvetica, sans-serif; }
 
-/* * Banner */
-/* line 14, scss/main.scss */
-.banner-bild {
-  background-image: url(/IMAGES/hero.JPG);
-  height: 80%;
+/* NAVIGERING */
+/* line 16, scss/main.scss */
+.nav-bar {
   width: 100%;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute; }
+  display: flex;
+  justify-content: space-evenly; }
+  /* line 21, scss/main.scss */
+  .nav-bar a {
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: black;
+    font-size: 20px;
+    text-decoration: none; }
+  /* line 30, scss/main.scss */
+  .nav-bar a:hover {
+    color: grey; }
 
-/* line 25, scss/main.scss */
-.nav-container {
-  width: 100%; }
+/* BANNER */
+/* line 37, scss/main.scss */
+section {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
 
-/* line 29, scss/main.scss */
-.topnav {
-  overflow: hidden;
-  background-color: rgba(122, 122, 117, 0.2);
-  position: relative;
-  width: 100%; }
-
-/* line 36, scss/main.scss */
-.topnav #myLinks {
-  text-align: center;
-  display: none; }
-
-/* line 41, scss/main.scss */
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block; }
+/* line 43, scss/main.scss */
+.slide-show-container {
+  height: 100%;
+  width: 100%;
+  position: relative; }
 
 /* line 49, scss/main.scss */
-.topnav a.icon {
-  background: rgba(122, 122, 117, 0.2);
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0; }
+.wrapper-one,
+.wrapper-two,
+.wrapper-three {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
 
-/* line 57, scss/main.scss */
-.topnav a:hover {
-  background-color: rgba(122, 122, 117, 0.2);
-  color: black; }
+/* line 60, scss/main.scss */
+.wrapper-one {
+  background-image: url("/images/hero-1.jpg"); }
 
-/* line 62, scss/main.scss */
-.active {
-  background-color: transparent;
-  color: white;
-  background-color: rgba(122, 122, 117, 0.2); }
+/* line 63, scss/main.scss */
+.wrapper-two {
+  background-image: url("/images/hero-2.jpg");
+  animation: slideTwoAnim 5s infinite; }
+
+/* line 67, scss/main.scss */
+.wrapper-three {
+  background-image: url("/images/hero-3.jpg");
+  animation: slideThreeAnim 5s infinite; }
+
+@keyframes slideTwoAnim {
+  0% {
+    opacity: 0; }
+  17% {
+    opacity: 0; }
+  33% {
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  67% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes slideThreeAnim {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  67% {
+    opacity: 1; }
+  83% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/* PRODUKTBILDER SAMT LÄNK TILL PRODUKTSIDORNA */
+/* line 91, scss/main.scss */
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px; }
+
+/* line 98, scss/main.scss */
+.product-image {
+  padding: 10px;
+  text-align: center; }
+
+/* line 103, scss/main.scss */
+.button {
+  font-size: 17px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none; }
+
+/* line 114, scss/main.scss */
+.button a:hover {
+  color: grey; }
+
+/* ANPASSNING FÖR MOBIL */
+@media screen and (max-width: 768px) {
+  /* line 121, scss/main.scss */
+  .image-container {
+    width: 100%;
+    display: block; }
+  /* line 125, scss/main.scss */
+  .product-image {
+    padding: 20px; }
+  /* line 128, scss/main.scss */
+  section {
+    height: 50%;
+    margin: 0;
+    padding: 0; } }
