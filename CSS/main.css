@@ -15,3 +15,7 @@ body {
   flex-wrap: wrap;
   border: 1px solid red;
   width: 100px; }
+
+.productImage {
+  height: 100px;
+  width: 100px; }

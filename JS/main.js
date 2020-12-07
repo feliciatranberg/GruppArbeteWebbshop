@@ -1,22 +1,22 @@
 class shopItem {
-    constructor(type, id, name, color, size, price) {
+    constructor(type, id, name, color, size, price,image) {
         this.type = type;
         this.id = id;
         this.name = name;
         this.color = color;
         this.size = size;
         this.price = price;
+        this.image = image;
     }
 }
-
-let shirt1 = new shopItem("Hoodie","1:1","djurparken1","black","medium","199")
-let shirt2 = new shopItem("Hoodie","1:2","ambivalens2","black","medium","199")
-let shirt3 = new shopItem("tshirt","2:1","djurparken3","black","medium","99")
-let shirt4 = new shopItem("tshirt","2:2","ambivalens4","black","medium","99")
+let shirt1 = new shopItem("Hoodie","1:1","djurparken1","black","medium",199,"1.jpg")
+let shirt2 = new shopItem("Hoodie","1:2","ambivalens2","black","medium","199","2.jpg")
+let shirt3 = new shopItem("tshirt","2:1","djurparken3","black","medium","99","1.jpg")
+let shirt4 = new shopItem("tshirt","2:2","ambivalens4","black","medium","99","2.jpg")
 
 let demoProductArr = [shirt1,shirt2,shirt3,shirt4]
 let checkoutArr = [];
-
+let priceArray = [];
 $(function(){
 
    ($("<button>"))
@@ -34,7 +34,11 @@ $(function(){
             ($("<h3>"))
                 .html(item.name)
                 .appendTo($(itemDiv));
-
+            
+            ($("<img>"))
+                .attr("src",item.image)
+                .addClass("productImage")
+                .appendTo($(itemDiv));
             ($("<p>"))
                 .html(item.type)
                 .appendTo($(itemDiv));
@@ -61,7 +65,7 @@ $(function(){
                     localStorage.setItem("checkoutArr",JSON.stringify(checkoutArr));
                     ($("#shoppingCart")).empty();
                     checkoutCreator();
-                    
+                    totalCreator(item);
                     
                 })
                 
@@ -78,6 +82,8 @@ $(function(){
         ($("<div>"))
         .attr("id","shoppingCart")
         .appendTo(shoppingCartDiv);
+        
+     
 
     $("<button>")
         .html("Show cart")
@@ -96,7 +102,7 @@ $(function(){
 
 
 
-function checkoutCreator(){
+function checkoutCreator(i,item){
     let checkout = ($("#shoppingCart"))
         let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr)
       
@@ -112,6 +118,7 @@ function checkoutCreator(){
                     .appendTo($(checkout))
                     .on("click",()=>{
                         checkoutArrFromLS.splice(i,1);
+                        priceArray.splice(i,1);
                         checkoutArr.splice(i,1);
                         console.log(checkoutArrFromLS);
                         localStorage.clear();
@@ -119,7 +126,8 @@ function checkoutCreator(){
                         
                         checkout.empty();
                         checkoutCreator();
-
+                        totalCreator();
+                        
 
                              
                             
@@ -128,6 +136,30 @@ function checkoutCreator(){
                        
                     
         });
-        
+      
 
+}
+
+function totalCreator(item){
+ 
+    if (priceArray == 0) {
+    
+    priceArray.push(item.price);
+   // console.log(priceArray)
+    let Varsum = priceArray.reduce((a, b) => a + b, 0);
+
+    ($("<p>"))
+    .attr("id","checkoutTotal")
+    .html(Varsum)
+    .appendTo($("#shoppingCartDiv"));
+}
+else
+    {
+        priceArray.push(item.price);
+        let Varsum = priceArray.reduce((a, b) => a + b, 0);
+        console.log(priceArray);
+        ($("#checkoutTotal"))
+        .html(Varsum)
+        .appendTo($("#shoppingCartDiv"));
+    }
 }
