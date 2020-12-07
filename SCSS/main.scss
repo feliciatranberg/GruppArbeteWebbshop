@@ -58,14 +58,14 @@ body, html {
 }
  
   .wrapper-one {
-    background-image: url("/images/hero-1.jpg");
+    background-image: url("../images/hero-1.jpg");
 }
 .wrapper-two {
-    background-image: url("/images/hero-2.jpg");
+    background-image: url("../images/hero-2.jpg");
   animation: slideTwoAnim 5s infinite;
 }
 .wrapper-three {
-    background-image: url("/images/hero-3.jpg");
+    background-image: url("../images/hero-3.jpg");
   animation: slideThreeAnim 5s infinite;
 }
 
