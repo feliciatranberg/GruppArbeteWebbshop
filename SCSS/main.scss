@@ -58,14 +58,14 @@ body, html {
 }
  
   .wrapper-one {
-    background-image: url("/images/hero-1.jpg");
+    background-image: url("../images/hero-1.jpg");
 }
 .wrapper-two {
-    background-image: url("/images/hero-2.jpg");
+    background-image: url("../images/hero-2.jpg");
   animation: slideTwoAnim 5s infinite;
 }
 .wrapper-three {
-    background-image: url("/images/hero-3.jpg");
+    background-image: url("../images/hero-3.jpg");
   animation: slideThreeAnim 5s infinite;
 }
 
@@ -74,7 +74,7 @@ body, html {
   17%{opacity:0;}
   33%{opacity:1;}
   50%{opacity:1;}
-  67%{opacity:0;}
+  67%{opacity:0;} 
   100%{opacity:0;}
 }
 
@@ -98,6 +98,9 @@ body, html {
 .product-image {
  padding: 10px;
  text-align: center;
+ img {
+   width: 100%;
+ }
 }
 
 .button {  
