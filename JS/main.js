@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class shopItem {
     constructor(type, id, name, color, size, price,image,description,stockAvailable) {
         this.type = type;
@@ -186,3 +187,8 @@ else
         
     }
 }
+=======
+$(function() {
+
+});
+>>>>>>> productPage

@@ -1,6 +1,6 @@
 @import "./mixins";
 
-body{
+/*body{
     display: flex;
 }
 .hidden{
@@ -24,5 +24,180 @@ body{
 .productImage {
     height: 100px;
     width: 100px;
+} */ 
+
+body, html {
+       
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%; 
+        background: white;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* NAVIGERING */
+
+  .nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  
+   a {
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color:black;
+    font-size: 20px;
+    text-decoration: none;
+    }
+  
+    a:hover {
+     color: grey;
+    }
+  }
+  
+/* BANNER */
+
+  section {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .slide-show-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+ 
+  .wrapper-one,
+  .wrapper-two,
+  .wrapper-three {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
+ 
+  .wrapper-one {
+    background-image: url("../images/hero-1.jpg");
+}
+.wrapper-two {
+    background-image: url("../images/hero-2.jpg");
+  animation: slideTwoAnim 5s infinite;
+}
+.wrapper-three {
+    background-image: url("../images/hero-3.jpg");
+  animation: slideThreeAnim 5s infinite;
+}
+
+@keyframes slideTwoAnim {
+  0%{opacity:0;}
+  17%{opacity:0;}
+  33%{opacity:1;}
+  50%{opacity:1;}
+  67%{opacity:0;} 
+  100%{opacity:0;}
+}
+
+@keyframes slideThreeAnim {
+  0%{opacity:0;}
+  50%{opacity:0;}
+  67%{opacity:1;}
+  83%{opacity:1;}
+  100%{opacity:0;}
+}
+
+/* PRODUKTBILDER SAMT LÄNK TILL PRODUKTSIDORNA */
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+
+.product-image {
+ padding: 10px;
+ text-align: center;
+ img {
+   width: 100%;
+ }
+}
+
+.button {  
+  font-size: 17px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;  
+  }
+
+.button a:hover {
+  color:grey;
+}
+
+/* ANPASSNING FÖR MOBIL */
+
+@include phone-only {
+.image-container {
+  width: 100%;
+  display: block;
+}
+.product-image {
+  padding: 20px;
+}
+ section {
+  height: 50%;
+  margin: 0;
+  padding: 0;
+}
+ }
+
+ /* PRODUKT SIDA TRÖJOR */
+
+ .wrapperProductPage {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+.itemDiv{
+  width: 30%;   
+} 
+
+.itemDiv:hover{
+   cursor: pointer;
+}
+
+.productImage {
+  width: 100%;
+}
+
+
+
+/* ANPASSNING FÖR MOBIL */
+
+@media screen and (max-width: 768px) { 
+  .itemDiv{
+      flex: 100%;
+      margin-left: 20px;
+      margin-right: 20px;
+  } 
+}
+
+
+
 
