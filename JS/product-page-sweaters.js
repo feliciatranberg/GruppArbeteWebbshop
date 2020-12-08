@@ -22,18 +22,22 @@ let shirt6 = new shopItem("tshirt","2:2","ambivalens4","Blå Tröja","medium","9
 let tshirtProducter = [shirt1,shirt2,shirt3,shirt4,shirt5,shirt6]
 
 $(function() {
-
+    let wrapperProductPage = ($("<div>"))
+        .addClass("wrapperProductPage")
+        .appendTo($("body"));
 
     $.each(tshirtProducter,(i,item)=>{
 
-        let wrapperProductPage = ($("<div>"))
-        .addClass("wrapperProductPage")
-        .appendTo($("body"));
+    
           
      
                 let itemDiv = ($("<div>"))
                 .addClass("itemDiv")
+                .on("click",()=>{
+                    window.location.href = "product-specific.html";
+                })
                 .appendTo($(wrapperProductPage));
+                
 
                 ($("<img>"))
                 .attr("src",item.image)

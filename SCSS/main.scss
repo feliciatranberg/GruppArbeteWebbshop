@@ -141,6 +141,7 @@ body, html {
   margin-top: 15px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
   text-align: center;
@@ -148,7 +149,11 @@ body, html {
  }
 
 .itemDiv{
-  width: 30%;  
+  width: 30%;   
+} 
+
+.itemDiv:hover{
+   cursor: pointer;
 }
 
 .productImage {
@@ -159,12 +164,12 @@ body, html {
 
 /* ANPASSNING FÖR MOBIL */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) { 
   .itemDiv{
       flex: 100%;
       margin-left: 20px;
       margin-right: 20px;
-  }
+  } 
 }
 
 
