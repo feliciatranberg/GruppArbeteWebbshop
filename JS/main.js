@@ -1,5 +1,5 @@
 class shopItem {
-    constructor(type, id, name, color, size, price,image) {
+    constructor(type, id, name, color, size, price,image,description,stockAvailable) {
         this.type = type;
         this.id = id;
         this.name = name;
@@ -7,16 +7,21 @@ class shopItem {
         this.size = size;
         this.price = price;
         this.image = image;
+        this.description = description;
+        this.stockAvailable = stockAvailable;  
     }
 }
-let shirt1 = new shopItem("Hoodie","1:1","djurparken1","black","medium",199,"1.jpg")
-let shirt2 = new shopItem("Hoodie","1:2","ambivalens2","black","medium","199","2.jpg")
-let shirt3 = new shopItem("tshirt","2:1","djurparken3","black","medium","99","1.jpg")
-let shirt4 = new shopItem("tshirt","2:2","ambivalens4","black","medium","99","2.jpg")
+let shirt1 = new shopItem("Hoodie","1:1","djurparken1","black","medium",199,"1.jpg","En tröja",true)
+let shirt2 = new shopItem("Hoodie","1:2","ambivalens2","black","medium",199,"2.jpg")
+let shirt3 = new shopItem("tshirt","2:1","djurparken3","black","medium",99,"1.jpg")
+let shirt4 = new shopItem("tshirt","2:2","ambivalens4","black","medium",99,"2.jpg")
+
 
 let demoProductArr = [shirt1,shirt2,shirt3,shirt4]
 let checkoutArr = [];
 let priceArray = [];
+let totalCount = 0;
+//onload, rendera product arr när man klickar på add to cart skicka det item till ls och kör checkoutCreator & totalCreator
 $(function(){
 
    ($("<button>"))
@@ -73,7 +78,7 @@ $(function(){
          
                 
     })
-
+//Div för shoppingcart or elaterad saker
    let shoppingCartDiv = $("<div>")
         .addClass("hidden")
         .attr("id","shoppingCartDiv")
@@ -82,7 +87,11 @@ $(function(){
         ($("<div>"))
         .attr("id","shoppingCart")
         .appendTo(shoppingCartDiv);
-        
+
+        ($("<button>"))
+        .attr("id","goToCheckout")
+        .html("Go to checkout")
+        .appendTo(shoppingCartDiv);
      
 
     $("<button>")
@@ -101,7 +110,7 @@ $(function(){
 
 
 
-
+//rendera namn & addera pris - också borttagning tar då bort från lister och kör funktioner som behövs
 function checkoutCreator(i,item){
     let checkout = ($("#shoppingCart"))
         let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr)
@@ -120,13 +129,16 @@ function checkoutCreator(i,item){
                         checkoutArrFromLS.splice(i,1);
                         priceArray.splice(i,1);
                         checkoutArr.splice(i,1);
-                        console.log(checkoutArrFromLS);
+                        //console.log(checkoutArrFromLS);
                         localStorage.clear();
                         localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
-                        
+                        console.log(priceArray)
                         checkout.empty();
+                        //($("#checkoutTotal")).empty();
                         checkoutCreator();
+                        
                         totalCreator();
+                        
                         
 
                              
@@ -139,27 +151,38 @@ function checkoutCreator(i,item){
       
 
 }
-
+//skapar första gången ptag för prissumma, adderar/subtrarherar följande ggr från array o renderar
 function totalCreator(item){
- 
-    if (priceArray == 0) {
-    
+    let bitch = ($("#checkoutTotal"));
+    if (priceArray == 0 && totalCount == 0) {
+       
     priceArray.push(item.price);
-   // console.log(priceArray)
-    let Varsum = priceArray.reduce((a, b) => a + b, 0);
-
+   
+    let arrSum = priceArray.reduce((a, b) => a + b, 0);
+    
     ($("<p>"))
     .attr("id","checkoutTotal")
-    .html(Varsum)
+    .html(arrSum)
     .appendTo($("#shoppingCartDiv"));
+    totalCount = 1;
 }
 else
     {
+       if (priceArray == 0){
+            bitch.addClass("hidden");
+       }
+       else {
+           bitch.removeClass("hidden");
+       }
+        if (item != undefined) {
         priceArray.push(item.price);
-        let Varsum = priceArray.reduce((a, b) => a + b, 0);
+        }
+        let arrSum = priceArray.reduce((a, b) => a + b, 0);
         console.log(priceArray);
+       
         ($("#checkoutTotal"))
-        .html(Varsum)
+        .html(arrSum)
         .appendTo($("#shoppingCartDiv"));
+        
     }
 }
