@@ -1,29 +1,4 @@
 @charset "UTF-8";
-/*body{
-    display: flex;
-}
-.hidden{
-    display:none;
-}
-.itemDiv{
-    width: 100px; 
-    height: 100px; 
-    margin: 25px;
-    border: 1px solid black; 
-}
-
-#shoppingCart{
-   display :flex; 
-    flex-wrap: wrap; 
-    border: 1px solid red;
-    width: 100px;
-     
-}
-
-.productImage {
-    height: 100px;
-    width: 100px;
-} */
 body, html {
   margin: 0;
   padding: 0;
@@ -163,6 +138,38 @@ section {
 
 .productImage {
   width: 100%; }
+
+#shoppingCart {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid red;
+  width: 100px;
+  z-index: 10000; }
+
+.hidden {
+  display: none; }
+
+#specificProductContentwrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  width: 100%;
+  border: 5px solid red; }
+  #specificProductContentwrap img {
+    width: 40%; }
+  #specificProductContentwrap #productTextBox {
+    border: solid 3px green; }
+  #specificProductContentwrap #dropDownMenu {
+    list-style-type: none;
+    border: 1px solid black;
+    width: 30%;
+    text-align: left;
+    padding: 0; }
+    #specificProductContentwrap #dropDownMenu .sizeOption {
+      margin-top: 5px; }
+    #specificProductContentwrap #dropDownMenu li:hover {
+      background-color: #3a93ce;
+      cursor: pointer; }
 
 /* ANPASSNING FÖR MOBIL */
 @media screen and (max-width: 768px) {

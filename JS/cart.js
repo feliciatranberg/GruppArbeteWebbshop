@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class shopItem {
     constructor(type, id, name, color, size, price,image,description,stockAvailable) {
         this.type = type;
@@ -12,10 +11,10 @@ class shopItem {
         this.stockAvailable = stockAvailable;  
     }
 }
-let shirt1 = new shopItem("Hoodie","1:1","djurparken1","black","medium",199,"1.jpg","En tröja",true)
-let shirt2 = new shopItem("Hoodie","1:2","ambivalens2","black","medium",199,"2.jpg")
-let shirt3 = new shopItem("tshirt","2:1","djurparken3","black","medium",99,"1.jpg")
-let shirt4 = new shopItem("tshirt","2:2","ambivalens4","black","medium",99,"2.jpg")
+let shirt1 = new shopItem("Hoodie","1:1","djurparken1","black","Small",199,"1.jpg","En tröja",true)
+let shirt2 = new shopItem("Hoodie","1:2","ambivalens2","black","Small",199,"2.jpg")
+let shirt3 = new shopItem("tshirt","2:1","djurparken3","black","Small",99,"1.jpg")
+let shirt4 = new shopItem("tshirt","2:2","ambivalens4","black","Small",99,"2.jpg")
 
 
 let demoProductArr = [shirt1,shirt2,shirt3,shirt4]
@@ -187,8 +186,3 @@ else
         
     }
 }
-=======
-$(function() {
-
-});
->>>>>>> productPage

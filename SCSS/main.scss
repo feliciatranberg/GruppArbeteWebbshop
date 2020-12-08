@@ -1,31 +1,5 @@
 @import "./mixins";
 
-/*body{
-    display: flex;
-}
-.hidden{
-    display:none;
-}
-.itemDiv{
-    width: 100px; 
-    height: 100px; 
-    margin: 25px;
-    border: 1px solid black; 
-}
-
-#shoppingCart{
-   display :flex; 
-    flex-wrap: wrap; 
-    border: 1px solid red;
-    width: 100px;
-     
-}
-
-.productImage {
-    height: 100px;
-    width: 100px;
-} */ 
-
 body, html {
        
         margin: 0;
@@ -185,8 +159,48 @@ body, html {
 .productImage {
   width: 100%;
 }
+//Max tilägg
+#shoppingCart{
+  display :flex; 
+   flex-wrap: wrap; 
+   border: 1px solid red;
+   width: 100px; 
+   
+   z-index: 10000;
+    
+}
 
-
+.hidden{
+  display: none;
+}
+//product-specific
+#specificProductContentwrap{
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  width: 100%;
+  border: 5px solid red;
+  img{
+    width: 40%;
+  }
+  #productTextBox{
+    border: solid 3px green;
+  }
+  #dropDownMenu{
+    list-style-type: none;
+    border: 1px solid black;
+    width: 30%;
+    text-align: left;
+    padding: 0;
+    .sizeOption{
+      margin-top: 5px;
+    }
+    li:hover{
+      background-color: rgb(58, 147, 206);
+      cursor: pointer;
+    }
+  }
+}
 
 /* ANPASSNING FÖR MOBIL */
 
@@ -195,7 +209,7 @@ body, html {
       flex: 100%;
       margin-left: 20px;
       margin-right: 20px;
-  } 
+  }  
 }
 
 
