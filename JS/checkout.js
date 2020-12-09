@@ -21,7 +21,7 @@ $(function() {
         return obj;
       };
       
-      $("form").submit(function(e){
+      $("form").on('submit', function(e){
         let $form = $(this);
         e.preventDefault();
        (JSON.stringify($form.serializeObject()));

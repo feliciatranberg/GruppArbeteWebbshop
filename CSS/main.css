@@ -179,13 +179,13 @@ Style for Validation Message
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center; }
   /* line 189, scss/main.scss */
   .checkout-products div {
-    width: 50%;
+    width: 90%;
     height: 300px;
-    border: solid 3px black; }
+    background-color: #f1f1f1; }
 
 /* line 196, scss/main.scss */
 .checkout-forms {
@@ -196,5 +196,11 @@ Style for Validation Message
   text-align: center; }
   /* line 203, scss/main.scss */
   .checkout-forms form {
-    border: solid black 2px;
-    width: 50%; }
+    width: 90%; }
+  /* line 208, scss/main.scss */
+  .checkout-forms div {
+    background-color: #f1f1f1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px; }
