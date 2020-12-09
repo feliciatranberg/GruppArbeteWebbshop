@@ -116,7 +116,7 @@ $("#shoppingCartButton")
                             priceArray.splice(i,1);
                             checkoutArr.splice(i,1);
                             //console.log(checkoutArrFromLS);
-                            localStorage.clear();
+                            //localStorage.clear();
                             localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
                             console.log(priceArray)
                             checkout.empty();
