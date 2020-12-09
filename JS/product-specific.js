@@ -1,9 +1,12 @@
-
-
+let checkoutArr = [];
+let priceArray = [];
+let totalCount = 0;
 $(function(){
+
     let specificProduct = JSON.parse(localStorage.itemObject)
     let sizeArr = ["Medium","Large","Extra Large"];
     console.log(specificProduct);
+
     ($("<div>"))
     .attr("id","specificProductContentwrap")
     .appendTo($("body"));
@@ -26,9 +29,9 @@ $(function(){
     .html(specificProduct.description)
     .appendTo($("#productTextBox"));
 
+    //Dropdown base
     ($("<ul>"))
     .attr("id","dropDownMenu")
-    
     .appendTo($("#productTextBox"));
     ($("<li>"))
     .attr("id","startSize")
@@ -41,7 +44,7 @@ $(function(){
         console.log(specificProduct)
         })
     .appendTo($("#dropDownMenu"));
-
+    //Dropdown loop
     $.each(sizeArr,(i,size)=>{
         ($("<li>"))
         .html(size)
@@ -58,10 +61,138 @@ $(function(){
        
         .appendTo($("#dropDownMenu"));
     });
-    
+    //Dropdown 
     ($("<p>"))
     .attr("id","productPrize")
     .html(specificProduct.price)
     .appendTo($("#productTextBox"));
 
+
+    //add to cart
+    ($("<button>"))
+    .attr("type","button")
+    .attr("id","addToCartButton")
+    .html("Lägg till i varukorg")
+    .on("click",()=>{
+      let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr)
+      console.log(specificProduct)
+      checkoutArrFromLS.push(specificProduct)
+      
+      
+      shoppingCartDiv.removeClass("hidden");
+      localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
+      ($("#shoppingCart")).empty();
+      checkoutCreator();
+      console.log(checkoutArrFromLS)
+      totalCreator(specificProduct);
+     
+    })
+    .appendTo($("#productTextBox"));
+    
+   //Div för shoppingcart or elaterad saker
+   let shoppingCartDiv = $("<div>")
+   .addClass("hidden")
+   .attr("id","shoppingCartDiv")
+   //.attr("position","absolute")
+   .appendTo($("#shoppingcartExtend"));
+
+   ($("<div>"))
+   .attr("id","shoppingCart")
+   .appendTo(shoppingCartDiv);
+
+   ($("<button>"))
+   .attr("id","goToCheckout")
+   .html("Go to checkout")
+   .appendTo(shoppingCartDiv);
+  
+
+   $("#shoppingcartButton")
+   
+   .on("click",()=>{
+       
+       shoppingCartDiv.toggleClass("hidden");
+       ($("#shoppingCart")).empty();
+        checkoutCreator();
+           
+   });
 })
+
+function checkoutCreator(i,item){
+  let checkout = ($("#shoppingCart"))
+      let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr)
+    
+      
+      $.each(checkoutArrFromLS,(i,item)=>{
+
+              ($("<h5>"))
+                  .html(item.name)
+                  .appendTo($(checkout));
+              ($("<button>"))
+                  //.addClass("")
+                  .html("X")
+                  .appendTo($(checkout))
+                  .on("click",()=>{
+                      checkoutArrFromLS.splice(i,1);
+                      priceArray.splice(i,1);
+                      checkoutArr.splice(i,1);
+                      //console.log(checkoutArrFromLS);
+                      //localStorage.clear();
+                      localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
+                      console.log(priceArray)
+                      checkout.empty();
+                      //($("#checkoutTotal")).empty();
+                      checkoutCreator();
+                      
+                      totalCreator();
+                      
+                      
+
+                           
+                          
+                  })
+                      
+                     
+                  
+      });
+    
+
+}
+
+ 
+
+//skapar första gången ptag för prissumma, adderar/subtrarherar följande ggr från array o renderar
+function totalCreator(specificProduct){
+  console.log("jag klrs")
+  let bitch = ($("#checkoutTotal"));
+  if (priceArray == 0 && totalCount == 0) {
+     console.log("hello")
+  priceArray.push(specificProduct.price);
+ 
+  let arrSum = priceArray.reduce((a, b) => a + b, 0);
+  
+  ($("<p>"))
+  .attr("id","checkoutTotal")
+  .html(arrSum)
+  .appendTo($("#shoppingCartDiv"));
+  totalCount = 1;
+}
+else
+  {
+     if (priceArray == 0){
+          bitch.addClass("hidden");
+     }
+     else {
+         bitch.removeClass("hidden");
+     }
+      if (specificProduct != undefined) {
+      priceArray.push(specificProduct.price);
+      }
+      let arrSum = priceArray.reduce((a, b) => a + b, 0);
+      console.log(priceArray);
+     
+      ($("#checkoutTotal"))
+      .html(arrSum)
+      .appendTo($("#shoppingCartDiv"));
+      
+  }
+}

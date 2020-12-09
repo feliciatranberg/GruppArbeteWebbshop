@@ -17,6 +17,7 @@ body, html {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    
   
    a {
     text-align: center;
@@ -25,17 +26,18 @@ body, html {
     color:black;
     font-size: 20px;
     text-decoration: none;
+   
     }
-  
+   
     a:hover {
      color: grey;
     }
-  }
+  }  
   
 /* BANNER */
 
   section {
-    height: 100%;
+    height: 100%; 
     margin: 0;
     padding: 0;
   }
@@ -170,6 +172,19 @@ body, html {
     
 }
 
+#shoppingcartExtend{
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  
+  #shoppingCartDiv{
+   
+    border: 5px solid pink;
+  }
+}
+
+
+
 .hidden{
   display: none;
 }
@@ -198,7 +213,7 @@ body, html {
     li:hover{
       background-color: rgb(58, 147, 206);
       cursor: pointer;
-    }
+    } 
   }
 }
 

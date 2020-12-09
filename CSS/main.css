@@ -146,6 +146,13 @@ section {
   width: 100px;
   z-index: 10000; }
 
+#shoppingcartExtend {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column; }
+  #shoppingcartExtend #shoppingCartDiv {
+    border: 5px solid pink; }
+
 .hidden {
   display: none; }
 
