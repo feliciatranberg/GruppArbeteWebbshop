@@ -6,7 +6,7 @@
     <title>KASSAN</title>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="/JS/main.js"></script>
+    <script src="/JS/checkout.js"></script>
     <script src="https://kit.fontawesome.com/8a91947445.js" crossorigin="anonymous"></script>
     <link href="/CSS/main.css" rel="stylesheet" />
 </head>
@@ -17,6 +17,36 @@
         <a href="/HTML/product-page-sweaters.html">TRÖJOR</a> 
         <a href="/HTML/checkout.html"><i class="fas fa-shopping-cart"></i></a>
       </div>
-    
+
+      <div class="checkout-products">
+        <div>Varukorgsprodukter</div>
+    </div>
+
+    <div class="checkout-forms">
+      <form>
+          <h2>Dina uppgifter</h2>
+
+       <p><label>Förnamn</label><input name="firstname" /></p>
+        <p><label>Efternamn</label><input name="lastname" /></p>
+        <p><label>Leveransadress</label><input name="adress" /></p>
+        <p><label>Postnummer</label><input name="zipcode" /></p>
+        <p><label>Stad</label><input name="city" /></p>
+        <p><label>E-Postadress</label><input name="email" /></p>
+        <p><label>Telefonnummer</label><input name="tel" /></p>
+
+        <p><button>Spara</button></p>
+      </form>
+       
+       <form>
+        <h2>Betalningsalternativ</h2>
+
+        <p><input name="Betalningsmetod" type="radio" checked value="Klarna" /> Klarna</p>
+        <p><input name="Betalningsmetod" type="radio" checked value="Swish" /> Swish</p>
+        <p><input name="Betalningsmetod" type="radio" checked value="Kortbetalning" /> Kortbetalning</p>
+       
+        <p><button>Spara</button></p>
+        </form>
+        </div> 
+     
 </body>
 </html>

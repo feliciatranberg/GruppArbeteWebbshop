@@ -167,6 +167,42 @@ body, html {
   }
 }
 
+/*
+Style for Validation Message
+*/
+#username-error, #email-error {
+  color: #d9534f;
+  padding: 12px;
+  display: none;
+}
 
 
+/* KASSA SIDAN */ 
+
+.checkout-products {
+ display: flex;
+ width: 100%;
+ justify-content: space-evenly;
+ margin-top: 30px;
+ text-align: center;
+
+ div {
+  width: 50%;
+  height: 300px;
+  border: solid 3px black;
+ }
+}
+
+.checkout-forms {
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ align-items: center;
+ text-align: center;
+
+ form {
+ border: solid black 2px;
+ width: 50%;  
+ } 
+}
 
