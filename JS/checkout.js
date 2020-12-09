@@ -1,5 +1,11 @@
 $(function() {
 
+  let dialog = $("#dialog").dialog({
+    autoOpen: false,
+    modal: true,
+    
+});
+
     $.fn.serializeObject = function() {
         let $form = this.is("form") ? this : this.find("form"),
           obj = {};
@@ -22,9 +28,21 @@ $(function() {
       };
       
       $("form").on('submit', function(e){
+        dialog.dialog('open');
         let $form = $(this);
         e.preventDefault();
        (JSON.stringify($form.serializeObject()));
         console.log($form.serializeObject());
+        // alert(JSON.stringify($form.serializeObject()));
       });
     });
+  
+
+
+
+
+
+
+
+    
+ 
