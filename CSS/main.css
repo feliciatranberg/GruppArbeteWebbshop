@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* line 3, scss/main.scss */
 body, html {
   margin: 0;
   padding: 0;
@@ -9,10 +10,12 @@ body, html {
   font-family: Arial, Helvetica, sans-serif; }
 
 /* NAVIGERING */
+/* line 16, scss/main.scss */
 .nav-bar {
   width: 100%;
   display: flex;
   justify-content: space-evenly; }
+  /* line 21, scss/main.scss */
   .nav-bar a {
     text-align: center;
     padding: 12px 0;
@@ -20,20 +23,24 @@ body, html {
     color: black;
     font-size: 20px;
     text-decoration: none; }
+  /* line 31, scss/main.scss */
   .nav-bar a:hover {
     color: grey; }
 
 /* BANNER */
+/* line 38, scss/main.scss */
 section {
   height: 100%;
   margin: 0;
   padding: 0; }
 
+/* line 44, scss/main.scss */
 .slide-show-container {
   height: 100%;
   width: 100%;
   position: relative; }
 
+/* line 50, scss/main.scss */
 .wrapper-one,
 .wrapper-two,
 .wrapper-three {
@@ -44,13 +51,16 @@ section {
   width: 100%;
   position: absolute; }
 
+/* line 61, scss/main.scss */
 .wrapper-one {
   background-image: url("../images/hero-1.jpg"); }
 
+/* line 64, scss/main.scss */
 .wrapper-two {
   background-image: url("../images/hero-2.jpg");
   animation: slideTwoAnim 5s infinite; }
 
+/* line 68, scss/main.scss */
 .wrapper-three {
   background-image: url("../images/hero-3.jpg");
   animation: slideThreeAnim 5s infinite; }
@@ -82,44 +92,57 @@ section {
     opacity: 0; } }
 
 /* PRODUKTBILDER SAMT LÄNK TILL PRODUKTSIDORNA */
+/* line 92, scss/main.scss */
 .image-container {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
   margin-top: 20px; }
 
+/* line 98, scss/main.scss */
 .product-image {
-  padding: 10px;
-  text-align: center; }
+  position: relative;
+  width: 100%;
+  margin: 15px; }
+  /* line 103, scss/main.scss */
   .product-image img {
     width: 100%; }
-
-.button {
-  font-size: 17px;
-  background-color: white;
-  color: black;
-  border: 2px solid black;
-  padding: 10px 20px;
-  margin-top: 20px;
-  text-align: center;
-  text-decoration: none; }
-
-.button a:hover {
-  color: grey; }
+  /* line 108, scss/main.scss */
+  .product-image button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 12px 24px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 17px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    text-decoration: none; }
+  /* line 123, scss/main.scss */
+  .product-image .button:hover {
+    background-color: grey; }
 
 /* ANPASSNING FÖR MOBIL */
 @media screen and (max-width: 768px) {
+  /* line 131, scss/main.scss */
   .image-container {
     width: 100%;
-    display: block; }
+    display: flex;
+    flex-wrap: wrap; }
+  /* line 136, scss/main.scss */
   .product-image {
-    padding: 20px; }
+    width: 100%; }
+  /* line 140, scss/main.scss */
   section {
     height: 50%;
     margin: 0;
     padding: 0; } }
 
 /* PRODUKT SIDA TRÖJOR */
+/* line 149, scss/main.scss */
 .wrapperProductPage {
   margin-top: 15px;
   display: flex;
@@ -130,15 +153,19 @@ section {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif; }
 
+/* line 160, scss/main.scss */
 .itemDiv {
   width: 30%; }
 
+/* line 164, scss/main.scss */
 .itemDiv:hover {
   cursor: pointer; }
 
+/* line 168, scss/main.scss */
 .productImage {
   width: 100%; }
 
+/* line 172, scss/main.scss */
 #shoppingCart {
   display: flex;
   flex-wrap: wrap;
@@ -146,41 +173,53 @@ section {
   width: 100px;
   z-index: 10000; }
 
+/* line 182, scss/main.scss */
 #shoppingcartExtend {
   border: 1px solid blue;
   display: flex;
   flex-direction: column; }
+  /* line 187, scss/main.scss */
   #shoppingcartExtend #shoppingCartDiv {
     border: 5px solid pink; }
 
+/* line 193, scss/main.scss */
 .hidden {
   display: none; }
 
+/* line 197, scss/main.scss */
 #specificProductContentwrap {
   display: flex;
   justify-content: center;
   margin-top: 10%;
   width: 100%;
   border: 5px solid red; }
+  /* line 203, scss/main.scss */
   #specificProductContentwrap img {
     width: 40%; }
+  /* line 206, scss/main.scss */
   #specificProductContentwrap #productTextBox {
     border: solid 3px green; }
+  /* line 209, scss/main.scss */
   #specificProductContentwrap #dropDownMenu {
     list-style-type: none;
     border: 1px solid black;
     width: 30%;
     text-align: left;
     padding: 0; }
+    /* line 215, scss/main.scss */
     #specificProductContentwrap #dropDownMenu .sizeOption {
       margin-top: 5px; }
+    /* line 218, scss/main.scss */
     #specificProductContentwrap #dropDownMenu li:hover {
       background-color: #3a93ce;
       cursor: pointer; }
 
 /* ANPASSNING FÖR MOBIL */
 @media screen and (max-width: 768px) {
+  /* line 228, scss/main.scss */
   .itemDiv {
     flex: 100%;
     margin-left: 20px;
     margin-right: 20px; } }
+
+/* FORM KNAPP */
