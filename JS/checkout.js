@@ -36,18 +36,15 @@ $(function() {
        (JSON.stringify($form.serializeObject()));
         console.log($form.serializeObject());
         // alert(JSON.stringify($form.serializeObject()));
-      });
-
+      
    
       $("#dialog-content")
       $("<p>")
-      .html("hjkdhkjdsh")
+      .html(JSON.stringify($form.serializeObject()))
       .appendTo("#dialog-content");
-         
+    });  
           
       });
-
-     
 
   
   
