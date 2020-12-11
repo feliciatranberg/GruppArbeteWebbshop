@@ -23,8 +23,8 @@ body, html {
     text-align: center;
     padding: 12px 0;
     transition: all 0.3s ease;
-    color:black;
-    font-size: 15px;
+    color: $text-color;
+    font-size: 20px;
     text-decoration: none;
     }
    
@@ -101,6 +101,8 @@ body, html {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
 .product-image {
@@ -113,22 +115,13 @@ body, html {
 }
 
  button { 
+  @include button;
   position: absolute;
-  top: 50%; 
+  top: 75%; 
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  padding: 12px 24px;
-  cursor: pointer;
-  text-align: center;
-  font-size: 17px;
-  background-color: transparent;
-  color: $text-color-secondary;
-  border: 3px solid white;
-  text-decoration: none;  
-}
-.button:hover {
-  background-color:grey;
+  padding: 12px 24px;    
 }
 }
 
@@ -143,7 +136,7 @@ body, html {
 }
 }
 
- /* PRODUKT SIDA TRÖJOR */
+ /* PRODUKTSIDOR */
 
  .wrapperProductPage {
   margin-top: 15px;
@@ -157,7 +150,9 @@ body, html {
  }
 
 .itemDiv{
-  width: 30%;   
+  width: 100%;   
+  margin-left: 20px;
+  margin-right: 20px;
 } 
 
 .itemDiv:hover{
@@ -167,6 +162,13 @@ body, html {
 .productImage {
   width: 100%;
 }
+
+#addToCartButton {
+ @include button;
+ font-size: 16px;
+
+}
+
 //Max tilägg
 #shoppingCart{
   display :flex; 
@@ -221,13 +223,9 @@ body, html {
   }
 }
 
-/* ANPASSNING FÖR MOBIL */
-
-@media screen and (max-width: 768px) { 
+@include tablets-up { 
   .itemDiv {
-      flex: 100%;
-      margin-left: 20px;
-      margin-right: 20px;
+  flex: 30%;
     }
       }
 

@@ -12,12 +12,12 @@ class shopItem {
   }
 }
 
-let shirt1 = new shopItem("Hoodie","1:1","djurparken1","Grön Tröja","Small",199, "/images/t-shirts/t-shirt-1.jpg","en tröja",true)
-let shirt2 = new shopItem("Hoodie","1:2","ambivalens2","Lila Tröja","Small",199, "/images/t-shirts/t-shirt-2.jpg","en tröja",true)
-let shirt3 = new shopItem("tshirt","2:1","djurparken3","Svart Tröja","Small",100, "/images/t-shirts/t-shirt-3.jpg","en tröja",true)
-let shirt4 = new shopItem("tshirt","2:2","ambivalens4","Blå Hoodie","Small",100, "/images/t-shirts/t-shirt-4.jpg","en tröja",true)
-let shirt5 = new shopItem("tshirt","2:2","ambivalens4","Grön Tröja","Small",300, "/images/t-shirts/t-shirt-5.jpg","en tröja",true)
-let shirt6 = new shopItem("tshirt","2:2","ambivalens4","Blå Tröja","Small",500, "/images/t-shirts/t-shirt-6.jpg","en tröja",true)
+let shirt1 = new shopItem("T-shirt","1:1","BG Logo","Rosa","Small",300, "/images/t-shirts/t-shirt-1.jpg","BG Logo t-shirt",true)
+let shirt2 = new shopItem("T-shirt","1:2","Supersize Me","Svart","Small",300, "/images/t-shirts/t-shirt-2.jpg","Supersize Me t-shirt",true)
+let shirt3 = new shopItem("T-shirt","2:1","Chakra","Grå","Small",300, "/images/t-shirts/t-shirt-3.jpg","Chakra T-shirt",true)
+let shirt4 = new shopItem("T-shirt","2:2","Supersize Me","Beige","Small",300, "/images/t-shirts/t-shirt-4.jpg","Supersize Me t-shirt",true)
+let shirt5 = new shopItem("T-shirt","2:2","Subtle Tie Dye","Rosa","Small",300, "/images/t-shirts/t-shirt-5.jpg","Subtle Tie Dye t-shirt",true)
+let shirt6 = new shopItem("T-shirt","2:2","Chakra","Vit/Svart","Small",300, "/images/t-shirts/t-shirt-6.jpg","Chakra T-shirt",true)
 
 let tshirtProducter = [shirt1,shirt2,shirt3,shirt4,shirt5,shirt6]
 let checkoutArr = [];
@@ -58,7 +58,7 @@ $(function() {
                 .appendTo($(itemDiv));
            
                 ($("<h3>"))
-                .html(item.color)
+                .html(item.name)
                 .appendTo($(itemDiv));
 
                 ($("<h2>"))

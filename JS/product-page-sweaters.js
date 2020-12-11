@@ -12,12 +12,12 @@ class shopItem {
     }
 }
 
-let shirt1 = new shopItem("Sweater","1:1","Fierce Fleece","Grön","Small",199, "/images/sweaters/sweater-1.jpg","Fierce Fleece tröja",true)
-let shirt2 = new shopItem("Sweater","1:2","Watchtower","Lila","Small",199, "/images/sweaters/sweater-2.jpg","Watchtower tröja med hög krage",true)
-let shirt3 = new shopItem("Sweater","2:1","Classic Pure","Svart","Small",100, "/images/sweaters/sweater-3.jpg","Classic Pure tröja",true)
-let shirt4 = new shopItem("Hoodie","2:2","Sweet Big Loose","Blå","Small",100, "/images/sweaters/sweater-4.jpg","Sweet Big Loose hoodie",true)
-let shirt5 = new shopItem("Sweater","2:2","Fierce Fleece","Grön","Small",300, "/images/sweaters/sweater-5.jpg","Fierce Fleece tröja",true)
-let shirt6 = new shopItem("Sweater","2:2","Multiverse","Blå","Small",500, "/images/sweaters/sweater-6.jpg","Multiverse tröja med avslappnad passform",true)
+let shirt1 = new shopItem("Sweater","1:1","Fierce Fleece","Grön","Small",600, "/images/sweaters/sweater-1.jpg","Fierce Fleece tröja",true)
+let shirt2 = new shopItem("Sweater","1:2","Watchtower","Lila","Small",600, "/images/sweaters/sweater-2.jpg","Watchtower tröja med hög krage",true)
+let shirt3 = new shopItem("Sweater","2:1","Classic Pure","Svart","Small",600, "/images/sweaters/sweater-3.jpg","Classic Pure tröja",true)
+let shirt4 = new shopItem("Hoodie","2:2","Sweet Big Loose","Blå","Small",600, "/images/sweaters/sweater-4.jpg","Sweet Big Loose hoodie",true)
+let shirt5 = new shopItem("Sweater","2:2","Fierce Fleece","Grön","Small",600, "/images/sweaters/sweater-5.jpg","Fierce Fleece tröja",true)
+let shirt6 = new shopItem("Sweater","2:2","Multiverse","Blå","Small",600, "/images/sweaters/sweater-6.jpg","Multiverse tröja med avslappnad passform",true)
 
 let tshirtProducter = [shirt1,shirt2,shirt3,shirt4,shirt5,shirt6]
 let checkoutArr = [];

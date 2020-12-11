@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* line 23, scss/_mixins.scss */
+.button:hover {
+  background-color: #cf8134; }
+
 /* FÄRGER */
 /* TYPSNITT OCH TYPSTORLEK */
 /* vet inte alls om jag ska använda mig att detta system, testar lite bara :) */
@@ -24,7 +28,7 @@ body, html {
     padding: 12px 0;
     transition: all 0.3s ease;
     color: black;
-    font-size: 15px;
+    font-size: 20px;
     text-decoration: none; }
   /* line 31, scss/main.scss */
   .nav-bar a:hover {
@@ -106,47 +110,46 @@ section {
 .image-container {
   width: 100%;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px; }
 
-/* line 106, scss/main.scss */
+/* line 108, scss/main.scss */
 .product-image {
   position: relative;
   width: 100%;
   margin: 15px; }
-  /* line 111, scss/main.scss */
+  /* line 113, scss/main.scss */
   .product-image img {
     width: 100%; }
-  /* line 115, scss/main.scss */
+  /* line 117, scss/main.scss */
   .product-image button {
+    cursor: pointer;
+    text-align: center;
+    font-size: 25px;
+    background-color: #de8f40;
+    color: white;
+    border: none;
+    text-decoration: none;
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    padding: 12px 24px;
-    cursor: pointer;
-    text-align: center;
-    font-size: 17px;
-    background-color: transparent;
-    color: white;
-    border: 3px solid white;
-    text-decoration: none; }
-  /* line 130, scss/main.scss */
-  .product-image .button:hover {
-    background-color: grey; }
+    padding: 12px 24px; }
 
 @media screen and (min-width: 769px) {
-  /* line 136, scss/main.scss */
+  /* line 129, scss/main.scss */
   .image-container {
     width: 100%;
     display: flex;
     flex-wrap: nowrap; }
-  /* line 141, scss/main.scss */
+  /* line 134, scss/main.scss */
   .product-image {
     width: 50%; } }
 
-/* PRODUKT SIDA TRÖJOR */
-/* line 148, scss/main.scss */
+/* PRODUKTSIDOR */
+/* line 141, scss/main.scss */
 .wrapperProductPage {
   margin-top: 15px;
   display: flex;
@@ -157,19 +160,32 @@ section {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif; }
 
-/* line 159, scss/main.scss */
+/* line 152, scss/main.scss */
 .itemDiv {
-  width: 30%; }
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px; }
 
-/* line 163, scss/main.scss */
+/* line 158, scss/main.scss */
 .itemDiv:hover {
   cursor: pointer; }
 
-/* line 167, scss/main.scss */
+/* line 162, scss/main.scss */
 .productImage {
   width: 100%; }
 
-/* line 171, scss/main.scss */
+/* line 166, scss/main.scss */
+#addToCartButton {
+  cursor: pointer;
+  text-align: center;
+  font-size: 25px;
+  background-color: #de8f40;
+  color: white;
+  border: none;
+  text-decoration: none;
+  font-size: 16px; }
+
+/* line 173, scss/main.scss */
 #shoppingCart {
   display: flex;
   flex-wrap: wrap;
@@ -177,57 +193,54 @@ section {
   width: 100px;
   z-index: 10000; }
 
-/* line 181, scss/main.scss */
+/* line 183, scss/main.scss */
 #shoppingcartExtend {
   border: 1px solid blue;
   display: flex;
   flex-direction: column; }
-  /* line 186, scss/main.scss */
+  /* line 188, scss/main.scss */
   #shoppingcartExtend #shoppingCartDiv {
     border: 5px solid pink; }
 
-/* line 192, scss/main.scss */
+/* line 194, scss/main.scss */
 .hidden {
   display: none; }
 
-/* line 196, scss/main.scss */
+/* line 198, scss/main.scss */
 #specificProductContentwrap {
   display: flex;
   justify-content: center;
   margin-top: 10%;
   width: 100%;
   border: 5px solid red; }
-  /* line 202, scss/main.scss */
+  /* line 204, scss/main.scss */
   #specificProductContentwrap img {
     width: 40%; }
-  /* line 205, scss/main.scss */
+  /* line 207, scss/main.scss */
   #specificProductContentwrap #productTextBox {
     border: solid 3px green; }
-  /* line 208, scss/main.scss */
+  /* line 210, scss/main.scss */
   #specificProductContentwrap #dropDownMenu {
     list-style-type: none;
     border: 1px solid black;
     width: 30%;
     text-align: left;
     padding: 0; }
-    /* line 214, scss/main.scss */
+    /* line 216, scss/main.scss */
     #specificProductContentwrap #dropDownMenu .sizeOption {
       margin-top: 5px; }
-    /* line 217, scss/main.scss */
+    /* line 219, scss/main.scss */
     #specificProductContentwrap #dropDownMenu li:hover {
       background-color: #3a93ce;
       cursor: pointer; }
 
-/* ANPASSNING FÖR MOBIL */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
   /* line 227, scss/main.scss */
   .itemDiv {
-    flex: 100%;
-    margin-left: 20px;
-    margin-right: 20px; } }
+    flex: 30%; } }
 
 /* FORM KNAPP */
-/* line 236, scss/main.scss */
+/* line 234, scss/main.scss */
 .button {
   font-size: 17px;
   background-color: white;
@@ -238,6 +251,6 @@ section {
   text-align: center;
   text-decoration: none; }
 
-/* line 247, scss/main.scss */
+/* line 245, scss/main.scss */
 .button a:hover {
   color: grey; }
