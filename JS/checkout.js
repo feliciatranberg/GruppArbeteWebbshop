@@ -3,6 +3,8 @@ $(function() {
   let dialog = $("#dialog").dialog({
     autoOpen: false,
     modal: true,
+    height: 400,
+    width: 400
     
 });
 
@@ -35,7 +37,19 @@ $(function() {
         console.log($form.serializeObject());
         // alert(JSON.stringify($form.serializeObject()));
       });
-    });
+
+   
+      $("#dialog-content")
+      $("<p>")
+      .html("hjkdhkjdsh")
+      .appendTo("#dialog-content");
+         
+          
+      });
+
+     
+
+  
   
 
 
