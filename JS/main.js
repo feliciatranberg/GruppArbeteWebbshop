@@ -20,6 +20,9 @@ $(function(){
      ($("<button>"))
      .attr("id","goToCheckout")
      .html("Go to checkout")
+     .on("click",()=>{
+        window.location.href = "HTML/checkout.html";
+      })
      .appendTo(shoppingCartDiv);
 $("#shoppingcartButton")
    

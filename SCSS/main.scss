@@ -5,7 +5,7 @@ body, html {
        
         margin: 0; 
         padding: 0;
-        height: 100%;
+        height: 100%; 
         width: 100%; 
         background: $bg-color;
         color: $text-color;
@@ -191,7 +191,6 @@ body, html {
   }
 }
 
-<<<<<<< HEAD
 .hidden{
   display: none;
 }
@@ -242,7 +241,6 @@ body, html {
   text-align: center;
   text-decoration: none;  
   }
-=======
 /*
 Style for Validation Message
 */
@@ -290,7 +288,6 @@ div {
 }
 
 }
->>>>>>> checkoutForm
 
 .button a:hover {
   color: $hover-color;
