@@ -165,7 +165,10 @@ function totalCreator(specificProduct){
    
     let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
     console.log(arrSum);
-    
+    if (arrSum==0){
+        arrSum = "";
+    }
+
     ($("<p>"))
     .attr("id","checkoutTotal")
     .html(arrSum)
