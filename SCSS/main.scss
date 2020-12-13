@@ -191,6 +191,7 @@ body, html {
   }
 }
 
+<<<<<<< HEAD
 .hidden{
   display: none;
 }
@@ -241,6 +242,55 @@ body, html {
   text-align: center;
   text-decoration: none;  
   }
+=======
+/*
+Style for Validation Message
+*/
+#username-error, #email-error {
+  color: #d9534f;
+  padding: 12px;
+  display: none;
+}
+
+
+/* KASSA SIDAN */ 
+
+.checkout-products {
+ display: flex;
+ width: 100%;
+ justify-content: space-evenly;
+ margin-top: 20px;
+ text-align: center;
+
+ div {
+  width: 90%;
+  height: 300px;
+  background-color: #f1f1f1;
+ }
+}
+
+.checkout-forms {
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ align-items: center;
+ text-align: center;
+
+ form {
+ width: 90%;
+ 
+ 
+ }  
+div {
+  background-color: #f1f1f1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+}
+>>>>>>> checkoutForm
 
 .button a:hover {
   color: $hover-color;

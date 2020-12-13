@@ -1,4 +1,5 @@
 @charset "UTF-8";
+<<<<<<< HEAD
 /* line 23, scss/_mixins.scss */
 .button:hover {
   background-color: #cf8134; }
@@ -7,6 +8,8 @@
 /* TYPSNITT OCH TYPSTORLEK */
 /* vet inte alls om jag ska använda mig att detta system, testar lite bara :) */
 /* line 4, scss/main.scss */
+=======
+>>>>>>> checkoutForm
 body, html {
   margin: 0;
   padding: 0;
@@ -17,12 +20,18 @@ body, html {
   font-family: Arial, Helvetica, sans-serif; }
 
 /* NAVIGERING */
+<<<<<<< HEAD
 /* line 17, scss/main.scss */
+=======
+>>>>>>> checkoutForm
 .nav-bar {
   width: 100%;
   display: flex;
   justify-content: space-evenly; }
+<<<<<<< HEAD
   /* line 22, scss/main.scss */
+=======
+>>>>>>> checkoutForm
   .nav-bar a {
     text-align: center;
     padding: 12px 0;
@@ -30,24 +39,37 @@ body, html {
     color: black;
     font-size: 20px;
     text-decoration: none; }
+<<<<<<< HEAD
   /* line 31, scss/main.scss */
+=======
+>>>>>>> checkoutForm
   .nav-bar a:hover {
     color: grey; }
 
 /* BANNER */
+<<<<<<< HEAD
 /* line 38, scss/main.scss */
+=======
+>>>>>>> checkoutForm
 section {
   height: 50%;
   margin: 0;
   padding: 0; }
 
+<<<<<<< HEAD
 /* line 44, scss/main.scss */
 .wrapper-container {
+=======
+.slide-show-container {
+>>>>>>> checkoutForm
   height: 100%;
   width: 100%;
   position: relative; }
 
+<<<<<<< HEAD
 /* line 50, scss/main.scss */
+=======
+>>>>>>> checkoutForm
 .wrapper-one,
 .wrapper-two,
 .wrapper-three {
@@ -58,16 +80,25 @@ section {
   width: 100%;
   position: absolute; }
 
+<<<<<<< HEAD
 /* line 61, scss/main.scss */
 .wrapper-one {
   background-image: url("../images/hero-1.jpg"); }
 
 /* line 64, scss/main.scss */
+=======
+.wrapper-one {
+  background-image: url("../images/hero-1.jpg"); }
+
+>>>>>>> checkoutForm
 .wrapper-two {
   background-image: url("../images/hero-2.jpg");
   animation: slideTwoAnim 5s infinite; }
 
+<<<<<<< HEAD
 /* line 68, scss/main.scss */
+=======
+>>>>>>> checkoutForm
 .wrapper-three {
   background-image: url("../images/hero-3.jpg");
   animation: slideThreeAnim 5s infinite; }
@@ -106,7 +137,10 @@ section {
     padding: 0; } }
 
 /* PRODUKTBILDER SAMT LÄNK TILL PRODUKTSIDORNA */
+<<<<<<< HEAD
 /* line 100, scss/main.scss */
+=======
+>>>>>>> checkoutForm
 .image-container {
   width: 100%;
   display: flex;
@@ -114,12 +148,18 @@ section {
   margin-top: 20px;
   margin-bottom: 20px; }
 
+<<<<<<< HEAD
 /* line 108, scss/main.scss */
 .product-image {
   position: relative;
   width: 100%;
   margin: 15px; }
   /* line 113, scss/main.scss */
+=======
+.product-image {
+  padding: 10px;
+  text-align: center; }
+>>>>>>> checkoutForm
   .product-image img {
     width: 100%; }
   /* line 117, scss/main.scss */
@@ -138,6 +178,7 @@ section {
     -ms-transform: translate(-50%, -50%);
     padding: 12px 24px; }
 
+<<<<<<< HEAD
 @media screen and (min-width: 769px) {
   /* line 129, scss/main.scss */
   .image-container {
@@ -150,6 +191,34 @@ section {
 
 /* PRODUKTSIDOR */
 /* line 141, scss/main.scss */
+=======
+.button {
+  font-size: 17px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none; }
+
+.button a:hover {
+  color: grey; }
+
+/* ANPASSNING FÖR MOBIL */
+@media screen and (max-width: 768px) {
+  .image-container {
+    width: 100%;
+    display: block; }
+  .product-image {
+    padding: 20px; }
+  section {
+    height: 50%;
+    margin: 0;
+    padding: 0; } }
+
+/* PRODUKT SIDA TRÖJOR */
+>>>>>>> checkoutForm
 .wrapperProductPage {
   margin-top: 15px;
   display: flex;
@@ -160,7 +229,10 @@ section {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif; }
 
+<<<<<<< HEAD
 /* line 152, scss/main.scss */
+=======
+>>>>>>> checkoutForm
 .itemDiv {
   width: 100%;
   margin-left: 20px;
@@ -170,6 +242,7 @@ section {
 .itemDiv:hover {
   cursor: pointer; }
 
+<<<<<<< HEAD
 /* line 162, scss/main.scss */
 .productImage {
   width: 100%; }
@@ -254,3 +327,52 @@ section {
 /* line 245, scss/main.scss */
 .button a:hover {
   color: grey; }
+=======
+.productImage {
+  width: 100%; }
+
+/* ANPASSNING FÖR MOBIL */
+@media screen and (max-width: 768px) {
+  .itemDiv {
+    flex: 100%;
+    margin-left: 20px;
+    margin-right: 20px; } }
+
+/*
+Style for Validation Message
+*/
+#username-error, #email-error {
+  color: #d9534f;
+  padding: 12px;
+  display: none; }
+
+/* KASSA SIDAN */
+.checkout-products {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  text-align: center; }
+  .checkout-products div {
+    width: 90%;
+    height: 300px;
+    background-color: #f1f1f1; }
+
+.checkout-forms {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  text-align: center; }
+  .checkout-forms form {
+    width: 90%; }
+  .checkout-forms div {
+    background-color: #f1f1f1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+
+.pink {
+  color: pink; }
+>>>>>>> checkoutForm
