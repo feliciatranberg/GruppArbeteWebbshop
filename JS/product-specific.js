@@ -120,10 +120,13 @@ $(function(){
    
    .on("click",()=>{
        
-       shoppingCartDiv.toggleClass("hidden");
-       ($("#shoppingCart")).empty();
-        checkoutCreator();
-           
+    shoppingCartDiv.toggleClass("hidden");
+
+    
+      
+    ($("#shoppingCart")).empty();
+    checkoutCreator();
+    totalCreator(); 
    });
 })
 
@@ -192,7 +195,9 @@ function totalCreator(specificProduct){
     console.log(priceArray);
   let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
   console.log(arrSum);
-  
+  if (arrSum==0){
+    arrSum = "";
+}
   ($("<p>"))
   .attr("id","checkoutTotal")
   .html(arrSum)
