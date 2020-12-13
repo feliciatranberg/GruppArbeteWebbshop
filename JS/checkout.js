@@ -6,8 +6,9 @@ $(function() {
     height: 400,
     width: 400
     
+ 
 });
-
+//Felicia modalfunktion
     $.fn.serializeObject = function() {
         let $form = this.is("form") ? this : this.find("form"),
           obj = {};
@@ -44,10 +45,49 @@ $(function() {
       .appendTo("#dialog-content");
     });  
           
+    finalCheckoutList();
       });
 
   
-  
+  function finalCheckoutList(){
+    let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
+    let checkoutProductsDiv = ($(".checkout-products"));
+      $.each(checkoutArrFromLS,(i,item)=>{
+    let productDiv = ($("<div>"))
+            .addClass("product-Div")
+            .appendTo(checkoutProductsDiv);
+
+            ($("<img>"))
+            .attr("src",item.image)
+            .addClass("productImage")
+            .appendTo($(productDiv));
+
+    let productTextDiv = ($("<div>"))
+            .addClass("product-text-div")
+            .appendTo($(productDiv));
+
+            ($("<h5>"))
+            .html(item.name)
+            .appendTo($(productTextDiv));
+            
+            ($("<h1>"))
+            .html(item.price + ":-")
+            .appendTo($(productTextDiv));
+
+            ($("<span>"))
+            .html(item.size)
+            .appendTo($(productTextDiv));
+
+            ($("<span>"))
+            .html(item.color)
+            .appendTo($(productTextDiv));
+
+            ($("<span>"))
+            .html(item.description)
+            .appendTo($(productTextDiv));
+      });
+
+  };
 
 
 
