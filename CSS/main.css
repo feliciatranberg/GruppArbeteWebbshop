@@ -242,15 +242,10 @@ section {
 /* FORM KNAPP */
 /* line 234, scss/main.scss */
 .button {
-  font-size: 17px;
-  background-color: white;
-  color: black;
-  border: 2px solid black;
-  padding: 10px 20px;
-  margin-top: 20px;
+  cursor: pointer;
   text-align: center;
+  font-size: 25px;
+  background-color: #de8f40;
+  color: white;
+  border: none;
   text-decoration: none; }
-
-/* line 245, scss/main.scss */
-.button a:hover {
-  color: grey; }
