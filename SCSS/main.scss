@@ -191,6 +191,7 @@ body, html {
   }
 }
 
+<<<<<<< HEAD
 .hidden{
   display: none;
 }
@@ -232,5 +233,70 @@ body, html {
       /* FORM KNAPP */
 
 .button {  
+<<<<<<< HEAD
 @include button; 
+=======
+  font-size: 17px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;  
+  }
+=======
+/*
+Style for Validation Message
+*/
+#username-error, #email-error {
+  color: #d9534f;
+  padding: 12px;
+  display: none;
+}
+
+
+/* KASSA SIDAN */ 
+
+.checkout-products {
+ display: flex;
+ width: 100%;
+ justify-content: space-evenly;
+ margin-top: 20px;
+ text-align: center;
+
+ div {
+  width: 90%;
+  height: 300px;
+  background-color: #f1f1f1;
+ }
+}
+
+.checkout-forms {
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ align-items: center;
+ text-align: center;
+
+ form {
+ width: 90%;
+ 
+ 
+ }  
+div {
+  background-color: #f1f1f1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+}
+>>>>>>> checkoutForm
+
+.button a:hover {
+  color: $hover-color;
+
+>>>>>>> 564e58b4462352c0a414eed6b6cc0108e833ab29
 }

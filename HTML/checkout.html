@@ -6,8 +6,12 @@
     <title>KASSAN</title>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="/JS/main.js"></script>
+    <script src="/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="/JS/checkout.js"></script>
     <script src="https://kit.fontawesome.com/8a91947445.js" crossorigin="anonymous"></script>
+    
+    <link href="/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" />
+    <link href="/jquery-ui-1.12.1/jquery-ui.theme.css" rel="stylesheet" />
     <link href="/CSS/main.css" rel="stylesheet" />
 </head>
 <body>
@@ -17,6 +21,44 @@
         <a href="/HTML/product-page-sweaters.html">TRÖJOR</a> 
         <a href="/HTML/checkout.html"><i class="fas fa-shopping-cart"></i></a>
       </div>
-    
+
+      <div class="checkout-products">
+        <div><h2>Varukorg</h2></div>
+    </div>
+
+    <div class="checkout-forms">
+      <form>
+        <div><h2>Dina uppgifter</h2>
+
+       <p><label>Förnamn </label><input name="firstname" /></p>
+        <p><label>Efternamn </label><input name="lastname" /></p>
+        <p><label>Leveransadress </label><input name="adress" /></p>
+        <p><label>Postnummer </label><input name="zipcode" /></p>
+        <p><label>Stad </label><input name="city" /></p>
+        <p><label>E-Postadress </label><input name="email" /></p>
+        <p><label>Telefonnummer </label><input name="tel" /></p></div>
+
+        <div><h2>Leverans</h2>
+
+        <p><input name="Leveranssätt" type="radio" checked value="Postnord" /> Postnord</p>
+        <p><input name="Leveranssätt" type="radio" checked value="Instabox" /> Instabox</p>
+        <p><input name="Leveranssätt" type="radio" checked value="Budbee" /> Budbee</p></div>
+       
+          <div><h2>Betalningsalternativ</h2>
+  
+          <p><input name="Betalningsmetod" type="radio" checked value="Klarna" /> Klarna</p>
+          <p><input name="Betalningsmetod" type="radio" checked value="Swish" /> Swish</p>
+          <p><input name="Betalningsmetod" type="radio" checked value="Kortbetalning" /> Kortbetalning</p>
+         
+          <p><button id="button" class="button">Bekräfta beställning</button></p></div>
+          </form>
+          </div> 
+     
+          <div id="dialog" title="Orderbekräftelse">
+            <div id="dialog-content"></div>
+          </div>
+
+         
+
 </body>
 </html>
