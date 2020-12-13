@@ -1,16 +1,17 @@
 class shopItem {
-  constructor(type, id, name, color, size, price, image, description, stockAvailable) {
-      this.type = type;
-      this.id = id;
-      this.name = name;
-      this.color = color;
-      this.size = size;
-      this.price = price;
-      this.image = image;
-      this.description = description;
-      this.stockAvailable = stockAvailable;  
-  }
+    constructor(type, id, name, color, size, price, image, description, stockAvailable) {
+        this.type = type;
+        this.id = id;
+        this.name = name;
+        this.color = color;
+        this.size = size;
+        this.price = price;
+        this.image = image;
+        this.description = description;
+        this.stockAvailable = stockAvailable;  
+    }
 }
+
 
 let shirt1 = new shopItem("T-shirt","1:1","BG Logo","Rosa","Small",300, "/images/t-shirts/t-shirt-1.jpg","BG Logo t-shirt",true)
 let shirt2 = new shopItem("T-shirt","1:2","Supersize Me","Svart","Small",300, "/images/t-shirts/t-shirt-2.jpg","Supersize Me t-shirt",true)
@@ -21,8 +22,8 @@ let shirt6 = new shopItem("T-shirt","2:2","Chakra","Vit/Svart","Small",300, "/im
 
 let tshirtProducter = [shirt1,shirt2,shirt3,shirt4,shirt5,shirt6]
 let checkoutArr = [];
-let priceArray = [];
-let totalCount = 0;
+//let priceArray = [];
+let totalCount = false;
 //localStorage.clear();
 $(function() {
     let wrapperProductPage = ($("<div>"))
@@ -49,6 +50,7 @@ $(function() {
                     totalCreator(item);
                     
                 })
+               
                 .appendTo($(wrapperProductPage));
                 
 
@@ -63,7 +65,7 @@ $(function() {
 
                 ($("<h2>"))
                 .html(item.price)
-                .appendTo($(itemDiv));
+                .appendTo($(itemDiv)); 
              })
 
 
@@ -71,7 +73,7 @@ $(function() {
             let shoppingCartDiv = $("<div>")
             .addClass("hidden")
             .attr("id","shoppingCartDiv")
-            //.attr("position","absolute")
+          
             .appendTo($("#shoppingcartExtend"));
 
             ($("<div>"))
@@ -84,44 +86,52 @@ $(function() {
             .appendTo(shoppingCartDiv);
 
 
-
-            $("#shoppingcartButton")
+$("#shoppingcartButton")
    
-            .on("click",()=>{
-                
-             shoppingCartDiv.toggleClass("hidden");
-             ($("#shoppingCart")).empty();
-              checkoutCreator();
-              totalCreator();
-                    
-            });
+   .on("click",()=>{
+       
+    shoppingCartDiv.toggleClass("hidden");
+
+    
+      
+    ($("#shoppingCart")).empty();
+    checkoutCreator();
+    totalCreator(); 
+   });
 
      //onload           
     });
 
 
     function checkoutCreator(i,item){
+        console.log("checkoutCreator körs")
         let checkout = ($("#shoppingCart"))
-            let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr)
-          
+            let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
+          console.log(checkoutArrFromLS);
             
             $.each(checkoutArrFromLS,(i,item)=>{
-    
+      
                     ($("<h5>"))
                         .html(item.name)
                         .appendTo($(checkout));
                     ($("<button>"))
-                        .addClass("")
+                        //.addClass("")
                         .html("X")
                         .appendTo($(checkout))
                         .on("click",()=>{
                             checkoutArrFromLS.splice(i,1);
-                            priceArray.splice(i,1);
-                            checkoutArr.splice(i,1);
-                            //console.log(checkoutArrFromLS);
-                            //localStorage.clear();
+                           
+                            //checkoutArr.splice(i,1);
+                          
                             localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
-                            console.log(priceArray)
+                          
+                            let priceArrayFromLS =JSON.parse(localStorage.priceArray);
+                            priceArrayFromLS.splice(i,1);
+                            localStorage.setItem("priceArray",JSON.stringify(priceArrayFromLS));
+                            /*if (priceArrayFromLS.length == 0){
+                              totalCount = false;
+                              ($("#checkoutTotal")).html("");
+                            }*/
                             checkout.empty();
                             //($("#checkoutTotal")).empty();
                             checkoutCreator();
@@ -129,7 +139,7 @@ $(function() {
                             totalCreator();
                             
                             
-    
+      
                                  
                                 
                         })
@@ -138,26 +148,32 @@ $(function() {
                         
             });
           
-    
-    }
-
+      
+      }
 //skapar första gången ptag för prissumma, adderar/subtrarherar följande ggr från array o renderar
-function totalCreator(item){
-  console.log("ASdas")
+function totalCreator(specificProduct){
+    console.log("jag klrs")
     let bitch = ($("#checkoutTotal"));
-    if (priceArray == 0 && totalCount == 0) {
-       
-    priceArray.push(item.price);
    
-    let arrSum = priceArray.reduce((a, b) => a + b, 0);
+    if (totalCount == false) {
+      console.log("Totalcount är false")
+  
+       console.log("hello")
+       
+  
+      let priceArrayFromLS = JSON.parse(localStorage.priceArray)
+    
+   
+    let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
+    console.log(arrSum);
     
     ($("<p>"))
     .attr("id","checkoutTotal")
     .html(arrSum)
     .appendTo($("#shoppingCartDiv"));
-    totalCount = 1;
-}
-else
+    totalCount = true;
+  }
+  /*else
     {
        if (priceArray == 0){
             bitch.addClass("hidden");
@@ -165,8 +181,10 @@ else
        else {
            bitch.removeClass("hidden");
        }
-        if (item != undefined) {
-        priceArray.push(item.price);
+        if (specificProduct != undefined) {
+          let priceArray =JSON.parse(localStorage.priceArray);
+        priceArray.push(specificProduct.price);
+        localStorage.setItem("priceArray",JSON.stringify(priceArray));
         }
         let arrSum = priceArray.reduce((a, b) => a + b, 0);
         console.log(priceArray);
@@ -175,5 +193,23 @@ else
         .html(arrSum)
         .appendTo($("#shoppingCartDiv"));
         
+    }*/
+  
+    else {
+      let priceArrayFromLS = JSON.parse(localStorage.priceArray)
+      console.log("Totalcount e true")
+      localStorage.setItem("priceArray",JSON.stringify(priceArrayFromLS));
+      //console.log(priceArray);
+    let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
+    console.log(arrSum);
+    ($("#checkoutTotal")).empty();
+    ($("#checkoutTotal"))
+    .html(arrSum)
+    .appendTo($("#shoppingCartDiv"));
+    if (priceArrayFromLS.length == 0 ){
+      totalCount = false;
+      ($("#checkoutTotal")).remove();
+      console.log("HELT SLUT")
     }
-}
+    }
+  }

@@ -1,6 +1,8 @@
 let checkoutArr = [];
+//let checkoutCopyLS = JSON.parse(localStorage.checkoutArr)
 let priceArray = [];
-let totalCount = 0;
+let totalCount = false;
+
 $(function(){
 
     let specificProduct = JSON.parse(localStorage.itemObject)
@@ -74,16 +76,24 @@ $(function(){
     .attr("id","addToCartButton")
     .html("Lägg till i varukorg")
     .on("click",()=>{
-      let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr)
-      console.log(specificProduct)
+      //Om CheckoutArr inte ännu finns definierad (dvs första gången man besöker sidan) definiears den
+      if (localStorage.getItem("checkoutArr")==null){
+        localStorage.setItem("checkoutArr",JSON.stringify(checkoutArr));
+      }
+      let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
       checkoutArrFromLS.push(specificProduct)
-      
-      
       shoppingCartDiv.removeClass("hidden");
       localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
+
+      if (localStorage.getItem("priceArray")==null){
+        localStorage.setItem("priceArray",JSON.stringify(priceArray));
+      }
+      let priceArrayFromLS = JSON.parse(localStorage.priceArray)
+    priceArrayFromLS.push(specificProduct.price);
+    localStorage.setItem("priceArray",JSON.stringify(priceArrayFromLS));
       ($("#shoppingCart")).empty();
       checkoutCreator();
-      console.log(checkoutArrFromLS)
+
       totalCreator(specificProduct);
      
     })
@@ -133,12 +143,18 @@ function checkoutCreator(i,item){
                   .appendTo($(checkout))
                   .on("click",()=>{
                       checkoutArrFromLS.splice(i,1);
-                      priceArray.splice(i,1);
-                      checkoutArr.splice(i,1);
-                      //console.log(checkoutArrFromLS);
-                      //localStorage.clear();
+                     
+                      //checkoutArr.splice(i,1);
+                    
                       localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
-                      console.log(priceArray)
+                    
+                      let priceArrayFromLS =JSON.parse(localStorage.priceArray);
+                      priceArrayFromLS.splice(i,1);
+                      localStorage.setItem("priceArray",JSON.stringify(priceArrayFromLS));
+                      /*if (priceArrayFromLS.length == 0){
+                        totalCount = false;
+                        ($("#checkoutTotal")).html("");
+                      }*/
                       checkout.empty();
                       //($("#checkoutTotal")).empty();
                       checkoutCreator();
@@ -164,19 +180,26 @@ function checkoutCreator(i,item){
 function totalCreator(specificProduct){
   console.log("jag klrs")
   let bitch = ($("#checkoutTotal"));
-  if (priceArray == 0 && totalCount == 0) {
-     console.log("hello")
-  priceArray.push(specificProduct.price);
  
-  let arrSum = priceArray.reduce((a, b) => a + b, 0);
+  if (totalCount == false) {
+    console.log("Totalcount är false")
+
+     console.log("hello")
+     
+
+    let priceArrayFromLS = JSON.parse(localStorage.priceArray)
+  
+    console.log(priceArray);
+  let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
+  console.log(arrSum);
   
   ($("<p>"))
   .attr("id","checkoutTotal")
   .html(arrSum)
   .appendTo($("#shoppingCartDiv"));
-  totalCount = 1;
+  totalCount = true;
 }
-else
+/*else
   {
      if (priceArray == 0){
           bitch.addClass("hidden");
@@ -185,7 +208,9 @@ else
          bitch.removeClass("hidden");
      }
       if (specificProduct != undefined) {
+        let priceArray =JSON.parse(localStorage.priceArray);
       priceArray.push(specificProduct.price);
+      localStorage.setItem("priceArray",JSON.stringify(priceArray));
       }
       let arrSum = priceArray.reduce((a, b) => a + b, 0);
       console.log(priceArray);
@@ -194,5 +219,23 @@ else
       .html(arrSum)
       .appendTo($("#shoppingCartDiv"));
       
+  }*/
+
+  else {
+    let priceArrayFromLS = JSON.parse(localStorage.priceArray)
+    console.log("Totalcount e true")
+    localStorage.setItem("priceArray",JSON.stringify(priceArrayFromLS));
+    console.log(priceArray);
+  let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
+  console.log(arrSum);
+  ($("#checkoutTotal")).empty();
+  ($("#checkoutTotal"))
+  .html(arrSum)
+  .appendTo($("#shoppingCartDiv"));
+  if (priceArrayFromLS.length == 0 ){
+    totalCount = false;
+    ($("#checkoutTotal")).remove();
+    console.log("HELT SLUT")
+  }
   }
 }
