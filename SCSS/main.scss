@@ -194,6 +194,7 @@ body, html {
 .hidden{
   display: none;
 }
+
 //product-specific
 #specificProductContentwrap{
   display: flex;
@@ -252,19 +253,44 @@ Style for Validation Message
 
 
 /* KASSA SIDAN */ 
-
+#checkout-form-wrap{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
 .checkout-products {
  display: flex;
- width: 100%;
- justify-content: space-evenly;
+ //width: 100%;
+ flex-direction: column;
+ align-items: center;
  margin-top: 20px;
  text-align: center;
-
- div {
+ background-color: #f1f1f1;
+ width: 90%;
+ height: 20%;
+.product-Div{
+  display: flex;
+  justify-content: center;
+  height: 40%;
   width: 90%;
-  height: 300px;
-  background-color: #f1f1f1;
+  border: 3px black solid;
+
+  img {
+   
+    width: 15%;
+    height: auto;
+  }
+ .product-text-div{
+   display:flex;
+   border:2px solid red;
+   flex-direction: column;
+  h5{
+    flex-grow: 1;
+    font-size: 1.2rem;
+    margin: 2% 0 0 2%;
+  }
  }
+}
 }
 
 .checkout-forms {

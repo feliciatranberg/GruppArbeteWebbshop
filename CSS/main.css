@@ -225,16 +225,37 @@ Style for Validation Message
   display: none; }
 
 /* KASSA SIDAN */
+#checkout-form-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 .checkout-products {
   display: flex;
-  width: 100%;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
   margin-top: 20px;
-  text-align: center; }
-  .checkout-products div {
+  text-align: center;
+  background-color: #f1f1f1;
+  width: 90%;
+  height: 20%; }
+  .checkout-products .product-Div {
+    display: flex;
+    justify-content: center;
+    height: 40%;
     width: 90%;
-    height: 300px;
-    background-color: #f1f1f1; }
+    border: 3px black solid; }
+    .checkout-products .product-Div img {
+      width: 15%;
+      height: auto; }
+    .checkout-products .product-Div .product-text-div {
+      display: flex;
+      border: 2px solid red;
+      flex-direction: column; }
+      .checkout-products .product-Div .product-text-div h5 {
+        flex-grow: 1;
+        font-size: 1.2rem;
+        margin: 2% 0 0 2%; }
 
 .checkout-forms {
   display: flex;
