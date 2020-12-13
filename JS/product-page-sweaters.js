@@ -20,7 +20,6 @@ let shirt5 = new shopItem("Sweater","2:2","Fierce Fleece","Grön","Small",600, "
 let shirt6 = new shopItem("Sweater","2:2","Multiverse","Blå","Small",600, "/images/sweaters/sweater-6.jpg","Multiverse tröja med avslappnad passform",true)
 
 let tshirtProducter = [shirt1,shirt2,shirt3,shirt4,shirt5,shirt6]
-//let checkoutArr = JSON.parse(localStorage.checkoutArr)
 let checkoutArr = [];
 //let priceArray = [];
 let totalCount = 0;
@@ -73,7 +72,7 @@ $(function() {
             let shoppingCartDiv = $("<div>")
             .addClass("hidden")
             .attr("id","shoppingCartDiv")
-            //.attr("position","absolute")
+          
             .appendTo($("#shoppingcartExtend"));
 
             ($("<div>"))
