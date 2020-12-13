@@ -5,7 +5,7 @@ body, html {
        
         margin: 0; 
         padding: 0;
-        height: 100%;
+        height: 100%; 
         width: 100%; 
         background: $bg-color;
         color: $text-color;
@@ -191,7 +191,6 @@ body, html {
   }
 }
 
-<<<<<<< HEAD
 .hidden{
   display: none;
 }
@@ -233,9 +232,7 @@ body, html {
       /* FORM KNAPP */
 
 .button {  
-<<<<<<< HEAD
 @include button; 
-=======
   font-size: 17px;
   background-color: white;
   color: black;
@@ -245,7 +242,6 @@ body, html {
   text-align: center;
   text-decoration: none;  
   }
-=======
 /*
 Style for Validation Message
 */
@@ -293,10 +289,8 @@ div {
 }
 
 }
->>>>>>> checkoutForm
 
 .button a:hover {
   color: $hover-color;
 
->>>>>>> 564e58b4462352c0a414eed6b6cc0108e833ab29
 }
