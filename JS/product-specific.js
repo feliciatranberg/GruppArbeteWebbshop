@@ -76,8 +76,12 @@ $(function(){
     .attr("id","addToCartButton")
     .html("Lägg till i varukorg")
     .on("click",()=>{
-      let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr)
-      console.log(specificProduct)
+      if (localStorage.getItem("checkoutArr")==null){
+        localStorage.setItem("checkoutArr",JSON.stringify(checkoutArr));
+      }
+      let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
+
+      console.log(checkoutArrFromLS)
       checkoutArrFromLS.push(specificProduct)
       
       

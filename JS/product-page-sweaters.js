@@ -44,7 +44,7 @@ $(function() {
                     localStorage.setItem("itemObject",JSON.stringify(itemObject));
                     console.log(checkoutArr)
                     //shoppingCartDiv.removeClass("hidden");
-                    localStorage.setItem("checkoutArr",JSON.stringify(checkoutArr));
+                    //localStorage.setItem("checkoutArr",JSON.stringify(checkoutArr));
                     ($("#shoppingCart")).empty();
                     checkoutCreator();
                     totalCreator(item);
