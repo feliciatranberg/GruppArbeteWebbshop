@@ -187,7 +187,9 @@ $(function() {
                         .appendTo($(checkout))
                         .on("click",()=>{
                             checkoutArrFromLS.splice(i,1);
+                            let priceArray =JSON.parse(localStorage.priceArray);
                             priceArray.splice(i,1);
+                            localStorage.setItem("priceArray",JSON.stringify(priceArray));
                             checkoutArr.splice(i,1);
                             //console.log(checkoutArrFromLS);
                             //localStorage.clear();

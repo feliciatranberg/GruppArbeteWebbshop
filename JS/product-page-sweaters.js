@@ -11,17 +11,17 @@ class shopItem {
         this.stockAvailable = stockAvailable;  
     }
 }
-
 let shirt1 = new shopItem("Hoodie","1:1","djurparken1","Grön Tröja","Small",199, "/images/sweaters/sweater-1.jpg","en tröja",true)
 let shirt2 = new shopItem("Hoodie","1:2","ambivalens2","Lila Tröja","Small",199, "/images/sweaters/sweater-2.jpg","en tröja",true)
 let shirt3 = new shopItem("tshirt","2:1","djurparken3","Svart Tröja","Small",100, "/images/sweaters/sweater-3.jpg","en tröja",true)
 let shirt4 = new shopItem("tshirt","2:2","ambivalens4","Blå Hoodie","Small",100, "/images/sweaters/sweater-4.jpg","en tröja",true)
 let shirt5 = new shopItem("tshirt","2:2","ambivalens4","Grön Tröja","Small",300, "/images/sweaters/sweater-5.jpg","en tröja",true)
 let shirt6 = new shopItem("tshirt","2:2","ambivalens4","Blå Tröja","Small",500, "/images/sweaters/sweater-6.jpg","en tröja",true)
-
+//localStorage.clear()
 let tshirtProducter = [shirt1,shirt2,shirt3,shirt4,shirt5,shirt6]
+//let checkoutArr = JSON.parse(localStorage.checkoutArr)
 let checkoutArr = [];
-let priceArray = [];
+//let priceArray = [];
 let totalCount = 0;
 //localStorage.clear();
 $(function() {
@@ -43,12 +43,13 @@ $(function() {
                     localStorage.setItem("itemObject",JSON.stringify(itemObject));
                     console.log(checkoutArr)
                     //shoppingCartDiv.removeClass("hidden");
-                    //localStorage.setItem("checkoutArr",JSON.stringify(checkoutArr));
+                    localStorage.setItem("checkoutArr",JSON.stringify(checkoutArr));
                     ($("#shoppingCart")).empty();
                     checkoutCreator();
                     totalCreator(item);
                     
                 })
+               
                 .appendTo($(wrapperProductPage));
                 
 
@@ -63,7 +64,7 @@ $(function() {
 
                 ($("<h2>"))
                 .html(item.price)
-                .appendTo($(itemDiv));
+                .appendTo($(itemDiv)); 
              })
 
 
@@ -114,12 +115,14 @@ $("#shoppingcartButton")
                         .appendTo($(checkout))
                         .on("click",()=>{
                             checkoutArrFromLS.splice(i,1);
-                            priceArray.splice(i,1);
+                            //let priceArray =JSON.parse(localStorage.priceArray);
+                            //priceArray.splice(i,1);
+                            //localStorage.setItem("priceArray",JSON.stringify(priceArray));
                             checkoutArr.splice(i,1);
                             //console.log(checkoutArrFromLS);
                             //localStorage.clear();
                             localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
-                            console.log(priceArray)
+                           // console.log(priceArray)
                             checkout.empty();
                             //($("#checkoutTotal")).empty();
                             checkoutCreator();

@@ -1,6 +1,8 @@
 let checkoutArr = [];
-let priceArray = [];
+//let checkoutCopyLS = JSON.parse(localStorage.checkoutArr)
+//let priceArray = [];
 let totalCount = 0;
+
 $(function(){
 
     let specificProduct = JSON.parse(localStorage.itemObject)
@@ -133,12 +135,14 @@ function checkoutCreator(i,item){
                   .appendTo($(checkout))
                   .on("click",()=>{
                       checkoutArrFromLS.splice(i,1);
-                      priceArray.splice(i,1);
+                      //let priceArray =JSON.parse(localStorage.priceArray);
+                      //priceArray.splice(i,1);
+                    //  localStorage.setItem("priceArray",JSON.stringify(priceArray));
                       checkoutArr.splice(i,1);
                       //console.log(checkoutArrFromLS);
                       //localStorage.clear();
                       localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
-                      console.log(priceArray)
+                     // console.log(priceArray)
                       checkout.empty();
                       //($("#checkoutTotal")).empty();
                       checkoutCreator();
@@ -166,8 +170,9 @@ function totalCreator(specificProduct){
   let bitch = ($("#checkoutTotal"));
   if (priceArray == 0 && totalCount == 0) {
      console.log("hello")
+  let priceArray =JSON.parse(localStorage.priceArray);
   priceArray.push(specificProduct.price);
- 
+  localStorage.setItem("priceArray",JSON.stringify(priceArray));
   let arrSum = priceArray.reduce((a, b) => a + b, 0);
   
   ($("<p>"))
@@ -185,7 +190,9 @@ else
          bitch.removeClass("hidden");
      }
       if (specificProduct != undefined) {
+        let priceArray =JSON.parse(localStorage.priceArray);
       priceArray.push(specificProduct.price);
+      localStorage.setItem("priceArray",JSON.stringify(priceArray));
       }
       let arrSum = priceArray.reduce((a, b) => a + b, 0);
       console.log(priceArray);
