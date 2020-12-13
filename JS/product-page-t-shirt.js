@@ -1,94 +1,23 @@
-//This is the same code I took from Felicias JS. I changed the photos and changed file names.
 class shopItem {
-  constructor(
-    type,
-    id,
-    name,
-    color,
-    size,
-    price,
-    image,
-    description,
-    stockAvailable
-  ) {
-    this.type = type;
-    this.id = id;
-    this.name = name;
-    this.color = color;
-    this.size = size;
-    this.price = price;
-    this.image = image;
-    this.description = description;
-    this.stockAvailable = stockAvailable;
+  constructor(type, id, name, color, size, price, image, description, stockAvailable) {
+      this.type = type;
+      this.id = id;
+      this.name = name;
+      this.color = color;
+      this.size = size;
+      this.price = price;
+      this.image = image;
+      this.description = description;
+      this.stockAvailable = stockAvailable;  
   }
 }
 
-let shirt1 = new shopItem(
-  "tshirt",
-  "1:1",
-  "djurparken1",
-  "Rosa T-shirt",
-  "Small",
-  199,
-  "/images/t-shirts/t-shirt-1.jpg",
-  "en t-shirt",
-  true
-);
-let shirt3 = new shopItem(
-  "tshirt",
-  "2:1",
-  "djurparken3",
-  "Rosa T-shirt",
-  "Small",
-  100,
-  "/images/t-shirts/t-shirt-3.jpg",
-  "en t-shirt",
-  true
-);
-let shirt2 = new shopItem(
-  "tshirt",
-  "1:2",
-  "ambivalens2",
-  "Svart T-shirt",
-  "Small",
-  199,
-  "/images/t-shirts/t-shirt-2.jpg",
-  "en t-shirt",
-  true
-);
-let shirt4 = new shopItem(
-  "tshirt",
-  "2:2",
-  "ambivalens4",
-  "Rosa T-shirt",
-  "Small",
-  100,
-  "/images/t-shirts/t-shirt-4.jpg",
-  "en t-shirt",
-  true
-);
-let shirt5 = new shopItem(
-  "tshirt",
-  "2:2",
-  "ambivalens4",
-  "Blå T-shirt",
-  "Small",
-  300,
-  "/images/t-shirts/t-shirt-5.jpg",
-  "en t-shirt",
-  true
-);
-let shirt6 = new shopItem(
-  "tshirt",
-  "2:2",
-  "ambivalens4",
-  "Stripped T-shirt",
-  "Small",
-  500,
-  "/images/t-shirts/t-shirt-6.jpg",
-  "en t-shirt",
-  true
-);
+let shirt1 = new shopItem("T-shirt","1:1","BG Logo","Rosa","Small",300, "/images/t-shirts/t-shirt-1.jpg","BG Logo t-shirt",true)
+let shirt2 = new shopItem("T-shirt","1:2","Supersize Me","Svart","Small",300, "/images/t-shirts/t-shirt-2.jpg","Supersize Me t-shirt",true)
+let shirt3 = new shopItem("T-shirt","2:1","Chakra","Grå","Small",300, "/images/t-shirts/t-shirt-3.jpg","Chakra T-shirt",true)
+let shirt4 = new shopItem("T-shirt","2:2","Supersize Me","Beige","Small",300, "/images/t-shirts/t-shirt-4.jpg","Supersize Me t-shirt",true)
+let shirt5 = new shopItem("T-shirt","2:2","Subtle Tie Dye","Rosa","Small",300, "/images/t-shirts/t-shirt-5.jpg","Subtle Tie Dye t-shirt",true)
+let shirt6 = new shopItem("T-shirt","2:2","Chakra","Vit/Svart","Small",300, "/images/t-shirts/t-shirt-6.jpg","Chakra T-shirt",true)
 
 let tshirtProducter = [shirt1,shirt2,shirt3,shirt4,shirt5,shirt6]
 let checkoutArr = [];
@@ -129,7 +58,7 @@ $(function() {
                 .appendTo($(itemDiv));
            
                 ($("<h3>"))
-                .html(item.color)
+                .html(item.name)
                 .appendTo($(itemDiv));
 
                 ($("<h2>"))

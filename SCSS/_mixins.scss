@@ -9,3 +9,18 @@
         @content;
     }
 }
+
+@mixin button {
+
+        cursor: pointer;
+        text-align: center;
+        font-size: 25px;
+        background-color: #de8f40;
+        color: white;
+        border: none;
+        text-decoration: none;  
+      }
+      .button:hover {
+        background-color: #cf8134;
+     
+}
