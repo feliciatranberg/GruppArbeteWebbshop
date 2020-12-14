@@ -14,20 +14,13 @@ body, html {
 
   /* NAVIGERING */ 
 
-  .nav-bar {
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    background-color: white;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    @include tablets-up{
-      position:static;
-    }
+   
   
   .nav-bar-container {
     @include flex-full-width-nowrap-container;
+    @include tablets-up{
+      position:static;
+    }
    a {
     text-align: center;
     padding: 12px 0;
@@ -39,9 +32,10 @@ body, html {
     a:hover {
      color: $link-hover-color;
     }
-  }  
+  }
   
-/* BANNER STARTSIDA */
+  
+/* BANNER STARTSIDA */ 
 
   section {
     height: 50%; 
@@ -397,4 +391,4 @@ div {
 }
 }
 }
-} 
+}

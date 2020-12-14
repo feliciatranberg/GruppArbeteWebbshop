@@ -46,6 +46,10 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
   }
 
   @mixin flex-full-width-wrap-container {
