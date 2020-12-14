@@ -122,15 +122,22 @@ $(function(){
    $("#shoppingcartButton")
    
    .on("click",()=>{
-       
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      window.location.href = "checkout.html";
+    }
+    else {
+    
     shoppingCartDiv.toggleClass("hidden");
 
     
       
     ($("#shoppingCart")).empty();
+    
     checkoutCreator();
     totalCreator(); 
+    }
    });
+   
 })
 
 function checkoutCreator(i,item){

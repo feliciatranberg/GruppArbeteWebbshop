@@ -50,8 +50,10 @@ $(function() {
 
   
   function finalCheckoutList(){
+
     let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
     let checkoutProductsDiv = ($(".checkout-products"));
+
       $.each(checkoutArrFromLS,(i,item)=>{
     let productDiv = ($("<div>"))
             .addClass("product-Div")
@@ -77,15 +79,24 @@ $(function() {
             ($("<span>"))
             .html(item.size)
             .appendTo($(productTextDiv));
+    
+            ($("<button>"))
+            
+            .html("X")
+            .appendTo($(productTextDiv))
+            .on("click",()=>{
+                checkoutArrFromLS.splice(i,1);
+                localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
+              
+                let priceArrayFromLS =JSON.parse(localStorage.priceArray);
+                priceArrayFromLS.splice(i,1);
+                localStorage.setItem("priceArray",JSON.stringify(priceArrayFromLS)); 
 
-            ($("<span>"))
-            .html(item.color)
-            .appendTo($(productTextDiv));
-
-            ($("<span>"))
-            .html(item.description)
-            .appendTo($(productTextDiv));
-      });
+                checkoutProductsDiv.empty();
+                finalCheckoutList();
+              });
+                
+    });
 
   };
 

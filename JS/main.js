@@ -28,6 +28,13 @@ $("#shoppingcartButton")
    
    .on("click",()=>{
        
+
+
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      window.location.href = "HTML/checkout.html";
+    }
+    else {
+   
     shoppingCartDiv.toggleClass("hidden");
 
     
@@ -35,6 +42,7 @@ $("#shoppingcartButton")
     ($("#shoppingCart")).empty();
     checkoutCreator();
     totalCreator(); 
+    }
    });
 
      //onload           
