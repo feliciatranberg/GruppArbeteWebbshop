@@ -156,7 +156,7 @@ function totalCreator(item){
     let bitch = ($("#checkoutTotal"));
     if (priceArray == 0 && totalCount == 0) {
        
-    priceArray.push(item.price);
+    priceArray.push(item.price +);
    
     let arrSum = priceArray.reduce((a, b) => a + b, 0);
     

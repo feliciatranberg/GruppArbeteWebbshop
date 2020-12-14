@@ -14,13 +14,13 @@
 
         cursor: pointer;
         text-align: center;
-        font-size: 25px;
-        background-color: #de8f40;
+        background-color: $button-color;
         color: white;
         border: none;
         text-decoration: none;  
       }
       .button:hover {
-        background-color: #cf8134;
-     
+        background-color: #edd1e7;
 }
+
+

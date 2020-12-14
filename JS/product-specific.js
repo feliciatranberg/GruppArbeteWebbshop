@@ -66,7 +66,7 @@ $(function(){
     //Dropdown 
     ($("<p>"))
     .attr("id","productPrize")
-    .html(specificProduct.price)
+    .html(specificProduct.price + ":-")
     .appendTo($("#productTextBox"));
 
 

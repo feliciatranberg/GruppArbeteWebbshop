@@ -64,7 +64,7 @@ $(function() {
                 .appendTo($(itemDiv));
 
                 ($("<h2>"))
-                .html(item.price)
+                .html(item.price + ":-")
                 .appendTo($(itemDiv)); 
              })
 
