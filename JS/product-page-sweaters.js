@@ -118,14 +118,16 @@ $("#shoppingcartButton")
           console.log(checkoutArrFromLS);
             
             $.each(checkoutArrFromLS,(i,item)=>{
-      
+               let shoppingCartItemDiv=($("<div>"))
+                    .addClass("shoppingCartItemDiv")
+                    .appendTo($(checkout));
                     ($("<h5>"))
                         .html(item.name)
-                        .appendTo($(checkout));
+                        .appendTo($(shoppingCartItemDiv));
                     ($("<button>"))
                         //.addClass("")
                         .html("X")
-                        .appendTo($(checkout))
+                        .appendTo($(shoppingCartItemDiv))
                         .on("click",()=>{
                             checkoutArrFromLS.splice(i,1);
                            

@@ -185,9 +185,26 @@ section {
 #shoppingCart {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   border: 1px solid red;
-  width: 100px;
+  width: 100%;
   z-index: 10000; }
+  #shoppingCart .shoppingCartImgDiv img {
+    width: 100%;
+    height: auto; }
+  #shoppingCart .shoppingCartItemDiv {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black; }
+    #shoppingCart .shoppingCartItemDiv .shoppingCartDeleteBtn {
+      color: red;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      justify-self: flex-end; }
+
+#shoppingcartButton:hover {
+  cursor: pointer; }
 
 #goToCheckout {
   cursor: pointer;
@@ -205,9 +222,11 @@ section {
   z-index: 5; }
   #shoppingcartExtend #shoppingCartDiv {
     position: absolute;
+    left: 70%;
+    top: 5%;
     background-color: white;
-    right: 0px;
-    border: 5px solid pink; }
+    width: 25%;
+    border: 1px solid pink; }
 
 .hidden {
   display: none; }

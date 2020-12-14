@@ -113,52 +113,54 @@ $("#shoppingcartButton")
 
 
     function checkoutCreator(i,item){
-        console.log("checkoutCreator körs")
-        let checkout = ($("#shoppingCart"))
-            let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
-          console.log(checkoutArrFromLS);
-            
-            $.each(checkoutArrFromLS,(i,item)=>{
-      
-                    ($("<h5>"))
-                        .html(item.name)
-                        .appendTo($(checkout));
-                    ($("<button>"))
-                        //.addClass("")
-                        .html("X")
-                        .appendTo($(checkout))
-                        .on("click",()=>{
-                            checkoutArrFromLS.splice(i,1);
-                           
-                            //checkoutArr.splice(i,1);
-                          
-                            localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
-                          
-                            let priceArrayFromLS =JSON.parse(localStorage.priceArray);
-                            priceArrayFromLS.splice(i,1);
-                            localStorage.setItem("priceArray",JSON.stringify(priceArrayFromLS));
-                            /*if (priceArrayFromLS.length == 0){
-                              totalCount = false;
-                              ($("#checkoutTotal")).html("");
-                            }*/
-                            checkout.empty();
-                            //($("#checkoutTotal")).empty();
-                            checkoutCreator();
-                            
-                            totalCreator();
-                            
-                            
-      
-                                 
-                                
-                        })
-                            
-                           
-                        
-            });
+      console.log("checkoutCreator körs")
+      let checkout = ($("#shoppingCart"))
+          let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
+        console.log(checkoutArrFromLS);
           
-      
-      }
+          $.each(checkoutArrFromLS,(i,item)=>{
+             let shoppingCartItemDiv=($("<div>"))
+                  .addClass("shoppingCartItemDiv")
+                  .appendTo($(checkout));
+                  ($("<h5>"))
+                      .html(item.name)
+                      .appendTo($(shoppingCartItemDiv));
+                  ($("<button>"))
+                      //.addClass("")
+                      .html("X")
+                      .appendTo($(shoppingCartItemDiv))
+                      .on("click",()=>{
+                          checkoutArrFromLS.splice(i,1);
+                         
+                          //checkoutArr.splice(i,1);
+                        
+                          localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
+                        
+                          let priceArrayFromLS =JSON.parse(localStorage.priceArray);
+                          priceArrayFromLS.splice(i,1);
+                          localStorage.setItem("priceArray",JSON.stringify(priceArrayFromLS));
+                          /*if (priceArrayFromLS.length == 0){
+                            totalCount = false;
+                            ($("#checkoutTotal")).html("");
+                          }*/
+                          checkout.empty();
+                          //($("#checkoutTotal")).empty();
+                          checkoutCreator();
+                          
+                          totalCreator();
+                          
+                          
+    
+                               
+                              
+                      })
+                          
+                         
+                      
+          });
+        
+    
+    }
 //skapar första gången ptag för prissumma, adderar/subtrarherar följande ggr från array o renderar
 function totalCreator(specificProduct){
     console.log("jag klrs")

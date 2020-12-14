@@ -34,7 +34,7 @@ $("#shoppingcartButton")
       window.location.href = "HTML/checkout.html";
     }
     else {
-   
+    
     shoppingCartDiv.toggleClass("hidden");
 
     
@@ -56,13 +56,22 @@ function checkoutCreator(i,item){
         
         $.each(checkoutArrFromLS,(i,item)=>{
   
-                ($("<h5>"))
-                    .html(item.name)
-                    .appendTo($(checkout));
-                ($("<button>"))
-                    //.addClass("")
-                    .html("X")
-                    .appendTo($(checkout))
+          let shoppingCartItemDiv=($("<div>"))
+          .addClass("shoppingCartItemDiv")
+          .appendTo($(checkout));
+          let shoppingCartImgDiv=($("<div>"))
+          .addClass("shoppingCartImgDiv")
+          .appendTo($(checkout));
+          ($("<img>"))
+          .attr("src",item.image)
+          .appendTo($(shoppingCartImgDiv));
+          ($("<h5>"))
+              .html(item.name)
+              .appendTo($(shoppingCartItemDiv));
+          ($("<button>"))
+              .addClass("shoppingCartDeleteBtn")
+              .addClass("fas fa-times")
+              .appendTo($(shoppingCartItemDiv))
                     .on("click",()=>{
                         checkoutArrFromLS.splice(i,1);
                        

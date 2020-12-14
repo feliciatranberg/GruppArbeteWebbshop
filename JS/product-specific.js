@@ -147,13 +147,16 @@ function checkoutCreator(i,item){
       
       $.each(checkoutArrFromLS,(i,item)=>{
 
-              ($("<h5>"))
-                  .html(item.name)
-                  .appendTo($(checkout));
-              ($("<button>"))
-                  //.addClass("")
-                  .html("X")
-                  .appendTo($(checkout))
+        let shoppingCartItemDiv=($("<div>"))
+                    .addClass("shoppingCartItemDiv")
+                    .appendTo($(checkout));
+                    ($("<h5>"))
+                        .html(item.name)
+                        .appendTo($(shoppingCartItemDiv));
+                    ($("<button>"))
+                        //.addClass("")
+                        .html("X")
+                        .appendTo($(shoppingCartItemDiv))
                   .on("click",()=>{
                       checkoutArrFromLS.splice(i,1);
                      
