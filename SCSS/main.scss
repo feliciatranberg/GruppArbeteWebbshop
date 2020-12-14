@@ -2,7 +2,6 @@
 @import './variables';
 
 body, html {
-       
         margin: 0; 
         padding: 0;
         height: 100%; 
@@ -14,11 +13,8 @@ body, html {
 
   /* NAVIGERING */ 
 
-  .nav-bar {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-  
+  .nav-bar-container {
+    @include flex-full-width-nowrap-container;
    a {
     text-align: center;
     padding: 12px 0;
@@ -27,29 +23,29 @@ body, html {
     font-size: 20px;
     text-decoration: none;
     }
-   
     a:hover {
      color: $link-hover-color;
     }
   }  
   
-/* BANNER */
+/* BANNER STARTSIDA */
 
   section {
     height: 50%; 
-    margin: 0;
-    padding: 0;
   }
-  
-  .wrapper-container {
+  @include tablets-up {
+    section {
+    height: 100%;
+  }
+  } 
+  .section-container {
     height: 100%;
     width: 100%;
     position: relative;
   }
- 
-  .wrapper-one,
-  .wrapper-two,
-  .wrapper-three {
+  .hero-one,
+  .hero-two,
+  .hero-three {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -57,19 +53,17 @@ body, html {
   width: 100%;
   position: absolute;
 }
- 
-  .wrapper-one {
+  .hero-one {
     background-image: url("../images/hero-1.jpg");
 }
-.wrapper-two {
+.hero-two {
     background-image: url("../images/hero-2.jpg");
   animation: slideTwoAnim 5s infinite;
 }
-.wrapper-three {
+.hero-three {
     background-image: url("../images/hero-3.jpg");
   animation: slideThreeAnim 5s infinite;
 }
-
 @keyframes slideTwoAnim {
   0%{opacity:0;}
   17%{opacity:0;}
@@ -78,7 +72,6 @@ body, html {
   67%{opacity:0;} 
   100%{opacity:0;}
 }
-
 @keyframes slideThreeAnim {
   0%{opacity:0;}
   50%{opacity:0;}
@@ -87,17 +80,9 @@ body, html {
   100%{opacity:0;}
 }
 
-@include tablets-up {
-  section {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-}
+/* PRODUKTBILDER STARTSIDA */
 
-/* PRODUKTBILDER PÅ MAINPAGE */
-
-.image-container {
+.product-image-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -109,11 +94,9 @@ body, html {
   position: relative;
   width: 100%;
   margin: 15px;
-
   img {
   width: 100%; 
 }
-
  button { 
   @include button-medium;
   position: absolute;
@@ -124,9 +107,8 @@ body, html {
   padding: 12px 24px;    
 }
 }
-
 @include tablets-up {
-  .image-container {
+  .product-image-container {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;

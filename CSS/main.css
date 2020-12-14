@@ -17,40 +17,44 @@ body, html {
   font-family: Arial, Helvetica, sans-serif; }
 
 /* NAVIGERING */
-/* line 17, scss/main.scss */
-.nav-bar {
+/* line 16, scss/main.scss */
+.nav-bar-container {
   width: 100%;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-evenly; }
-  /* line 22, scss/main.scss */
-  .nav-bar a {
+  /* line 18, scss/main.scss */
+  .nav-bar-container a {
     text-align: center;
     padding: 12px 0;
     transition: all 0.3s ease;
     color: black;
     font-size: 20px;
     text-decoration: none; }
-  /* line 31, scss/main.scss */
-  .nav-bar a:hover {
+  /* line 26, scss/main.scss */
+  .nav-bar-container a:hover {
     color: grey; }
 
-/* BANNER */
-/* line 38, scss/main.scss */
+/* BANNER STARTSIDA */
+/* line 33, scss/main.scss */
 section {
-  height: 50%;
-  margin: 0;
-  padding: 0; }
+  height: 50%; }
 
-/* line 44, scss/main.scss */
-.wrapper-container {
+@media screen and (min-width: 769px) {
+  /* line 37, scss/main.scss */
+  section {
+    height: 100%; } }
+
+/* line 41, scss/main.scss */
+.section-container {
   height: 100%;
   width: 100%;
   position: relative; }
 
-/* line 50, scss/main.scss */
-.wrapper-one,
-.wrapper-two,
-.wrapper-three {
+/* line 46, scss/main.scss */
+.hero-one,
+.hero-two,
+.hero-three {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -58,17 +62,17 @@ section {
   width: 100%;
   position: absolute; }
 
-/* line 61, scss/main.scss */
-.wrapper-one {
+/* line 56, scss/main.scss */
+.hero-one {
   background-image: url("../images/hero-1.jpg"); }
 
-/* line 64, scss/main.scss */
-.wrapper-two {
+/* line 59, scss/main.scss */
+.hero-two {
   background-image: url("../images/hero-2.jpg");
   animation: slideTwoAnim 5s infinite; }
 
-/* line 68, scss/main.scss */
-.wrapper-three {
+/* line 63, scss/main.scss */
+.hero-three {
   background-image: url("../images/hero-3.jpg");
   animation: slideThreeAnim 5s infinite; }
 
@@ -98,31 +102,24 @@ section {
   100% {
     opacity: 0; } }
 
-@media screen and (min-width: 769px) {
-  /* line 91, scss/main.scss */
-  section {
-    height: 100%;
-    margin: 0;
-    padding: 0; } }
-
-/* PRODUKTBILDER PÅ MAINPAGE */
-/* line 100, scss/main.scss */
-.image-container {
+/* PRODUKTBILDER STARTSIDA */
+/* line 85, scss/main.scss */
+.product-image-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 20px; }
 
-/* line 108, scss/main.scss */
+/* line 93, scss/main.scss */
 .product-image {
   position: relative;
   width: 100%;
   margin: 15px; }
-  /* line 113, scss/main.scss */
+  /* line 97, scss/main.scss */
   .product-image img {
     width: 100%; }
-  /* line 117, scss/main.scss */
+  /* line 100, scss/main.scss */
   .product-image button {
     cursor: pointer;
     text-align: center;
@@ -139,16 +136,16 @@ section {
     padding: 12px 24px; }
 
 @media screen and (min-width: 769px) {
-  /* line 129, scss/main.scss */
-  .image-container {
+  /* line 111, scss/main.scss */
+  .product-image-container {
     width: 100%;
     display: flex;
     flex-wrap: nowrap; }
-    /* line 133, scss/main.scss */
-    .image-container .product-image {
+    /* line 115, scss/main.scss */
+    .product-image-container .product-image {
       width: 50%; }
-      /* line 135, scss/main.scss */
-      .image-container .product-image .button {
+      /* line 117, scss/main.scss */
+      .product-image-container .product-image .button {
         cursor: pointer;
         text-align: center;
         background-color: #d5bccf;
@@ -164,7 +161,7 @@ section {
         padding: 12px 24px; } }
 
 /* PRODUKTSIDOR */
-/* line 150, scss/main.scss */
+/* line 132, scss/main.scss */
 .product-page-header {
   background-color: #d5bccf;
   width: 100%;
@@ -172,7 +169,7 @@ section {
   display: flex;
   justify-content: center; }
 
-/* line 158, scss/main.scss */
+/* line 140, scss/main.scss */
 .wrapperProductPage {
   margin-top: 15px;
   display: flex;
@@ -182,26 +179,26 @@ section {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif; }
 
-/* line 168, scss/main.scss */
+/* line 150, scss/main.scss */
 .itemDiv {
   width: 100%;
   margin-left: 20px;
   margin-right: 20px; }
 
-/* line 175, scss/main.scss */
+/* line 157, scss/main.scss */
 .itemDiv:hover {
   cursor: pointer; }
 
-/* line 179, scss/main.scss */
+/* line 161, scss/main.scss */
 .productImage {
   width: 100%; }
 
 @media screen and (min-width: 769px) {
-  /* line 184, scss/main.scss */
+  /* line 166, scss/main.scss */
   .itemDiv {
     width: 30%; } }
 
-/* line 191, scss/main.scss */
+/* line 173, scss/main.scss */
 #shoppingCart {
   display: flex;
   flex-wrap: wrap;
@@ -209,7 +206,7 @@ section {
   width: 100px;
   z-index: 10000; }
 
-/* line 201, scss/main.scss */
+/* line 183, scss/main.scss */
 #goToCheckout {
   cursor: pointer;
   text-align: center;
@@ -219,50 +216,50 @@ section {
   font-size: 0,8rem;
   padding: 1%; }
 
-/* line 205, scss/main.scss */
+/* line 187, scss/main.scss */
 #shoppingcartExtend {
   border: 1px solid blue;
   display: flex;
   flex-direction: column; }
-  /* line 210, scss/main.scss */
+  /* line 192, scss/main.scss */
   #shoppingcartExtend #shoppingCartDiv {
     border: 5px solid pink; }
 
-/* line 216, scss/main.scss */
+/* line 198, scss/main.scss */
 .hidden {
   display: none; }
 
-/* line 221, scss/main.scss */
+/* line 203, scss/main.scss */
 #specificProductContentwrap {
   display: flex;
   justify-content: center;
   margin-top: 10%;
   width: 100%;
   flex-wrap: wrap; }
-  /* line 227, scss/main.scss */
+  /* line 209, scss/main.scss */
   #specificProductContentwrap img {
     width: 100%; }
-  /* line 230, scss/main.scss */
+  /* line 212, scss/main.scss */
   #specificProductContentwrap #productTextBox {
     display: flex;
     flex-direction: column;
     width: 100%; }
-    /* line 234, scss/main.scss */
+    /* line 216, scss/main.scss */
     #specificProductContentwrap #productTextBox h1 {
       font-size: 1.5rem;
       margin-left: 5%; }
-    /* line 238, scss/main.scss */
+    /* line 220, scss/main.scss */
     #specificProductContentwrap #productTextBox #description, #specificProductContentwrap #productTextBox #dropDownMenu {
       font-size: 1rem;
       margin-left: 5%;
       margin-top: 0; }
-    /* line 243, scss/main.scss */
+    /* line 225, scss/main.scss */
     #specificProductContentwrap #productTextBox #productPrize {
       font-size: 1.8rem;
       font-weight: bold;
       margin-left: 5%;
       margin-top: 0; }
-    /* line 250, scss/main.scss */
+    /* line 232, scss/main.scss */
     #specificProductContentwrap #productTextBox #addToCartButton {
       cursor: pointer;
       text-align: center;
@@ -274,50 +271,50 @@ section {
       width: 90%;
       align-self: center;
       margin-top: -3%; }
-  /* line 258, scss/main.scss */
+  /* line 240, scss/main.scss */
   #specificProductContentwrap #dropDownMenu {
     list-style-type: none;
     border: 1px solid black;
     width: 30%;
     text-align: left;
     padding: 0; }
-    /* line 264, scss/main.scss */
+    /* line 246, scss/main.scss */
     #specificProductContentwrap #dropDownMenu .sizeOption {
       margin-top: 5px; }
-    /* line 267, scss/main.scss */
+    /* line 249, scss/main.scss */
     #specificProductContentwrap #dropDownMenu li:hover {
       background-color: #3a93ce;
       cursor: pointer; }
 
 @media screen and (min-width: 769px) {
-  /* line 276, scss/main.scss */
+  /* line 258, scss/main.scss */
   #specificProductContentwrap {
     display: flex;
     justify-content: center;
     width: 100%; }
-    /* line 280, scss/main.scss */
+    /* line 262, scss/main.scss */
     #specificProductContentwrap img {
       width: 40%; }
-    /* line 283, scss/main.scss */
+    /* line 265, scss/main.scss */
     #specificProductContentwrap #productTextBox {
       display: flex;
       flex-direction: column;
       width: 40%; }
-      /* line 287, scss/main.scss */
+      /* line 269, scss/main.scss */
       #specificProductContentwrap #productTextBox h1 {
         font-size: 1.5rem;
         margin-left: 5%;
         margin-top: 5%; }
-      /* line 292, scss/main.scss */
+      /* line 274, scss/main.scss */
       #specificProductContentwrap #productTextBox #description, #specificProductContentwrap #productTextBox #dropDownMenu {
         font-size: 1rem;
         margin-left: 5%; }
-      /* line 296, scss/main.scss */
+      /* line 278, scss/main.scss */
       #specificProductContentwrap #productTextBox #productPrize {
         font-size: 1.8rem;
         font-weight: bold;
         margin-left: 5%; }
-      /* line 301, scss/main.scss */
+      /* line 283, scss/main.scss */
       #specificProductContentwrap #productTextBox #addToCartButton {
         cursor: pointer;
         text-align: center;
@@ -329,17 +326,17 @@ section {
         width: 40%;
         margin-top: 50%;
         margin-left: -51%; }
-    /* line 309, scss/main.scss */
+    /* line 291, scss/main.scss */
     #specificProductContentwrap #dropDownMenu {
       list-style-type: none;
       border: 1px solid black;
       width: 30%;
       text-align: left;
       padding: 0; }
-      /* line 315, scss/main.scss */
+      /* line 297, scss/main.scss */
       #specificProductContentwrap #dropDownMenu .sizeOption {
         margin-top: 5px; }
-      /* line 318, scss/main.scss */
+      /* line 300, scss/main.scss */
       #specificProductContentwrap #dropDownMenu li:hover {
         background-color: #3a93ce;
         cursor: pointer; } }
@@ -347,20 +344,20 @@ section {
 /*
 Style for Validation Message
 */
-/* line 330, scss/main.scss */
+/* line 312, scss/main.scss */
 #username-error, #email-error {
   color: #d9534f;
   padding: 12px;
   display: none; }
 
 /* KASSA SIDAN mobil */
-/* line 338, scss/main.scss */
+/* line 320, scss/main.scss */
 #checkout-form-wrap {
   display: flex;
   flex-direction: column;
   align-items: center; }
 
-/* line 343, scss/main.scss */
+/* line 325, scss/main.scss */
 .checkout-products {
   display: flex;
   flex-direction: column;
@@ -369,47 +366,47 @@ Style for Validation Message
   text-align: center;
   background-color: #f1f1f1;
   width: 90%; }
-  /* line 352, scss/main.scss */
+  /* line 334, scss/main.scss */
   .checkout-products .product-Div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 90%; }
-    /* line 357, scss/main.scss */
+    /* line 339, scss/main.scss */
     .checkout-products .product-Div img {
       width: 90%; }
     @media screen and (min-width: 769px) {
-      /* line 362, scss/main.scss */
+      /* line 344, scss/main.scss */
       .checkout-products .product-Div img {
         width: 40%;
         height: auto; } }
-    /* line 366, scss/main.scss */
+    /* line 348, scss/main.scss */
     .checkout-products .product-Div .product-text-div {
       display: flex;
       align-items: center;
       flex-direction: column; }
-      /* line 370, scss/main.scss */
+      /* line 352, scss/main.scss */
       .checkout-products .product-Div .product-text-div h5 {
         font-size: 1.2rem; }
 
-/* line 378, scss/main.scss */
+/* line 360, scss/main.scss */
 .checkout-forms {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
   text-align: center; }
-  /* line 384, scss/main.scss */
+  /* line 366, scss/main.scss */
   .checkout-forms form {
     width: 90%; }
-    /* line 386, scss/main.scss */
+    /* line 368, scss/main.scss */
     .checkout-forms form div {
       background-color: #f1f1f1;
       padding-top: 20px;
       padding-bottom: 20px;
       margin-top: 20px;
       margin-bottom: 20px; }
-      /* line 392, scss/main.scss */
+      /* line 374, scss/main.scss */
       .checkout-forms form div button {
         cursor: pointer;
         text-align: center;

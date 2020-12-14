@@ -11,7 +11,6 @@
 }
 
 @mixin button-small {
-
         cursor: pointer;
         text-align: center;
         background-color: $button-color;
@@ -22,7 +21,6 @@
       }
 
 @mixin button-medium {
-
     cursor: pointer;
     text-align: center;
     background-color: $button-color;
@@ -41,6 +39,20 @@
     border: none;
     font-size: 1.3rem;
     padding: 2%;
+  }
+
+  @mixin flex-full-width-nowrap-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+
+  @mixin flex-full-width-wrap-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
 
