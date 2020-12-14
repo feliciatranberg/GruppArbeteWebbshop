@@ -115,7 +115,7 @@ body, html {
 }
 
  button { 
-  @include button;
+  @include button-medium;
   position: absolute;
   top: 75%; 
   left: 50%;
@@ -130,9 +130,18 @@ body, html {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-  }
   .product-image {
   width: 50%;
+.button { 
+  @include button-large;
+  position: absolute;
+  top: 75%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  padding: 12px 24px;    
+}
+}
 }
 }
 
@@ -190,7 +199,7 @@ body, html {
 }
 
 #goToCheckout {
-  @include button;
+  @include button-small;
 }
 
 #shoppingcartExtend{
@@ -239,10 +248,8 @@ body, html {
   }
  
     #addToCartButton {
-    @include button;
-    font-size: 1.5rem;
+    @include button-large;
     width: 90%;
-    padding: 3%;
     align-self: center;
     margin-top: -3%;
   }  
@@ -292,12 +299,10 @@ body, html {
     margin-left: 5%;
   }
     #addToCartButton {
-    @include button;
-    font-size: 1.5rem;
+    @include button-large;
     width: 40%;
-    padding: 3%;
     margin-top: 50%;
-    margin-left: -50%;
+    margin-left: -51%;
   }  
    }
 
@@ -329,7 +334,7 @@ Style for Validation Message
 }
 
 
-/* KASSA SIDAN */ 
+/* KASSA SIDAN mobil */ 
 #checkout-form-wrap{
   display:flex;
   flex-direction: column;
@@ -344,31 +349,31 @@ Style for Validation Message
  text-align: center;
  background-color: #f1f1f1;
  width: 90%;
- height: 20%;
 .product-Div{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  height: 40%;
   width: 90%;
-  border: 3px black solid;
-
   img {
-   
-    width: 15%;
-    height: auto;
+    width: 90%;
+  
   }
+  @include tablets-up {   
+  img {
+    width: 40%;
+    height: auto;
+  }}
  .product-text-div{
    display:flex;
-   border:2px solid red;
+   align-items: center;
    flex-direction: column;
   h5{
-    flex-grow: 1;
     font-size: 1.2rem;
-    margin: 2% 0 0 2%;
   }
  }
 }
 }
+
 
 .checkout-forms {
  display: flex;
@@ -377,18 +382,16 @@ Style for Validation Message
  align-items: center;
  text-align: center;
  form {
- width: 90%;
- }  
+ width: 90%; 
 div {
   background-color: $bg-color-secondary;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-.button{
-  @include button;
+ button {
+  @include button-medium;
 }
 }
-
+}
+}

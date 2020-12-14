@@ -10,17 +10,38 @@
     }
 }
 
-@mixin button {
+@mixin button-small {
 
         cursor: pointer;
         text-align: center;
         background-color: $button-color;
         color: white;
         border: none;
-        text-decoration: none;  
+        font-size: 0,8rem;
+        padding: 1%;
       }
-      .button:hover {
-        background-color: #edd1e7;
-}
+
+@mixin button-medium {
+
+    cursor: pointer;
+    text-align: center;
+    background-color: $button-color;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    padding: 1.4%;
+  }
+
+
+@mixin button-large {
+    cursor: pointer;
+    text-align: center;
+    background-color: $button-color;
+    color: white;
+    border: none;
+    font-size: 1.3rem;
+    padding: 2%;
+  }
+
 
 
