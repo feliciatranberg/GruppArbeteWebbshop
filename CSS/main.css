@@ -6,6 +6,7 @@ $button-color: #de8f40;
 $button-hover-color: #cf8134; */
 /* TYPSNITT OCH TYPSTORLEK */
 /* vet inte alls om jag ska använda mig att detta system, testar lite bara :) */
+/* line 4, scss/main.scss */
 body, html {
   z-index: 0;
   margin: 0;
@@ -17,6 +18,7 @@ body, html {
   font-family: Arial, Helvetica, sans-serif; }
 
 /* NAVIGERING */
+/* line 17, scss/main.scss */
 .nav-bar-container {
   width: 100%;
   display: flex;
@@ -25,10 +27,13 @@ body, html {
   position: fixed;
   top: 0;
   z-index: 1000;
-  background-color: white; }
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif; }
   @media screen and (min-width: 769px) {
+    /* line 17, scss/main.scss */
     .nav-bar-container {
       position: static; } }
+  /* line 22, scss/main.scss */
   .nav-bar-container a {
     text-align: center;
     padding: 12px 0;
@@ -36,22 +41,27 @@ body, html {
     color: black;
     font-size: 20px;
     text-decoration: none; }
+  /* line 30, scss/main.scss */
   .nav-bar-container a:hover {
     color: grey; }
 
 /* BANNER STARTSIDA */
+/* line 37, scss/main.scss */
 section {
   height: 50%; }
 
 @media screen and (min-width: 769px) {
+  /* line 41, scss/main.scss */
   section {
     height: 100%; } }
 
+/* line 45, scss/main.scss */
 .section-container {
   height: 100%;
   width: 100%;
   position: relative; }
 
+/* line 50, scss/main.scss */
 .hero-one,
 .hero-two,
 .hero-three {
@@ -62,13 +72,16 @@ section {
   width: 100%;
   position: absolute; }
 
+/* line 60, scss/main.scss */
 .hero-one {
   background-image: url("../images/hero-1.jpg"); }
 
+/* line 63, scss/main.scss */
 .hero-two {
   background-image: url("../images/hero-2.jpg");
   animation: slideTwoAnim 5s infinite; }
 
+/* line 67, scss/main.scss */
 .hero-three {
   background-image: url("../images/hero-3.jpg");
   animation: slideThreeAnim 5s infinite; }
@@ -100,19 +113,24 @@ section {
     opacity: 0; } }
 
 /* PRODUKTBILDER STARTSIDA */
+/* line 89, scss/main.scss */
 .product-image-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
-  margin-bottom: 20px; }
+  justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 2% 0 2% 0; }
 
+/* line 93, scss/main.scss */
 .product-image {
   position: relative;
   width: 100%;
   margin: 15px; }
+  /* line 97, scss/main.scss */
   .product-image img {
     width: 100%; }
+  /* line 100, scss/main.scss */
   .product-image button {
     cursor: pointer;
     text-align: center;
@@ -120,29 +138,33 @@ section {
     color: white;
     border: none;
     font-size: 1.1rem;
-    padding: 1.4%;
+    padding: 3% 4% 3% 4%;
     position: absolute;
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    padding: 12px 24px; }
+    -ms-transform: translate(-50%, -50%); }
 
 @media screen and (min-width: 769px) {
+  /* line 110, scss/main.scss */
   .product-image-container {
     width: 100%;
     display: flex;
-    flex-wrap: nowrap; }
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif; }
+    /* line 112, scss/main.scss */
     .product-image-container .product-image {
-      width: 50%; }
+      width: 100%; }
+      /* line 114, scss/main.scss */
       .product-image-container .product-image .button {
         cursor: pointer;
         text-align: center;
         background-color: #d5bccf;
         color: white;
         border: none;
-        font-size: 1.3rem;
-        padding: 2%;
+        font-size: 1.2rem;
+        padding: 2% 4% 2% 4%;
         position: absolute;
         top: 75%;
         left: 50%;
@@ -151,6 +173,7 @@ section {
         padding: 12px 24px; } }
 
 /* PRODUKTSIDOR */
+/* line 129, scss/main.scss */
 .product-page-header {
   background-color: #d5bccf;
   width: 100%;
@@ -158,30 +181,48 @@ section {
   display: flex;
   justify-content: center; }
 
+/* line 136, scss/main.scss */
 .wrapperProductPage {
-  margin-top: 15px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 100%;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10%; }
 
+/* line 140, scss/main.scss */
 .itemDiv {
   width: 100%;
-  margin-left: 20px;
-  margin-right: 20px; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: column;
+  align-items: center; }
+  /* line 144, scss/main.scss */
+  .itemDiv img {
+    width: 85%; }
 
+/* line 148, scss/main.scss */
 .itemDiv:hover {
   cursor: pointer; }
 
-.productImage {
-  width: 100%; }
-
 @media screen and (min-width: 769px) {
+  /* line 153, scss/main.scss */
+  .wrapperProductPage {
+    margin-top: 3%;
+    justify-content: center; }
+  /* line 157, scss/main.scss */
   .itemDiv {
-    width: 30%; } }
+    width: 27%; }
+    /* line 159, scss/main.scss */
+    .itemDiv img {
+      width: 90%; }
+  /* line 163, scss/main.scss */
+  .itemDiv:hover {
+    cursor: pointer; } }
 
+/* line 169, scss/main.scss */
 #shoppingCart {
   display: flex;
   flex-wrap: wrap;
@@ -189,13 +230,16 @@ section {
   border: 1px solid red;
   width: 100%;
   z-index: 10000; }
+  /* line 176, scss/main.scss */
   #shoppingCart .shoppingCartImgDiv img {
     width: 100%;
     height: auto; }
+  /* line 182, scss/main.scss */
   #shoppingCart .shoppingCartItemDiv {
     display: flex;
     justify-content: space-between;
     border: 1px solid black; }
+    /* line 186, scss/main.scss */
     #shoppingCart .shoppingCartItemDiv .shoppingCartDeleteBtn {
       color: red;
       background: none;
@@ -203,9 +247,11 @@ section {
       font-size: 1.5rem;
       justify-self: flex-end; }
 
+/* line 196, scss/main.scss */
 #shoppingcartButton:hover {
   cursor: pointer; }
 
+/* line 201, scss/main.scss */
 #goToCheckout {
   cursor: pointer;
   text-align: center;
@@ -215,11 +261,13 @@ section {
   font-size: 0,8rem;
   padding: 1%; }
 
+/* line 205, scss/main.scss */
 #shoppingcartExtend {
   border: 1px solid blue;
   display: flex;
   flex-direction: column;
   z-index: 5; }
+  /* line 213, scss/main.scss */
   #shoppingcartExtend #shoppingCartDiv {
     position: absolute;
     left: 70%;
@@ -228,97 +276,118 @@ section {
     width: 25%;
     border: 1px solid pink; }
 
+/* line 225, scss/main.scss */
 .hidden {
   display: none; }
 
+/* line 230, scss/main.scss */
 #specificProductContentwrap {
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 15%;
   width: 100%;
   flex-wrap: wrap; }
+  /* line 236, scss/main.scss */
   #specificProductContentwrap img {
     width: 100%; }
+  /* line 239, scss/main.scss */
   #specificProductContentwrap #productTextBox {
     display: flex;
     flex-direction: column;
     width: 100%; }
+    /* line 243, scss/main.scss */
     #specificProductContentwrap #productTextBox h1 {
       font-size: 1.5rem;
       margin-left: 5%; }
+    /* line 247, scss/main.scss */
     #specificProductContentwrap #productTextBox #description, #specificProductContentwrap #productTextBox #dropDownMenu {
       font-size: 1rem;
       margin-left: 5%;
       margin-top: 0; }
+    /* line 252, scss/main.scss */
     #specificProductContentwrap #productTextBox #productPrize {
       font-size: 1.8rem;
       font-weight: bold;
       margin-left: 5%;
       margin-top: 0; }
+    /* line 259, scss/main.scss */
     #specificProductContentwrap #productTextBox #addToCartButton {
       cursor: pointer;
       text-align: center;
       background-color: #d5bccf;
       color: white;
       border: none;
-      font-size: 1.3rem;
-      padding: 2%;
+      font-size: 1.2rem;
+      padding: 2% 4% 2% 4%;
       width: 90%;
       align-self: center;
       margin-top: -3%; }
+  /* line 267, scss/main.scss */
   #specificProductContentwrap #dropDownMenu {
     list-style-type: none;
     border: 1px solid black;
     width: 30%;
     text-align: left;
     padding: 0; }
+    /* line 273, scss/main.scss */
     #specificProductContentwrap #dropDownMenu .sizeOption {
       margin-top: 5px; }
+    /* line 276, scss/main.scss */
     #specificProductContentwrap #dropDownMenu li:hover {
       background-color: #3a93ce;
       cursor: pointer; }
 
 @media screen and (min-width: 769px) {
+  /* line 285, scss/main.scss */
   #specificProductContentwrap {
     display: flex;
     justify-content: center;
     width: 100%; }
+    /* line 289, scss/main.scss */
     #specificProductContentwrap img {
       width: 40%; }
+    /* line 292, scss/main.scss */
     #specificProductContentwrap #productTextBox {
       display: flex;
       flex-direction: column;
       width: 40%; }
+      /* line 296, scss/main.scss */
       #specificProductContentwrap #productTextBox h1 {
         font-size: 1.5rem;
         margin-left: 5%;
         margin-top: 5%; }
+      /* line 301, scss/main.scss */
       #specificProductContentwrap #productTextBox #description, #specificProductContentwrap #productTextBox #dropDownMenu {
         font-size: 1rem;
         margin-left: 5%; }
+      /* line 305, scss/main.scss */
       #specificProductContentwrap #productTextBox #productPrize {
         font-size: 1.8rem;
         font-weight: bold;
         margin-left: 5%; }
+      /* line 310, scss/main.scss */
       #specificProductContentwrap #productTextBox #addToCartButton {
         cursor: pointer;
         text-align: center;
         background-color: #d5bccf;
         color: white;
         border: none;
-        font-size: 1.3rem;
-        padding: 2%;
+        font-size: 1.2rem;
+        padding: 2% 4% 2% 4%;
         width: 40%;
         margin-top: 50%;
         margin-left: -51%; }
+    /* line 318, scss/main.scss */
     #specificProductContentwrap #dropDownMenu {
       list-style-type: none;
       border: 1px solid black;
       width: 30%;
       text-align: left;
       padding: 0; }
+      /* line 324, scss/main.scss */
       #specificProductContentwrap #dropDownMenu .sizeOption {
         margin-top: 5px; }
+      /* line 327, scss/main.scss */
       #specificProductContentwrap #dropDownMenu li:hover {
         background-color: #3a93ce;
         cursor: pointer; } }
@@ -326,17 +395,20 @@ section {
 /*
 Style for Validation Message
 */
+/* line 337, scss/main.scss */
 #username-error, #email-error {
   color: #d9534f;
   padding: 12px;
   display: none; }
 
 /* KASSA SIDAN mobil */
+/* line 345, scss/main.scss */
 #checkout-form-wrap {
   display: flex;
   flex-direction: column;
   align-items: center; }
 
+/* line 350, scss/main.scss */
 .checkout-products {
   display: flex;
   flex-direction: column;
@@ -345,40 +417,49 @@ Style for Validation Message
   text-align: center;
   background-color: #f1f1f1;
   width: 90%; }
+  /* line 359, scss/main.scss */
   .checkout-products .product-Div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 90%;
     border: 1px solid black; }
+    /* line 365, scss/main.scss */
     .checkout-products .product-Div img {
       width: 90%; }
     @media screen and (min-width: 769px) {
+      /* line 370, scss/main.scss */
       .checkout-products .product-Div img {
         width: 40%;
         height: auto; } }
+    /* line 374, scss/main.scss */
     .checkout-products .product-Div .product-text-div {
       display: flex;
       align-items: center;
       flex-direction: column;
       border: 1px solid red; }
+      /* line 379, scss/main.scss */
       .checkout-products .product-Div .product-text-div h5 {
         font-size: 1.2rem; }
 
+/* line 387, scss/main.scss */
 .checkout-forms {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
   text-align: center; }
+  /* line 393, scss/main.scss */
   .checkout-forms form {
     width: 90%; }
+    /* line 395, scss/main.scss */
     .checkout-forms form div {
       background-color: #f1f1f1;
       padding-top: 20px;
       padding-bottom: 20px;
       margin-top: 20px;
       margin-bottom: 20px; }
+      /* line 401, scss/main.scss */
       .checkout-forms form div button {
         cursor: pointer;
         text-align: center;
@@ -386,4 +467,4 @@ Style for Validation Message
         color: white;
         border: none;
         font-size: 1.1rem;
-        padding: 1.4%; }
+        padding: 3% 4% 3% 4%; }

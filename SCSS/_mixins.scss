@@ -27,7 +27,7 @@
     color: white;
     border: none;
     font-size: 1.1rem;
-    padding: 1.4%;
+    padding: 3% 4% 3% 4%;
   }
 
 
@@ -37,11 +37,27 @@
     background-color: $button-color;
     color: white;
     border: none;
-    font-size: 1.3rem;
-    padding: 2%;
+    font-size: 1.2rem;
+    padding: 2% 4% 2% 4%;
+  }
+
+  @mixin flex-full-width-wrap-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   @mixin flex-full-width-nowrap-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  @mixin flex-full-width-nowrap-fixed-container {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
@@ -50,13 +66,7 @@
     top: 0;
     z-index: 1000;
     background-color: white;
-  }
-
-  @mixin flex-full-width-wrap-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
 

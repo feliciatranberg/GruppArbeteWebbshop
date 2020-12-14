@@ -14,10 +14,8 @@ body, html {
 
   /* NAVIGERING */ 
 
-   
-  
   .nav-bar-container {
-    @include flex-full-width-nowrap-container;
+    @include flex-full-width-nowrap-fixed-container;
     @include tablets-up{
       position:static;
     }
@@ -33,7 +31,6 @@ body, html {
      color: $link-hover-color;
     }
   }
-  
   
 /* BANNER STARTSIDA */ 
 
@@ -90,13 +87,9 @@ body, html {
 /* PRODUKTBILDER STARTSIDA */
 
 .product-image-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  @include flex-full-width-wrap-container;  
+  margin: 2% 0 2% 0;
   }
-
 .product-image {
   position: relative;
   width: 100%;
@@ -110,17 +103,14 @@ body, html {
   top: 75%; 
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  padding: 12px 24px;    
+  -ms-transform: translate(-50%, -50%);  
 }
 }
 @include tablets-up {
   .product-image-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
+    @include flex-full-width-nowrap-container;
   .product-image {
-  width: 50%;
+  width: 100%;
 .button { 
   @include button-large;
   position: absolute;
@@ -143,38 +133,37 @@ body, html {
    display: flex;
    justify-content: center;
  }
-
  .wrapperProductPage {
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 100%;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  @include flex-full-width-wrap-container;
+  margin-top: 10%;
  }
-
 .itemDiv{
-  width: 100%;   
-  margin-left: 20px;
-  margin-right: 20px;
- 
+  @include flex-full-width-wrap-container;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 85%;
+  }
 } 
-
 .itemDiv:hover{
    cursor: pointer;
 }
 
-.productImage {
-  width: 100%;
-}
-
 @include tablets-up { 
-  .itemDiv {
-  width: 30%;
- 
+  .wrapperProductPage {
+    margin-top: 3%;
+    justify-content: center;
+   }
+  .itemDiv{
+    width: 27%;
+    img {
+      width: 90%;
     }
-      }
+  } 
+  .itemDiv:hover{
+     cursor: pointer;
+  }
+}
 
 //Max tilägg
 #shoppingCart{
@@ -241,7 +230,7 @@ body, html {
 #specificProductContentwrap{
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 15%;
   width: 100%;
   flex-wrap: wrap;
   img{
@@ -342,8 +331,6 @@ body, html {
   }
 }
 }
-
-
 /*
 Style for Validation Message
 */
