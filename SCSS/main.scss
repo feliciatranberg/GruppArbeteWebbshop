@@ -252,14 +252,12 @@ body, html {
   }
 }
 
-
-
-
 @include tablets-up {
 #specificProductContentwrap{
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 5%;
   img{
     width: 40%;
   }
@@ -314,7 +312,7 @@ body, html {
    border: 1px solid red;
    width: 100%;
   .shoppingCartImgDiv{
-    img{
+    img{ 
       width: 100%;
       height: auto;
     }
@@ -377,73 +375,60 @@ Style for Validation Message
   display: none;
 }
 
+/* NYA KASSASIDAN */
 
-/* KASSA SIDAN mobil */ 
-#checkout-form-wrap{
-  display:flex;
-  flex-direction: column;
-  align-items: center; 
-  margin-top: 10%;
-  @include tablets-up {
-    margin-top: 1%;
-  }
-}
-.checkout-products {
- display: flex;
- flex-direction: column;
- align-items: center;
- margin-top: 10%;
- text-align: center;
- background-color: #f1f1f1;
- width: 90%;
- height: auto;
-.product-Div{
-  display: flex;
-  flex-wrap: wrap;
+#checkout-form-wrap {
+  margin-top: 15%;
+ }
+ .checkout-products {
+  width: 100%;
+ }
+ .product-Div {
+  @include flex-full-width-nowrap-container;
   justify-content: center;
-  width: 90%;
-  border: 1px solid black;
-  img {
-    width: 90%;
-  
-  }
-  @include tablets-up {   
-  img {
-    width: 40%;
-    height: auto;
-  }
-}
- .product-text-div{
-   display:flex;
-   align-items: center;
-   flex-direction: column;
-   border: 1px solid red;
-  h5{
-    font-size: 1.2rem;
-  }
+  border: green 2px solid;
+ img {
+  width: 60%;
  }
 }
-}
-
-
-.checkout-forms {
- display: flex;
- flex-direction: column;
- width: 100%;
- align-items: center;
- text-align: left;
- form {
- width: 90%; 
-}
-div {
-  background-color: $bg-color;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+ .product-text-div {
+   width: 40%;
+   border: red 2px solid;
+   h5{
+     margin-left: 5%;   
+   } 
+   h1 {
+    margin-left: 5%;
+    margin-top: -4%;
+   }
+   span {
+    margin-left: 5%;
+    margin-top: -4%;
+   }
+   button {
+    @include button-small;
  
- button {
-  @include button-medium;
+   }
+ }
+
+
+@include tablets-up { 
+#checkout-form-wrap {
+  margin-top: 2%;
+ }
+ .checkout-products {
+  width: 100%;
+ }
+ .product-Div {
+  @include flex-full-width-nowrap-container;
+  justify-content: center;
+  border: green 2px solid;
+ img {
+  width: 25%;
+ }
 }
+ .product-text-div {
+   width: 25%;
+   border: red 2px solid;
+ }
 }

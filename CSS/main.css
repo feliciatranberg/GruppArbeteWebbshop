@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @keyframes scrolling-text-container {
   from {
-    -webkit-transform: translateY(-180%);
-    transform: translateY(-180%); }
+    -webkit-transform: translateY(-130%);
+    transform: translateY(-130%); }
   to {
     -webkit-transform: translateY(0);
     transform: translateY(0); } }
@@ -75,7 +75,7 @@ section {
 .hero-one,
 .hero-two,
 .hero-three {
-  box-shadow: 7px 7px 25px grey;
+  box-shadow: 1px 1px 5px grey;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -140,7 +140,7 @@ section {
   margin: 15px; }
   /* line 86, scss/main.scss */
   .product-image img {
-    box-shadow: 7px 7px 25px grey;
+    box-shadow: 1px 1px 5px grey;
     width: 100%; }
   /* line 90, scss/main.scss */
   .product-image button {
@@ -187,7 +187,7 @@ section {
 /* RULLANDE TEXT PRODUKTSIDOR */
 /* line 119, scss/main.scss */
 .scrolling-text-container {
-  box-shadow: 7px 7px 25px grey;
+  box-shadow: 1px 1px 5px grey;
   overflow: hidden;
   position: relative;
   background: #d5bccf;
@@ -251,7 +251,7 @@ section {
 img {
   width: 85%;
   align-self: center;
-  box-shadow: 7px 7px 25px grey; }
+  box-shadow: 1px 1px 5px grey; }
 
 /* line 162, scss/main.scss */
 h2 {
@@ -353,33 +353,34 @@ p {
       cursor: pointer; }
 
 @media screen and (min-width: 769px) {
-  /* line 259, scss/main.scss */
+  /* line 256, scss/main.scss */
   #specificProductContentwrap {
     display: flex;
     justify-content: center;
-    width: 100%; }
-    /* line 263, scss/main.scss */
+    width: 100%;
+    margin-top: 5%; }
+    /* line 261, scss/main.scss */
     #specificProductContentwrap img {
       width: 40%; }
-    /* line 266, scss/main.scss */
+    /* line 264, scss/main.scss */
     #specificProductContentwrap #productTextBox {
       display: flex;
       flex-direction: column;
       width: 40%; }
-      /* line 270, scss/main.scss */
+      /* line 268, scss/main.scss */
       #specificProductContentwrap #productTextBox h1 {
         font-size: 1.5rem;
         margin-left: 5%;
         margin-top: 5%; }
-      /* line 275, scss/main.scss */
+      /* line 273, scss/main.scss */
       #specificProductContentwrap #productTextBox #description, #specificProductContentwrap #productTextBox #dropDownMenu {
         font-size: 1rem;
         margin-left: 5%; }
-      /* line 279, scss/main.scss */
+      /* line 277, scss/main.scss */
       #specificProductContentwrap #productTextBox #productPrize {
         font-weight: bold;
         margin-left: 5%; }
-      /* line 283, scss/main.scss */
+      /* line 281, scss/main.scss */
       #specificProductContentwrap #productTextBox #addToCartButton {
         cursor: pointer;
         text-align: center;
@@ -391,22 +392,22 @@ p {
         width: 40%;
         margin-top: 50%;
         margin-left: -51%; }
-    /* line 291, scss/main.scss */
+    /* line 289, scss/main.scss */
     #specificProductContentwrap #dropDownMenu {
       list-style-type: none;
       border: 1px solid black;
       width: 30%;
       text-align: left;
       padding: 0; }
-      /* line 297, scss/main.scss */
+      /* line 295, scss/main.scss */
       #specificProductContentwrap #dropDownMenu .sizeOption {
         margin-top: 5px; }
-      /* line 300, scss/main.scss */
+      /* line 298, scss/main.scss */
       #specificProductContentwrap #dropDownMenu li:hover {
         background-color: #3a93ce;
         cursor: pointer; } }
 
-/* line 310, scss/main.scss */
+/* line 308, scss/main.scss */
 #shoppingCart {
   display: flex;
   flex-wrap: wrap;
@@ -414,16 +415,16 @@ p {
   border: 1px solid red;
   width: 100%;
   z-index: 10000; }
-  /* line 317, scss/main.scss */
+  /* line 315, scss/main.scss */
   #shoppingCart .shoppingCartImgDiv img {
     width: 100%;
     height: auto; }
-  /* line 323, scss/main.scss */
+  /* line 321, scss/main.scss */
   #shoppingCart .shoppingCartItemDiv {
     display: flex;
     justify-content: space-between;
     border: 1px solid black; }
-    /* line 327, scss/main.scss */
+    /* line 325, scss/main.scss */
     #shoppingCart .shoppingCartItemDiv .shoppingCartDeleteBtn {
       color: red;
       background: none;
@@ -431,11 +432,11 @@ p {
       font-size: 1.5rem;
       justify-self: flex-end; }
 
-/* line 337, scss/main.scss */
+/* line 335, scss/main.scss */
 #shoppingcartButton:hover {
   cursor: pointer; }
 
-/* line 342, scss/main.scss */
+/* line 340, scss/main.scss */
 #goToCheckout {
   cursor: pointer;
   text-align: center;
@@ -445,13 +446,13 @@ p {
   font-size: 0,8rem;
   padding: 1%; }
 
-/* line 346, scss/main.scss */
+/* line 344, scss/main.scss */
 #shoppingcartExtend {
   border: 1px solid blue;
   display: flex;
   flex-direction: column;
   z-index: 5; }
-  /* line 354, scss/main.scss */
+  /* line 352, scss/main.scss */
   #shoppingcartExtend #shoppingCartDiv {
     position: absolute;
     left: 70%;
@@ -460,89 +461,86 @@ p {
     width: 25%;
     border: 1px solid pink; }
 
-/* line 366, scss/main.scss */
+/* line 364, scss/main.scss */
 .hidden {
   display: none; }
 
 /*
 Style for Validation Message
 */
-/* line 374, scss/main.scss */
+/* line 372, scss/main.scss */
 #username-error, #email-error {
   color: #d9534f;
   padding: 12px;
   display: none; }
 
-/* KASSA SIDAN mobil */
-/* line 382, scss/main.scss */
+/* NYA KASSASIDAN */
+/* line 380, scss/main.scss */
 #checkout-form-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10%; }
-  @media screen and (min-width: 769px) {
-    /* line 382, scss/main.scss */
-    #checkout-form-wrap {
-      margin-top: 1%; } }
+  margin-top: 15%; }
 
-/* line 391, scss/main.scss */
+/* line 383, scss/main.scss */
 .checkout-products {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10%;
-  text-align: center;
-  background-color: #f1f1f1;
-  width: 90%;
-  height: auto; }
-  /* line 400, scss/main.scss */
-  .checkout-products .product-Div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 90%;
-    border: 1px solid black; }
-    /* line 406, scss/main.scss */
-    .checkout-products .product-Div img {
-      width: 90%; }
-    @media screen and (min-width: 769px) {
-      /* line 411, scss/main.scss */
-      .checkout-products .product-Div img {
-        width: 40%;
-        height: auto; } }
-    /* line 416, scss/main.scss */
-    .checkout-products .product-Div .product-text-div {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      border: 1px solid red; }
-      /* line 421, scss/main.scss */
-      .checkout-products .product-Div .product-text-div h5 {
-        font-size: 1.2rem; }
+  width: 100%; }
 
-/* line 429, scss/main.scss */
-.checkout-forms {
-  display: flex;
-  flex-direction: column;
+/* line 386, scss/main.scss */
+.product-Div {
   width: 100%;
-  align-items: center;
-  text-align: left; }
-  /* line 435, scss/main.scss */
-  .checkout-forms form {
-    width: 90%; }
-  /* line 438, scss/main.scss */
-  .checkout-forms div {
-    background-color: #f1f1f1;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px; }
-  /* line 446, scss/main.scss */
-  .checkout-forms button {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  border: green 2px solid; }
+  /* line 390, scss/main.scss */
+  .product-Div img {
+    width: 60%; }
+
+/* line 394, scss/main.scss */
+.product-text-div {
+  width: 40%;
+  border: red 2px solid; }
+  /* line 397, scss/main.scss */
+  .product-text-div h5 {
+    margin-left: 5%; }
+  /* line 400, scss/main.scss */
+  .product-text-div h1 {
+    margin-left: 5%;
+    margin-top: -4%; }
+  /* line 404, scss/main.scss */
+  .product-text-div span {
+    margin-left: 5%;
+    margin-top: -4%; }
+  /* line 408, scss/main.scss */
+  .product-text-div button {
     cursor: pointer;
     text-align: center;
     background-color: #d5bccf;
     color: white;
     border: none;
-    font-size: 1.1rem;
-    padding: 3% 4% 3% 4%; }
+    font-size: 0,8rem;
+    padding: 1%; }
+
+@media screen and (min-width: 769px) {
+  /* line 416, scss/main.scss */
+  #checkout-form-wrap {
+    margin-top: 2%; }
+  /* line 419, scss/main.scss */
+  .checkout-products {
+    width: 100%; }
+  /* line 422, scss/main.scss */
+  .product-Div {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    border: green 2px solid; }
+    /* line 426, scss/main.scss */
+    .product-Div img {
+      width: 25%; }
+  /* line 430, scss/main.scss */
+  .product-text-div {
+    width: 25%;
+    border: red 2px solid; } }

@@ -30,7 +30,7 @@
     padding: 3% 4% 3% 4%;
   }
 
-@mixin button-large {
+@mixin button-large {   
     cursor: pointer;
     text-align: center;
     background-color: $button-color;
@@ -38,14 +38,16 @@
     border: none;
     font-size: 1.2rem;
     padding: 2% 4% 2% 4%;
-  }
+}
+
+
 
   @mixin flex-full-width-wrap-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $font-family;
   }
 
   @mixin flex-full-width-nowrap-container {
@@ -53,7 +55,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $font-family;
   }
 
   @mixin flex-full-width-nowrap-fixed-container {
@@ -65,7 +67,7 @@
     top: 0;
     z-index: 1000;
     background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $font-family;
   }
 
   @mixin scrolling-text {
@@ -81,8 +83,8 @@
     
       @keyframes scrolling-text-container {
         from {
-          -webkit-transform: translateY(-180%);
-                  transform: translateY(-180%);
+          -webkit-transform: translateY(-130%);
+                  transform: translateY(-130%);
         }
         to {
           -webkit-transform: translateY(0);
@@ -110,5 +112,5 @@
   }
 
   @mixin shadow {
-    box-shadow: 7px 7px 25px grey;
+    box-shadow: 1px 1px 5px grey;
   }
