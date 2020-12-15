@@ -124,21 +124,22 @@ body, html {
   color: $text-color-secondary;
   height: 30%;
   width: 100%;
+  text-align: center;
   font-family: Impact, 'Arial Narrow Bold';
  }
  .scrolling-text-container p {
   position: absolute;
   width: 100%;
-  font-size: 3rem;
-  margin-top: 26%;
+  margin-top: 30%;
+  font-size: 3rem; 
   @include scrolling-text;
  }
  @include tablets-up {
   .scrolling-text-container p {
     position: absolute;
     width: 100%;
+    margin-top: 3%;
     font-size: 5rem;
-    margin-top: 4%;
     @include scrolling-text;
    }
  }

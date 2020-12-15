@@ -74,22 +74,21 @@
        -webkit-transform:translateX(100%);	
        transform:translateX(100%);
        /* Apply animation to this element */	
-       -moz-animation: scrolling-text-container 15s linear infinite;
-       -webkit-animation: sscrolling-text-container 15s linear infinite;
-       animation: scrolling-text-container 15s linear infinite;
+       -moz-animation: scrolling-text-container 5s linear infinite;
+       -webkit-animation: sscrolling-text-container 5s linear infinite;
+       animation: scrolling-text-container 5s linear infinite;
       }
     
       @keyframes scrolling-text-container {
-       0%   { 
-       -moz-transform: translateX(100%); /* Browser bug fix */
-       -webkit-transform: translateX(100%); /* Browser bug fix */
-       transform: translateX(100%); 		
-       }
-       100% { 
-       -moz-transform: translateX(-100%); /* Browser bug fix */
-       -webkit-transform: translateX(-100%); /* Browser bug fix */
-       transform: translateX(-100%); 
-       }
+        from {
+          -webkit-transform: translateY(-180%);
+                  transform: translateY(-180%);
+        }
+        to {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      
   }
 
   @mixin keyframes-hero-banner {
