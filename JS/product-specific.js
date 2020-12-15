@@ -150,12 +150,22 @@ function checkoutCreator(i,item){
         let shoppingCartItemDiv=($("<div>"))
                     .addClass("shoppingCartItemDiv")
                     .appendTo($(checkout));
+
+                    let shoppingCartImgDiv=($("<div>"))
+                    .addClass("shoppingCartImgDiv")
+                    .appendTo($(checkout));
+
+                    ($("<img>"))
+                    .attr("src",item.image)
+                    .appendTo($(shoppingCartImgDiv));
+
+
                     ($("<h5>"))
                         .html(item.name)
                         .appendTo($(shoppingCartItemDiv));
                     ($("<button>"))
-                        //.addClass("")
-                        .html("X")
+                    .addClass("shoppingCartDeleteBtn")
+                    .addClass("fas fa-times")
                         .appendTo($(shoppingCartItemDiv))
                   .on("click",()=>{
                       checkoutArrFromLS.splice(i,1);
