@@ -22,7 +22,7 @@ $(function(){
     .attr("id","productTextBox")
     .appendTo(sPCW);
 
-    ($("<h1>"))
+    ($("<h2>"))
     .html(specificProduct.name)
     .appendTo($("#productTextBox"));
 
@@ -64,9 +64,9 @@ $(function(){
         .appendTo($("#dropDownMenu"));
     });
     //Dropdown 
-    ($("<p>"))
+    ($("<h1>"))
     .attr("id","productPrize")
-    .html(specificProduct.price + ":-")
+    .html(specificProduct.price + " KR")
     .appendTo($("#productTextBox"));
 
 

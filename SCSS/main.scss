@@ -153,20 +153,23 @@ body, html {
 .itemDiv{
   @include flex-full-width-wrap-container;
   flex-direction: column;
-  align-items: center;}
+}
   img {
     width: 85%;
+    align-self: center;
     @include shadow;
   }
   h2 {
-    align-self: flex-start;
-    margin-left: 10%;
-    margin-top: -3%;
+    margin-left: 11%;
+    margin-top: -1%;
   }
   h3 {
-    align-self: flex-start;
-    margin-left: 10%;
+    margin-left: 11%;
   }
+  p {
+    margin-left: 11%;
+    margin-top: -3%;
+   }
 
 .itemDiv:hover{
    cursor: pointer;
@@ -182,21 +185,126 @@ body, html {
       width: 90%;
     }
     h2 {
-      align-self: flex-start;
-      margin-left: 7%;
-      margin-top: -3%;
+      margin-left: 8%;
+      margin-top: 0%;
     }
     h3 {
-      align-self: flex-start;
-      margin-left: 7%;
+      margin-left: 8%;
+    }
+    p {
+      margin-left: 8%;
+      font-size: 14px;
+      margin-top: -5%;
+     }
+  } 
+}
+
+/* ENSKILD PRODUKTSIDA */
+
+#specificProductContentwrap{
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+  width: 100%;
+  flex-wrap: wrap;
+  img{
+    width: 100%;
+  }
+  #productTextBox{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    h2{
+      margin-top: 5%;
+      margin-left: 5%;
     }
   } 
-  .itemDiv:hover{
-     cursor: pointer;
+    #description {
+      margin-left: 5%;
+    }
+      ul {
+        margin-left: 5%;
+        margin-top: -1%;
+      }    
+    h1{
+    margin-left: 5%;
+  }  
+    #addToCartButton {
+    @include button-large;
+    width: 90%;
+    align-self: center;
+    margin-top: -3%;
+}
+
+  #dropDownMenu{
+    list-style-type: none;
+    border: 1px solid black;
+    width: 30%;
+    text-align: left;
+    padding: 0;
+    .sizeOption{
+      margin-top: 5px;
+    }
+    li:hover{
+      background-color: $button-color;
+      cursor: pointer;
+    } 
   }
 }
 
-//ganska städat tills hit ish
+
+
+
+@include tablets-up {
+#specificProductContentwrap{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  img{
+    width: 40%;
+  }
+  #productTextBox{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    h1{
+    font-size: 1.5rem;
+    margin-left: 5%;
+    margin-top: 5%;
+  }    
+  #description, #dropDownMenu {
+    font-size: 1rem;
+    margin-left: 5%;
+  }
+  #productPrize {
+    font-weight: bold;
+    margin-left: 5%;
+  }
+    #addToCartButton {
+    @include button-large;
+    width: 40%;
+    margin-top: 50%;
+    margin-left: -51%;
+  }  
+   }
+
+  #dropDownMenu{
+    list-style-type: none;
+    border: 1px solid black;
+    width: 30%;
+    text-align: left;
+    padding: 0;
+    .sizeOption{
+      margin-top: 5px;
+    }
+    li:hover{
+      background-color: rgb(58, 147, 206);
+      cursor: pointer;
+    } 
+  }
+}
+}
+
 
 //Max tilägg
 #shoppingCart{
@@ -259,111 +367,7 @@ body, html {
   display: none;
 }
 
-//product-specific
-#specificProductContentwrap{
-  display: flex;
-  justify-content: center;
-  margin-top: 15%;
-  width: 100%;
-  flex-wrap: wrap;
-  img{
-    width: 100%;
-  }
-  #productTextBox{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    h1{
-    font-size: 1.5rem;
-    margin-left: 5%;
-  }    
-  #description, #dropDownMenu {
-    font-size: 1rem;
-    margin-left: 5%;
-    margin-top: 0;
-  }
-  #productPrize {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-left: 5%;
-    margin-top: 0;
-  }
- 
-    #addToCartButton {
-    @include button-large;
-    width: 90%;
-    align-self: center;
-    margin-top: -3%;
-  }  
-   }
 
-  #dropDownMenu{
-    list-style-type: none;
-    border: 1px solid black;
-    width: 30%;
-    text-align: left;
-    padding: 0;
-    .sizeOption{
-      margin-top: 5px;
-    }
-    li:hover{
-      background-color: rgb(58, 147, 206);
-      cursor: pointer;
-    } 
-  }
-}
-
-
-@include tablets-up {
-#specificProductContentwrap{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  img{
-    width: 40%;
-  }
-  #productTextBox{
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    h1{
-    font-size: 1.5rem;
-    margin-left: 5%;
-    margin-top: 5%;
-  }    
-  #description, #dropDownMenu {
-    font-size: 1rem;
-    margin-left: 5%;
-  }
-  #productPrize {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-left: 5%;
-  }
-    #addToCartButton {
-    @include button-large;
-    width: 40%;
-    margin-top: 50%;
-    margin-left: -51%;
-  }  
-   }
-
-  #dropDownMenu{
-    list-style-type: none;
-    border: 1px solid black;
-    width: 30%;
-    text-align: left;
-    padding: 0;
-    .sizeOption{
-      margin-top: 5px;
-    }
-    li:hover{
-      background-color: rgb(58, 147, 206);
-      cursor: pointer;
-    } 
-  }
-}
-}
 /*
 Style for Validation Message
 */

@@ -64,8 +64,12 @@ $(function() {
                 .html(item.name)
                 .appendTo($(itemDiv));
 
+                ($("<p>"))
+                .html(item.description)
+                .appendTo($(itemDiv));
+
                 ($("<h2>"))
-                .html(item.price + ":-")
+                .html(item.price + " KR")
                 .appendTo($(itemDiv)); 
              })
 
