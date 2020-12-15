@@ -1,13 +1,19 @@
 $(function() {
 
+  $("button").on('click', function(){
+    dialog.dialog('open');
+  });
+
   let dialog = $("#dialog").dialog({
     autoOpen: false,
     modal: true,
-    height: 400,
-    width: 400
+   buttons: {
+     Ok: function() {
+       $(this).dialog('close');   
+  }}
+});
     
  
-});
 //Felicia modalfunktion
     // $.fn.serializeObject = function() {
     //     let $form = this.is("form") ? this : this.find("form"),
@@ -44,9 +50,11 @@ $(function() {
     //   .html(JSON.stringify($form.serializeObject()))
     //   .appendTo("#dialog-content");
     // });  
+
           
     finalCheckoutList();
       });
+
 
   
   function finalCheckoutList(){
@@ -77,7 +85,7 @@ $(function() {
             .appendTo($(productTextDiv));
 
             ($("<span>"))
-            .html(item.size)
+            .html(item.size + " ")
             .appendTo($(productTextDiv));
     
             ($("<button>"))
@@ -99,6 +107,9 @@ $(function() {
     });
 
   };
+
+
+
 
 
 
