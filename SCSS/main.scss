@@ -196,7 +196,7 @@ body, html {
       font-size: 14px;
       margin-top: -5%;
      }
-  } 
+   } 
 }
 
 /* ENSKILD PRODUKTSIDA */
@@ -348,7 +348,7 @@ body, html {
   display: flex;
   flex-direction: column;
   z-index: 5;
-  
+ 
   #shoppingCartDiv{
     position: absolute;
     left: 70%;
@@ -357,7 +357,11 @@ body, html {
     width: 25%;
     border: 1px solid pink;
     
- 
+    #cartNumberDisplay{
+      color: red;
+      position: relative;
+      top: -100px;
+    }
   }
 }
 

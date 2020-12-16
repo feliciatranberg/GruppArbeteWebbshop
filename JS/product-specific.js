@@ -4,7 +4,7 @@ let priceArray = [];
 let totalCount = false;
 
 $(function(){
-
+    
     let specificProduct = JSON.parse(localStorage.itemObject)
     let sizeArr = ["Medium","Large","Extra Large"];
     console.log(specificProduct);
@@ -81,8 +81,10 @@ $(function(){
         localStorage.setItem("checkoutArr",JSON.stringify(checkoutArr));
       }
       let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
-      checkoutArrFromLS.push(specificProduct)
-      shoppingCartDiv.removeClass("hidden");
+      checkoutArrFromLS.push(specificProduct);
+      
+      ($("#cartNumberDisplay")).html(checkoutArrFromLS.length);
+
       localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
 
       if (localStorage.getItem("priceArray")==null){
@@ -92,10 +94,14 @@ $(function(){
     priceArrayFromLS.push(specificProduct.price);
     localStorage.setItem("priceArray",JSON.stringify(priceArrayFromLS));
       ($("#shoppingCart")).empty();
+
+      if (window.matchMedia('(min-width: 767px)').matches) {
+        shoppingCartDiv.removeClass("hidden");
+      
       checkoutCreator();
 
       totalCreator(specificProduct);
-     
+      }
     })
     .appendTo($("#productTextBox"));
     
@@ -122,20 +128,25 @@ $(function(){
    $("#shoppingcartButton")
    
    .on("click",()=>{
+    
     if (window.matchMedia('(max-width: 767px)').matches) {
       window.location.href = "checkout.html";
     }
     else {
-    
+   
+    if (JSON.parse(localStorage.checkoutArr).length > 0 ) {
     shoppingCartDiv.toggleClass("hidden");
-
+    }
+    else {
+      console.log("varukorg e tom")
+    }
     
       
     ($("#shoppingCart")).empty();
-    
     checkoutCreator();
     totalCreator(); 
     }
+   
    });
    
 })
@@ -170,24 +181,22 @@ function checkoutCreator(i,item){
                   .on("click",()=>{
                       checkoutArrFromLS.splice(i,1);
                      
-                      //checkoutArr.splice(i,1);
-                    
+                      if (checkoutArrFromLS.length===0) {
+                        ($(shoppingCartDiv)).addClass("hidden");
+                      }
                       localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
-                    
+
                       let priceArrayFromLS =JSON.parse(localStorage.priceArray);
                       priceArrayFromLS.splice(i,1);
                       localStorage.setItem("priceArray",JSON.stringify(priceArrayFromLS));
-                      /*if (priceArrayFromLS.length == 0){
-                        totalCount = false;
-                        ($("#checkoutTotal")).html("");
-                      }*/
+                     
                       checkout.empty();
                       //($("#checkoutTotal")).empty();
                       checkoutCreator();
                       
                       totalCreator();
                       
-                      
+                        
 
                            
                           
