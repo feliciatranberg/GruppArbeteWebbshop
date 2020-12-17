@@ -432,10 +432,21 @@ Style for Validation Message
  img {
   width: 25%;
  }
+.product-text-div {
+  width: 30%;
+  h5{
+    margin-left: 10%;   
+  } 
+  h1 {
+   margin-left: 10%;
+   margin-top: -4%;
+  }
+  span {
+   margin-left: 10%;
+   margin-top: -4%;
+  }
 }
- .product-text-div {
-   width: 25%;
- }
+}
 }
 
 /* FORM */

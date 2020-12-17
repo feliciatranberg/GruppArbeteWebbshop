@@ -5,6 +5,8 @@ $(function() {
     dialog.dialog('open');
     orderComfirm();
 
+
+
     
   //  let $inputs = $('#my-form :input');
 
@@ -28,6 +30,8 @@ $(function() {
     maxWidth: 600,
     height: 'auto',
     fluid: true, 
+    my: 'left',
+    at: 'left',
     resizable: false
 });
 
