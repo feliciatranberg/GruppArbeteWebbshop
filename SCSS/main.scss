@@ -14,6 +14,10 @@ body, html {
 
   /* NAVIGERING */ 
 
+  .pink {
+    color: pink;
+  }
+
   .nav-bar-container {
     @include flex-full-width-nowrap-fixed-container;
     @include tablets-up{
@@ -217,7 +221,7 @@ body, html {
     h2{
       margin-top: 5%;
       margin-left: 5%;
-    }
+    } 
   } 
     #description {
       margin-left: 5%;

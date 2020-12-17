@@ -25,6 +25,9 @@ body, html {
   font-family: Arial, Helvetica, sans-serif; }
 
 /* NAVIGERING */
+.pink {
+  color: pink; }
+
 .nav-bar-container {
   width: 100%;
   display: flex;
