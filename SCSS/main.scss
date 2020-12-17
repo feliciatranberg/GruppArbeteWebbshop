@@ -95,12 +95,16 @@ body, html {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);  
 }
+button:hover {
+  background-color: $button-hover-color;
+}
 }
 @include tablets-up {
   .product-image-container {
-    @include flex-full-width-nowrap-container;
+  @include flex-full-width-nowrap-container;
   .product-image {
   width: 100%;
+}
 button { 
   @include button-large;
   position: absolute;
@@ -110,6 +114,8 @@ button {
   -ms-transform: translate(-50%, -50%);
   padding: 12px 24px;    
 }
+button:hover {
+  background-color: $button-hover-color;
 }
 }
 }
@@ -235,6 +241,9 @@ button {
     align-self: center;
     margin-top: -3%;
 }
+#addToCartButton:hover {
+  background-color: $button-hover-color;
+}
 
   #dropDownMenu{
     list-style-type: none;
@@ -284,8 +293,10 @@ button {
     margin-top: 50%;
     margin-left: -51%;
   }  
+  #addToCartButton:hover {
+    background-color: $button-hover-color;
+  }
    }
-
   #dropDownMenu{
     list-style-type: none;
     border: 1px solid black;
@@ -340,14 +351,42 @@ button {
 #goToCheckout {
   @include button-small;
 }
+#goToCheckout:hover {
+  background-color: $button-hover-color;
+}
 
 #shoppingcartExtend{
-  //position: absolute;
- 
   border: 1px solid green;
   display: flex;
   flex-direction: column;
   z-index: 5;
+}
+
+  #cartEmptyMessage{
+    padding: 1%;
+    align-self: center;
+    background-color: white;
+    position: absolute;
+    width: 100px;
+    margin-top: 12%;
+    @include shadow;
+  } 
+
+  @include tablets-up {
+    #cartEmptyMessage{
+      padding: 1%;
+      align-self: center;
+      background-color: white;
+      position: absolute;
+      width: 100px;
+      margin-top: 3%;
+      @include shadow;    
+    } 
+  } 
+  
+
+
+
   #shoppingcartButton{
     padding-bottom: 0;
     height: 5px;
@@ -367,12 +406,10 @@ button {
     width: 25%;
     border: 1px solid pink;
   }
-}
 
 .hidden{
   display: none;
 } 
-
 
 /*
 Style for Validation Message
@@ -471,6 +508,9 @@ Style for Validation Message
     align-self: center;  
     margin-top: 7%; 
   }
+  button:hover {
+  background-color: $button-hover-color;
+  }
   p {
     margin: 1% 0 0 10%;
   }
@@ -500,6 +540,9 @@ Style for Validation Message
   p {
     margin: 1% 0 0 10%;
   }
+  button:hover {
+    background-color: $button-hover-color;
+    }
 }
 }
 
@@ -518,4 +561,21 @@ width: 50%;
 }
 .input-text {
 margin: 1%;
+}
+
+@include tablets-up {  
+.product-div-form {
+  @include flex-full-width-nowrap-container;
+ width: 100%;
+ margin-bottom: 10%;
+}           
+.product-image-form {
+  width: 100%;
+}
+.product-text-div {
+width: 100%;
+}
+.input-text {
+margin: 1%;
+}
 }

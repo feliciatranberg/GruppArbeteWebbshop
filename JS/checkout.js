@@ -6,10 +6,6 @@ $(function() {
     orderComfirm();
 
 
-
-    
-  //  let $inputs = $('#my-form :input');
-
     let inputData = {};
     $("#my-form :text, #my-form :checked").each(function() {
         inputData[this.name] = $(this).val();
@@ -20,25 +16,16 @@ $(function() {
         .appendTo($("#dialog"));
   
         console.log($(this).val()); 
+      
       });
   });
 
   let dialog = $("#dialog").dialog({
     autoOpen: false,
     modal: true,
-    width: 'auto', 
-    maxWidth: 600,
-    height: 'auto',
-    fluid: true, 
-    my: 'left',
-    at: 'left',
-    resizable: false
-});
-
-
-
-
-
+    maxWidth: 1000,
+    position: { my: "center", at: "center", of: window }
+  });
           
     finalCheckoutList();
       });

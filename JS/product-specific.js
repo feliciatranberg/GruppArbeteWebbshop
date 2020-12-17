@@ -31,6 +31,16 @@ $(function(){
     .html(specificProduct.description)
     .appendTo($("#productTextBox"));
 
+    //CARTEMPTYMESSAGE
+    ($("<div>"))
+    .attr("id","cartEmptyMessage")
+    .addClass("hidden")
+    .appendTo($("#shoppingcartExtend"));  
+    ($("<em>"))
+    .html("Det verkar som att din varukorg är tom")
+    .appendTo($("#cartEmptyMessage"));
+    
+
     //Dropdown base
     ($("<ul>"))
     .attr("id","dropDownMenu")
@@ -69,6 +79,7 @@ $(function(){
     .html(specificProduct.price + " KR")
     .appendTo($("#productTextBox"));
 
+   
 
     //add to cart
     ($("<button>"))
@@ -130,7 +141,13 @@ $(function(){
    .on("click",()=>{
     
     if (window.matchMedia('(max-width: 767px)').matches) {
+      if (JSON.parse(localStorage.checkoutArr).length === 0){
+        ($("#cartEmptyMessage"))
+         .toggleClass("hidden")
+      }
+      else {
       window.location.href = "checkout.html";
+      }
     }
     else {
    
@@ -141,6 +158,11 @@ $(function(){
     ($("#shoppingCart")).empty();
     checkoutCreator();
     totalCreator(); 
+    if (JSON.parse(localStorage.checkoutArr).length === 0) {
+    ($("#cartEmptyMessage"))
+    .toggleClass("hidden")
+    }
+    
     }
     cartCounterDisplay();
    });
@@ -192,12 +214,13 @@ function checkoutCreator(i,item){
                       ($("#cartNumberDisplay")).addClass("hidden");
                      }*/
                       checkout.empty();
+                     
                       //($("#checkoutTotal")).empty();
                       checkoutCreator();
                       
                       totalCreator();
                       
-                        
+                     
 
                            
                           
@@ -280,13 +303,19 @@ function totalCreator(specificProduct){
 
 
 function cartCounterDisplay(){
+  
   let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
   ($("#cartNumberDisplay")).removeClass("hidden").html(checkoutArrFromLS.length);
   if (checkoutArrFromLS.length ===0){
    ($("#cartNumberDisplay")).addClass("hidden");
    ($(shoppingCartDiv)).addClass("hidden");
-   console.log("korgen en tom jao")
+   
   }
-  
+  if (checkoutArrFromLS.length ===0 && ($("#cartNumberDisplay")).hasClass("hidden")){
+    
+    //($("#cartEmptyMessage")).removeClass("hidden");
 }
-
+  else {
+    //($("#cartEmptyMessage")).addClass("hidden");
+  }
+}
