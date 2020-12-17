@@ -344,11 +344,21 @@ body, html {
 #shoppingcartExtend{
   //position: absolute;
  
-  border: 1px solid blue;
+  border: 1px solid green;
   display: flex;
   flex-direction: column;
   z-index: 5;
- 
+  #shoppingcartButton{
+    padding-bottom: 0;
+    height: 5px;
+    #cartNumberDisplay{
+      color:blue;
+      position: relative;
+      right: -15px;
+      top:-36px;
+      z-index: 10000;
+    }
+  }
   #shoppingCartDiv{
     position: absolute;
     left: 70%;
@@ -357,11 +367,7 @@ body, html {
     width: 25%;
     border: 1px solid pink;
     
-    #cartNumberDisplay{
-      color: red;
-      position: relative;
-      top: -100px;
-    }
+  
   }
 }
 

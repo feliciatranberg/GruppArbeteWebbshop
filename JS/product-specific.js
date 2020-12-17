@@ -83,7 +83,7 @@ $(function(){
       let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
       checkoutArrFromLS.push(specificProduct);
       
-      ($("#cartNumberDisplay")).html(checkoutArrFromLS.length);
+      ($("#cartNumberDisplay")).removeClass("hidden").html(checkoutArrFromLS.length);
 
       localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
 
@@ -124,7 +124,7 @@ $(function(){
   })
    .appendTo(shoppingCartDiv);
   
-
+   cartCounterDisplay();
    $("#shoppingcartButton")
    
    .on("click",()=>{
@@ -134,21 +134,23 @@ $(function(){
     }
     else {
    
-    if (JSON.parse(localStorage.checkoutArr).length > 0 ) {
+    
+    /*if (JSON.parse(localStorage.checkoutArr).length > 0 ) {
     shoppingCartDiv.toggleClass("hidden");
     }
     else {
       console.log("varukorg e tom")
-    }
+    }*/
     
-      
+    cartCounterDisplay();
     ($("#shoppingCart")).empty();
     checkoutCreator();
     totalCreator(); 
     }
-   
+  
    });
    
+  // ($("#cartNumberDisplay")).removeClass("hidden").html(JSON.parse(localStorage.checkoutArr).length);
 })
 
 function checkoutCreator(i,item){
@@ -180,16 +182,20 @@ function checkoutCreator(i,item){
                         .appendTo($(shoppingCartItemDiv))
                   .on("click",()=>{
                       checkoutArrFromLS.splice(i,1);
-                     
-                      if (checkoutArrFromLS.length===0) {
-                        ($(shoppingCartDiv)).addClass("hidden");
-                      }
+                      
+                 
                       localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
-
+                      cartCounterDisplay();
+                     // cartHideOnZero();
                       let priceArrayFromLS =JSON.parse(localStorage.priceArray);
                       priceArrayFromLS.splice(i,1);
                       localStorage.setItem("priceArray",JSON.stringify(priceArrayFromLS));
-                     
+                      ////////////////
+                    
+                   /* ($("#cartNumberDisplay")).removeClass("hidden").html(checkoutArrFromLS.length);
+                     if (checkoutArrFromLS.length ===0){
+                      ($("#cartNumberDisplay")).addClass("hidden");
+                     }*/
                       checkout.empty();
                       //($("#checkoutTotal")).empty();
                       checkoutCreator();
@@ -276,3 +282,16 @@ function totalCreator(specificProduct){
   }
   }
 }
+
+
+function cartCounterDisplay(){
+  let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
+  ($("#cartNumberDisplay")).removeClass("hidden").html(checkoutArrFromLS.length);
+  if (checkoutArrFromLS.length ===0){
+   ($("#cartNumberDisplay")).addClass("hidden");
+   ($(shoppingCartDiv)).addClass("hidden");
+   console.log("korgen en tom jao")
+  }
+  
+}
+

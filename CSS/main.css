@@ -385,10 +385,19 @@ p {
   padding: 1%; }
 
 #shoppingcartExtend {
-  border: 1px solid blue;
+  border: 1px solid green;
   display: flex;
   flex-direction: column;
   z-index: 5; }
+  #shoppingcartExtend #shoppingcartButton {
+    padding-bottom: 0;
+    height: 5px; }
+    #shoppingcartExtend #shoppingcartButton #cartNumberDisplay {
+      color: blue;
+      position: relative;
+      right: -15px;
+      top: -36px;
+      z-index: 10000; }
   #shoppingcartExtend #shoppingCartDiv {
     position: absolute;
     left: 70%;
@@ -396,10 +405,6 @@ p {
     background-color: white;
     width: 25%;
     border: 1px solid pink; }
-    #shoppingcartExtend #shoppingCartDiv #cartNumberDisplay {
-      color: red;
-      position: relative;
-      top: -100px; }
 
 .hidden {
   display: none; }

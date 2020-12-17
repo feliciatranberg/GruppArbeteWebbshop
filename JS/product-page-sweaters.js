@@ -93,7 +93,7 @@ $(function() {
             })
             .appendTo(shoppingCartDiv);
 
-
+           
 $("#shoppingcartButton")
    
    .on("click",()=>{
@@ -105,14 +105,15 @@ $("#shoppingcartButton")
     else {
     shoppingCartDiv.toggleClass("hidden");
 
-    
+    cartCounterDisplay();
       
     ($("#shoppingCart")).empty();
     checkoutCreator();
     totalCreator(); 
     }
    });
-
+   //($("#cartNumberDisplay")).removeClass("hidden").html(JSON.parse(localStorage.checkoutArr).length);
+   cartCounterDisplay();
      //onload           
     });
 
@@ -122,7 +123,7 @@ $("#shoppingcartButton")
       console.log("checkoutCreator körs")
       let checkout = ($("#shoppingCart"))
           let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
-        console.log(checkoutArrFromLS);
+      
           
           $.each(checkoutArrFromLS,(i,item)=>{
 
@@ -151,7 +152,8 @@ $("#shoppingcartButton")
                           //checkoutArr.splice(i,1);
                         
                           localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
-                        
+                          cartCounterDisplay();
+                          
                           let priceArrayFromLS =JSON.parse(localStorage.priceArray);
                           priceArrayFromLS.splice(i,1);
                           localStorage.setItem("priceArray",JSON.stringify(priceArrayFromLS));
@@ -243,3 +245,19 @@ function totalCreator(specificProduct){
     }
     }
   }
+
+
+
+ 
+  function cartCounterDisplay(){
+    let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
+    ($("#cartNumberDisplay")).removeClass("hidden").html(checkoutArrFromLS.length);
+    if (checkoutArrFromLS.length ===0){
+     ($("#cartNumberDisplay")).addClass("hidden");
+     ($(shoppingCartDiv)).addClass("hidden");
+     console.log("korgen en tom jao")
+    }
+    
+  }
+  
+ 

@@ -95,26 +95,27 @@ $(function() {
             .appendTo(shoppingCartDiv);
 
 
-$("#shoppingcartButton")
+            $("#shoppingcartButton")
    
-   .on("click",()=>{
-    
-    if (window.matchMedia('(max-width: 767px)').matches) {
-      window.location.href = "checkout.html";
-    }
-    else {
-   
-    shoppingCartDiv.toggleClass("hidden");
-
-    
-      
-    ($("#shoppingCart")).empty();
-    checkoutCreator();
-    totalCreator(); 
-    }
-   });
-
-     //onload           
+            .on("click",()=>{
+                
+         
+             if (window.matchMedia('(max-width: 767px)').matches) {
+               window.location.href = "checkout.html";
+             }
+             else {
+             shoppingCartDiv.toggleClass("hidden");
+         
+             cartCounterDisplay();
+               
+             ($("#shoppingCart")).empty();
+             checkoutCreator();
+             totalCreator(); 
+             }
+            });
+            //($("#cartNumberDisplay")).removeClass("hidden").html(JSON.parse(localStorage.checkoutArr).length);
+            cartCounterDisplay();
+              //onload           
     });
 
 
@@ -151,7 +152,7 @@ $("#shoppingcartButton")
                           //checkoutArr.splice(i,1);
                         
                           localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
-                        
+                          cartCounterDisplay();
                           let priceArrayFromLS =JSON.parse(localStorage.priceArray);
                           priceArrayFromLS.splice(i,1);
                           localStorage.setItem("priceArray",JSON.stringify(priceArrayFromLS));
@@ -241,4 +242,15 @@ function totalCreator(specificProduct){
       console.log("HELT SLUT")
     }
     }
+  }
+
+  function cartCounterDisplay(){
+    let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
+    ($("#cartNumberDisplay")).removeClass("hidden").html(checkoutArrFromLS.length);
+    if (checkoutArrFromLS.length ===0){
+     ($("#cartNumberDisplay")).addClass("hidden");
+     ($(shoppingCartDiv)).addClass("hidden");
+     console.log("korgen en tom jao")
+    }
+    
   }
