@@ -3,17 +3,53 @@ $(function() {
   $("button").on('click', function(){
     dialog.dialog('open');
     orderComfirm();
+
+    
+    let $inputs = $('#my-form input:text');
+
+    let values = {};
+    $inputs.each(function() {
+        values[this.name] = $(this).val();
+  
+        ($("<p>"))
+        .html($(this).val())
+        .appendTo($("#dialog"));
+  
+        console.log($(this).val());
+  
+    
+      });
   });
 
   let dialog = $("#dialog").dialog({
     autoOpen: false,
     modal: true,
-    width: 'auto', // overcomes width:'auto' and maxWidth bug
+    width: 'auto', 
     maxWidth: 600,
     height: 'auto',
-    fluid: true, //new option
+    fluid: true, 
     resizable: false
 });
+
+// $('button').on('click', function() {
+//   let $inputs = $('#my-form :input:checked');
+
+//   let values = {};
+//   $inputs.each(function() {
+//       values[this.name] = $(this).val();
+
+//       ($("<p>"))
+//       .html($(this).val())
+//       .appendTo($("#dialog"));
+
+//       console.log($(this).val());
+
+      
+//   });
+
+// });
+
+
 
           
     finalCheckoutList();
