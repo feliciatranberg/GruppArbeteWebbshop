@@ -384,6 +384,13 @@ p {
   display: flex;
   flex-direction: column;
   z-index: 5; }
+  #shoppingcartExtend #cartEmptyMessage {
+    padding: 25px;
+    background-color: white;
+    position: absolute;
+    width: 100px;
+    top: 50px;
+    left: 60%; }
   #shoppingcartExtend #shoppingcartButton {
     padding-bottom: 0;
     height: 5px; }

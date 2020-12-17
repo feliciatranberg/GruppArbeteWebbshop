@@ -348,6 +348,18 @@ button {
   display: flex;
   flex-direction: column;
   z-index: 5;
+  
+  #cartEmptyMessage{
+    padding: 25px;
+   // display: flex;
+   background-color: white;
+    position: absolute;
+    width: 100px;
+    top: 50px;
+  
+    left: 60%;
+    
+  }
   #shoppingcartButton{
     padding-bottom: 0;
     height: 5px;

@@ -5,7 +5,14 @@ let totalCount = false;
 
 $(function(){
 
-
+       //CARTEMPTYMESSAGE
+    ($("<div>"))
+    .attr("id","cartEmptyMessage")
+    .addClass("hidden")
+    .appendTo($("#shoppingcartExtend"));  
+    ($("<em>"))
+    .html("Det verkar som att din varukorg är tom")
+    .appendTo($("#cartEmptyMessage"));
      //Div för shoppingcart or elaterad saker
      let shoppingCartDiv = $("<div>")
      .addClass("hidden")
@@ -28,18 +35,28 @@ $(function(){
    
      .on("click",()=>{
          
-  
       if (window.matchMedia('(max-width: 767px)').matches) {
+        if (JSON.parse(localStorage.checkoutArr).length === 0){
+          ($("#cartEmptyMessage"))
+           .toggleClass("hidden")
+        }
+        else {
         window.location.href = "checkout.html";
+        }
       }
       else {
-      shoppingCartDiv.toggleClass("hidden");
+     
+        shoppingCartDiv.toggleClass("hidden");
   
       cartCounterDisplay();
         
       ($("#shoppingCart")).empty();
       checkoutCreator();
       totalCreator(); 
+      if (JSON.parse(localStorage.checkoutArr).length === 0) {
+        ($("#cartEmptyMessage"))
+        .toggleClass("hidden")
+        }
       }
      });
      //($("#cartNumberDisplay")).removeClass("hidden").html(JSON.parse(localStorage.checkoutArr).length);
