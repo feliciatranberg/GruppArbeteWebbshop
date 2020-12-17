@@ -134,20 +134,15 @@ $(function(){
     }
     else {
    
-    
-    /*if (JSON.parse(localStorage.checkoutArr).length > 0 ) {
-    shoppingCartDiv.toggleClass("hidden");
-    }
-    else {
-      console.log("varukorg e tom")
-    }*/
+      shoppingCartDiv.toggleClass("hidden");
+  
     
     cartCounterDisplay();
     ($("#shoppingCart")).empty();
     checkoutCreator();
     totalCreator(); 
     }
-  
+    cartCounterDisplay();
    });
    
   // ($("#cartNumberDisplay")).removeClass("hidden").html(JSON.parse(localStorage.checkoutArr).length);
