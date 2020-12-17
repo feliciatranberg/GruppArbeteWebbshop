@@ -101,7 +101,7 @@ body, html {
     @include flex-full-width-nowrap-container;
   .product-image {
   width: 100%;
-.button { 
+button { 
   @include button-large;
   position: absolute;
   top: 75%; 
@@ -120,7 +120,7 @@ body, html {
   @include shadow;
   overflow: hidden;
   position: relative;
-  background: $bg-color-secondary;
+  background: $button-color;
   color: $text-color-secondary;
   height: 30%;
   width: 100%;
@@ -356,8 +356,6 @@ body, html {
     background-color: white;
     width: 25%;
     border: 1px solid pink;
-    
- 
   }
 }
 
@@ -375,7 +373,7 @@ Style for Validation Message
   display: none;
 }
 
-/* NYA KASSASIDAN */
+/* PRODUKT FORM */
 
 #checkout-form-wrap {
   margin-top: 15%;
@@ -411,7 +409,6 @@ Style for Validation Message
    }
  }
 
-
 @include tablets-up { 
 #checkout-form-wrap {
   margin-top: 2%;
@@ -433,7 +430,69 @@ Style for Validation Message
  }
 }
 
+/* FORM */
+
 #my-form {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 7%;
+  div {
+    background-color: $bg-color-secondary;
+    width: 90%;
+    margin-bottom: 7%;
+    padding: 7% 0 7% 0;
+    display: flex;
+    flex-direction: column;
+  }
+  button {
+    @include button-medium;
+    width: 80%;
+    align-self: center;  
+    margin-top: 7%; 
+  }
+  p {
+    margin: 1% 0 0 10%;
+  }
+}
+
+@include tablets-up {  
+#my-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7%;
+  div {
+    background-color: $bg-color-secondary;
+    width: 90%;
+    margin-bottom: 7%;
+    padding: 7% 0 7% 0;
+    display: flex;
+    flex-direction: column;
+  }
+  button {
+    @include button-medium;
+    width: 50%;
+    margin-top: 4%;
+    align-self: center;   
+  }
+  p {
+    margin: 1% 0 0 10%;
+  }
+}
+}
+
+/* DIALOG */
+
+.product-div-form {
+  @include flex-full-width-nowrap-container;
+ width: 100%;
+}           
+.product-image-form {
+  width: 50%;
+}
+.product-text-div {
+width: 50%;
 }

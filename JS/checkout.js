@@ -5,7 +5,7 @@ $(function() {
     orderComfirm();
 
     
-    let $inputs = $('#my-form input:text');
+    let $inputs = $('#my-form :input');
 
     let values = {};
     $inputs.each(function() {
@@ -15,9 +15,7 @@ $(function() {
         .html($(this).val())
         .appendTo($("#dialog"));
   
-        console.log($(this).val());
-  
-    
+        console.log($(this).val()); 
       });
   });
 
@@ -31,23 +29,7 @@ $(function() {
     resizable: false
 });
 
-// $('button').on('click', function() {
-//   let $inputs = $('#my-form :input:checked');
 
-//   let values = {};
-//   $inputs.each(function() {
-//       values[this.name] = $(this).val();
-
-//       ($("<p>"))
-//       .html($(this).val())
-//       .appendTo($("#dialog"));
-
-//       console.log($(this).val());
-
-      
-//   });
-
-// });
 
 
 
@@ -110,33 +92,35 @@ $(function() {
   function orderComfirm() {
 
     let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
-    let checkoutProductsDiv = ($("#dialog"));
+    let checkoutProductsDivForm = ($("#dialog"));
 
       $.each(checkoutArrFromLS,(i,item)=>{
-    let productDiv = ($("<div>"))
-            .addClass("product-Div")
-            .appendTo(checkoutProductsDiv);
+    let productDivForm = ($("<div>"))
+            .addClass("product-div-form")
+            .appendTo(checkoutProductsDivForm);
 
             ($("<img>"))
             .attr("src",item.image)
-            .addClass("productImage")
-            .appendTo($(productDiv));
+            .addClass("product-image-form")
+            .appendTo($(productDivForm));
 
-    let productTextDiv = ($("<div>"))
+    let productTextDivForm = ($("<div>"))
             .addClass("product-text-div")
-            .appendTo($(productDiv));
+            .appendTo($(productDivForm));
 
             ($("<h5>"))
             .html(item.name)
-            .appendTo($(productTextDiv));
-            
-            ($("<h1>"))
-            .html(item.price + ":-")
-            .appendTo($(productTextDiv));
+            .appendTo($(productTextDivForm));
 
             ($("<span>"))
             .html(item.size + " ")
-            .appendTo($(productTextDiv));
+            .appendTo($(productTextDivForm));
+            
+            ($("<h2>"))
+            .html(item.price + ":-")
+            .appendTo($(productTextDivForm));
+
+           
   
               });
   };

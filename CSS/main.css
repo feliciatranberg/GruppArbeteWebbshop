@@ -169,7 +169,7 @@ section {
     .product-image-container .product-image {
       width: 100%; }
       /* line 104, scss/main.scss */
-      .product-image-container .product-image .button {
+      .product-image-container .product-image button {
         cursor: pointer;
         text-align: center;
         background-color: #d5bccf;
@@ -461,29 +461,29 @@ p {
     width: 25%;
     border: 1px solid pink; }
 
-/* line 364, scss/main.scss */
+/* line 362, scss/main.scss */
 .hidden {
   display: none; }
 
 /*
 Style for Validation Message
 */
-/* line 372, scss/main.scss */
+/* line 370, scss/main.scss */
 #username-error, #email-error {
   color: #d9534f;
   padding: 12px;
   display: none; }
 
-/* NYA KASSASIDAN */
-/* line 380, scss/main.scss */
+/* PRODUKT FORM */
+/* line 378, scss/main.scss */
 #checkout-form-wrap {
   margin-top: 15%; }
 
-/* line 383, scss/main.scss */
+/* line 381, scss/main.scss */
 .checkout-products {
   width: 100%; }
 
-/* line 386, scss/main.scss */
+/* line 384, scss/main.scss */
 .product-Div {
   width: 100%;
   display: flex;
@@ -492,26 +492,26 @@ Style for Validation Message
   font-family: Arial, Helvetica, sans-serif;
   justify-content: center;
   border: green 2px solid; }
-  /* line 390, scss/main.scss */
+  /* line 388, scss/main.scss */
   .product-Div img {
     width: 60%; }
 
-/* line 394, scss/main.scss */
+/* line 392, scss/main.scss */
 .product-text-div {
   width: 40%;
   border: red 2px solid; }
-  /* line 397, scss/main.scss */
+  /* line 395, scss/main.scss */
   .product-text-div h5 {
     margin-left: 5%; }
-  /* line 400, scss/main.scss */
+  /* line 398, scss/main.scss */
   .product-text-div h1 {
     margin-left: 5%;
     margin-top: -4%; }
-  /* line 404, scss/main.scss */
+  /* line 402, scss/main.scss */
   .product-text-div span {
     margin-left: 5%;
     margin-top: -4%; }
-  /* line 408, scss/main.scss */
+  /* line 406, scss/main.scss */
   .product-text-div button {
     cursor: pointer;
     text-align: center;
@@ -522,13 +522,13 @@ Style for Validation Message
     padding: 1%; }
 
 @media screen and (min-width: 769px) {
-  /* line 416, scss/main.scss */
+  /* line 413, scss/main.scss */
   #checkout-form-wrap {
     margin-top: 2%; }
-  /* line 419, scss/main.scss */
+  /* line 416, scss/main.scss */
   .checkout-products {
     width: 100%; }
-  /* line 422, scss/main.scss */
+  /* line 419, scss/main.scss */
   .product-Div {
     width: 100%;
     display: flex;
@@ -537,15 +537,92 @@ Style for Validation Message
     font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
     border: green 2px solid; }
-    /* line 426, scss/main.scss */
+    /* line 423, scss/main.scss */
     .product-Div img {
       width: 25%; }
-  /* line 430, scss/main.scss */
+  /* line 427, scss/main.scss */
   .product-text-div {
     width: 25%;
     border: red 2px solid; } }
 
-/* line 436, scss/main.scss */
+/* FORM */
+/* line 435, scss/main.scss */
 #my-form {
+  width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7%; }
+  /* line 441, scss/main.scss */
+  #my-form div {
+    background-color: #f1f1f1;
+    width: 90%;
+    margin-bottom: 7%;
+    padding: 7% 0 7% 0;
+    display: flex;
+    flex-direction: column; }
+  /* line 449, scss/main.scss */
+  #my-form button {
+    cursor: pointer;
+    text-align: center;
+    background-color: #d5bccf;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    padding: 3% 4% 3% 4%;
+    width: 80%;
+    align-self: center;
+    margin-top: 7%; }
+  /* line 455, scss/main.scss */
+  #my-form p {
+    margin: 1% 0 0 10%; }
+
+@media screen and (min-width: 769px) {
+  /* line 461, scss/main.scss */
+  #my-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7%; }
+    /* line 467, scss/main.scss */
+    #my-form div {
+      background-color: #f1f1f1;
+      width: 90%;
+      margin-bottom: 7%;
+      padding: 7% 0 7% 0;
+      display: flex;
+      flex-direction: column; }
+    /* line 475, scss/main.scss */
+    #my-form button {
+      cursor: pointer;
+      text-align: center;
+      background-color: #d5bccf;
+      color: white;
+      border: none;
+      font-size: 1.1rem;
+      padding: 3% 4% 3% 4%;
+      width: 50%;
+      margin-top: 4%;
+      align-self: center; }
+    /* line 481, scss/main.scss */
+    #my-form p {
+      margin: 1% 0 0 10%; } }
+
+/* DIALOG */
+/* line 489, scss/main.scss */
+.product-div-form {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%; }
+
+/* line 493, scss/main.scss */
+.product-image-form {
+  width: 50%; }
+
+/* line 496, scss/main.scss */
+.product-text-div {
+  width: 50%; }
