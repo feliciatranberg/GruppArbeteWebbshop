@@ -1,6 +1,7 @@
 $(function() {
 
   $("button").on('click', function(){
+    dialog.empty();
     dialog.dialog('open');
     orderComfirm();
 
