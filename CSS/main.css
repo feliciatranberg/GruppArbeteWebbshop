@@ -8,12 +8,7 @@
     transform: translateY(0); } }
 
 /* FÄRGER */
-/* färgtema orange
-
-$button-color: #de8f40;
-$button-hover-color: #cf8134; */
 /* TYPSNITT OCH TYPSTORLEK */
-/* vet inte alls om jag ska använda mig att detta system, testar lite bara :) */
 body, html {
   z-index: 0;
   margin: 0;
@@ -25,9 +20,6 @@ body, html {
   font-family: Arial, Helvetica, sans-serif; }
 
 /* NAVIGERING */
-.pink {
-  color: pink; }
-
 .nav-bar-container {
   width: 100%;
   display: flex;
@@ -153,7 +145,7 @@ section {
     font-family: Arial, Helvetica, sans-serif; }
     .product-image-container .product-image {
       width: 100%; }
-      .product-image-container .product-image .button {
+      .product-image-container .product-image button {
         cursor: pointer;
         text-align: center;
         background-color: #d5bccf;
@@ -420,7 +412,7 @@ Style for Validation Message
   padding: 12px;
   display: none; }
 
-/* NYA KASSASIDAN */
+/* PRODUKT FORM */
 #checkout-form-wrap {
   margin-top: 15%; }
 
@@ -434,13 +426,13 @@ Style for Validation Message
   justify-content: space-evenly;
   font-family: Arial, Helvetica, sans-serif;
   justify-content: center;
-  border: green 2px solid; }
+  background-color: #f1f1f1; }
   .product-Div img {
-    width: 60%; }
+    width: 60%;
+    box-shadow: none; }
 
 .product-text-div {
-  width: 40%;
-  border: red 2px solid; }
+  width: 40%; }
   .product-text-div h5 {
     margin-left: 5%; }
   .product-text-div h1 {
@@ -469,10 +461,83 @@ Style for Validation Message
     flex-wrap: nowrap;
     justify-content: space-evenly;
     font-family: Arial, Helvetica, sans-serif;
-    justify-content: center;
-    border: green 2px solid; }
+    justify-content: center; }
     .product-Div img {
       width: 25%; }
   .product-text-div {
-    width: 25%;
-    border: red 2px solid; } }
+    width: 25%; } }
+
+/* FORM */
+#my-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7%; }
+  #my-form div {
+    background-color: #f1f1f1;
+    width: 90%;
+    margin-bottom: 7%;
+    padding: 7% 0 7% 0;
+    display: flex;
+    flex-direction: column; }
+  #my-form button {
+    cursor: pointer;
+    text-align: center;
+    background-color: #d5bccf;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    padding: 3% 4% 3% 4%;
+    width: 80%;
+    align-self: center;
+    margin-top: 7%; }
+  #my-form p {
+    margin: 1% 0 0 10%; }
+
+@media screen and (min-width: 769px) {
+  #my-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%; }
+    #my-form div {
+      background-color: #f1f1f1;
+      width: 90%;
+      margin-bottom: 5%;
+      padding: 7% 0 7% 0;
+      display: flex;
+      flex-direction: column; }
+    #my-form button {
+      cursor: pointer;
+      text-align: center;
+      background-color: #d5bccf;
+      color: white;
+      border: none;
+      font-size: 1.1rem;
+      padding: 3% 4% 3% 4%;
+      width: 50%;
+      margin-top: 4%;
+      align-self: center; }
+    #my-form p {
+      margin: 1% 0 0 10%; } }
+
+/* DIALOG */
+.product-div-form {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin-bottom: 10%; }
+
+.product-image-form {
+  width: 50%; }
+
+.product-text-div {
+  width: 50%; }
+
+.input-text {
+  margin: 1%; }
