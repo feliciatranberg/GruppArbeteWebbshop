@@ -384,14 +384,14 @@ Style for Validation Message
  .product-Div {
   @include flex-full-width-nowrap-container;
   justify-content: center;
-  border: green 2px solid;
+  background-color: $bg-color-secondary;
  img {
   width: 60%;
+  box-shadow: none;
  }
 }
  .product-text-div {
    width: 40%;
-   border: red 2px solid;
    h5{
      margin-left: 5%;   
    } 
@@ -419,14 +419,12 @@ Style for Validation Message
  .product-Div {
   @include flex-full-width-nowrap-container;
   justify-content: center;
-  border: green 2px solid;
  img {
   width: 25%;
  }
 }
  .product-text-div {
    width: 25%;
-   border: red 2px solid;
  }
 }
 
@@ -463,11 +461,11 @@ Style for Validation Message
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 7%;
+  margin-top: 5%;
   div {
     background-color: $bg-color-secondary;
     width: 90%;
-    margin-bottom: 7%;
+    margin-bottom: 5%;
     padding: 7% 0 7% 0;
     display: flex;
     flex-direction: column;
@@ -489,10 +487,14 @@ Style for Validation Message
 .product-div-form {
   @include flex-full-width-nowrap-container;
  width: 100%;
+ margin-bottom: 10%;
 }           
 .product-image-form {
   width: 50%;
 }
 .product-text-div {
 width: 50%;
+}
+.input-text {
+margin: 1%;
 }

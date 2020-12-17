@@ -5,13 +5,14 @@ $(function() {
     orderComfirm();
 
     
-    let $inputs = $('#my-form :input');
+  //  let $inputs = $('#my-form :input');
 
-    let values = {};
-    $inputs.each(function() {
-        values[this.name] = $(this).val();
+    let inputData = {};
+    $("#my-form :text, #my-form :checked").each(function() {
+        inputData[this.name] = $(this).val();
   
         ($("<p>"))
+        .addClass("input-text")
         .html($(this).val())
         .appendTo($("#dialog"));
   
