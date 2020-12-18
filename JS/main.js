@@ -11,7 +11,7 @@ $(function(){
     .addClass("hidden")
     .appendTo($("#shoppingcartExtend"));  
     ($("<em>"))
-    .html("Det verkar som att din varukorg är tom")
+    .html("Det verkar som att din varukorg är tom...")
     .appendTo($("#cartEmptyMessage"));
      //Div för shoppingcart or elaterad saker
      let shoppingCartDiv = $("<div>")
@@ -28,7 +28,7 @@ $(function(){
      .attr("id","goToCheckout")
      .html("Go to checkout")
      .on("click",()=>{
-        window.location.href = "HTML/checkout.html";
+        window.location.href = "checkout.html";
       })
      .appendTo(shoppingCartDiv);
      $("#shoppingcartButton")
@@ -41,7 +41,7 @@ $(function(){
            .toggleClass("hidden")
         }
         else {
-        window.location.href = "checkout.html";
+        window.location.href = "/HTML/checkout.html";
         }
       }
       else {

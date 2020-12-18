@@ -248,8 +248,13 @@ button:hover {
 
   #dropDownMenu{
     list-style-type: none;
+    position: absolute;
+    align-self: flex-end;
+    margin-top: 50px;
+    margin-right: 50px;
+    z-index: 10000;
     border: 1px solid black;
-    width: 30%;
+    width: 100px;
     text-align: left;
     padding: 0;
     .sizeOption{
