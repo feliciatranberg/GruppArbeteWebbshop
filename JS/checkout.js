@@ -1,12 +1,40 @@
 $(function() {
+localStorage.removeItem("itemObject")
+    $("#confirm-order-button").on('click', ()=>{
+      
+     // body.empty();
+      setTimeout(()=>{
+        window.location.href = "product-specific.html";
+     
+      }, 3000);
+     
+     ($(".container-checkout-form")).empty();
+     ($(".nav-bar-container")).empty();
+     
+     ($("<div>"))
+        .attr("id","loading-screen")
+        
+        .appendTo($(".nav-bar-container"));
+       
+      ($("<p>"))
+        .attr("id","loading-screen-p-tag")
+        .html("Behandlar din beställning")
+        .appendTo($("#loading-screen"));
 
-  $("button").on('click', function(){
-    dialog.empty();
-    dialog.dialog('open');
-    orderComfirm();
+      ($("<p>"))
+      .addClass("dots")
+      .html(".")
+      .appendTo($("#loading-screen"));
 
+      ($("<div>"))
+        .attr("id","loading-screen-bar")
+        
+        .appendTo($("#loading-screen"));
+      ($("<div>"))
+        .attr("id","loading-bar-box")
+        .appendTo($("#loading-screen-bar"));
 
-    let inputData = {};
+    let inputData = {}; 
     $("#my-form :text, #my-form :checked").each(function() {
         inputData[this.name] = $(this).val();
   
@@ -20,12 +48,6 @@ $(function() {
       });
   });
 
-  let dialog = $("#dialog").dialog({
-    autoOpen: false,
-    modal: true,
-    maxWidth: 1000,
-    position: { my: "center", at: "center", of: window }
-  });
           
     finalCheckoutList();
       });

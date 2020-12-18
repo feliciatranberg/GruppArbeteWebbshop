@@ -4,8 +4,12 @@ let priceArray = [];
 let totalCount = false;
 
 $(function(){
-    
+  if (localStorage.getItem("itemObject") === null) {
+    console.log("asdas")
+  }
+  else{
     let specificProduct = JSON.parse(localStorage.itemObject)
+  
     let sizeArr = ["Medium","Large","Extra Large"];
     console.log(specificProduct);
 
@@ -165,8 +169,9 @@ $(function(){
     
     }
     cartCounterDisplay();
+    
    });
-   
+  }
   // ($("#cartNumberDisplay")).removeClass("hidden").html(JSON.parse(localStorage.checkoutArr).length);
 })
 
@@ -318,4 +323,8 @@ function cartCounterDisplay(){
   else {
     //($("#cartEmptyMessage")).addClass("hidden");
   }
+}
+
+function orderConfirmed() {
+  
 }
