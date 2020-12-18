@@ -25,7 +25,7 @@ $(function () {
       .attr("id", "goToCheckout")
       .html("Go to checkout")
       .on("click", () => {
-            window.location.href = "checkout.html";
+            window.location.href = "/HTML/checkout.html";
           })
       .appendTo(shoppingCartDiv);
 
