@@ -137,19 +137,19 @@ button:hover {
   position: absolute;
   width: 100%;
   margin-top: 30%;
-  font-size: 3rem; 
-  @include scrolling-text;
+  font-size: 2rem; 
+  @include scrolling-text
  }
+
  @include tablets-up {
   .scrolling-text-container div {
     position: absolute;
     width: 100%;
-    text-align: center;
     margin-top: 3%;
-    font-size: 5rem;
+    font-size: 4rem;
     @include scrolling-text;
-   }
  }
+}
 
  /* PRODUKTSIDOR */
 

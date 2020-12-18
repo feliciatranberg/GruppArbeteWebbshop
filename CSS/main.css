@@ -1,12 +1,4 @@
 @charset "UTF-8";
-@keyframes scrolling-text-container {
-  from {
-    -webkit-transform: translateY(-130%);
-    transform: translateY(-130%); }
-  to {
-    -webkit-transform: translateY(0);
-    transform: translateY(0); } }
-
 /* FÄRGER */
 /* TYPSNITT OCH TYPSTORLEK */
 /* line 4, scss/main.scss */
@@ -205,32 +197,58 @@ section {
   position: absolute;
   width: 100%;
   margin-top: 30%;
-  font-size: 3rem;
-  /* Starting position */
+  font-size: 2rem;
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  /* Apply animation to this element */
-  -moz-animation: scrolling-text-container 5s linear infinite;
-  -webkit-animation: sscrolling-text-container 5s linear infinite;
-  animation: scrolling-text-container 5s linear infinite; }
+  -moz-animation: scrolling-text-container 5s forwards;
+  -webkit-animation: scrolling-text-container 5s forwards;
+  animation: scrolling-text-container 5s forwards; }
+
+@keyframes scrolling-text-container {
+  0% {
+    -webkit-transform: translateY(-250%);
+    transform: translateY(-250%); }
+  100% {
+    -webkit-transform: translateY(-45%);
+    transform: translateY(-45%); } }
+  @media screen and (min-width: 769px) {
+    @keyframes scrolling-text-container {
+      0% {
+        -webkit-transform: translateY(-130%);
+        transform: translateY(-130%); }
+      100% {
+        -webkit-transform: translateY(3%);
+        transform: translateY(3%); } } }
 
 @media screen and (min-width: 769px) {
-  /* line 144, scss/main.scss */
+  /* line 145, scss/main.scss */
   .scrolling-text-container div {
     position: absolute;
     width: 100%;
-    text-align: center;
     margin-top: 3%;
-    font-size: 5rem;
-    /* Starting position */
+    font-size: 4rem;
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
-    /* Apply animation to this element */
-    -moz-animation: scrolling-text-container 5s linear infinite;
-    -webkit-animation: sscrolling-text-container 5s linear infinite;
-    animation: scrolling-text-container 5s linear infinite; } }
+    -moz-animation: scrolling-text-container 5s forwards;
+    -webkit-animation: scrolling-text-container 5s forwards;
+    animation: scrolling-text-container 5s forwards; }
+  @keyframes scrolling-text-container {
+    0% {
+      -webkit-transform: translateY(-250%);
+      transform: translateY(-250%); }
+    100% {
+      -webkit-transform: translateY(-45%);
+      transform: translateY(-45%); } } }
+  @media screen and (min-width: 769px) and (min-width: 769px) {
+    @keyframes scrolling-text-container {
+      0% {
+        -webkit-transform: translateY(-130%);
+        transform: translateY(-130%); }
+      100% {
+        -webkit-transform: translateY(3%);
+        transform: translateY(3%); } } }
 
 /* PRODUKTSIDOR */
 /* line 156, scss/main.scss */
