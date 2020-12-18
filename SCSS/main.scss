@@ -128,12 +128,12 @@ button:hover {
   position: relative;
   background: $button-color;
   color: $text-color-secondary;
-  height: 30%;
-  width: 100%;
   text-align: center;
+  height: 25%;
+  width: 100%;
   font-family: Impact, 'Arial Narrow Bold';
  }
- .scrolling-text-container p {
+ .scrolling-text-container div {
   position: absolute;
   width: 100%;
   margin-top: 30%;
@@ -141,9 +141,10 @@ button:hover {
   @include scrolling-text;
  }
  @include tablets-up {
-  .scrolling-text-container p {
+  .scrolling-text-container div {
     position: absolute;
     width: 100%;
+    text-align: center;
     margin-top: 3%;
     font-size: 5rem;
     @include scrolling-text;
