@@ -261,7 +261,7 @@ button:hover {
       margin-top: 5px;
     }
     li:hover{
-      background-color: $button-color;
+      background-color: $bg-color-secondary;
       cursor: pointer;
     } 
   }
@@ -306,14 +306,17 @@ button:hover {
   #dropDownMenu{
     list-style-type: none;
     border: 1px solid black;
-    width: 30%;
-    text-align: left;
-    padding: 0;
+    width: 10%;
+    padding: 1%;
+    align-self: flex-start;
+    margin-top: 13%;
+ 
+   
     .sizeOption{
       margin-top: 5px;
     }
     li:hover{
-      background-color: rgb(58, 147, 206);
+      background-color: $bg-color-secondary;
       cursor: pointer;
     } 
   }
