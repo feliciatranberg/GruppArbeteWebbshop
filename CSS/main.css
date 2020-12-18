@@ -451,12 +451,7 @@ Style for Validation Message
   display: none; }
 
 /* PRODUKT FORM */
-<<<<<<< HEAD
-/* line 426, scss/main.scss */
-.container-checkout-form {
-=======
 #checkout-form-wrap {
->>>>>>> 076354671e65e623491b4b80712827a4bed7ca4c
   margin-top: 15%; }
 
 .checkout-products {
@@ -494,12 +489,7 @@ Style for Validation Message
     padding: 1%; }
 
 @media screen and (min-width: 769px) {
-<<<<<<< HEAD
-  /* line 461, scss/main.scss */
-  .container-checkout-form {
-=======
   #checkout-form-wrap {
->>>>>>> 076354671e65e623491b4b80712827a4bed7ca4c
     margin-top: 2%; }
   .checkout-products {
     width: 100%; }
