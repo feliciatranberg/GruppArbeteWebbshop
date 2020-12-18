@@ -522,7 +522,7 @@ Style for Validation Message
 
 /* PRODUKT FORM */
 /* line 426, scss/main.scss */
-#checkout-form-wrap {
+.container-checkout-form {
   margin-top: 15%; }
 
 /* line 429, scss/main.scss */
@@ -569,7 +569,7 @@ Style for Validation Message
 
 @media screen and (min-width: 769px) {
   /* line 461, scss/main.scss */
-  #checkout-form-wrap {
+  .container-checkout-form {
     margin-top: 2%; }
   /* line 464, scss/main.scss */
   .checkout-products {

@@ -423,7 +423,7 @@ Style for Validation Message
 
 /* PRODUKT FORM */
 
-#checkout-form-wrap {
+.container-checkout-form {
   margin-top: 15%;
  }
  .checkout-products {
@@ -458,7 +458,7 @@ Style for Validation Message
  }
 
 @include tablets-up { 
-#checkout-form-wrap {
+.container-checkout-form {
   margin-top: 2%;
  }
  .checkout-products {
