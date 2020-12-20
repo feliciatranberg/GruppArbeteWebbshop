@@ -705,7 +705,11 @@ margin: 1%;
   justify-content: flex-start;
   align-items: center;
   font-size: 1.1rem;
-
+#order-input-text-div{
+  @include tablets-up{
+    width: 50%;
+  }
+}
   #confirm-logo-banner{
     display:flex;
     justify-content: center;
@@ -743,7 +747,7 @@ margin: 1%;
   #order-box-div, #order-delivery-div{
     background-color: rgb(233, 224, 224);
     width: 90%;
-    height: 10%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -763,6 +767,9 @@ margin: 1%;
         font-size: 1.2rem; 
         opacity: 1;
       }
+      .lower-ptag{
+        padding-bottom: 5%;
+      }
       p{
         font-size: 1rem;
         margin: 0;
@@ -774,6 +781,23 @@ margin: 1%;
 
   #order-delivery-div{
     height: auto;
-  
+    margin-bottom: 1%;
   }
+  }
+  
+  .product-confirm-text-div{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    text-align: center;
+    h1{
+      margin: 0;
+      
+    }
+    h3{
+     
+      margin: 0;
+      margin-top: 50px;
+      width: 100%;
+    }
   }

@@ -18,7 +18,11 @@ localStorage.removeItem("itemObject")
         
         localStorage.setItem("orderInputData",JSON.stringify(inputData));
       });
+      
+     /* if (inputData != null){
       fauxPayment();
+      }
+      else {console.log("undefedsadsds")}*/
   });
 
           

@@ -7,6 +7,7 @@ $(function(){
   if (localStorage.getItem("itemObject") === null) {
       ($("body")).empty();
       orderConfirmed();
+      finalCheckoutList();
   }
   else{
     let specificProduct = JSON.parse(localStorage.itemObject)
@@ -381,6 +382,7 @@ function orderConfirmed() {
           .appendTo("#order-date-div");
 
           ($("<p>"))
+          .addClass("lower-ptag")
           .html(date.toDateString())
           .appendTo("#order-date-div");
 
@@ -394,6 +396,7 @@ function orderConfirmed() {
           .attr("id","p-order-number")
           .appendTo("#order-number-div");
           ($("<p>"))
+          .addClass("lower-ptag")
           .html(orderNumber + "XY")
           .appendTo("#order-number-div");
 
@@ -407,7 +410,7 @@ function orderConfirmed() {
           ($("<p>")).html(cappedAdress).appendTo($("#order-adress-div"));
           ($("<p>")).html(orderInputData.city.toUpperCase()).appendTo($("#order-adress-div"));
           ($("<p>")).html(orderInputData.zipcode).appendTo($("#order-adress-div"));
-          ($("<p>")).html(orderInputData.tel).appendTo($("#order-adress-div"));
+          ($("<p>")).addClass("lower-ptag").html(orderInputData.tel).appendTo($("#order-adress-div"));
           
           
 
@@ -431,3 +434,44 @@ function firstLetterCapitalize(incString){
 
 
 
+function finalCheckoutList(){
+
+  let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
+  if (checkoutArrFromLS > 1){
+  ($("<h1>")).html("Du har beställt följande " + checkoutArrFromLS.length + " artiklar").appendTo($("#confirm-page-container"));
+  }
+  else {
+    ($("<h1>")).html("Du har beställt följande " + "artikel").appendTo($("#confirm-page-container"));
+  }
+  let checkoutProductsDiv = ($("<div>")).attr("id","order-confirm-products").appendTo($("#confirm-page-container"));
+
+    $.each(checkoutArrFromLS,(i,item)=>{
+  let productDiv = ($("<div>"))
+          .addClass("product-Div")
+          .appendTo(checkoutProductsDiv);
+
+          ($("<img>"))
+          .attr("src",item.image)
+          .addClass("productImage")
+          .appendTo($(productDiv));
+
+  let productTextDiv = ($("<div>"))
+          .addClass("product-confirm-text-div")
+          .appendTo($(productDiv));
+
+          ($("<h3>"))
+          .html(item.name)
+          .appendTo($(productTextDiv));
+          
+          ($("<h1>"))
+          .html(item.price + ":-")
+          .appendTo($(productTextDiv));
+
+          ($("<span>"))
+          .html(item.size + " ")
+          .appendTo($(productTextDiv));
+  
+     
+  });
+
+};

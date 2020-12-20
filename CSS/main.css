@@ -723,6 +723,9 @@ Style for Validation Message
   justify-content: flex-start;
   align-items: center;
   font-size: 1.1rem; }
+  @media screen and (min-width: 769px) {
+    #confirm-page-container #order-input-text-div, #order-input-text-div #order-input-text-div {
+      width: 50%; } }
   #confirm-page-container #confirm-logo-banner, #order-input-text-div #confirm-logo-banner {
     display: flex;
     justify-content: center;
@@ -754,7 +757,7 @@ Style for Validation Message
   #confirm-page-container #order-box-div, #confirm-page-container #order-delivery-div, #order-input-text-div #order-box-div, #order-input-text-div #order-delivery-div {
     background-color: #e9e0e0;
     width: 90%;
-    height: 10%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -773,9 +776,24 @@ Style for Validation Message
         margin-top: 5px;
         font-size: 1.2rem;
         opacity: 1; }
+      #confirm-page-container #order-box-div div .lower-ptag, #confirm-page-container #order-delivery-div div .lower-ptag, #order-input-text-div #order-box-div div .lower-ptag, #order-input-text-div #order-delivery-div div .lower-ptag {
+        padding-bottom: 5%; }
       #confirm-page-container #order-box-div div p, #confirm-page-container #order-delivery-div div p, #order-input-text-div #order-box-div div p, #order-input-text-div #order-delivery-div div p {
         font-size: 1rem;
         margin: 0;
         opacity: .9; }
   #confirm-page-container #order-delivery-div, #order-input-text-div #order-delivery-div {
-    height: auto; }
+    height: auto;
+    margin-bottom: 1%; }
+
+.product-confirm-text-div {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  text-align: center; }
+  .product-confirm-text-div h1 {
+    margin: 0; }
+  .product-confirm-text-div h3 {
+    margin: 0;
+    margin-top: 50px;
+    width: 100%; }
