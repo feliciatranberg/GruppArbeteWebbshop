@@ -602,78 +602,6 @@ Style for Validation Message
     }
 }
 
-// @include tablets-up {  
-// #my-form {
-//   width: 90%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: baseline;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-//   margin-top: 4%;  
-// div {
-//     width: 40%;
-//     margin-bottom: 5%;
-//     align-self: flex-start;
-//     input {
-//       width: 27%;
-//       text-align: center;
-//       align-self: flex-end;
-//     p {
-//       align-self: flex-start;
-//     }
-//   }
-//   }
-
-//   #confirm-order-button {
-//     @include button-medium;
-//     width: 50%;
-//     margin-top: 4%;
-//     align-self: flex-end;   
-//   }
-//   p {
-//     margin: 1% 0 0 10%;
-//   }
-//   #confirm-order-button:hover {
-//     background-color: $button-hover-color;
-//     }
-// }
-// }
-
-// /* DIALOG */
-
-// .product-div-form {
-//   @include flex-full-width-nowrap-container;
-//  width: 100%;
-//  margin-bottom: 10%;
-// }           
-// .product-image-form {
-//   width: 50%;
-// }
-// .product-text-div {
-// width: 50%;
-// }
-// .input-text {
-// margin: 1%;
-// }
-
-// @include tablets-up {  
-// .product-div-form {
-//   @include flex-full-width-nowrap-container;
-//  width: 100%;
-//  margin-bottom: 10%;
-// }           
-// .product-image-form {
-//   width: 100%;
-// }
-// .product-text-div {
-// width: 100%;
-// }
-// .input-text {
-// margin: 1%;
-// }
-// }
-
 
 #loading-screen{
   width: 100vh;
@@ -787,15 +715,14 @@ Style for Validation Message
   }
   p{
     position: relative;
-    margin: 2%;
     margin-right: 0;
     font-size: 4rem;
+    margin-bottom: 25%;
   }
  .dots{
-    margin:0;
+    margin-right: 42%;
     position: absolute;
-    top: 15%;
-    right: 25%;
+   
  } 
  .dots::before, .dots::after {
   content: '.';

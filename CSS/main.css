@@ -747,7 +747,7 @@ Style for Validation Message
   #confirm-order-button:hover {
     background-color: #edd1e7; } }
 
-/* line 678, scss/main.scss */
+/* line 606, scss/main.scss */
 #loading-screen {
   width: 100vh;
   height: 100vh;
@@ -756,7 +756,7 @@ Style for Validation Message
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start; }
-  /* line 687, scss/main.scss */
+  /* line 615, scss/main.scss */
   #loading-screen #loading-screen-bar {
     border: 3px solid black;
     height: 5%;
@@ -765,7 +765,7 @@ Style for Validation Message
     top: -225px;
     border-radius: 5%;
     z-index: 100; }
-    /* line 695, scss/main.scss */
+    /* line 623, scss/main.scss */
     #loading-screen #loading-screen-bar #loading-bar-box {
       display: inline-block;
       height: 100%;
@@ -775,26 +775,26 @@ Style for Validation Message
       background-color: #61abce;
       animation: bar-animation 3s infinite ease-in;
       position: relative; }
-  /* line 706, scss/main.scss */
+  /* line 634, scss/main.scss */
   #loading-screen p {
     position: relative;
     margin: 2%;
     margin-right: 0;
     font-size: 4rem; }
-  /* line 712, scss/main.scss */
+  /* line 640, scss/main.scss */
   #loading-screen .dots {
     margin: 0;
     position: absolute;
     top: 105px;
     right: 75px; }
-  /* line 718, scss/main.scss */
+  /* line 646, scss/main.scss */
   #loading-screen .dots::before, #loading-screen .dots::after {
     content: '.';
     display: inline-block; }
-  /* line 722, scss/main.scss */
+  /* line 650, scss/main.scss */
   #loading-screen .dots::before {
     animation: dot-anim-before 2s infinite ease-in; }
-  /* line 725, scss/main.scss */
+  /* line 653, scss/main.scss */
   #loading-screen .dots::after {
     animation: dot-anim-after 2s infinite ease-in;
     animation-delay: 1s; }
@@ -832,7 +832,7 @@ Style for Validation Message
     width: 100%; } }
 
 @media screen and (min-width: 769px) {
-  /* line 761, scss/main.scss */
+  /* line 689, scss/main.scss */
   #loading-screen {
     width: 100vh;
     height: 100vh;
@@ -841,7 +841,7 @@ Style for Validation Message
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start; }
-    /* line 769, scss/main.scss */
+    /* line 697, scss/main.scss */
     #loading-screen #loading-screen-bar {
       border: 3px solid black;
       height: 5%;
@@ -850,7 +850,7 @@ Style for Validation Message
       top: -225px;
       border-radius: 5%;
       z-index: 100; }
-      /* line 777, scss/main.scss */
+      /* line 705, scss/main.scss */
       #loading-screen #loading-screen-bar #loading-bar-box {
         display: inline-block;
         height: 100%;
@@ -860,26 +860,24 @@ Style for Validation Message
         background-color: #61abce;
         animation: bar-animation 3s infinite ease-in;
         position: relative; }
-    /* line 788, scss/main.scss */
+    /* line 716, scss/main.scss */
     #loading-screen p {
       position: relative;
-      margin: 2%;
       margin-right: 0;
-      font-size: 4rem; }
-    /* line 794, scss/main.scss */
+      font-size: 4rem;
+      margin-bottom: 25%; }
+    /* line 722, scss/main.scss */
     #loading-screen .dots {
-      margin: 0;
-      position: absolute;
-      top: 15%;
-      right: 25%; }
-    /* line 800, scss/main.scss */
+      margin-right: 42%;
+      position: absolute; }
+    /* line 727, scss/main.scss */
     #loading-screen .dots::before, #loading-screen .dots::after {
       content: '.';
       display: inline-block; }
-    /* line 804, scss/main.scss */
+    /* line 731, scss/main.scss */
     #loading-screen .dots::before {
       animation: dot-anim-before 2s infinite ease-in; }
-    /* line 807, scss/main.scss */
+    /* line 734, scss/main.scss */
     #loading-screen .dots::after {
       animation: dot-anim-after 2s infinite ease-in;
       animation-delay: 1s; }
@@ -913,7 +911,7 @@ Style for Validation Message
     100% {
       width: 100%; } } }
 
-/* line 847, scss/main.scss */
+/* line 774, scss/main.scss */
 #confirm-page-container, #order-input-text-div {
   height: 100%;
   width: 100%;
@@ -923,10 +921,10 @@ Style for Validation Message
   align-items: center;
   font-size: 1.1rem; }
   @media screen and (min-width: 769px) {
-    /* line 856, scss/main.scss */
+    /* line 783, scss/main.scss */
     #confirm-page-container #order-input-text-div, #order-input-text-div #order-input-text-div {
       width: 50%; } }
-  /* line 861, scss/main.scss */
+  /* line 788, scss/main.scss */
   #confirm-page-container #confirm-logo-banner, #order-input-text-div #confirm-logo-banner {
     display: flex;
     justify-content: center;
@@ -935,19 +933,19 @@ Style for Validation Message
     height: 15%;
     background-color: #d5bccf;
     box-shadow: 1px 1px 5px grey; }
-    /* line 869, scss/main.scss */
+    /* line 796, scss/main.scss */
     #confirm-page-container #confirm-logo-banner h2, #order-input-text-div #confirm-logo-banner h2 {
       transform: rotate(-10deg);
       font-size: 5rem;
       margin: 0;
       margin-bottom: 25px;
       color: white; }
-  /* line 877, scss/main.scss */
+  /* line 804, scss/main.scss */
   #confirm-page-container h1, #order-input-text-div h1 {
     margin-bottom: 5%;
     text-align: center;
     text-shadow: 0.5px 0.5px 0px grey; }
-  /* line 882, scss/main.scss */
+  /* line 809, scss/main.scss */
   #confirm-page-container p, #order-input-text-div p {
     text-align: center;
     display: flex;
@@ -956,11 +954,11 @@ Style for Validation Message
     justify-content: center;
     width: 90%;
     text-shadow: 0.5px 0.5px 0px grey; }
-  /* line 891, scss/main.scss */
+  /* line 818, scss/main.scss */
   #confirm-page-container #p2, #order-input-text-div #p2 {
     font-size: 1rem;
     margin-bottom: 20px; }
-  /* line 896, scss/main.scss */
+  /* line 823, scss/main.scss */
   #confirm-page-container #order-box-div, #confirm-page-container #order-delivery-div, #order-input-text-div #order-box-div, #order-input-text-div #order-delivery-div {
     background-color: #e9e0e0;
     width: 90%;
@@ -971,7 +969,7 @@ Style for Validation Message
     font-size: 1rem;
     margin-bottom: 25px;
     box-shadow: 1px 1px 5px grey; }
-    /* line 906, scss/main.scss */
+    /* line 833, scss/main.scss */
     #confirm-page-container #order-box-div div, #confirm-page-container #order-delivery-div div, #order-input-text-div #order-box-div div, #order-input-text-div #order-delivery-div div {
       border: 1px solid #c7c5c5;
       width: 50%;
@@ -980,34 +978,34 @@ Style for Validation Message
       flex-direction: column;
       justify-content: flex-start;
       align-items: center; }
-      /* line 914, scss/main.scss */
+      /* line 841, scss/main.scss */
       #confirm-page-container #order-box-div div #p-order-date, #confirm-page-container #order-box-div div #p-delivery-adress, #confirm-page-container #order-box-div div #p-order-number, #confirm-page-container #order-box-div div #p-delivery-sum, #confirm-page-container #order-delivery-div div #p-order-date, #confirm-page-container #order-delivery-div div #p-delivery-adress, #confirm-page-container #order-delivery-div div #p-order-number, #confirm-page-container #order-delivery-div div #p-delivery-sum, #order-input-text-div #order-box-div div #p-order-date, #order-input-text-div #order-box-div div #p-delivery-adress, #order-input-text-div #order-box-div div #p-order-number, #order-input-text-div #order-box-div div #p-delivery-sum, #order-input-text-div #order-delivery-div div #p-order-date, #order-input-text-div #order-delivery-div div #p-delivery-adress, #order-input-text-div #order-delivery-div div #p-order-number, #order-input-text-div #order-delivery-div div #p-delivery-sum {
         margin-top: 5px;
         font-size: 1.2rem;
         opacity: 1; }
-      /* line 919, scss/main.scss */
+      /* line 846, scss/main.scss */
       #confirm-page-container #order-box-div div .lower-ptag, #confirm-page-container #order-delivery-div div .lower-ptag, #order-input-text-div #order-box-div div .lower-ptag, #order-input-text-div #order-delivery-div div .lower-ptag {
         padding-bottom: 5%; }
-      /* line 922, scss/main.scss */
+      /* line 849, scss/main.scss */
       #confirm-page-container #order-box-div div p, #confirm-page-container #order-delivery-div div p, #order-input-text-div #order-box-div div p, #order-input-text-div #order-delivery-div div p {
         font-size: 1rem;
         margin: 0;
         opacity: .9; }
-  /* line 931, scss/main.scss */
+  /* line 858, scss/main.scss */
   #confirm-page-container #order-delivery-div, #order-input-text-div #order-delivery-div {
     height: auto;
     margin-bottom: 1%; }
 
-/* line 937, scss/main.scss */
+/* line 864, scss/main.scss */
 .product-confirm-text-div {
   display: flex;
   flex-direction: column;
   width: auto;
   text-align: center; }
-  /* line 942, scss/main.scss */
+  /* line 869, scss/main.scss */
   .product-confirm-text-div h1 {
     margin: 0; }
-  /* line 946, scss/main.scss */
+  /* line 873, scss/main.scss */
   .product-confirm-text-div h3 {
     margin: 0;
     margin-top: 50px;
