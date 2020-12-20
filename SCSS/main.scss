@@ -688,3 +688,83 @@ margin: 1%;
   }
  
 }
+
+
+//Orderconfirm
+
+#confirm-page-container,#order-input-text-div {
+  height: 100%;
+  width: 100%;
+  //border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.1rem;
+
+  #confirm-logo-banner{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    background-color: $button-color;
+    @include shadow;
+    h2 {
+      transform: rotate(-10deg);
+      font-size: 5rem;
+      margin: 0;
+      margin-bottom: 25px;
+    }
+  }
+  h1{
+    margin-bottom: 5%;
+    text-align: center;
+    @include text-shadow;
+  }
+  p{
+    text-align: center;
+    display:flex;
+    margin: 0;
+    margin-bottom: 10px;
+    justify-content: center;
+    width: 90%;
+    @include text-shadow;
+  }
+  #p2{
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  #order-box-div, #order-delivery-div{
+    background-color: rgb(233, 224, 224);
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    @include shadow;
+    div{
+      border:1px solid rgb(199, 197, 197);
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      #p-order-date{
+        margin-top: 5px;
+      }
+      p{
+        margin: 0;
+      }
+    }
+
+  }
+
+  #order-delivery-div{
+    height: 20%;
+  }
+  }

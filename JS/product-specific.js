@@ -5,7 +5,8 @@ let totalCount = false;
 
 $(function(){
   if (localStorage.getItem("itemObject") === null) {
-    console.log("asdas")
+      ($("body")).empty();
+      orderConfirmed();
   }
   else{
     let specificProduct = JSON.parse(localStorage.itemObject)
@@ -326,5 +327,87 @@ function cartCounterDisplay(){
 }
 
 function orderConfirmed() {
-  
+          let orderInputData = JSON.parse(localStorage.orderInputData)
+          console.log(orderInputData);
+          console.log(orderInputData.firstname);
+          let date = new Date();
+          let generator = Math.random()* Math.pow(10,10);
+          let orderNumber = Math.round(generator);
+          console.log(orderNumber);
+          
+      
+          let confirmPageContainer = ($("<div>")).attr("id","confirm-page-container").appendTo($("body"));
+          ($("<div>")).attr("id","confirm-logo-banner").appendTo(confirmPageContainer);
+          ($("<h2>")).html("<em>substans</em>").appendTo($("#confirm-logo-banner"));
+
+          let orderInputTextDiv = ($("<div>")).attr("id","order-input-text-div").appendTo(confirmPageContainer);
+          let cappedFirstName = firstLetterCapitalize(orderInputData.firstname);
+         
+
+          ($("<h1>"))
+              .html("Tack för din beställning " + cappedFirstName + "!")
+              .appendTo("#order-input-text-div");
+          
+          ($("<p>"))
+              .html("Vi har tagit emot din beställning och packar snart dina varor. När din order lämnat vårt lager kommer du att få en leveransbekräftelse med spårningsnummer via e-post.")
+              .appendTo("#order-input-text-div");
+              ($("<p>"))
+              .attr("id","p2")
+              .html(" Vänliga hälsningar, substans")
+              .appendTo("#order-input-text-div");
+
+
+          let orderBoxDiv =($("<div>")).attr("id","order-box-div").appendTo(orderInputTextDiv);
+
+          ($("<div>"))
+          .attr("id","order-date-div")
+          .appendTo(orderBoxDiv);
+          
+          ($("<p>"))
+          .html("Orderdatum")
+          .attr("id","p-order-date")
+          .appendTo("#order-date-div");
+
+          ($("<p>"))
+          .html(date.toDateString())
+          .appendTo("#order-date-div");
+
+          ////////////////////////////
+
+          ($("<div>"))
+          .attr("id","order-number-div")
+          .appendTo(orderBoxDiv);
+          ($("<p>"))
+          .html("Ordernummer")
+          .attr("id","p-order-number")
+          .appendTo("#order-number-div");
+          ($("<p>"))
+          .html(orderNumber + "XY")
+          .appendTo("#order-number-div");
+
+          let orderDeliveryDiv =($("<div>")).attr("id","order-delivery-div").appendTo(orderInputTextDiv);
+
+          ($("<div>"))
+          .attr("id","order-adress-div")
+          .appendTo(orderDeliveryDiv);
+          ($("<p>")).attr("id","p-delivery-adress").html("Leveransadress").appendTo($("#order-adress-div"));
+          ($("<p>")).html("asds").appendTo($("#order-adress-div"));
+          ($("<p>")).html("asds").appendTo($("#order-adress-div"));
+          ($("<p>")).html("asds").appendTo($("#order-adress-div"));
+          ($("<p>")).html("asds").appendTo($("#order-adress-div"));
+          
+          
+
+          ($("<div>"))
+          .attr("id","order-sum-div")
+          .appendTo(orderDeliveryDiv);
+          
+}             
+
+function firstLetterCapitalize(incString){
+  let stringToLower = incString;
+  let loweredString = stringToLower.toLowerCase();
+  let cappedString = (loweredString[0].toUpperCase()+loweredString.slice(1)); 
+  return cappedString;
+
 }
