@@ -532,6 +532,20 @@ Style for Validation Message
     justify-content: space-evenly;
     font-family: "Oswald", sans-serif;
     justify-content: center; }
+    /* line 485, scss/main.scss */
+    .product-Div img {
+      width: 25%; }
+    /* line 488, scss/main.scss */
+    .product-Div .product-text-div {
+      width: 30%; }
+      /* line 490, scss/main.scss */
+      .product-Div .product-text-div h5 {
+        margin-left: 10%; }
+      /* line 493, scss/main.scss */
+      .product-Div .product-text-div h1 {
+        margin-left: 10%;
+        margin-top: -4%; }
+      /* line 497, scss/main.scss */
     .product-Div img {
       width: 25%; }
     .product-Div .product-text-div {
@@ -546,12 +560,14 @@ Style for Validation Message
         margin-top: -4%; } }
 
 /* FORM */
+/* line 507, scss/main.scss */
 #my-form {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 7%; }
+  /* line 513, scss/main.scss */
   #my-form div {
     background-color: #f1f1f1;
     width: 90%;
@@ -570,7 +586,7 @@ Style for Validation Message
     font-family: "Oswald", sans-serif;
     width: 80%;
     align-self: center;
-    margin-bottom: 6%; }
+    margin-top: 7%; }
   #my-form button:hover {
     background-color: #edd1e7; }
   #my-form p {
@@ -580,23 +596,16 @@ Style for Validation Message
   #my-form {
     width: 90%;
     display: flex;
-    justify-content: center;
-    align-items: baseline;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 4%;
-    background-color: #f1f1f1; }
-    #my-form .form-div-1 {
-      margin-left: 4%;
-      width: 25%;
-      margin-bottom: 5%; }
-    #my-form .form-div-2 {
-      width: 20%;
-      margin: 1%;
-      margin-left: 10%; }
-    #my-form .form-div-3 {
-      width: 25%;
-      margin: 1%; }
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%; }
+    #my-form div {
+      background-color: #f1f1f1;
+      width: 90%;
+      margin-bottom: 5%;
+      padding: 7% 0 7% 0;
+      display: flex;
+      flex-direction: column; }
     #my-form button {
       cursor: pointer;
       text-align: center;
@@ -608,13 +617,14 @@ Style for Validation Message
       font-family: "Oswald", sans-serif;
       width: 50%;
       margin-top: 4%;
-      align-self: flex-end; }
+      align-self: center; }
     #my-form p {
       margin: 1% 0 0 10%; }
     #my-form button:hover {
       background-color: #edd1e7; } }
 
 /* DIALOG */
+/* line 582, scss/main.scss */
 .product-div-form {
   width: 100%;
   display: flex;
@@ -642,6 +652,17 @@ Style for Validation Message
     font-family: "Oswald", sans-serif;
     width: 100%;
     margin-bottom: 10%; }
+  /* line 603, scss/main.scss */
+  .product-image-form {
+    width: 100%; }
+  /* line 606, scss/main.scss */
+  .product-text-div {
+    width: 100%; }
+  /* line 609, scss/main.scss */
+  .input-text {
+    margin: 1%; } }
+
+/* line 615, scss/main.scss */
   .product-image-form {
     width: 100%; }
   .product-text-div {
@@ -657,6 +678,7 @@ Style for Validation Message
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start; }
+  /* line 624, scss/main.scss */
   #loading-screen #loading-screen-bar {
     border: 3px solid black;
     height: 5%;
@@ -665,6 +687,7 @@ Style for Validation Message
     top: -225px;
     border-radius: 5%;
     z-index: 100; }
+    /* line 632, scss/main.scss */
     #loading-screen #loading-screen-bar #loading-bar-box {
       display: inline-block;
       height: 100%;
@@ -674,16 +697,26 @@ Style for Validation Message
       background-color: #61abce;
       animation: bar-animation 3s infinite ease-in;
       position: relative; }
+  /* line 643, scss/main.scss */
   #loading-screen p {
     position: relative;
     margin: 2%;
     margin-right: 0;
     font-size: 4rem; }
+  /* line 650, scss/main.scss */
   #loading-screen .dots {
     margin: 0;
     position: absolute;
     top: 105px;
     right: 75px; }
+  /* line 656, scss/main.scss */
+  #loading-screen .dots::before, #loading-screen .dots::after {
+    content: '.';
+    display: inline-block; }
+  /* line 664, scss/main.scss */
+  #loading-screen .dots::before {
+    animation: dot-anim-before 2s infinite ease-in; }
+  /* line 671, scss/main.scss */
   #loading-screen .dots::before, #loading-screen .dots::after {
     content: '.';
     display: inline-block; }
@@ -748,8 +781,7 @@ Style for Validation Message
       transform: rotate(-10deg);
       font-size: 5rem;
       margin: 0;
-      margin-bottom: 25px;
-      color: white; }
+      margin-bottom: 25px; }
   #confirm-page-container h1, #order-input-text-div h1 {
     margin-bottom: 5%;
     text-align: center;
