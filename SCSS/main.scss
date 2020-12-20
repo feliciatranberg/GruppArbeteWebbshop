@@ -510,72 +510,135 @@ Style for Validation Message
   flex-direction: column;
   align-items: center;
   margin-top: 7%;
-  div {
+} 
+  .contact-info-div {
     background-color: $bg-color-secondary;
     width: 90%;
     margin-bottom: 7%;
     padding: 7% 0 7% 0;
     display: flex;
     flex-direction: column;
+    input {
+      width: 60%;
+      margin-left: 5%
+    } 
+    p {
+      margin: 1% 0 0 7%;
+    }
   }
-  button {
+  .delivery-payment-div {
+    background-color: $bg-color-secondary;
+    width: 90%;
+    margin-bottom: 7%;
+    padding: 7% 0 7% 0;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin-bottom: 10%
+    }
+  }
+  #confirm-order-button {
     @include button-medium;
-    width: 80%;
-    align-self: center;  
+    width: 80%; 
     margin-bottom: 8%;
- 
+  
+
+
+
   }
-  button:hover {
+  #confirm-order-button:hover {
   background-color: $button-hover-color;
   }
-  p {
-    margin: 1% 0 0 10%;
-  }
-}
 
-@include tablets-up {  
-#my-form {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 4%;
-  background-color: $bg-color-secondary;
-  
-  .form-div-1 {
-    margin-left: 4%;
-    width: 25%;
-    margin-bottom: 5%;
-  
-  }
-  .form-div-2 { 
-    width: 20%;
-    margin: 1%;
-    margin-left: 10%;
-  
-  }
-  .form-div-3 {
-    width: 25%;
-    margin: 1%;
+@include tablets-up {
+  #my-form {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
     
   }
-
-  button {
-    @include button-medium;
-    width: 50%;
-    margin-top: 4%;
-    align-self: flex-end;   
-  }
-  p {
-    margin: 1% 0 0 10%;
-  }
-  button:hover {
+    .contact-info-div {
+      width: 40%;
+      height: 55%;
+      margin-bottom: 0;
+      padding-bottom: 7%;
+      padding-left: 5%;
+      input {
+        width: 60%;
+        margin-left: 5%
+      } 
+      p {
+        margin: 1% 0 0 5%;
+      }
+      h2 {
+        margin-left: 5%;
+      }
+    }
+    .delivery-payment-div {
+      width: 40%;
+      height: 55%;
+      padding-bottom: 7%;
+      margin-bottom: 7%;
+  
+      h2 {
+        margin-bottom: 10%
+      }
+      p {
+        margin-bottom: 7%
+      }
+    }
+    #confirm-order-button {
+      @include button-medium;
+      width: 40%; 
+      margin-bottom: 8%;
+    }
+    #confirm-order-button:hover {
     background-color: $button-hover-color;
     }
 }
-}
+
+// @include tablets-up {  
+// #my-form {
+//   width: 90%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: baseline;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   margin-top: 4%;  
+// div {
+//     width: 40%;
+//     margin-bottom: 5%;
+//     align-self: flex-start;
+//     input {
+//       width: 27%;
+//       text-align: center;
+//       align-self: flex-end;
+//     p {
+//       align-self: flex-start;
+//     }
+//   }
+//   }
+
+//   #confirm-order-button {
+//     @include button-medium;
+//     width: 50%;
+//     margin-top: 4%;
+//     align-self: flex-end;   
+//   }
+//   p {
+//     margin: 1% 0 0 10%;
+//   }
+//   #confirm-order-button:hover {
+//     background-color: $button-hover-color;
+//     }
+// }
+// }
 
 // /* DIALOG */
 
