@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* FÄRGER */
 /* TYPSNITT OCH TYPSTORLEK */
+/* line 4, scss/main.scss */
 body, html {
   z-index: 0;
   margin: 0;
@@ -12,6 +13,7 @@ body, html {
   font-family: "Oswald", sans-serif; }
 
 /* NAVIGERING */
+/* line 17, scss/main.scss */
 .nav-bar-container {
   width: 100%;
   display: flex;
@@ -23,8 +25,10 @@ body, html {
   background-color: white;
   font-family: "Oswald", sans-serif; }
   @media screen and (min-width: 769px) {
+    /* line 17, scss/main.scss */
     .nav-bar-container {
       position: static; } }
+  /* line 22, scss/main.scss */
   .nav-bar-container a {
     text-align: center;
     padding: 12px 0;
@@ -32,24 +36,29 @@ body, html {
     color: black;
     font-size: 20px;
     text-decoration: none; }
+  /* line 30, scss/main.scss */
   .nav-bar-container a:hover {
     color: grey; }
 
 /* BANNER STARTSIDA */
+/* line 37, scss/main.scss */
 section {
   height: 50%;
   margin-top: 12%; }
 
 @media screen and (min-width: 769px) {
+  /* line 42, scss/main.scss */
   section {
     height: 100%;
     margin-top: 0; } }
 
+/* line 47, scss/main.scss */
 .section-container {
   height: 100%;
   width: 100%;
   position: relative; }
 
+/* line 52, scss/main.scss */
 .hero-one,
 .hero-two,
 .hero-three {
@@ -61,13 +70,16 @@ section {
   width: 100%;
   position: absolute; }
 
+/* line 63, scss/main.scss */
 .hero-one {
   background-image: url("../images/hero-1.jpg"); }
 
+/* line 66, scss/main.scss */
 .hero-two {
   background-image: url("../images/hero-2.jpg");
   animation: slideTwoAnim 5s infinite; }
 
+/* line 70, scss/main.scss */
 .hero-three {
   background-image: url("../images/hero-3.jpg");
   animation: slideThreeAnim 5s infinite; }
@@ -99,6 +111,7 @@ section {
     opacity: 0; } }
 
 /* PRODUKTBILDER STARTSIDA */
+/* line 78, scss/main.scss */
 .product-image-container {
   width: 100%;
   display: flex;
@@ -107,13 +120,16 @@ section {
   font-family: "Oswald", sans-serif;
   margin: 2% 0 2% 0; }
 
+/* line 82, scss/main.scss */
 .product-image {
   position: relative;
   width: 100%;
   margin: 15px; }
+  /* line 86, scss/main.scss */
   .product-image img {
     box-shadow: 1px 1px 5px grey;
     width: 100%; }
+  /* line 90, scss/main.scss */
   .product-image button {
     cursor: pointer;
     text-align: center;
@@ -128,18 +144,22 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%); }
+  /* line 98, scss/main.scss */
   .product-image button:hover {
     background-color: #edd1e7; }
 
 @media screen and (min-width: 769px) {
+  /* line 103, scss/main.scss */
   .product-image-container {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
     font-family: "Oswald", sans-serif; }
+    /* line 105, scss/main.scss */
     .product-image-container .product-image {
       width: 100%; }
+    /* line 108, scss/main.scss */
     .product-image-container button {
       cursor: pointer;
       text-align: center;
@@ -155,10 +175,12 @@ section {
       transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       padding: 12px 24px; }
+    /* line 117, scss/main.scss */
     .product-image-container button:hover {
       background-color: #edd1e7; } }
 
 /* RULLANDE TEXT PRODUKTSIDOR */
+/* line 125, scss/main.scss */
 .scrolling-text-container {
   box-shadow: 1px 1px 5px grey;
   overflow: hidden;
@@ -170,6 +192,7 @@ section {
   width: 100%;
   font-family: Impact, 'Arial Narrow Bold'; }
 
+/* line 136, scss/main.scss */
 .scrolling-text-container div {
   position: absolute;
   width: 100%;
@@ -228,6 +251,7 @@ section {
         transform: translateY(3%); } } }
 
 /* PRODUKTSIDOR */
+/* line 156, scss/main.scss */
 .wrapperProductPage {
   width: 100%;
   display: flex;
@@ -236,6 +260,7 @@ section {
   font-family: "Oswald", sans-serif;
   margin-top: 10%; }
 
+/* line 160, scss/main.scss */
 .itemDiv {
   width: 100%;
   display: flex;
@@ -244,66 +269,85 @@ section {
   font-family: "Oswald", sans-serif;
   flex-direction: column; }
 
+/* line 164, scss/main.scss */
 img {
   width: 85%;
   align-self: center;
   box-shadow: 1px 1px 5px grey; }
 
+/* line 169, scss/main.scss */
 h2 {
   margin-left: 11%;
   margin-top: -1%; }
 
+/* line 173, scss/main.scss */
 h3 {
   margin-left: 11%; }
 
+/* line 176, scss/main.scss */
 p {
   margin-left: 11%;
   margin-top: -5%; }
 
+/* line 181, scss/main.scss */
 .itemDiv:hover {
   cursor: pointer; }
 
 @media screen and (min-width: 769px) {
+  /* line 185, scss/main.scss */
   .wrapperProductPage {
     margin-top: 3%;
     justify-content: center; }
+  /* line 189, scss/main.scss */
   .itemDiv {
     width: 27%; }
+    /* line 191, scss/main.scss */
     .itemDiv img {
       width: 90%; }
+    /* line 194, scss/main.scss */
     .itemDiv h2 {
       margin-left: 8%;
       margin-top: 0%; }
+    /* line 198, scss/main.scss */
     .itemDiv h3 {
       margin-left: 8%; }
+    /* line 201, scss/main.scss */
     .itemDiv p {
       margin-left: 8%;
       font-size: 14px;
       margin-top: -4%; } }
 
 /* ENSKILD PRODUKTSIDA */
+/* line 211, scss/main.scss */
 #specificProductContentwrap {
   display: flex;
   justify-content: center;
   margin-top: 15%;
   width: 100%;
   flex-wrap: wrap; }
+  /* line 217, scss/main.scss */
   #specificProductContentwrap img {
     width: 100%; }
+  /* line 220, scss/main.scss */
   #specificProductContentwrap #productTextBox {
     display: flex;
     flex-direction: column;
     width: 100%; }
+    /* line 224, scss/main.scss */
     #specificProductContentwrap #productTextBox h2 {
       margin-top: 5%;
       margin-left: 5%; }
+  /* line 229, scss/main.scss */
   #specificProductContentwrap #description {
     margin-left: 5%; }
+  /* line 232, scss/main.scss */
   #specificProductContentwrap ul {
     margin-left: 5%;
     margin-top: -1%; }
+  /* line 236, scss/main.scss */
   #specificProductContentwrap h1 {
     margin-left: 5%; }
+  /* line 239, scss/main.scss */
   #specificProductContentwrap #addToCartButton {
     cursor: pointer;
     text-align: center;
@@ -316,47 +360,61 @@ p {
     width: 90%;
     align-self: center;
     margin-top: -3%; }
+  /* line 245, scss/main.scss */
   #specificProductContentwrap #addToCartButton:hover {
     background-color: #edd1e7; }
+  /* line 249, scss/main.scss */
   #specificProductContentwrap #dropDownMenu {
     list-style-type: none;
     position: absolute;
     align-self: flex-end;
-    margin-top: 50px;
-    margin-right: 50px;
+    margin-top: 26px;
+    margin-right: 25px;
     z-index: 10000;
     border: 1px solid black;
     width: 100px;
     text-align: left;
     padding: 0; }
+    /* line 260, scss/main.scss */
     #specificProductContentwrap #dropDownMenu .sizeOption {
       margin-top: 5px; }
+    /* line 263, scss/main.scss */
     #specificProductContentwrap #dropDownMenu li:hover {
       background-color: #f1f1f1;
       cursor: pointer; }
 
 @media screen and (min-width: 769px) {
+  /* line 271, scss/main.scss */
   #specificProductContentwrap {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 5%; }
+    /* line 276, scss/main.scss */
     #specificProductContentwrap img {
       width: 40%; }
+    /* line 279, scss/main.scss */
     #specificProductContentwrap #productTextBox {
       display: flex;
       flex-direction: column;
-      width: 40%; }
-      #specificProductContentwrap #productTextBox h1 {
+      width: 40%;
+      height: 40%; }
+      /* line 284, scss/main.scss */
+      #specificProductContentwrap #productTextBox h2 {
         font-size: 1.5rem;
-        margin-left: 5%;
-        margin-top: 5%; }
-      #specificProductContentwrap #productTextBox #description, #specificProductContentwrap #productTextBox #dropDownMenu {
+        margin-left: 4%;
+        margin-top: 4%; }
+      /* line 289, scss/main.scss */
+      #specificProductContentwrap #productTextBox #description {
         font-size: 1rem;
-        margin-left: 5%; }
+        margin-left: 5%;
+        margin-top: -3%; }
+      /* line 294, scss/main.scss */
       #specificProductContentwrap #productTextBox #productPrize {
         font-weight: bold;
-        margin-left: 5%; }
+        margin-left: 5%;
+        margin-top: 55%; }
+      /* line 299, scss/main.scss */
       #specificProductContentwrap #productTextBox #addToCartButton {
         cursor: pointer;
         text-align: center;
@@ -367,23 +425,29 @@ p {
         padding: 2% 4% 2% 4%;
         font-family: "Oswald", sans-serif;
         width: 40%;
-        margin-top: 50%;
+        margin-top: -1%;
         margin-left: -51%; }
+      /* line 305, scss/main.scss */
       #specificProductContentwrap #productTextBox #addToCartButton:hover {
         background-color: #edd1e7; }
+    /* line 309, scss/main.scss */
     #specificProductContentwrap #dropDownMenu {
       list-style-type: none;
       border: 1px solid black;
-      width: 10%;
-      padding: 1%;
+      width: 14%;
+      padding: 0.5%;
       align-self: flex-start;
-      margin-top: 13%; }
+      margin-top: 8%;
+      margin-left: 2%; }
+      /* line 319, scss/main.scss */
       #specificProductContentwrap #dropDownMenu .sizeOption {
         margin-top: 5px; }
+      /* line 322, scss/main.scss */
       #specificProductContentwrap #dropDownMenu li:hover {
         background-color: #f1f1f1;
         cursor: pointer; } }
 
+/* line 332, scss/main.scss */
 #shoppingCart {
   display: flex;
   flex-wrap: wrap;
@@ -391,13 +455,16 @@ p {
   border: 1px solid red;
   width: 100%;
   z-index: 10000; }
+  /* line 339, scss/main.scss */
   #shoppingCart .shoppingCartImgDiv img {
     width: 100%;
     height: auto; }
+  /* line 345, scss/main.scss */
   #shoppingCart .shoppingCartItemDiv {
     display: flex;
     justify-content: space-between;
     border: 1px solid black; }
+    /* line 349, scss/main.scss */
     #shoppingCart .shoppingCartItemDiv .shoppingCartDeleteBtn {
       color: red;
       background: none;
@@ -405,9 +472,11 @@ p {
       font-size: 1.5rem;
       justify-self: flex-end; }
 
+/* line 359, scss/main.scss */
 #shoppingcartButton:hover {
   cursor: pointer; }
 
+/* line 364, scss/main.scss */
 #goToCheckout {
   cursor: pointer;
   text-align: center;
@@ -418,15 +487,18 @@ p {
   padding: 1%;
   font-family: "Oswald", sans-serif; }
 
+/* line 367, scss/main.scss */
 #goToCheckout:hover {
   background-color: #edd1e7; }
 
+/* line 371, scss/main.scss */
 #shoppingcartExtend {
   border: 1px solid green;
   display: flex;
   flex-direction: column;
   z-index: 5; }
 
+/* line 378, scss/main.scss */
 #cartEmptyMessage {
   padding: 1%;
   align-self: center;
@@ -437,6 +509,7 @@ p {
   box-shadow: 1px 1px 5px grey; }
 
 @media screen and (min-width: 769px) {
+  /* line 389, scss/main.scss */
   #cartEmptyMessage {
     padding: 1%;
     align-self: center;
@@ -446,9 +519,11 @@ p {
     margin-top: 3%;
     box-shadow: 1px 1px 5px grey; } }
 
+/* line 403, scss/main.scss */
 #shoppingcartButton {
   padding-bottom: 0;
   height: 5px; }
+  /* line 406, scss/main.scss */
   #shoppingcartButton #cartNumberDisplay {
     color: blue;
     position: relative;
@@ -456,6 +531,7 @@ p {
     top: -36px;
     z-index: 10000; }
 
+/* line 414, scss/main.scss */
 #shoppingCartDiv {
   position: absolute;
   left: 70%;
@@ -464,24 +540,29 @@ p {
   width: 25%;
   border: 1px solid pink; }
 
+/* line 423, scss/main.scss */
 .hidden {
   display: none; }
 
 /*
 Style for Validation Message
 */
+/* line 430, scss/main.scss */
 #username-error, #email-error {
   color: #d9534f;
   padding: 12px;
   display: none; }
 
 /* PRODUKT FORM */
+/* line 438, scss/main.scss */
 .container-checkout-form {
   margin-top: 15%; }
 
+/* line 441, scss/main.scss */
 .checkout-products {
   width: 100%; }
 
+/* line 444, scss/main.scss */
 .product-Div {
   width: 100%;
   display: flex;
@@ -490,20 +571,26 @@ Style for Validation Message
   font-family: "Oswald", sans-serif;
   justify-content: center;
   background-color: #f1f1f1; }
+  /* line 448, scss/main.scss */
   .product-Div img {
     width: 60%;
     box-shadow: none; }
 
+/* line 453, scss/main.scss */
 .product-text-div {
   width: 40%; }
+  /* line 455, scss/main.scss */
   .product-text-div h5 {
     margin-left: 5%; }
+  /* line 458, scss/main.scss */
   .product-text-div h1 {
     margin-left: 5%;
     margin-top: -4%; }
+  /* line 462, scss/main.scss */
   .product-text-div span {
     margin-left: 5%;
     margin-top: -4%; }
+  /* line 466, scss/main.scss */
   .product-text-div button {
     cursor: pointer;
     text-align: center;
@@ -515,10 +602,13 @@ Style for Validation Message
     font-family: "Oswald", sans-serif; }
 
 @media screen and (min-width: 769px) {
+  /* line 473, scss/main.scss */
   .container-checkout-form {
     margin-top: 2%; }
+  /* line 476, scss/main.scss */
   .checkout-products {
     width: 100%; }
+  /* line 479, scss/main.scss */
   .product-Div {
     width: 100%;
     display: flex;
@@ -526,26 +616,33 @@ Style for Validation Message
     justify-content: space-evenly;
     font-family: "Oswald", sans-serif;
     justify-content: center; }
+    /* line 482, scss/main.scss */
     .product-Div img {
       width: 25%; }
+    /* line 485, scss/main.scss */
     .product-Div .product-text-div {
       width: 30%; }
+      /* line 487, scss/main.scss */
       .product-Div .product-text-div h5 {
         margin-left: 10%; }
+      /* line 490, scss/main.scss */
       .product-Div .product-text-div h1 {
         margin-left: 10%;
         margin-top: -4%; }
+      /* line 494, scss/main.scss */
       .product-Div .product-text-div span {
         margin-left: 10%;
         margin-top: -4%; } }
 
 /* FORM */
+/* line 504, scss/main.scss */
 #my-form {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 7%; }
+  /* line 510, scss/main.scss */
   #my-form div {
     background-color: #f1f1f1;
     width: 90%;
@@ -553,6 +650,7 @@ Style for Validation Message
     padding: 7% 0 7% 0;
     display: flex;
     flex-direction: column; }
+  /* line 518, scss/main.scss */
   #my-form button {
     cursor: pointer;
     text-align: center;
@@ -565,18 +663,22 @@ Style for Validation Message
     width: 80%;
     align-self: center;
     margin-top: 7%; }
+  /* line 524, scss/main.scss */
   #my-form button:hover {
     background-color: #edd1e7; }
+  /* line 527, scss/main.scss */
   #my-form p {
     margin: 1% 0 0 10%; }
 
 @media screen and (min-width: 769px) {
+  /* line 533, scss/main.scss */
   #my-form {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5%; }
+    /* line 539, scss/main.scss */
     #my-form div {
       background-color: #f1f1f1;
       width: 90%;
@@ -584,6 +686,7 @@ Style for Validation Message
       padding: 7% 0 7% 0;
       display: flex;
       flex-direction: column; }
+    /* line 547, scss/main.scss */
     #my-form button {
       cursor: pointer;
       text-align: center;
@@ -596,12 +699,15 @@ Style for Validation Message
       width: 50%;
       margin-top: 4%;
       align-self: center; }
+    /* line 553, scss/main.scss */
     #my-form p {
       margin: 1% 0 0 10%; }
+    /* line 556, scss/main.scss */
     #my-form button:hover {
       background-color: #edd1e7; } }
 
 /* DIALOG */
+/* line 564, scss/main.scss */
 .product-div-form {
   width: 100%;
   display: flex;
@@ -611,16 +717,20 @@ Style for Validation Message
   width: 100%;
   margin-bottom: 10%; }
 
+/* line 569, scss/main.scss */
 .product-image-form {
   width: 50%; }
 
+/* line 572, scss/main.scss */
 .product-text-div {
   width: 50%; }
 
+/* line 575, scss/main.scss */
 .input-text {
   margin: 1%; }
 
 @media screen and (min-width: 769px) {
+  /* line 580, scss/main.scss */
   .product-div-form {
     width: 100%;
     display: flex;
@@ -629,13 +739,17 @@ Style for Validation Message
     font-family: "Oswald", sans-serif;
     width: 100%;
     margin-bottom: 10%; }
+  /* line 585, scss/main.scss */
   .product-image-form {
     width: 100%; }
+  /* line 588, scss/main.scss */
   .product-text-div {
     width: 100%; }
+  /* line 591, scss/main.scss */
   .input-text {
     margin: 1%; } }
 
+/* line 597, scss/main.scss */
 #loading-screen {
   width: 100vh;
   height: 100vh;
@@ -644,6 +758,7 @@ Style for Validation Message
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start; }
+  /* line 606, scss/main.scss */
   #loading-screen #loading-screen-bar {
     border: 3px solid black;
     height: 5%;
@@ -652,6 +767,7 @@ Style for Validation Message
     top: -225px;
     border-radius: 5%;
     z-index: 100; }
+    /* line 614, scss/main.scss */
     #loading-screen #loading-screen-bar #loading-bar-box {
       display: inline-block;
       height: 100%;
@@ -661,21 +777,26 @@ Style for Validation Message
       background-color: #61abce;
       animation: bar-animation 3s infinite ease-in;
       position: relative; }
+  /* line 625, scss/main.scss */
   #loading-screen p {
     position: relative;
     margin: 2%;
     margin-right: 0;
     font-size: 4rem; }
+  /* line 632, scss/main.scss */
   #loading-screen .dots {
     margin: 0;
     position: absolute;
     top: 105px;
     right: 75px; }
+  /* line 638, scss/main.scss */
   #loading-screen .dots::before, #loading-screen .dots::after {
     content: '.';
     display: inline-block; }
+  /* line 646, scss/main.scss */
   #loading-screen .dots::before {
     animation: dot-anim-before 2s infinite ease-in; }
+  /* line 653, scss/main.scss */
   #loading-screen .dots::after {
     animation: dot-anim-after 2s infinite ease-in;
     animation-delay: 1s; }

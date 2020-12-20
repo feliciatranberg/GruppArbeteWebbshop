@@ -250,8 +250,8 @@ button:hover {
     list-style-type: none;
     position: absolute;
     align-self: flex-end;
-    margin-top: 50px;
-    margin-right: 50px;
+    margin-top: 26px;
+    margin-right: 25px;
     z-index: 10000;
     border: 1px solid black;
     width: 100px;
@@ -280,23 +280,26 @@ button:hover {
     display: flex;
     flex-direction: column;
     width: 40%;
-    h1{
+    height: 40%;
+    h2{
     font-size: 1.5rem;
-    margin-left: 5%;
-    margin-top: 5%;
+    margin-left: 4%;
+    margin-top: 4%;
   }    
-  #description, #dropDownMenu {
+  #description {
     font-size: 1rem;
     margin-left: 5%;
+    margin-top: -3%;
   }
   #productPrize {
     font-weight: bold;
     margin-left: 5%;
+    margin-top: 55%;
   }
     #addToCartButton {
     @include button-large;
     width: 40%;
-    margin-top: 50%;
+    margin-top: -1%;
     margin-left: -51%;
   }  
   #addToCartButton:hover {
@@ -306,10 +309,11 @@ button:hover {
   #dropDownMenu{
     list-style-type: none;
     border: 1px solid black;
-    width: 10%;
-    padding: 1%;
+    width: 14%;
+    padding: 0.5%;
     align-self: flex-start;
-    margin-top: 13%;
+    margin-top: 8%;
+    margin-left: 2%;
  
    
     .sizeOption{
