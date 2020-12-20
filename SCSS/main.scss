@@ -737,7 +737,7 @@ margin: 1%;
   }
   #p2{
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   #order-box-div, #order-delivery-div{
@@ -758,17 +758,22 @@ margin: 1%;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      #p-order-date{
+      #p-order-date,#p-delivery-adress,#p-order-number,#p-delivery-sum{
         margin-top: 5px;
+        font-size: 1.2rem; 
+        opacity: 1;
       }
       p{
+        font-size: 1rem;
         margin: 0;
+        opacity: .9;
       }
     }
 
   }
 
   #order-delivery-div{
-    height: 20%;
+    height: auto;
+  
   }
   }

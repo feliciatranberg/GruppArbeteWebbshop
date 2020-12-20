@@ -256,6 +256,7 @@ function totalCreator(specificProduct){
   
     console.log(priceArray);
   let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
+ 
   console.log(arrSum);
   if (arrSum==0){
     arrSum = "";
@@ -334,7 +335,15 @@ function orderConfirmed() {
           let generator = Math.random()* Math.pow(10,10);
           let orderNumber = Math.round(generator);
           console.log(orderNumber);
-          
+          let priceArrayFromLS = JSON.parse(localStorage.priceArray);
+          let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
+          let shipping = 50;
+          console.log(shipping);
+          if (arrSum > 500) {
+            shipping = 0;
+          }
+          let total = arrSum + shipping;
+       
       
           let confirmPageContainer = ($("<div>")).attr("id","confirm-page-container").appendTo($("body"));
           ($("<div>")).attr("id","confirm-logo-banner").appendTo(confirmPageContainer);
@@ -342,10 +351,13 @@ function orderConfirmed() {
 
           let orderInputTextDiv = ($("<div>")).attr("id","order-input-text-div").appendTo(confirmPageContainer);
           let cappedFirstName = firstLetterCapitalize(orderInputData.firstname);
-         
+          let cappedLastName = firstLetterCapitalize(orderInputData.lastname);
+          let cappedAdress = firstLetterCapitalize(orderInputData.adress);
+          
+          
 
           ($("<h1>"))
-              .html("Tack för din beställning " + cappedFirstName + "!")
+              .html("Tack för din beställning, " + cappedFirstName + "!")
               .appendTo("#order-input-text-div");
           
           ($("<p>"))
@@ -391,16 +403,21 @@ function orderConfirmed() {
           .attr("id","order-adress-div")
           .appendTo(orderDeliveryDiv);
           ($("<p>")).attr("id","p-delivery-adress").html("Leveransadress").appendTo($("#order-adress-div"));
-          ($("<p>")).html("asds").appendTo($("#order-adress-div"));
-          ($("<p>")).html("asds").appendTo($("#order-adress-div"));
-          ($("<p>")).html("asds").appendTo($("#order-adress-div"));
-          ($("<p>")).html("asds").appendTo($("#order-adress-div"));
+          ($("<p>")).html(cappedFirstName +" " +cappedLastName).appendTo($("#order-adress-div"));
+          ($("<p>")).html(cappedAdress).appendTo($("#order-adress-div"));
+          ($("<p>")).html(orderInputData.city.toUpperCase()).appendTo($("#order-adress-div"));
+          ($("<p>")).html(orderInputData.zipcode).appendTo($("#order-adress-div"));
+          ($("<p>")).html(orderInputData.tel).appendTo($("#order-adress-div"));
           
           
 
           ($("<div>"))
           .attr("id","order-sum-div")
           .appendTo(orderDeliveryDiv);
+          ($("<p>")).attr("id","p-delivery-sum").html("Summa").appendTo($("#order-sum-div"));
+          ($("<p>")).html("Summa" + " " + arrSum + "kr").appendTo($("#order-sum-div"));
+          ($("<p>")).html("Frakt" + " " + shipping + "kr").appendTo($("#order-sum-div"));
+          ($("<p>")).html("Totalsumma" + " " + total + "kr").appendTo($("#order-sum-div"));
           
 }             
 
@@ -411,3 +428,6 @@ function firstLetterCapitalize(incString){
   return cappedString;
 
 }
+
+
+
