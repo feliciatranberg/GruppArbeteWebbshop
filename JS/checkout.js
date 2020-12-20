@@ -2,37 +2,8 @@ $(function() {
 localStorage.removeItem("itemObject")
     $("#confirm-order-button").on('click', ()=>{
       
-     // body.empty();
-      setTimeout(()=>{
-        window.location.href = "product-specific.html";
      
-      }, 3000);
      
-     ($(".container-checkout-form")).empty();
-     ($(".nav-bar-container")).empty();
-     
-     ($("<div>"))
-        .attr("id","loading-screen")
-        
-        .appendTo($(".nav-bar-container"));
-       
-      ($("<p>"))
-        .attr("id","loading-screen-p-tag")
-        .html("Behandlar din beställning")
-        .appendTo($("#loading-screen"));
-
-      ($("<p>"))
-      .addClass("dots")
-      .html(".")
-      .appendTo($("#loading-screen"));
-
-      ($("<div>"))
-        .attr("id","loading-screen-bar")
-        
-        .appendTo($("#loading-screen"));
-      ($("<div>"))
-        .attr("id","loading-bar-box")
-        .appendTo($("#loading-screen-bar"));
 
     let inputData = {}; 
     $("#my-form :text, #my-form :checked").each(function() {
@@ -43,9 +14,11 @@ localStorage.removeItem("itemObject")
         .html($(this).val())
         .appendTo($("#dialog"));
   
-        console.log($(this).val()); 
-      
+        console.log(inputData[this.name]); 
+        
+        localStorage.setItem("orderInputData",JSON.stringify(inputData));
       });
+      fauxPayment();
   });
 
           
@@ -140,7 +113,38 @@ localStorage.removeItem("itemObject")
               });
   };
   
+function fauxPayment() {
+  setTimeout(()=>{
+    window.location.href = "product-specific.html";
+ 
+  }, 3000);
+ 
+ ($(".container-checkout-form")).empty();
+ ($(".nav-bar-container")).empty();
+ 
+ ($("<div>"))
+    .attr("id","loading-screen")
+    
+    .appendTo($(".nav-bar-container"));
+   
+  ($("<p>"))
+    .attr("id","loading-screen-p-tag")
+    .html("Behandlar din beställning")
+    .appendTo($("#loading-screen"));
 
+  ($("<p>"))
+  .addClass("dots")
+  .html(".")
+  .appendTo($("#loading-screen"));
+
+  ($("<div>"))
+    .attr("id","loading-screen-bar")
+    
+    .appendTo($("#loading-screen"));
+  ($("<div>"))
+    .attr("id","loading-bar-box")
+    .appendTo($("#loading-screen-bar"));
+}
 
 
 
