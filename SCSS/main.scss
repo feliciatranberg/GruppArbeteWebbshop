@@ -393,7 +393,7 @@ button:hover {
       position: absolute;
       width: 100px;
       margin-top: 3%;
-      @include shadow;    
+      @include shadow;     
     } 
   } 
   
@@ -710,3 +710,112 @@ margin: 1%;
   }
  
 }
+
+
+//Orderconfirm
+
+#confirm-page-container,#order-input-text-div {
+  height: 100%;
+  width: 100%;
+  //border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.1rem;
+#order-input-text-div{
+  @include tablets-up{
+    width: 50%;
+  }
+}
+  #confirm-logo-banner{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    background-color: $button-color;
+    @include shadow;
+    h2 {
+      transform: rotate(-10deg);
+      font-size: 5rem;
+      margin: 0;
+      margin-bottom: 25px;
+    }
+  }
+  h1{
+    margin-bottom: 5%;
+    text-align: center;
+    @include text-shadow;
+  }
+  p{
+    text-align: center;
+    display:flex;
+    margin: 0;
+    margin-bottom: 10px;
+    justify-content: center;
+    width: 90%;
+    @include text-shadow;
+  }
+  #p2{
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  #order-box-div, #order-delivery-div{
+    background-color: rgb(233, 224, 224);
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    @include shadow;
+    div{
+      border:1px solid rgb(199, 197, 197);
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      #p-order-date,#p-delivery-adress,#p-order-number,#p-delivery-sum{
+        margin-top: 5px;
+        font-size: 1.2rem; 
+        opacity: 1;
+      }
+      .lower-ptag{
+        padding-bottom: 5%;
+      }
+      p{
+        font-size: 1rem;
+        margin: 0;
+        opacity: .9;
+      }
+    }
+
+  }
+
+  #order-delivery-div{
+    height: auto;
+    margin-bottom: 1%;
+  }
+  }
+  
+  .product-confirm-text-div{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    text-align: center;
+    h1{
+      margin: 0;
+      
+    }
+    h3{
+     
+      margin: 0;
+      margin-top: 50px;
+      width: 100%;
+    }
+  }

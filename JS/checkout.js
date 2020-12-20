@@ -1,3 +1,4 @@
+let requiredCounter = 0;
 $(function() {
 localStorage.removeItem("itemObject")
     $("#confirm-order-button").on('click', ()=>{
@@ -18,7 +19,24 @@ localStorage.removeItem("itemObject")
         
         localStorage.setItem("orderInputData",JSON.stringify(inputData));
       });
+      let attrArray = Object.values(inputData);
+     
+
+      $.each(attrArray,(i,event)=>{
+        if (attrArray[i]==""){
+          requiredCounter++;
+        }
+        
+      });
+    
+     if (inputData != null && requiredCounter === 0 ){
       fauxPayment();
+      }
+      else {
+        alert("Vänligen fyll i samtliga fält");
+        requiredCounter = 0;
+      }
+    
   });
 
           
