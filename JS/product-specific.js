@@ -437,7 +437,7 @@ function firstLetterCapitalize(incString){
 function finalCheckoutList(){
 
   let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
-  if (checkoutArrFromLS > 1){
+  if (checkoutArrFromLS.length > 1){
   ($("<h1>")).html("Du har beställt följande " + checkoutArrFromLS.length + " artiklar").appendTo($("#confirm-page-container"));
   }
   else {
