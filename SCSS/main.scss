@@ -160,6 +160,7 @@ button:hover {
 .itemDiv{
   @include flex-full-width-wrap-container;
   flex-direction: column;
+  padding-bottom: 4%;
 }
   img {
     width: 85%;
@@ -183,11 +184,12 @@ button:hover {
 }
 @include tablets-up { 
   .wrapperProductPage {
-    margin-top: 3%;
+    margin-top: 4%;
     justify-content: center;
    }
   .itemDiv{
     width: 27%;
+    padding-bottom: 2%;
     img {
       width: 90%;
     }
@@ -241,6 +243,7 @@ button:hover {
     width: 90%;
     align-self: center;
     margin-top: -3%;
+    margin-bottom: 10%;
 }
 #addToCartButton:hover {
   background-color: $button-hover-color;
@@ -273,6 +276,7 @@ button:hover {
   justify-content: center;
   width: 100%;
   margin-top: 5%;
+  padding-bottom: 5%;
   img{
     width: 40%;
   }
@@ -411,6 +415,7 @@ button:hover {
     margin-top: 12%;
     @include shadow;
   } 
+
 
 
 @include tablets-up {
@@ -926,3 +931,85 @@ Style for Validation Message
 .hidden{
   display: none;
 }  
+
+/*Footer CSS*/
+/*
+.nav-bar-container {
+  @include flex-full-width-nowrap-fixed-container;
+  @include tablets-up {
+    position: static;
+  }
+
+
+*/
+
+.about-us-links,
+.help-links,
+.more-links {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+//MEDIA  FOOTER
+
+@include phone-only {
+  .about-us-links,
+  .more-links {
+    display: none;
+  }
+}
+@include tablets-up {
+}
+.social-payment-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
+}
+
+.footer-bar-container-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  z-index: 1000;
+  background-color: white;
+  font-family: $font-family;
+  a {
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: $text-color;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $link-hover-color;
+  }
+}
+
+.faq-container,
+.student-container {
+  h4,
+  h1, table {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+  }
+}
+.track-id {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 15px;
+  .track-id-button:hover {
+    cursor: pointer;
+  }
+}
+.colored-table-row-first{
+  background-color:  #c3e0e6;
+}
+.colored-table-row-second{
+  background-color:  #71c5d6;
+}
