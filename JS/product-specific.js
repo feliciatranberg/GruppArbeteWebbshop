@@ -200,6 +200,9 @@ function checkoutCreator(i,item){
                     ($("<h5>"))
                         .html(item.name)
                         .appendTo($(shoppingCartItemDiv));
+
+                        $("<p>").html(item.size).appendTo($(shoppingCartImgDiv));
+                        
                     ($("<button>"))
                     .addClass("shoppingCartDeleteBtn")
                     .addClass("fas fa-times")

@@ -336,23 +336,30 @@ button:hover {
    border: 1px solid red;
    width: 100%;
   .shoppingCartImgDiv{
-    img{ 
       width: 100%;
-      height: auto;
-    }
+      display: flex;
+      flex-wrap: nowrap;
+     img {
+       width: 50%;
+     }
+     p {
+       width: 50%;
+       align-self: flex-end;
+     }
   }
    z-index: 10000;
   .shoppingCartItemDiv{
     display: flex;
     justify-content: space-between;
     border: 1px solid black;
+    h5 {
+      font-size: 20px;
+    }
     .shoppingCartDeleteBtn{
       color:red;
       background:none;
       border: none;
       font-size: 1.5rem;
-      justify-self: flex-end;
-  
     }
   }
 }
@@ -360,9 +367,22 @@ button:hover {
   cursor: pointer;
 }
 
+#checkoutTotal {
+  font-size: 20px;
+  margin-top: -20%;
+  text-align: right;
+  
+}
+
 
 #goToCheckout {
   @include button-small;
+  width: 100%;
+  margin-top: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%; 
+  font-size: 20px;
+
 }
 #goToCheckout:hover {
   background-color: $button-hover-color;
@@ -397,9 +417,6 @@ button:hover {
     } 
   } 
   
-
-
-
   #shoppingcartButton{
     padding-bottom: 0;
     height: 5px;
@@ -566,7 +583,7 @@ Style for Validation Message
       width: 40%;
       height: 55%;
       margin-bottom: 0;
-      padding-bottom: 7%;
+      padding-bottom: 5%;
       padding-left: 5%;
       input {
         width: 60%;
@@ -582,8 +599,8 @@ Style for Validation Message
     .delivery-payment-div {
       width: 40%;
       height: 55%;
-      padding-bottom: 7%;
-      margin-bottom: 7%;
+      padding-bottom: 5%;
+      margin-bottom: 5%;
   
       h2 {
         margin-bottom: 10%

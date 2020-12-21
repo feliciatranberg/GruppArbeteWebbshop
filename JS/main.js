@@ -80,6 +80,8 @@ function checkoutCreator(i, item) {
 
               $("<img>").attr("src", item.image).appendTo($(shoppingCartImgDiv));
 
+              $("<p>").html(item.size).appendTo($(shoppingCartImgDiv));
+
               $("<h5>").html(item.name).appendTo($(shoppingCartItemDiv));
 
            $("<button>")
