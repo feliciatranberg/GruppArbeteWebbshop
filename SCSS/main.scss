@@ -386,9 +386,8 @@ button:hover {
 #goToCheckout {
   @include button-small;
   width: 100%;
-  
-
   font-size: 20px;
+  align-self: flex-end;
   @include shadow;
 
 }
@@ -412,12 +411,25 @@ button:hover {
     margin-top: 12%;
     @include shadow;
   } 
+
+
+@include tablets-up {
+  #cartEmptyMessage{
+    padding: 1%;
+    align-self: center;
+    background-color: white;
+    position: absolute;
+    width: 100px;
+    margin-top: 3%;
+    @include shadow;     
+  } 
+} 
   
   #shoppingcartButton{
     padding-bottom: 0;
     height: 5px;
     #cartNumberDisplay{
-      color:blue;
+      color:$button-color;
       position: relative;
       right: -15px;
       top:-36px;
@@ -435,21 +447,8 @@ button:hover {
     @include shadow;
   }
 
-.hidden{
-  display: none;
-} 
 
-@include tablets-up {
-  #cartEmptyMessage{
-    padding: 1%;
-    align-self: center;
-    background-color: white;
-    position: absolute;
-    width: 100px;
-    margin-top: 3%;
-    @include shadow;     
-  } 
-} 
+
 
 /*
 Style for Validation Message
@@ -904,3 +903,26 @@ Style for Validation Message
       width: 100%;
     }
   }
+
+#total-display-row-div{
+  margin-top: 5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $bg-color-secondary;
+  #total-display-inner-div{
+    padding-bottom: 10px;
+  }
+  p {
+    margin: 5px;
+  }
+  h2 {
+    margin: 5px;
+  }
+}
+
+.hidden{
+  display: none;
+}  

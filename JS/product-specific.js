@@ -11,9 +11,9 @@ $(function(){
   }
   else{
     let specificProduct = JSON.parse(localStorage.itemObject)
-  
+    document.title = specificProduct.name;
     let sizeArr = ["Medium","Large","Extra Large"];
-    console.log(specificProduct);
+   
 
     ($("<div>"))
     .attr("id","specificProductContentwrap")
@@ -59,7 +59,7 @@ $(function(){
         ($("#startSize")).html(specificProduct.size);
         ($(".sizeOption")).slideToggle(200);
         ($(".sizeOption")).toggleClass("hidden");
-        console.log(specificProduct)
+    
         })
     .appendTo($("#dropDownMenu"));
     //Dropdown loop
@@ -73,7 +73,7 @@ $(function(){
             ($("#startSize")).html(size);
            
             specificProduct.size = size;
-            console.log(specificProduct.size);
+          
             ($(".sizeOption")).slideToggle(200);
         })
        
@@ -246,21 +246,19 @@ function checkoutCreator(i,item){
 
 //skapar första gången ptag för prissumma, adderar/subtrarherar följande ggr från array o renderar
 function totalCreator(specificProduct){
-  console.log("jag klrs")
-  let bitch = ($("#checkoutTotal"));
+ 
+
  
   if (totalCount == false) {
-    console.log("Totalcount är false")
-
-     console.log("hello")
+   
      
 
     let priceArrayFromLS = JSON.parse(localStorage.priceArray)
   
-    console.log(priceArray);
+    
   let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
  
-  console.log(arrSum);
+ 
   if (arrSum==0){
     arrSum = "";
 }
@@ -270,35 +268,15 @@ function totalCreator(specificProduct){
   .appendTo($("#shoppingCartDiv"));
   totalCount = true;
 }
-/*else
-  {
-     if (priceArray == 0){
-          bitch.addClass("hidden");
-     }
-     else {
-         bitch.removeClass("hidden");
-     }
-      if (specificProduct != undefined) {
-        let priceArray =JSON.parse(localStorage.priceArray);
-      priceArray.push(specificProduct.price);
-      localStorage.setItem("priceArray",JSON.stringify(priceArray));
-      }
-      let arrSum = priceArray.reduce((a, b) => a + b, 0);
-      console.log(priceArray);
-     
-      ($("#checkoutTotal"))
-      .html(arrSum)
-      .appendTo($("#shoppingCartDiv"));
-      
-  }*/
+
 
   else {
     let priceArrayFromLS = JSON.parse(localStorage.priceArray)
-    console.log("Totalcount e true")
+   
     localStorage.setItem("priceArray",JSON.stringify(priceArrayFromLS));
-    console.log(priceArray);
+  
   let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
-  console.log(arrSum);
+
   ($("#checkoutTotal")).empty();
   ($("#checkoutTotal"))
   .html("Totalt: " + arrSum + " KR")
@@ -306,7 +284,7 @@ function totalCreator(specificProduct){
   if (priceArrayFromLS.length == 0 ){
     totalCount = false;
     ($("#checkoutTotal")).remove();
-    console.log("HELT SLUT")
+    
   }
   }
 }
@@ -323,25 +301,22 @@ function cartCounterDisplay(){
   }
   if (checkoutArrFromLS.length ===0 && ($("#cartNumberDisplay")).hasClass("hidden")){
     
-    //($("#cartEmptyMessage")).removeClass("hidden");
+  
 }
-  else {
-    //($("#cartEmptyMessage")).addClass("hidden");
-  }
+
 }
 
 function orderConfirmed() {
           let orderInputData = JSON.parse(localStorage.orderInputData)
-          console.log(orderInputData);
-          console.log(orderInputData.firstname);
+  
           let date = new Date();
           let generator = Math.random()* Math.pow(10,10);
           let orderNumber = Math.round(generator);
-          console.log(orderNumber);
+    
           let priceArrayFromLS = JSON.parse(localStorage.priceArray);
           let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
           let shipping = 50;
-          console.log(shipping);
+        
           if (arrSum > 500) {
             shipping = 0;
           }
