@@ -98,6 +98,9 @@ body, html {
 button:hover {
   background-color: $button-hover-color;
 }
+button:focus {
+  outline: none;
+  }
 }
 @include tablets-up {
   .product-image-container {
@@ -117,6 +120,9 @@ button {
 button:hover {
   background-color: $button-hover-color;
 }
+button:focus {
+  outline: none;
+  }
 }
 }
 
@@ -249,6 +255,10 @@ button:hover {
   background-color: $button-hover-color;
 }
 
+#addToCartButton:focus {
+  outline: none;
+  }
+
   #dropDownMenu{
     list-style-type: none;
     position: absolute;
@@ -309,6 +319,10 @@ button:hover {
   #addToCartButton:hover {
     background-color: $button-hover-color;
   }
+
+  #addToCartButton:focus {
+    outline: none;
+  }
    }
   #dropDownMenu{
     list-style-type: none;
@@ -334,7 +348,7 @@ button:hover {
 
 //Max tilägg
 #shoppingCart{
-  display :flex; 
+
    flex-wrap: wrap; 
    flex-direction: column;
    //border: 1px solid red;
@@ -378,6 +392,9 @@ button:hover {
 .shoppingCartDeleteBtn:hover{
   cursor: pointer;
 }
+.shoppingCartDeleteBtn:focus {
+  outline: none;
+  }
 
 #checkoutTotal {
   font-size: 22px;
@@ -397,6 +414,9 @@ button:hover {
 }
 #goToCheckout:hover {
   background-color: $button-hover-color;
+}
+#goToCheckout:focus {
+  display: none;
 }
 
 #shoppingcartExtend{
@@ -443,7 +463,6 @@ button:hover {
   }
   #shoppingCartDiv{
     position: absolute;
-    display: flex;
     flex-wrap: wrap;
     left: 70%;
     top: 5%;
@@ -496,9 +515,17 @@ Style for Validation Message
    }
    button {
     @include button-small;
+    padding: 2%;
+  } 
+button:hover {
+  background-color: $button-hover-color;
+}
+
+   button:focus {
+    outline: none;
+   } 
+  } 
  
-   }
- }
 
 @include tablets-up { 
 .container-checkout-form {
@@ -572,14 +599,16 @@ Style for Validation Message
     @include button-medium;
     width: 80%; 
     margin-bottom: 8%;
-  
-
 
 
   }
   #confirm-order-button:hover {
   background-color: $button-hover-color;
   }
+  #confirm-order-button:focus {
+   outline: none;
+    }
+  
 
 @include tablets-up {
   #my-form {
@@ -631,6 +660,9 @@ Style for Validation Message
     #confirm-order-button:hover {
     background-color: $button-hover-color;
     }
+    #confirm-order-button:focus {
+      outline: none;
+      }
 }
 
 
