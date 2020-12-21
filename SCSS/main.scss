@@ -339,10 +339,13 @@ button:hover {
       width: 100%;
       display: flex;
       flex-wrap: nowrap;
+    
      img {
        width: 50%;
      }
-     p {
+     h3 {
+  margin-left: 4%;
+       font-size: 17px;
        width: 50%;
        align-self: flex-end;
      }
@@ -353,9 +356,9 @@ button:hover {
     justify-content: space-between;
     border: 1px solid $bg-color-secondary;
     ;
-    h5 {
+    h2 {
       margin: 10px;
-      font-size: 20px;
+      font-size: 22px;
     }
     .shoppingCartDeleteBtn{
       color:red;
@@ -373,9 +376,10 @@ button:hover {
 }
 
 #checkoutTotal {
-  font-size: 20px;
+  font-size: 25px;
   margin-top: -20%;
   text-align: right;
+
   
 }
 
@@ -439,7 +443,7 @@ button:hover {
     left: 70%;
     top: 5%;
     background-color: white;
-    width: 25%;
+    width: 21%;
     @include shadow;
   }
 
@@ -497,7 +501,7 @@ Style for Validation Message
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 2%;
+  margin-top: 0;
  }
  .checkout-products {
   width: 100%;

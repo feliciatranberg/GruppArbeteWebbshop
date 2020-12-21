@@ -23,7 +23,7 @@ $(function () {
 
     $("<button>")
       .attr("id", "goToCheckout")
-      .html("Go to checkout")
+      .html("Gå till kassan")
       .on("click", () => {
             window.location.href = "/HTML/checkout.html";
           })
@@ -80,9 +80,11 @@ function checkoutCreator(i, item) {
 
               $("<img>").attr("src", item.image).appendTo($(shoppingCartImgDiv));
 
-              $("<p>").html(item.size).appendTo($(shoppingCartImgDiv));
+              $("<h3>").html(item.size).appendTo($(shoppingCartImgDiv));
 
-              $("<h5>").html(item.name).appendTo($(shoppingCartItemDiv));
+              $("<h3>").html(item.price + " KR").appendTo($(shoppingCartImgDiv));
+
+              $("<h2>").html(item.name).appendTo($(shoppingCartItemDiv));
 
            $("<button>")
 
