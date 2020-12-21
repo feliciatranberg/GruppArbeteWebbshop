@@ -1,4 +1,5 @@
 let requiredCounter = 0;
+let alerted = false;
 $(function() {
 localStorage.removeItem("itemObject")
     $("#confirm-order-button").on('click', ()=>{
@@ -20,7 +21,7 @@ localStorage.removeItem("itemObject")
         localStorage.setItem("orderInputData",JSON.stringify(inputData));
       });
       let attrArray = Object.values(inputData);
-     
+      let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
 
       $.each(attrArray,(i,event)=>{
         if (attrArray[i]==""){
@@ -28,13 +29,18 @@ localStorage.removeItem("itemObject")
         }
         
       });
-    
-     if (inputData != null && requiredCounter === 0 ){
+    if (checkoutArrFromLS.length ===0){
+      alert("Det verkar som att din varukorg är tom!")
+      alerted = true;
+    }
+     if (checkoutArrFromLS.length != 0 && requiredCounter === 0 ){
       fauxPayment();
       }
-      else {
+      else{
+        if (alerted == false){
         alert("Vänligen fyll i samtliga fält");
-        requiredCounter = 0;
+        }
+      requiredCounter = 0;
       }
     
   });
@@ -47,6 +53,14 @@ localStorage.removeItem("itemObject")
 
     let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
     let checkoutProductsDiv = ($(".checkout-products"));
+    let priceArrayFromLS = JSON.parse(localStorage.priceArray);
+    let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
+    let shipping = 50;
+    console.log(shipping);
+    if (arrSum > 500) {
+      shipping = 0;
+    }
+    let total = arrSum + shipping;
 
       $.each(checkoutArrFromLS,(i,item)=>{
     let productDiv = ($("<div>"))
@@ -92,45 +106,34 @@ localStorage.removeItem("itemObject")
                 
     });
 
+    
+    
+    
+    let totalDisplayDiv = $("<div>")
+                          .attr("id","total-display-row-div")
+                          .appendTo(checkoutProductsDiv);
+                          $("<div>")
+                          .attr("id","total-display-inner-div")
+                          .appendTo(totalDisplayDiv);
+
+                          ($("<h2>"))
+                          .attr("id","total-display-number")
+                          .html("Summa")
+                          .appendTo($("#total-display-inner-div"));
+                         
+                          ($("<p>")).html("Summa" + " " + arrSum + "kr").appendTo($("#total-display-inner-div"));
+                          ($("<p>")).html("Frakt" + " " + shipping + "kr").appendTo($("#total-display-inner-div"));
+                          ($("<p>")).html("Totalsumma" + " " + total + "kr").appendTo($("#total-display-inner-div"));
+
+  if (arrSum == 0) { 
+      ($("#total-display-number")).addClass("hidden");
+      (totalDisplayDiv).addClass("hidden");
+    }
+                        
+
   };
 
 
-  function orderComfirm() {
-
-    let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
-    let checkoutProductsDivForm = ($("#dialog"));
-
-      $.each(checkoutArrFromLS,(i,item)=>{
-    let productDivForm = ($("<div>"))
-            .addClass("product-div-form")
-            .appendTo(checkoutProductsDivForm);
-
-            ($("<img>"))
-            .attr("src",item.image)
-            .addClass("product-image-form")
-            .appendTo($(productDivForm));
-
-    let productTextDivForm = ($("<div>"))
-            .addClass("product-text-div")
-            .appendTo($(productDivForm));
-
-            ($("<h5>"))
-            .html(item.name)
-            .appendTo($(productTextDivForm));
-
-            ($("<span>"))
-            .html(item.size + " ")
-            .appendTo($(productTextDivForm));
-            
-            ($("<h2>"))
-            .html(item.price + ":-")
-            .appendTo($(productTextDivForm));
-
-           
-  
-              });
-  };
-  
 function fauxPayment() {
   setTimeout(()=>{
     window.location.href = "product-specific.html";

@@ -900,3 +900,22 @@ Style for Validation Message
       width: 100%;
     }
   }
+
+#total-display-row-div{
+  margin-top: 5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $bg-color-secondary;
+  #total-display-inner-div{
+    padding-bottom: 3%;
+  }
+  p {
+    margin: 5px;
+  }
+  h2 {
+    margin: 5px;
+  }
+}

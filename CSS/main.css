@@ -888,3 +888,18 @@ Style for Validation Message
     margin: 0;
     margin-top: 50px;
     width: 100%; }
+
+#total-display-row-div {
+  margin-top: 5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f1f1f1; }
+  #total-display-row-div #total-display-inner-div {
+    padding-bottom: 3%; }
+  #total-display-row-div p {
+    margin: 5px; }
+  #total-display-row-div h2 {
+    margin: 5px; }
