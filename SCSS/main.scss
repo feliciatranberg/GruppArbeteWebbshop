@@ -333,7 +333,7 @@ button:hover {
   display :flex; 
    flex-wrap: wrap; 
    flex-direction: column;
-   border: 1px solid red;
+   //border: 1px solid red;
    width: 100%;
   .shoppingCartImgDiv{
       width: 100%;
@@ -351,8 +351,10 @@ button:hover {
   .shoppingCartItemDiv{
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
+    border: 1px solid $bg-color-secondary;
+    ;
     h5 {
+      margin: 10px;
       font-size: 20px;
     }
     .shoppingCartDeleteBtn{
@@ -364,6 +366,9 @@ button:hover {
   }
 }
 #shoppingcartButton:hover{
+  cursor: pointer;
+}
+.shoppingCartDeleteBtn:hover{
   cursor: pointer;
 }
 
@@ -382,6 +387,7 @@ button:hover {
   padding-top: 2%;
   padding-bottom: 2%; 
   font-size: 20px;
+  @include shadow;
 
 }
 #goToCheckout:hover {
@@ -389,7 +395,7 @@ button:hover {
 }
 
 #shoppingcartExtend{
-  border: 1px solid green;
+  //border: 1px solid green;
   display: flex;
   flex-direction: column;
   z-index: 5;
@@ -434,7 +440,7 @@ button:hover {
     top: 5%;
     background-color: white;
     width: 25%;
-    border: 1px solid pink;
+    @include shadow;
   }
 
 .hidden{
