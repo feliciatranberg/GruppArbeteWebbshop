@@ -16,10 +16,11 @@ localStorage.removeItem("itemObject")
         .html($(this).val())
         .appendTo($("#dialog"));
   
-        console.log(inputData[this.name]); 
+     
         
-        localStorage.setItem("orderInputData",JSON.stringify(inputData));
+      localStorage.setItem("orderInputData",JSON.stringify(inputData));
       });
+
       let attrArray = Object.values(inputData);
       let checkoutArrFromLS = JSON.parse(localStorage.checkoutArr);
 
@@ -56,13 +57,15 @@ localStorage.removeItem("itemObject")
     let priceArrayFromLS = JSON.parse(localStorage.priceArray);
     let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
     let shipping = 50;
-    console.log(shipping);
+
+  
     if (arrSum > 500 || checkoutArrFromLS.length == 0) {
       shipping = 0;
     }
     let total = arrSum + shipping;
 
       $.each(checkoutArrFromLS,(i,item)=>{
+
     let productDiv = ($("<div>"))
             .addClass("product-Div")
             .appendTo(checkoutProductsDiv);
@@ -93,6 +96,7 @@ localStorage.removeItem("itemObject")
             .html("X")
             .appendTo($(productTextDiv))
             .on("click",()=>{
+
                 checkoutArrFromLS.splice(i,1);
                 localStorage.setItem("checkoutArr",JSON.stringify(checkoutArrFromLS));
               
@@ -126,7 +130,6 @@ localStorage.removeItem("itemObject")
                           ($("<p>")).html("Totalsumma" + " " + total + "kr").appendTo($("#total-display-inner-div"));
 
   if (arrSum == 0) { 
-     // ($("#total-display-number")).addClass("hidden");
       (totalDisplayDiv).detach();
     }
                         
@@ -138,7 +141,7 @@ function fauxPayment() {
   setTimeout(()=>{
     window.location.href = "product-specific.html";
  
-  }, 3000);
+}, 3000);
  
  ($(".container-checkout-form")).empty();
  ($(".nav-bar-container")).empty();

@@ -124,7 +124,7 @@ $(function() {
              });
          
             cartCounterDisplay();
-              //onload           
+                       
     });
 
 //Funktion för varukorg. Hämtar värden från ls. 
