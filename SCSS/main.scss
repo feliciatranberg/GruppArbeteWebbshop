@@ -786,8 +786,9 @@ button:hover {
     margin-bottom: 25%;
   }
  .dots{
-    margin-right: 42%;
     position: absolute;
+    top: 12px;
+    right: 370px;
    
  } 
  .dots::before, .dots::after {
@@ -974,77 +975,119 @@ button:hover {
   @include tablets-up {
     position: static;
   }
-
-
 */
 
-.about-us-links,
-.help-links,
-.more-links {
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  margin: 0;
-  padding: 0;
-}
-
-//MEDIA  FOOTER
-
-@include phone-only {
-  .about-us-links,
-  .more-links {
-    display: none;
-  }
-}
-@include tablets-up {
-}
-.social-payment-icons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3%;
-}
-
-.footer-bar-container-links {
+footer {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
-  z-index: 1000;
-  background-color: white;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
   font-family: $font-family;
-  a {
-    text-align: center;
-    padding: 12px 0;
-    transition: all 0.3s ease;
-    color: $text-color;
-    font-size: 20px;
-    text-decoration: none;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  .social-media {
+margin-top: 2%;
   }
-  a:hover {
-    color: $link-hover-color;
+  .help-links {
+    margin-top: 3%;
+    display: flex;
+flex-direction: column;
+align-items: center;
+  a {
+    text-decoration: none;
+    color: $text-color;
+    margin-bottom: 2%;
+    a:hover {
+      background-color: $link-hover-color;
+    }
+  }
+  }
+  .copyright {
+    font-style: italic;
+    font-size: 12px;
+    padding: 4%;
   }
 }
 
-.faq-container,
-.student-container {
-  h4,
-  h1, table {
-    padding: 40px;
+
+@include tablets-up {
+  footer {
     display: flex;
-    justify-content: center;
-  }
-}
-.track-id {
-  padding-top: 15px;
+    width: 100%;
+    flex-wrap: wrap;
+    font-family: $font-family;
+    margin-top: 2%;
+    margin-bottom: 2%;
+.help-links {
   display: flex;
-  justify-content: space-evenly;
-  padding-bottom: 15px;
-  .track-id-button:hover {
-    cursor: pointer;
-  }
+  flex-direction: row;
+}  
 }
-.colored-table-row-first{
-  background-color:  #c3e0e6;
 }
-.colored-table-row-second{
-  background-color:  #71c5d6;
-}
+
+
+
+
+
+
+// //MEDIA  FOOTER
+
+// @include phone-only {
+//   .about-us-links,
+//   .more-links {
+//     display: none;
+//   }
+// }
+// @include tablets-up {
+// }
+// .social-payment-icons {
+//   display: flex;
+//   justify-content: center;
+//   margin-bottom: 3%;
+// }
+
+// .footer-bar-container-links {
+//   display: flex;
+//   width: 100%;
+//   justify-content: space-evenly;
+//   z-index: 1000;
+//   background-color: white;
+//   font-family: $font-family;
+//   a {
+//     text-align: center;
+//     padding: 12px 0;
+//     transition: all 0.3s ease;
+//     color: $text-color;
+//     font-size: 20px;
+//     text-decoration: none;
+//   }
+//   a:hover {
+//     color: $link-hover-color;
+//   }
+// }
+
+// .faq-container,
+// .student-container {
+//   h4,
+//   h1, table {
+//     padding: 40px;
+//     display: flex;
+//     justify-content: center;
+//   }
+// }
+// .track-id {
+//   padding-top: 15px;
+//   display: flex;
+//   justify-content: space-evenly;
+//   padding-bottom: 15px;
+//   .track-id-button:hover {
+//     cursor: pointer;
+//   }
+// }
+// .colored-table-row-first{
+//   background-color:  #c3e0e6;
+// }
+// .colored-table-row-second{
+//   background-color:  #71c5d6;
+// }
