@@ -11,7 +11,7 @@ $(function(){
   }
   else{
     let specificProduct = JSON.parse(localStorage.itemObject)
-  
+    document.title = specificProduct.name;
     let sizeArr = ["Medium","Large","Extra Large"];
     console.log(specificProduct);
 
