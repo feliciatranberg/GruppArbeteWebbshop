@@ -23,8 +23,6 @@ let shirt5 = new shopItem("Sweater","2:2","Fierce Fleece","Grön","Small",600, "
 let shirt6 = new shopItem("Sweater","2:2","Multiverse","Blå","Small",600, "/images/sweaters/sweater-6.jpg","Multiverse tröja",true,0,false)
 
 let tshirtProducter = [shirt1,shirt2,shirt3,shirt4,shirt5,shirt6]
-//let checkoutArr = [];
-//let priceArray = [];
 let totalCount = false;
 
 

@@ -57,7 +57,7 @@ localStorage.removeItem("itemObject")
     let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
     let shipping = 50;
     console.log(shipping);
-    if (arrSum > 500) {
+    if (arrSum > 500 || checkoutArrFromLS.length == 0) {
       shipping = 0;
     }
     let total = arrSum + shipping;
@@ -126,8 +126,8 @@ localStorage.removeItem("itemObject")
                           ($("<p>")).html("Totalsumma" + " " + total + "kr").appendTo($("#total-display-inner-div"));
 
   if (arrSum == 0) { 
-      ($("#total-display-number")).addClass("hidden");
-      (totalDisplayDiv).addClass("hidden");
+     // ($("#total-display-number")).addClass("hidden");
+      (totalDisplayDiv).detach();
     }
                         
 
