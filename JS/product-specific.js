@@ -135,7 +135,7 @@ $(function(){
 
    ($("<button>"))
    .attr("id","goToCheckout")
-   .html("Go to checkout")
+   .html("Gå till kassan")
    .on("click",()=>{
     window.location.href = "checkout.html";
   })
@@ -196,12 +196,11 @@ function checkoutCreator(i,item){
                     .attr("src",item.image)
                     .appendTo($(shoppingCartImgDiv));
 
+              $("<h3>").html(item.size).appendTo($(shoppingCartImgDiv));
 
-                    ($("<h5>"))
-                        .html(item.name)
-                        .appendTo($(shoppingCartItemDiv));
+              $("<h3>").html(item.price +" KR").appendTo($(shoppingCartImgDiv));
 
-                        $("<p>").html(item.size).appendTo($(shoppingCartImgDiv));
+              $("<h2>").html(item.name).appendTo($(shoppingCartItemDiv));
                         
                     ($("<button>"))
                     .addClass("shoppingCartDeleteBtn")
@@ -467,7 +466,7 @@ function finalCheckoutList(){
           .appendTo($(productTextDiv));
           
           ($("<h1>"))
-          .html(item.price + ":-")
+          .html(item.price + " KR")
           .appendTo($(productTextDiv));
 
           ($("<span>"))

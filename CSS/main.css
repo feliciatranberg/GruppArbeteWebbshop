@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* FÄRGER */
 /* TYPSNITT OCH TYPSTORLEK */
+/* line 4, scss/main.scss */
 body, html {
   z-index: 0;
   margin: 0;
@@ -12,6 +13,7 @@ body, html {
   font-family: "Oswald", sans-serif; }
 
 /* NAVIGERING */
+/* line 17, scss/main.scss */
 .nav-bar-container {
   width: 100%;
   display: flex;
@@ -23,8 +25,10 @@ body, html {
   background-color: white;
   font-family: "Oswald", sans-serif; }
   @media screen and (min-width: 769px) {
+    /* line 17, scss/main.scss */
     .nav-bar-container {
       position: static; } }
+  /* line 22, scss/main.scss */
   .nav-bar-container a {
     text-align: center;
     padding: 12px 0;
@@ -32,24 +36,29 @@ body, html {
     color: black;
     font-size: 20px;
     text-decoration: none; }
+  /* line 30, scss/main.scss */
   .nav-bar-container a:hover {
     color: grey; }
 
 /* BANNER STARTSIDA */
+/* line 37, scss/main.scss */
 section {
   height: 50%;
   margin-top: 12%; }
 
 @media screen and (min-width: 769px) {
+  /* line 42, scss/main.scss */
   section {
     height: 100%;
     margin-top: 0; } }
 
+/* line 47, scss/main.scss */
 .section-container {
   height: 100%;
   width: 100%;
   position: relative; }
 
+/* line 52, scss/main.scss */
 .hero-one,
 .hero-two,
 .hero-three {
@@ -61,13 +70,16 @@ section {
   width: 100%;
   position: absolute; }
 
+/* line 63, scss/main.scss */
 .hero-one {
   background-image: url("../images/hero-1.jpg"); }
 
+/* line 66, scss/main.scss */
 .hero-two {
   background-image: url("../images/hero-2.jpg");
   animation: slideTwoAnim 5s infinite; }
 
+/* line 70, scss/main.scss */
 .hero-three {
   background-image: url("../images/hero-3.jpg");
   animation: slideThreeAnim 5s infinite; }
@@ -99,6 +111,7 @@ section {
     opacity: 0; } }
 
 /* PRODUKTBILDER STARTSIDA */
+/* line 78, scss/main.scss */
 .product-image-container {
   width: 100%;
   display: flex;
@@ -107,13 +120,16 @@ section {
   font-family: "Oswald", sans-serif;
   margin: 2% 0 2% 0; }
 
+/* line 82, scss/main.scss */
 .product-image {
   position: relative;
   width: 100%;
   margin: 15px; }
+  /* line 86, scss/main.scss */
   .product-image img {
     box-shadow: 1px 1px 5px grey;
     width: 100%; }
+  /* line 90, scss/main.scss */
   .product-image button {
     cursor: pointer;
     text-align: center;
@@ -128,18 +144,22 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%); }
+  /* line 98, scss/main.scss */
   .product-image button:hover {
     background-color: #edd1e7; }
 
 @media screen and (min-width: 769px) {
+  /* line 103, scss/main.scss */
   .product-image-container {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
     font-family: "Oswald", sans-serif; }
+    /* line 105, scss/main.scss */
     .product-image-container .product-image {
       width: 100%; }
+    /* line 108, scss/main.scss */
     .product-image-container button {
       cursor: pointer;
       text-align: center;
@@ -155,10 +175,12 @@ section {
       transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       padding: 12px 24px; }
+    /* line 117, scss/main.scss */
     .product-image-container button:hover {
       background-color: #edd1e7; } }
 
 /* RULLANDE TEXT PRODUKTSIDOR */
+/* line 125, scss/main.scss */
 .scrolling-text-container {
   box-shadow: 1px 1px 5px grey;
   overflow: hidden;
@@ -170,6 +192,7 @@ section {
   width: 100%;
   font-family: Impact, 'Arial Narrow Bold'; }
 
+/* line 136, scss/main.scss */
 .scrolling-text-container div {
   position: absolute;
   width: 100%;
@@ -199,6 +222,7 @@ section {
         transform: translateY(3%); } } }
 
 @media screen and (min-width: 769px) {
+  /* line 145, scss/main.scss */
   .scrolling-text-container div {
     position: absolute;
     width: 100%;
@@ -227,6 +251,7 @@ section {
         transform: translateY(3%); } } }
 
 /* PRODUKTSIDOR */
+/* line 156, scss/main.scss */
 .wrapperProductPage {
   width: 100%;
   display: flex;
@@ -235,6 +260,7 @@ section {
   font-family: "Oswald", sans-serif;
   margin-top: 10%; }
 
+/* line 160, scss/main.scss */
 .itemDiv {
   width: 100%;
   display: flex;
@@ -243,66 +269,85 @@ section {
   font-family: "Oswald", sans-serif;
   flex-direction: column; }
 
+/* line 164, scss/main.scss */
 img {
   width: 85%;
   align-self: center;
   box-shadow: 1px 1px 5px grey; }
 
+/* line 169, scss/main.scss */
 h2 {
   margin-left: 11%;
   margin-top: -1%; }
 
+/* line 173, scss/main.scss */
 h3 {
   margin-left: 11%; }
 
+/* line 176, scss/main.scss */
 p {
   margin-left: 11%;
   margin-top: -5%; }
 
+/* line 181, scss/main.scss */
 .itemDiv:hover {
   cursor: pointer; }
 
 @media screen and (min-width: 769px) {
+  /* line 185, scss/main.scss */
   .wrapperProductPage {
     margin-top: 3%;
     justify-content: center; }
+  /* line 189, scss/main.scss */
   .itemDiv {
     width: 27%; }
+    /* line 191, scss/main.scss */
     .itemDiv img {
       width: 90%; }
+    /* line 194, scss/main.scss */
     .itemDiv h2 {
       margin-left: 8%;
       margin-top: 0%; }
+    /* line 198, scss/main.scss */
     .itemDiv h3 {
       margin-left: 8%; }
+    /* line 201, scss/main.scss */
     .itemDiv p {
       margin-left: 8%;
       font-size: 14px;
       margin-top: -4%; } }
 
 /* ENSKILD PRODUKTSIDA */
+/* line 211, scss/main.scss */
 #specificProductContentwrap {
   display: flex;
   justify-content: center;
   margin-top: 15%;
   width: 100%;
   flex-wrap: wrap; }
+  /* line 217, scss/main.scss */
   #specificProductContentwrap img {
     width: 100%; }
+  /* line 220, scss/main.scss */
   #specificProductContentwrap #productTextBox {
     display: flex;
     flex-direction: column;
     width: 100%; }
+    /* line 224, scss/main.scss */
     #specificProductContentwrap #productTextBox h2 {
       margin-top: 5%;
       margin-left: 5%; }
+  /* line 229, scss/main.scss */
   #specificProductContentwrap #description {
     margin-left: 5%; }
+  /* line 232, scss/main.scss */
   #specificProductContentwrap ul {
     margin-left: 5%;
     margin-top: -1%; }
+  /* line 236, scss/main.scss */
   #specificProductContentwrap h1 {
     margin-left: 5%; }
+  /* line 239, scss/main.scss */
   #specificProductContentwrap #addToCartButton {
     cursor: pointer;
     text-align: center;
@@ -315,8 +360,10 @@ p {
     width: 90%;
     align-self: center;
     margin-top: -3%; }
+  /* line 245, scss/main.scss */
   #specificProductContentwrap #addToCartButton:hover {
     background-color: #edd1e7; }
+  /* line 249, scss/main.scss */
   #specificProductContentwrap #dropDownMenu {
     list-style-type: none;
     position: absolute;
@@ -328,37 +375,46 @@ p {
     width: 100px;
     text-align: left;
     padding: 0; }
+    /* line 260, scss/main.scss */
     #specificProductContentwrap #dropDownMenu .sizeOption {
       margin-top: 5px; }
+    /* line 263, scss/main.scss */
     #specificProductContentwrap #dropDownMenu li:hover {
       background-color: #f1f1f1;
       cursor: pointer; }
 
 @media screen and (min-width: 769px) {
+  /* line 271, scss/main.scss */
   #specificProductContentwrap {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 5%; }
+    /* line 276, scss/main.scss */
     #specificProductContentwrap img {
       width: 40%; }
+    /* line 279, scss/main.scss */
     #specificProductContentwrap #productTextBox {
       display: flex;
       flex-direction: column;
       width: 40%;
       height: 40%; }
+      /* line 284, scss/main.scss */
       #specificProductContentwrap #productTextBox h2 {
         font-size: 1.5rem;
         margin-left: 4%;
         margin-top: 4%; }
+      /* line 289, scss/main.scss */
       #specificProductContentwrap #productTextBox #description {
         font-size: 1rem;
         margin-left: 5%;
         margin-top: -3%; }
+      /* line 294, scss/main.scss */
       #specificProductContentwrap #productTextBox #productPrize {
         font-weight: bold;
         margin-left: 5%;
         margin-top: 55%; }
+      /* line 299, scss/main.scss */
       #specificProductContentwrap #productTextBox #addToCartButton {
         cursor: pointer;
         text-align: center;
@@ -371,8 +427,10 @@ p {
         width: 40%;
         margin-top: -1%;
         margin-left: -51%; }
+      /* line 305, scss/main.scss */
       #specificProductContentwrap #productTextBox #addToCartButton:hover {
         background-color: #edd1e7; }
+    /* line 309, scss/main.scss */
     #specificProductContentwrap #dropDownMenu {
       list-style-type: none;
       border: 1px solid black;
@@ -381,51 +439,66 @@ p {
       align-self: flex-start;
       margin-top: 8%;
       margin-left: 2%; }
+      /* line 319, scss/main.scss */
       #specificProductContentwrap #dropDownMenu .sizeOption {
         margin-top: 5px; }
+      /* line 322, scss/main.scss */
       #specificProductContentwrap #dropDownMenu li:hover {
         background-color: #f1f1f1;
         cursor: pointer; } }
 
+/* line 332, scss/main.scss */
 #shoppingCart {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
   z-index: 10000; }
+  /* line 338, scss/main.scss */
   #shoppingCart .shoppingCartImgDiv {
     width: 100%;
     display: flex;
     flex-wrap: nowrap; }
+    /* line 343, scss/main.scss */
     #shoppingCart .shoppingCartImgDiv img {
       width: 50%; }
-    #shoppingCart .shoppingCartImgDiv p {
+    /* line 346, scss/main.scss */
+    #shoppingCart .shoppingCartImgDiv h3 {
+      margin-left: 4%;
+      font-size: 17px;
       width: 50%;
       align-self: flex-end; }
+  /* line 354, scss/main.scss */
   #shoppingCart .shoppingCartItemDiv {
     display: flex;
     justify-content: space-between;
     border: 1px solid #f1f1f1; }
-    #shoppingCart .shoppingCartItemDiv h5 {
+    /* line 359, scss/main.scss */
+    #shoppingCart .shoppingCartItemDiv h2 {
       margin: 10px;
-      font-size: 20px; }
+      font-size: 22px; }
+    /* line 363, scss/main.scss */
     #shoppingCart .shoppingCartItemDiv .shoppingCartDeleteBtn {
       color: red;
       background: none;
       border: none;
       font-size: 1.5rem; }
 
+/* line 371, scss/main.scss */
 #shoppingcartButton:hover {
   cursor: pointer; }
 
+/* line 374, scss/main.scss */
 .shoppingCartDeleteBtn:hover {
   cursor: pointer; }
 
+/* line 378, scss/main.scss */
 #checkoutTotal {
-  font-size: 20px;
+  font-size: 25px;
   margin-top: -20%;
   text-align: right; }
 
+/* line 387, scss/main.scss */
 #goToCheckout {
   cursor: pointer;
   text-align: center;
@@ -442,14 +515,17 @@ p {
   font-size: 20px;
   box-shadow: 1px 1px 5px grey; }
 
+/* line 397, scss/main.scss */
 #goToCheckout:hover {
   background-color: #edd1e7; }
 
+/* line 401, scss/main.scss */
 #shoppingcartExtend {
   display: flex;
   flex-direction: column;
   z-index: 5; }
 
+/* line 408, scss/main.scss */
 #cartEmptyMessage {
   padding: 1%;
   align-self: center;
@@ -460,6 +536,7 @@ p {
   box-shadow: 1px 1px 5px grey; }
 
 @media screen and (min-width: 769px) {
+  /* line 419, scss/main.scss */
   #cartEmptyMessage {
     padding: 1%;
     align-self: center;
@@ -469,9 +546,11 @@ p {
     margin-top: 3%;
     box-shadow: 1px 1px 5px grey; } }
 
+/* line 430, scss/main.scss */
 #shoppingcartButton {
   padding-bottom: 0;
   height: 5px; }
+  /* line 433, scss/main.scss */
   #shoppingcartButton #cartNumberDisplay {
     color: blue;
     position: relative;
@@ -479,32 +558,38 @@ p {
     top: -36px;
     z-index: 10000; }
 
+/* line 441, scss/main.scss */
 #shoppingCartDiv {
   position: absolute;
   left: 70%;
   top: 5%;
   background-color: white;
-  width: 25%;
+  width: 21%;
   box-shadow: 1px 1px 5px grey; }
 
+/* line 450, scss/main.scss */
 .hidden {
   display: none; }
 
 /*
 Style for Validation Message
 */
+/* line 457, scss/main.scss */
 #username-error, #email-error {
   color: #d9534f;
   padding: 12px;
   display: none; }
 
 /* PRODUKT FORM */
+/* line 465, scss/main.scss */
 .container-checkout-form {
   margin-top: 15%; }
 
+/* line 468, scss/main.scss */
 .checkout-products {
   width: 100%; }
 
+/* line 471, scss/main.scss */
 .product-Div {
   width: 100%;
   display: flex;
@@ -513,20 +598,26 @@ Style for Validation Message
   font-family: "Oswald", sans-serif;
   justify-content: center;
   background-color: #f1f1f1; }
+  /* line 475, scss/main.scss */
   .product-Div img {
     width: 60%;
     box-shadow: none; }
 
+/* line 480, scss/main.scss */
 .product-text-div {
   width: 40%; }
+  /* line 482, scss/main.scss */
   .product-text-div h5 {
     margin-left: 5%; }
+  /* line 485, scss/main.scss */
   .product-text-div h1 {
     margin-left: 5%;
     margin-top: -4%; }
+  /* line 489, scss/main.scss */
   .product-text-div span {
     margin-left: 5%;
     margin-top: -4%; }
+  /* line 493, scss/main.scss */
   .product-text-div button {
     cursor: pointer;
     text-align: center;
@@ -538,13 +629,16 @@ Style for Validation Message
     font-family: "Oswald", sans-serif; }
 
 @media screen and (min-width: 769px) {
+  /* line 500, scss/main.scss */
   .container-checkout-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-top: 2%; }
+    margin-top: 0; }
+  /* line 506, scss/main.scss */
   .checkout-products {
     width: 100%; }
+  /* line 509, scss/main.scss */
   .product-Div {
     width: 100%;
     display: flex;
@@ -552,20 +646,26 @@ Style for Validation Message
     justify-content: space-evenly;
     font-family: "Oswald", sans-serif;
     justify-content: center; }
+    /* line 512, scss/main.scss */
     .product-Div img {
       width: 25%; }
+    /* line 515, scss/main.scss */
     .product-Div .product-text-div {
       width: 30%; }
+      /* line 517, scss/main.scss */
       .product-Div .product-text-div h5 {
         margin-left: 10%; }
+      /* line 520, scss/main.scss */
       .product-Div .product-text-div h1 {
         margin-left: 10%;
         margin-top: -4%; }
+      /* line 524, scss/main.scss */
       .product-Div .product-text-div span {
         margin-left: 10%;
         margin-top: -4%; } }
 
 /* FORM */
+/* line 534, scss/main.scss */
 #my-form {
   width: 100%;
   display: flex;
@@ -573,6 +673,7 @@ Style for Validation Message
   align-items: center;
   margin-top: 7%; }
 
+/* line 541, scss/main.scss */
 .contact-info-div {
   background-color: #f1f1f1;
   width: 90%;
@@ -580,12 +681,15 @@ Style for Validation Message
   padding: 7% 0 7% 0;
   display: flex;
   flex-direction: column; }
+  /* line 548, scss/main.scss */
   .contact-info-div input {
     width: 60%;
     margin-left: 5%; }
+  /* line 552, scss/main.scss */
   .contact-info-div p {
     margin: 1% 0 0 7%; }
 
+/* line 556, scss/main.scss */
 .delivery-payment-div {
   background-color: #f1f1f1;
   width: 90%;
@@ -593,9 +697,11 @@ Style for Validation Message
   padding: 7% 0 7% 0;
   display: flex;
   flex-direction: column; }
+  /* line 563, scss/main.scss */
   .delivery-payment-div h2 {
     margin-bottom: 10%; }
 
+/* line 567, scss/main.scss */
 #confirm-order-button {
   cursor: pointer;
   text-align: center;
@@ -608,10 +714,12 @@ Style for Validation Message
   width: 80%;
   margin-bottom: 8%; }
 
+/* line 576, scss/main.scss */
 #confirm-order-button:hover {
   background-color: #edd1e7; }
 
 @media screen and (min-width: 769px) {
+  /* line 581, scss/main.scss */
   #my-form {
     width: 90%;
     display: flex;
@@ -621,28 +729,36 @@ Style for Validation Message
     justify-content: center;
     margin-top: 4%;
     margin-bottom: 4%; }
+  /* line 592, scss/main.scss */
   .contact-info-div {
     width: 40%;
     height: 55%;
     margin-bottom: 0;
     padding-bottom: 5%;
     padding-left: 5%; }
+    /* line 598, scss/main.scss */
     .contact-info-div input {
       width: 60%;
       margin-left: 5%; }
+    /* line 602, scss/main.scss */
     .contact-info-div p {
       margin: 1% 0 0 5%; }
+    /* line 605, scss/main.scss */
     .contact-info-div h2 {
       margin-left: 5%; }
+  /* line 609, scss/main.scss */
   .delivery-payment-div {
     width: 40%;
     height: 55%;
     padding-bottom: 5%;
     margin-bottom: 5%; }
+    /* line 615, scss/main.scss */
     .delivery-payment-div h2 {
       margin-bottom: 10%; }
+    /* line 618, scss/main.scss */
     .delivery-payment-div p {
       margin-bottom: 7%; }
+  /* line 622, scss/main.scss */
   #confirm-order-button {
     cursor: pointer;
     text-align: center;
@@ -654,9 +770,11 @@ Style for Validation Message
     font-family: "Oswald", sans-serif;
     width: 40%;
     margin-bottom: 8%; }
+  /* line 627, scss/main.scss */
   #confirm-order-button:hover {
     background-color: #edd1e7; } }
 
+/* line 633, scss/main.scss */
 #loading-screen {
   width: 100vh;
   height: 100vh;
@@ -665,6 +783,7 @@ Style for Validation Message
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start; }
+  /* line 642, scss/main.scss */
   #loading-screen #loading-screen-bar {
     border: 3px solid black;
     height: 5%;
@@ -673,6 +792,7 @@ Style for Validation Message
     top: -225px;
     border-radius: 5%;
     z-index: 100; }
+    /* line 650, scss/main.scss */
     #loading-screen #loading-screen-bar #loading-bar-box {
       display: inline-block;
       height: 100%;
@@ -682,21 +802,26 @@ Style for Validation Message
       background-color: #61abce;
       animation: bar-animation 3s infinite ease-in;
       position: relative; }
+  /* line 661, scss/main.scss */
   #loading-screen p {
     position: relative;
     margin: 2%;
     margin-right: 0;
     font-size: 4rem; }
+  /* line 667, scss/main.scss */
   #loading-screen .dots {
     margin: 0;
     position: absolute;
     top: 105px;
     right: 75px; }
+  /* line 673, scss/main.scss */
   #loading-screen .dots::before, #loading-screen .dots::after {
     content: '.';
     display: inline-block; }
+  /* line 677, scss/main.scss */
   #loading-screen .dots::before {
     animation: dot-anim-before 2s infinite ease-in; }
+  /* line 680, scss/main.scss */
   #loading-screen .dots::after {
     animation: dot-anim-after 2s infinite ease-in;
     animation-delay: 1s; }
@@ -734,6 +859,7 @@ Style for Validation Message
     width: 100%; } }
 
 @media screen and (min-width: 769px) {
+  /* line 716, scss/main.scss */
   #loading-screen {
     width: 100vh;
     height: 100vh;
@@ -742,6 +868,7 @@ Style for Validation Message
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start; }
+    /* line 724, scss/main.scss */
     #loading-screen #loading-screen-bar {
       border: 3px solid black;
       height: 5%;
@@ -750,6 +877,7 @@ Style for Validation Message
       top: -225px;
       border-radius: 5%;
       z-index: 100; }
+      /* line 732, scss/main.scss */
       #loading-screen #loading-screen-bar #loading-bar-box {
         display: inline-block;
         height: 100%;
@@ -759,19 +887,24 @@ Style for Validation Message
         background-color: #61abce;
         animation: bar-animation 3s infinite ease-in;
         position: relative; }
+    /* line 743, scss/main.scss */
     #loading-screen p {
       position: relative;
       margin-right: 0;
       font-size: 4rem;
       margin-bottom: 25%; }
+    /* line 749, scss/main.scss */
     #loading-screen .dots {
       margin-right: 42%;
       position: absolute; }
+    /* line 754, scss/main.scss */
     #loading-screen .dots::before, #loading-screen .dots::after {
       content: '.';
       display: inline-block; }
+    /* line 758, scss/main.scss */
     #loading-screen .dots::before {
       animation: dot-anim-before 2s infinite ease-in; }
+    /* line 761, scss/main.scss */
     #loading-screen .dots::after {
       animation: dot-anim-after 2s infinite ease-in;
       animation-delay: 1s; }
@@ -805,6 +938,7 @@ Style for Validation Message
     100% {
       width: 100%; } } }
 
+/* line 801, scss/main.scss */
 #confirm-page-container, #order-input-text-div {
   height: 100%;
   width: 100%;
@@ -814,8 +948,10 @@ Style for Validation Message
   align-items: center;
   font-size: 1.1rem; }
   @media screen and (min-width: 769px) {
+    /* line 810, scss/main.scss */
     #confirm-page-container #order-input-text-div, #order-input-text-div #order-input-text-div {
       width: 50%; } }
+  /* line 815, scss/main.scss */
   #confirm-page-container #confirm-logo-banner, #order-input-text-div #confirm-logo-banner {
     display: flex;
     justify-content: center;
@@ -824,16 +960,19 @@ Style for Validation Message
     height: 15%;
     background-color: #d5bccf;
     box-shadow: 1px 1px 5px grey; }
+    /* line 823, scss/main.scss */
     #confirm-page-container #confirm-logo-banner h2, #order-input-text-div #confirm-logo-banner h2 {
       transform: rotate(-10deg);
       font-size: 5rem;
       margin: 0;
       margin-bottom: 25px;
       color: white; }
+  /* line 831, scss/main.scss */
   #confirm-page-container h1, #order-input-text-div h1 {
     margin-bottom: 5%;
     text-align: center;
     text-shadow: 0.5px 0.5px 0px grey; }
+  /* line 836, scss/main.scss */
   #confirm-page-container p, #order-input-text-div p {
     text-align: center;
     display: flex;
@@ -842,9 +981,11 @@ Style for Validation Message
     justify-content: center;
     width: 90%;
     text-shadow: 0.5px 0.5px 0px grey; }
+  /* line 845, scss/main.scss */
   #confirm-page-container #p2, #order-input-text-div #p2 {
     font-size: 1rem;
     margin-bottom: 20px; }
+  /* line 850, scss/main.scss */
   #confirm-page-container #order-box-div, #confirm-page-container #order-delivery-div, #order-input-text-div #order-box-div, #order-input-text-div #order-delivery-div {
     background-color: #e9e0e0;
     width: 90%;
@@ -855,6 +996,7 @@ Style for Validation Message
     font-size: 1rem;
     margin-bottom: 25px;
     box-shadow: 1px 1px 5px grey; }
+    /* line 860, scss/main.scss */
     #confirm-page-container #order-box-div div, #confirm-page-container #order-delivery-div div, #order-input-text-div #order-box-div div, #order-input-text-div #order-delivery-div div {
       border: 1px solid #c7c5c5;
       width: 50%;
@@ -863,27 +1005,34 @@ Style for Validation Message
       flex-direction: column;
       justify-content: flex-start;
       align-items: center; }
+      /* line 868, scss/main.scss */
       #confirm-page-container #order-box-div div #p-order-date, #confirm-page-container #order-box-div div #p-delivery-adress, #confirm-page-container #order-box-div div #p-order-number, #confirm-page-container #order-box-div div #p-delivery-sum, #confirm-page-container #order-delivery-div div #p-order-date, #confirm-page-container #order-delivery-div div #p-delivery-adress, #confirm-page-container #order-delivery-div div #p-order-number, #confirm-page-container #order-delivery-div div #p-delivery-sum, #order-input-text-div #order-box-div div #p-order-date, #order-input-text-div #order-box-div div #p-delivery-adress, #order-input-text-div #order-box-div div #p-order-number, #order-input-text-div #order-box-div div #p-delivery-sum, #order-input-text-div #order-delivery-div div #p-order-date, #order-input-text-div #order-delivery-div div #p-delivery-adress, #order-input-text-div #order-delivery-div div #p-order-number, #order-input-text-div #order-delivery-div div #p-delivery-sum {
         margin-top: 5px;
         font-size: 1.2rem;
         opacity: 1; }
+      /* line 873, scss/main.scss */
       #confirm-page-container #order-box-div div .lower-ptag, #confirm-page-container #order-delivery-div div .lower-ptag, #order-input-text-div #order-box-div div .lower-ptag, #order-input-text-div #order-delivery-div div .lower-ptag {
         padding-bottom: 5%; }
+      /* line 876, scss/main.scss */
       #confirm-page-container #order-box-div div p, #confirm-page-container #order-delivery-div div p, #order-input-text-div #order-box-div div p, #order-input-text-div #order-delivery-div div p {
         font-size: 1rem;
         margin: 0;
         opacity: .9; }
+  /* line 885, scss/main.scss */
   #confirm-page-container #order-delivery-div, #order-input-text-div #order-delivery-div {
     height: auto;
     margin-bottom: 1%; }
 
+/* line 891, scss/main.scss */
 .product-confirm-text-div {
   display: flex;
   flex-direction: column;
   width: auto;
   text-align: center; }
+  /* line 896, scss/main.scss */
   .product-confirm-text-div h1 {
     margin: 0; }
+  /* line 900, scss/main.scss */
   .product-confirm-text-div h3 {
     margin: 0;
     margin-top: 50px;

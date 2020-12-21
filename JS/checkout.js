@@ -81,7 +81,7 @@ localStorage.removeItem("itemObject")
             .appendTo($(productTextDiv));
             
             ($("<h1>"))
-            .html(item.price + ":-")
+            .html(item.price + " KR")
             .appendTo($(productTextDiv));
 
             ($("<span>"))
