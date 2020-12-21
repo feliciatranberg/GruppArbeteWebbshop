@@ -124,7 +124,7 @@ function totalCreator(specificProduct) {
 
       $("<p>")
           .attr("id", "checkoutTotal")
-          .html(arrSum)
+          .html("Totalt: " + arrSum + " KR")
           .appendTo($("#shoppingCartDiv"));
           totalCount = true;
   } 
@@ -135,7 +135,7 @@ function totalCreator(specificProduct) {
       let arrSum = priceArrayFromLS.reduce((a, b) => a + b, 0);
     
        $("#checkoutTotal").empty();
-       $("#checkoutTotal").html(arrSum).appendTo($("#shoppingCartDiv"));
+       $("#checkoutTotal").html("Totalt: " + arrSum + " KR").appendTo($("#shoppingCartDiv"));
 
       if (priceArrayFromLS.length == 0) {
 

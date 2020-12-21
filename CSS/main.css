@@ -494,11 +494,12 @@ p {
 
 /* line 378, scss/main.scss */
 #checkoutTotal {
-  font-size: 25px;
-  margin-top: -20%;
-  text-align: right; }
+  font-size: 22px;
+  text-align: right;
+  align-items: flex-start;
+  margin-bottom: 0; }
 
-/* line 387, scss/main.scss */
+/* line 386, scss/main.scss */
 #goToCheckout {
   cursor: pointer;
   text-align: center;
@@ -509,23 +510,20 @@ p {
   padding: 1%;
   font-family: "Oswald", sans-serif;
   width: 100%;
-  margin-top: 10%;
-  padding-top: 2%;
-  padding-bottom: 2%;
   font-size: 20px;
   box-shadow: 1px 1px 5px grey; }
 
-/* line 397, scss/main.scss */
+/* line 395, scss/main.scss */
 #goToCheckout:hover {
   background-color: #edd1e7; }
 
-/* line 401, scss/main.scss */
+/* line 399, scss/main.scss */
 #shoppingcartExtend {
   display: flex;
   flex-direction: column;
   z-index: 5; }
 
-/* line 408, scss/main.scss */
+/* line 406, scss/main.scss */
 #cartEmptyMessage {
   padding: 1%;
   align-self: center;
@@ -535,8 +533,35 @@ p {
   margin-top: 12%;
   box-shadow: 1px 1px 5px grey; }
 
-@media screen and (min-width: 769px) {
+/* line 416, scss/main.scss */
+#shoppingcartButton {
+  padding-bottom: 0;
+  height: 5px; }
   /* line 419, scss/main.scss */
+  #shoppingcartButton #cartNumberDisplay {
+    color: blue;
+    position: relative;
+    right: -15px;
+    top: -36px;
+    z-index: 10000; }
+
+/* line 427, scss/main.scss */
+#shoppingCartDiv {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  left: 70%;
+  top: 5%;
+  background-color: white;
+  width: 21%;
+  box-shadow: 1px 1px 5px grey; }
+
+/* line 438, scss/main.scss */
+.hidden {
+  display: none; }
+
+@media screen and (min-width: 769px) {
+  /* line 443, scss/main.scss */
   #cartEmptyMessage {
     padding: 1%;
     align-self: center;
@@ -545,31 +570,6 @@ p {
     width: 100px;
     margin-top: 3%;
     box-shadow: 1px 1px 5px grey; } }
-
-/* line 430, scss/main.scss */
-#shoppingcartButton {
-  padding-bottom: 0;
-  height: 5px; }
-  /* line 433, scss/main.scss */
-  #shoppingcartButton #cartNumberDisplay {
-    color: blue;
-    position: relative;
-    right: -15px;
-    top: -36px;
-    z-index: 10000; }
-
-/* line 441, scss/main.scss */
-#shoppingCartDiv {
-  position: absolute;
-  left: 70%;
-  top: 5%;
-  background-color: white;
-  width: 21%;
-  box-shadow: 1px 1px 5px grey; }
-
-/* line 450, scss/main.scss */
-.hidden {
-  display: none; }
 
 /*
 Style for Validation Message

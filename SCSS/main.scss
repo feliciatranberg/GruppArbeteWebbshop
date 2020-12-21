@@ -376,20 +376,18 @@ button:hover {
 }
 
 #checkoutTotal {
-  font-size: 25px;
-  margin-top: -20%;
+  font-size: 22px;
   text-align: right;
-
-  
+  align-items: flex-start;
+  margin-bottom: 0;
 }
 
 
 #goToCheckout {
   @include button-small;
   width: 100%;
-  margin-top: 10%;
-  padding-top: 2%;
-  padding-bottom: 2%; 
+  
+
   font-size: 20px;
   @include shadow;
 
@@ -414,18 +412,6 @@ button:hover {
     margin-top: 12%;
     @include shadow;
   } 
-
-  @include tablets-up {
-    #cartEmptyMessage{
-      padding: 1%;
-      align-self: center;
-      background-color: white;
-      position: absolute;
-      width: 100px;
-      margin-top: 3%;
-      @include shadow;     
-    } 
-  } 
   
   #shoppingcartButton{
     padding-bottom: 0;
@@ -440,6 +426,8 @@ button:hover {
   }
   #shoppingCartDiv{
     position: absolute;
+    display: flex;
+    flex-wrap: wrap;
     left: 70%;
     top: 5%;
     background-color: white;
@@ -449,6 +437,18 @@ button:hover {
 
 .hidden{
   display: none;
+} 
+
+@include tablets-up {
+  #cartEmptyMessage{
+    padding: 1%;
+    align-self: center;
+    background-color: white;
+    position: absolute;
+    width: 100px;
+    margin-top: 3%;
+    @include shadow;     
+  } 
 } 
 
 /*
