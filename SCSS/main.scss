@@ -325,32 +325,25 @@ button:focus {
     .sizeOption{
       margin-top: 5px;
     }
-    li:hover{
-      background-color: $bg-color-secondary;
-      cursor: pointer;
-    } 
   }
-}
+} 
 }
 
+/* VARUKORGEN */
 
-//Max tilägg
 #shoppingCart{
-
    flex-wrap: wrap; 
    flex-direction: column;
-   //border: 1px solid red;
    width: 100%;
   .shoppingCartImgDiv{
       width: 100%;
       display: flex;
       flex-wrap: nowrap;
-    
      img {
        width: 50%;
      }
      h3 {
-  margin-left: 4%;
+       margin-left: 4%;
        font-size: 17px;
        width: 50%;
        align-self: flex-end;
@@ -361,7 +354,6 @@ button:focus {
     display: flex;
     justify-content: space-between;
     border: 1px solid $bg-color-secondary;
-    ;
     h2 {
       margin: 10px;
       font-size: 22px;
@@ -374,26 +366,18 @@ button:focus {
     }
   }
 }
-#shoppingcartButton:hover{
-  cursor: pointer;
-}
-.shoppingCartDeleteBtn:hover{
+#shoppingcartButton:hover, .shoppingCartDeleteBtn:hover {
   cursor: pointer;
 }
 .shoppingCartDeleteBtn:focus {
   outline: none;
   }
-
 #checkoutTotal {
   font-size: 22px;
   text-align: right;
   margin-bottom: 13%;
   margin-top: 0;
-
-
 }
-
-
 #goToCheckout {
   @include button-small;
   width: 100%;
@@ -401,7 +385,6 @@ button:focus {
   position: absolute;
   bottom: 0;
   @include shadow;
-
 }
 #goToCheckout:hover {
   background-color: $button-hover-color;
@@ -409,38 +392,11 @@ button:focus {
 #goToCheckout:focus {
   display: none;
 }
-
 #shoppingcartExtend{
-  //border: 1px solid green;
   display: flex;
   flex-direction: column;
   z-index: 5;
 }
-
-  #cartEmptyMessage{
-    padding: 1%;
-    align-self: center;
-    background-color: white;
-    position: absolute;
-    width: 100px;
-    margin-top: 12%;
-    @include shadow;
-  } 
-
-
-
-@include tablets-up {
-  #cartEmptyMessage{
-    padding: 1%;
-    align-self: center;
-    background-color: white;
-    position: absolute;
-    width: 100px;
-    margin-top: 3%;
-    @include shadow;     
-  } 
-} 
-  
   #shoppingcartButton{
     padding-bottom: 0;
     height: 5px;
@@ -461,18 +417,35 @@ button:focus {
     width: 21%;
     @include shadow;
   }
-
-
-
-
-/*
-Style for Validation Message
-*/
-#username-error, #email-error {
-  color: #d9534f;
-  padding: 12px;
-  display: none;
-}
+  #cartEmptyMessage{
+    padding: 1%;
+    align-self: center;
+    background-color: white;
+    position: absolute;
+    width: 100px;
+    margin-top: 12%;
+    @include shadow;
+  } 
+@include tablets-up {
+  #cartEmptyMessage{
+    padding: 1%;
+    align-self: center;
+    background-color: white;
+    position: absolute;
+    width: 100px;
+    margin-top: 3%;
+    @include shadow;     
+  } 
+} 
+  
+// /*
+// Style for Validation Message
+// */
+// #username-error, #email-error {
+//   color: #d9534f;
+//   padding: 12px;
+//   display: none;
+// }
 
 /* PRODUKT FORM */
 
@@ -494,13 +467,10 @@ Style for Validation Message
  .product-text-div {
    width: 40%;
    h5{
-     margin-left: 5%;   
+     margin-left: 5%; 
+     font-size: 1.2rem;  
    } 
-   h1 {
-    margin-left: 5%;
-    margin-top: -4%;
-   }
-   span {
+   h1, span {
     margin-left: 5%;
     margin-top: -4%;
    }
@@ -511,12 +481,10 @@ Style for Validation Message
 button:hover {
   background-color: $button-hover-color;
 }
-
    button:focus {
     outline: none;
    } 
   } 
- 
 
 @include tablets-up { 
 .container-checkout-form {
@@ -539,11 +507,7 @@ button:hover {
   h5{
     margin-left: 10%;   
   } 
-  h1 {
-   margin-left: 10%;
-   margin-top: -4%;
-  }
-  span {
+  h1, span {
    margin-left: 10%;
    margin-top: -4%;
   }

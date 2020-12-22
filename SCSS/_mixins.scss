@@ -14,18 +14,18 @@
         cursor: pointer;
         text-align: center;
         background-color: $button-color;
-        color: white;
+        color: $text-color-secondary;
         border: none;
         font-size: 0,8rem;
         padding: 1%;
         font-family: $font-family;
       }
 
-@mixin button-medium {
+@mixin button-medium { 
     cursor: pointer;
     text-align: center;
     background-color: $button-color;
-    color: white;
+    color: $text-color-secondary;
     border: none;
     font-size: 1.1rem;
     padding: 3% 4% 3% 4%;
@@ -36,7 +36,7 @@
     cursor: pointer;
     text-align: center;
     background-color: $button-color;
-    color: white;
+    color: $text-color-secondary;
     border: none;
     font-size: 1.2rem;
     padding: 2% 4% 2% 4%;
