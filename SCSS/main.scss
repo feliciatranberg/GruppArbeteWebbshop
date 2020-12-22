@@ -7,7 +7,7 @@ body, html {
         padding: 0;
         height: 100%; 
         width: 100%; 
-        background: white;
+        background: $bg-color;
         color: $text-color;
         font-family: $font-family;
   }
@@ -152,7 +152,7 @@ button:focus {
     position: absolute;
     width: 100%;
     margin-top: 3%;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     @include scrolling-text;
  }
 }
@@ -217,18 +217,13 @@ button:focus {
 /* ENSKILD PRODUKTSIDA */
 
 #specificProductContentwrap{
-  display: flex;
-  justify-content: center;
+ @include flex-full-width-wrap-container;
   margin-top: 15%;
-  width: 100%;
-  flex-wrap: wrap;
   img{
-    width: 100%;
+    width: 100%; 
   }
   #productTextBox{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+   @include flex-full-width-column-container;
     h2{
       margin-top: 5%;
       margin-left: 5%;
@@ -254,11 +249,9 @@ button:focus {
 #addToCartButton:hover {
   background-color: $button-hover-color;
 }
-
 #addToCartButton:focus {
   outline: none;
   }
-
   #dropDownMenu{
     list-style-type: none;
     position: absolute;
@@ -279,12 +272,10 @@ button:focus {
     } 
   }
 }
-
 @include tablets-up {
 #specificProductContentwrap{
-  display: flex;
+  @include flex-full-width-nowrap-container;
   justify-content: center;
-  width: 100%;
   margin-top: 5%;
   padding-bottom: 5%;
   img{
@@ -297,11 +288,11 @@ button:focus {
     height: 40%;
     h2{
     font-size: 1.5rem;
-    margin-left: 4%;
+    margin-left: 5%;
     margin-top: 4%;
   }    
   #description {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-left: 5%;
     margin-top: -3%;
   }
@@ -319,7 +310,6 @@ button:focus {
   #addToCartButton:hover {
     background-color: $button-hover-color;
   }
-
   #addToCartButton:focus {
     outline: none;
   }
@@ -332,8 +322,6 @@ button:focus {
     align-self: flex-start;
     margin-top: 8%;
     margin-left: 2%;
- 
-   
     .sizeOption{
       margin-top: 5px;
     }
