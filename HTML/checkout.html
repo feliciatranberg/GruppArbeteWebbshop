@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KASSAN</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="/JS/checkout.js"></script>
+    <script src="https://kit.fontawesome.com/8a91947445.js" crossorigin="anonymous"></script>
+    
+    <link href="/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" />
+    <link href="/jquery-ui-1.12.1/jquery-ui.theme.css" rel="stylesheet" />
+    <link href="/CSS/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="nav-bar-container">
+        <a class="active" href="/index.html">HEM</a> 
+        <a href="/HTML/product-page-t-shirts.html">T-SHIRT</a>
+        <a href="/HTML/product-page-sweaters.html">TRÖJOR</a> 
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+      <div class="container-checkout-form">
+      <div class="checkout-products"></div>
+
+
+      <div id="my-form">
+        <div class="contact-info-div"><h2>Dina uppgifter</h2>
+
+          <p><label>Förnamn: </label></p>
+            <input name="firstname"  />
+           <p><label>Efternamn: </label></p>
+            <input name="lastname" />
+           <p><label>Leveransadress: </label></p>
+            <input name="adress" />
+           <p><label>Postnummer: </label></p>
+            <input name="zipcode" />
+           <p><label>Stad: </label></p>
+            <input name="city" />
+           <p><label>E-Postadress: </label></p>
+            <input name="email" />
+           <p><label>Telefonnummer: </label></p>
+            <input name="tel" /></div>
+   
+           <div class="delivery-payment-div"><h2>Leverans</h2>
+   
+           <p><input name="Leveranssätt" type="radio" checked value="Postnord" /> Postnord</p>
+           <p><input name="Leveranssätt" type="radio" checked value="Instabox" /> Instabox</p>
+           <p><input name="Leveranssätt" type="radio" checked value="Budbee" /> Budbee</p>
+          <br>
+           <h2>Betalningsalternativ</h2>
+     
+             <p><input name="Betalningsmetod" type="radio" checked value="Klarna" /> Klarna</p>
+             <p><input name="Betalningsmetod" type="radio" checked value="Swish" /> Swish</p>
+             <p><input name="Betalningsmetod" type="radio" checked value="Kortbetalning" /> Kortbetalning</p> </div> 
+             
+     <button id="confirm-order-button">Bekräfta din beställning!</button>  
+  
+    </div> 
+  </div>
+
+  <footer>
+  
+    <div class="social-media">
+     <a href="#"><i class="fab fa-facebook fa-2x"></a></i>
+     <a href="#"><i class="fab fa-twitter fa-2x"> </a></i>
+     <a href="#"><i class="fab fa-instagram fa-2x"></a></i>
+    </div>
+
+    <div class="links">
+      <a href="#">Om oss</a>
+      <a href="#">Kontakta oss</a>
+      <a href="#">Hitta oss</a> 
+    </div>     
+ 
+    <div class="copyright">
+      <i class="far fa-copyright"></i>SUBSTANS 2020 
+    </div>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,1045 @@
+@charset "UTF-8";
+/* FÄRGER */
+/* TYPSNITT OCH TYPSTORLEK */
+/* line 4, scss/main.scss */
+body, html {
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  color: black;
+  font-family: "Oswald", sans-serif; }
+
+/* NAVIGERING */
+/* line 17, scss/main.scss */
+.nav-bar-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  font-family: "Oswald", sans-serif; }
+  @media screen and (min-width: 769px) {
+    /* line 17, scss/main.scss */
+    .nav-bar-container {
+      position: static; } }
+  /* line 22, scss/main.scss */
+  .nav-bar-container a {
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: none; }
+  /* line 30, scss/main.scss */
+  .nav-bar-container a:hover {
+    color: grey; }
+
+/* BANNER STARTSIDA */
+/* line 37, scss/main.scss */
+section {
+  height: 50%;
+  margin-top: 12%; }
+
+@media screen and (min-width: 769px) {
+  /* line 42, scss/main.scss */
+  section {
+    height: 100%;
+    margin-top: 0; } }
+
+/* line 47, scss/main.scss */
+.section-container {
+  height: 100%;
+  width: 100%;
+  position: relative; }
+
+/* line 52, scss/main.scss */
+.hero-one,
+.hero-two,
+.hero-three {
+  box-shadow: 1px 1px 5px grey;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
+/* line 63, scss/main.scss */
+.hero-one {
+  background-image: url("../images/hero-1.jpg"); }
+
+/* line 66, scss/main.scss */
+.hero-two {
+  background-image: url("../images/hero-2.jpg");
+  animation: slideTwoAnim 5s infinite; }
+
+/* line 70, scss/main.scss */
+.hero-three {
+  background-image: url("../images/hero-3.jpg");
+  animation: slideThreeAnim 5s infinite; }
+
+@keyframes slideTwoAnim {
+  0% {
+    opacity: 0; }
+  17% {
+    opacity: 0; }
+  33% {
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  67% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes slideThreeAnim {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  67% {
+    opacity: 1; }
+  83% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/* PRODUKTBILDER STARTSIDA */
+/* line 78, scss/main.scss */
+.product-image-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-family: "Oswald", sans-serif;
+  margin: 2% 0 2% 0; }
+
+/* line 82, scss/main.scss */
+.product-image {
+  position: relative;
+  width: 100%;
+  margin: 5%; }
+  /* line 86, scss/main.scss */
+  .product-image img {
+    box-shadow: 1px 1px 5px grey;
+    width: 100%; }
+  /* line 90, scss/main.scss */
+  .product-image button {
+    cursor: pointer;
+    text-align: center;
+    background-color: #d5bccf;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    padding: 3% 4% 3% 4%;
+    font-family: "Oswald", sans-serif;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); }
+  /* line 98, scss/main.scss */
+  .product-image button:hover {
+    background-color: #edd1e7; }
+  /* line 101, scss/main.scss */
+  .product-image button:focus {
+    outline: none; }
+
+@media screen and (min-width: 769px) {
+  /* line 106, scss/main.scss */
+  .product-image-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    font-family: "Oswald", sans-serif; }
+    /* line 108, scss/main.scss */
+    .product-image-container .product-image {
+      width: 100%; }
+    /* line 111, scss/main.scss */
+    .product-image-container button {
+      cursor: pointer;
+      text-align: center;
+      background-color: #d5bccf;
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      padding: 2% 4% 2% 4%;
+      font-family: "Oswald", sans-serif;
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%); }
+    /* line 119, scss/main.scss */
+    .product-image-container button:hover {
+      background-color: #edd1e7; }
+    /* line 122, scss/main.scss */
+    .product-image-container button:focus {
+      outline: none; } }
+
+/* RULLANDE TEXT PRODUKTSIDOR */
+/* line 130, scss/main.scss */
+.scrolling-text-container {
+  box-shadow: 1px 1px 5px grey;
+  overflow: hidden;
+  position: relative;
+  background: #d5bccf;
+  color: white;
+  text-align: center;
+  height: 25%;
+  width: 100%;
+  font-family: Impact, 'Arial Narrow Bold'; }
+
+/* line 141, scss/main.scss */
+.scrolling-text-container div {
+  position: absolute;
+  width: 100%;
+  margin-top: 30%;
+  font-size: 1.5rem;
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -moz-animation: scrolling-text-container 5s forwards;
+  -webkit-animation: scrolling-text-container 5s forwards;
+  animation: scrolling-text-container 5s forwards; }
+
+@keyframes scrolling-text-container {
+  0% {
+    -webkit-transform: translateY(-250%);
+    transform: translateY(-250%); }
+  100% {
+    -webkit-transform: translateY(-45%);
+    transform: translateY(-45%); } }
+  @media screen and (min-width: 769px) {
+    @keyframes scrolling-text-container {
+      0% {
+        -webkit-transform: translateY(-130%);
+        transform: translateY(-130%); }
+      100% {
+        -webkit-transform: translateY(40%);
+        transform: translateY(40%); } } }
+
+@media screen and (min-width: 769px) {
+  /* line 150, scss/main.scss */
+  .scrolling-text-container div {
+    position: absolute;
+    width: 100%;
+    margin-top: 3%;
+    font-size: 3.5rem;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: scrolling-text-container 5s forwards;
+    -webkit-animation: scrolling-text-container 5s forwards;
+    animation: scrolling-text-container 5s forwards; }
+  @keyframes scrolling-text-container {
+    0% {
+      -webkit-transform: translateY(-250%);
+      transform: translateY(-250%); }
+    100% {
+      -webkit-transform: translateY(-45%);
+      transform: translateY(-45%); } } }
+  @media screen and (min-width: 769px) and (min-width: 769px) {
+    @keyframes scrolling-text-container {
+      0% {
+        -webkit-transform: translateY(-130%);
+        transform: translateY(-130%); }
+      100% {
+        -webkit-transform: translateY(40%);
+        transform: translateY(40%); } } }
+
+/* PRODUKTSIDOR */
+/* line 161, scss/main.scss */
+.wrapperProductPage {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-family: "Oswald", sans-serif;
+  margin-top: 10%; }
+
+/* line 165, scss/main.scss */
+.itemDiv {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-family: "Oswald", sans-serif;
+  flex-direction: column;
+  padding-bottom: 4%; }
+
+/* line 170, scss/main.scss */
+img {
+  width: 85%;
+  align-self: center;
+  box-shadow: 1px 1px 5px grey; }
+
+/* line 175, scss/main.scss */
+h2 {
+  margin-left: 11%;
+  margin-top: -1%; }
+
+/* line 179, scss/main.scss */
+h3 {
+  margin-left: 11%; }
+
+/* line 182, scss/main.scss */
+p {
+  margin-left: 11%;
+  margin-top: -5%; }
+
+/* line 187, scss/main.scss */
+.itemDiv:hover {
+  cursor: pointer; }
+
+@media screen and (min-width: 769px) {
+  /* line 191, scss/main.scss */
+  .wrapperProductPage {
+    margin-top: 4%;
+    justify-content: center; }
+  /* line 195, scss/main.scss */
+  .itemDiv {
+    width: 27%;
+    padding-bottom: 2%; }
+    /* line 198, scss/main.scss */
+    .itemDiv img {
+      width: 90%; }
+    /* line 201, scss/main.scss */
+    .itemDiv h2 {
+      margin-left: 8%;
+      margin-top: 0%; }
+    /* line 205, scss/main.scss */
+    .itemDiv h3 {
+      margin-left: 8%; }
+    /* line 208, scss/main.scss */
+    .itemDiv p {
+      margin-left: 8%;
+      font-size: 1rem;
+      margin-top: -4%; } }
+
+/* ENSKILD PRODUKTSIDA */
+/* line 218, scss/main.scss */
+#specificProductContentwrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-family: "Oswald", sans-serif;
+  margin-top: 15%; }
+  /* line 221, scss/main.scss */
+  #specificProductContentwrap img {
+    width: 100%; }
+  /* line 224, scss/main.scss */
+  #specificProductContentwrap #productTextBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Oswald", sans-serif; }
+    /* line 226, scss/main.scss */
+    #specificProductContentwrap #productTextBox h2 {
+      margin-top: 5%;
+      margin-left: 5%; }
+  /* line 231, scss/main.scss */
+  #specificProductContentwrap #description {
+    margin-left: 5%; }
+  /* line 234, scss/main.scss */
+  #specificProductContentwrap ul {
+    margin-left: 5%;
+    margin-top: -1%; }
+  /* line 238, scss/main.scss */
+  #specificProductContentwrap h1 {
+    margin-left: 5%; }
+  /* line 241, scss/main.scss */
+  #specificProductContentwrap #addToCartButton {
+    cursor: pointer;
+    text-align: center;
+    background-color: #d5bccf;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    padding: 2% 4% 2% 4%;
+    font-family: "Oswald", sans-serif;
+    width: 90%;
+    align-self: center;
+    margin-top: -3%;
+    margin-bottom: 10%; }
+  /* line 248, scss/main.scss */
+  #specificProductContentwrap #addToCartButton:hover {
+    background-color: #edd1e7; }
+  /* line 251, scss/main.scss */
+  #specificProductContentwrap #addToCartButton:focus {
+    outline: none; }
+  /* line 254, scss/main.scss */
+  #specificProductContentwrap #dropDownMenu {
+    list-style-type: none;
+    position: absolute;
+    align-self: flex-end;
+    margin-top: 26px;
+    margin-right: 25px;
+    z-index: 10000;
+    border: 1px solid black;
+    width: 100px;
+    text-align: left;
+    padding: 0; }
+    /* line 265, scss/main.scss */
+    #specificProductContentwrap #dropDownMenu .sizeOption {
+      margin-top: 5px; }
+    /* line 268, scss/main.scss */
+    #specificProductContentwrap #dropDownMenu li:hover {
+      background-color: #f1f1f1;
+      cursor: pointer; }
+
+@media screen and (min-width: 769px) {
+  /* line 275, scss/main.scss */
+  #specificProductContentwrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    font-family: "Oswald", sans-serif;
+    justify-content: center;
+    margin-top: 5%;
+    padding-bottom: 5%; }
+    /* line 280, scss/main.scss */
+    #specificProductContentwrap img {
+      width: 40%; }
+    /* line 283, scss/main.scss */
+    #specificProductContentwrap #productTextBox {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      height: 40%; }
+      /* line 288, scss/main.scss */
+      #specificProductContentwrap #productTextBox h2 {
+        font-size: 1.5rem;
+        margin-left: 5%;
+        margin-top: 4%; }
+      /* line 293, scss/main.scss */
+      #specificProductContentwrap #productTextBox #description {
+        font-size: 1.1rem;
+        margin-left: 5%;
+        margin-top: -3%; }
+      /* line 298, scss/main.scss */
+      #specificProductContentwrap #productTextBox #productPrize {
+        font-weight: bold;
+        margin-left: 5%;
+        margin-top: 55%; }
+      /* line 303, scss/main.scss */
+      #specificProductContentwrap #productTextBox #addToCartButton {
+        cursor: pointer;
+        text-align: center;
+        background-color: #d5bccf;
+        color: white;
+        border: none;
+        font-size: 1.2rem;
+        padding: 2% 4% 2% 4%;
+        font-family: "Oswald", sans-serif;
+        width: 40%;
+        margin-top: -1%;
+        margin-left: -51%; }
+      /* line 309, scss/main.scss */
+      #specificProductContentwrap #productTextBox #addToCartButton:hover {
+        background-color: #edd1e7; }
+      /* line 312, scss/main.scss */
+      #specificProductContentwrap #productTextBox #addToCartButton:focus {
+        outline: none; }
+    /* line 316, scss/main.scss */
+    #specificProductContentwrap #dropDownMenu {
+      list-style-type: none;
+      border: 1px solid black;
+      width: 14%;
+      padding: 0.5%;
+      align-self: flex-start;
+      margin-top: 8%;
+      margin-left: 2%; }
+      /* line 324, scss/main.scss */
+      #specificProductContentwrap #dropDownMenu .sizeOption {
+        margin-top: 5px; } }
+
+/* VARUKORGEN */
+/* line 333, scss/main.scss */
+#shoppingCart {
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  z-index: 10000; }
+  /* line 337, scss/main.scss */
+  #shoppingCart .shoppingCartImgDiv {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap; }
+    /* line 341, scss/main.scss */
+    #shoppingCart .shoppingCartImgDiv img {
+      width: 50%; }
+    /* line 344, scss/main.scss */
+    #shoppingCart .shoppingCartImgDiv h3 {
+      margin-left: 4%;
+      font-size: 1.1rem;
+      width: 50%;
+      align-self: flex-end; }
+  /* line 352, scss/main.scss */
+  #shoppingCart .shoppingCartItemDiv {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #f1f1f1; }
+    /* line 356, scss/main.scss */
+    #shoppingCart .shoppingCartItemDiv h2 {
+      margin: 2%;
+      font-size: 1.4rem; }
+    /* line 360, scss/main.scss */
+    #shoppingCart .shoppingCartItemDiv .shoppingCartDeleteBtn {
+      color: red;
+      background: none;
+      border: none;
+      font-size: 1.4rem; }
+
+/* line 368, scss/main.scss */
+#shoppingcartButton:hover, .shoppingCartDeleteBtn:hover {
+  cursor: pointer; }
+
+/* line 371, scss/main.scss */
+.shoppingCartDeleteBtn:focus {
+  outline: none; }
+
+/* line 374, scss/main.scss */
+#checkoutTotal {
+  font-size: 1.5rem;
+  text-align: right;
+  margin-bottom: 13%;
+  margin-top: 0; }
+
+/* line 380, scss/main.scss */
+#goToCheckout {
+  cursor: pointer;
+  text-align: center;
+  background-color: #d5bccf;
+  color: white;
+  border: none;
+  font-size: 0,8rem;
+  padding: 1%;
+  font-family: "Oswald", sans-serif;
+  width: 100%;
+  font-size: 1.3rem;
+  position: absolute;
+  bottom: 0;
+  box-shadow: 1px 1px 5px grey; }
+
+/* line 388, scss/main.scss */
+#goToCheckout:hover {
+  background-color: #edd1e7; }
+
+/* line 391, scss/main.scss */
+#goToCheckout:focus {
+  display: none; }
+
+/* line 394, scss/main.scss */
+#shoppingcartExtend {
+  display: flex;
+  flex-direction: column;
+  z-index: 5; }
+
+/* line 399, scss/main.scss */
+#shoppingcartButton {
+  padding-bottom: 0;
+  height: 5px; }
+  /* line 402, scss/main.scss */
+  #shoppingcartButton #cartNumberDisplay {
+    color: #d5bccf;
+    position: relative;
+    right: -15px;
+    top: -36px;
+    z-index: 10000; }
+
+/* line 410, scss/main.scss */
+#shoppingCartDiv {
+  position: absolute;
+  height: auto;
+  left: 70%;
+  top: 5%;
+  background-color: white;
+  width: 21%;
+  box-shadow: 1px 1px 5px grey; }
+
+/* line 419, scss/main.scss */
+#cartEmptyMessage {
+  padding: 1%;
+  align-self: center;
+  background-color: white;
+  position: absolute;
+  width: 100px;
+  margin-top: 12%;
+  box-shadow: 1px 1px 5px grey; }
+
+@media screen and (min-width: 769px) {
+  /* line 429, scss/main.scss */
+  #cartEmptyMessage {
+    padding: 1%;
+    align-self: center;
+    background-color: white;
+    position: absolute;
+    width: 100px;
+    margin-top: 3%;
+    box-shadow: 1px 1px 5px grey; } }
+
+/* PRODUKTER KASSASIDA */
+/* line 442, scss/main.scss */
+.container-checkout-form {
+  margin-top: 15%; }
+
+/* line 445, scss/main.scss */
+.checkout-products {
+  width: 100%; }
+
+/* line 448, scss/main.scss */
+.product-Div {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  font-family: "Oswald", sans-serif;
+  justify-content: center;
+  background-color: #f1f1f1; }
+  /* line 452, scss/main.scss */
+  .product-Div img {
+    width: 60%;
+    box-shadow: none; }
+
+/* line 457, scss/main.scss */
+.product-text-div {
+  width: 40%; }
+  /* line 459, scss/main.scss */
+  .product-text-div h5 {
+    margin-left: 5%;
+    font-size: 1.2rem; }
+  /* line 463, scss/main.scss */
+  .product-text-div h1, .product-text-div span {
+    margin-left: 5%;
+    margin-top: -4%; }
+  /* line 467, scss/main.scss */
+  .product-text-div button {
+    cursor: pointer;
+    text-align: center;
+    background-color: #d5bccf;
+    color: white;
+    border: none;
+    font-size: 0,8rem;
+    padding: 1%;
+    font-family: "Oswald", sans-serif;
+    padding: 2%; }
+  /* line 471, scss/main.scss */
+  .product-text-div button:hover {
+    background-color: #edd1e7; }
+  /* line 474, scss/main.scss */
+  .product-text-div button:focus {
+    outline: none; }
+
+@media screen and (min-width: 769px) {
+  /* line 480, scss/main.scss */
+  .container-checkout-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 0; }
+  /* line 486, scss/main.scss */
+  .checkout-products {
+    width: 100%; }
+  /* line 489, scss/main.scss */
+  .product-Div {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    font-family: "Oswald", sans-serif;
+    justify-content: center; }
+    /* line 492, scss/main.scss */
+    .product-Div img {
+      width: 25%; }
+    /* line 495, scss/main.scss */
+    .product-Div .product-text-div {
+      width: 30%; }
+      /* line 497, scss/main.scss */
+      .product-Div .product-text-div h5 {
+        margin-left: 10%; }
+      /* line 500, scss/main.scss */
+      .product-Div .product-text-div h1, .product-Div .product-text-div span {
+        margin-left: 10%;
+        margin-top: -4%; } }
+
+/* line 507, scss/main.scss */
+#total-display-row-div {
+  margin-top: 5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f1f1f1; }
+  /* line 515, scss/main.scss */
+  #total-display-row-div #total-display-inner-div {
+    padding-bottom: 10px; }
+  /* line 518, scss/main.scss */
+  #total-display-row-div p {
+    margin: 5px; }
+  /* line 521, scss/main.scss */
+  #total-display-row-div h2 {
+    margin: 5px; }
+
+/* line 525, scss/main.scss */
+.hidden {
+  display: none; }
+
+/* DINA UPPGIFTER KASSASISA */
+/* line 531, scss/main.scss */
+#my-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
+  align-items: center;
+  margin-top: 7%; }
+
+/* line 536, scss/main.scss */
+.contact-info-div {
+  background-color: #f1f1f1;
+  width: 90%;
+  margin-bottom: 7%;
+  padding: 7% 0 7% 0;
+  display: flex;
+  flex-direction: column; }
+  /* line 543, scss/main.scss */
+  .contact-info-div input {
+    width: 60%;
+    margin-left: 5%; }
+  /* line 547, scss/main.scss */
+  .contact-info-div p {
+    margin: 1% 0 0 7%; }
+
+/* line 551, scss/main.scss */
+.delivery-payment-div {
+  background-color: #f1f1f1;
+  width: 90%;
+  margin-bottom: 7%;
+  padding: 7% 0 7% 0;
+  display: flex;
+  flex-direction: column; }
+  /* line 558, scss/main.scss */
+  .delivery-payment-div h2 {
+    margin-bottom: 10%; }
+
+/* line 562, scss/main.scss */
+#confirm-order-button {
+  cursor: pointer;
+  text-align: center;
+  background-color: #d5bccf;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  padding: 3% 4% 3% 4%;
+  font-family: "Oswald", sans-serif;
+  width: 80%;
+  margin-bottom: 2%; }
+
+/* line 567, scss/main.scss */
+#confirm-order-button:hover {
+  background-color: #edd1e7; }
+
+/* line 570, scss/main.scss */
+#confirm-order-button:focus {
+  outline: none; }
+
+@media screen and (min-width: 769px) {
+  /* line 575, scss/main.scss */
+  #my-form {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    margin-top: 4%;
+    margin-bottom: 4%; }
+  /* line 585, scss/main.scss */
+  .contact-info-div {
+    width: 40%;
+    height: 55%;
+    margin-bottom: 0;
+    padding-bottom: 5%;
+    padding-left: 5%; }
+    /* line 591, scss/main.scss */
+    .contact-info-div input {
+      width: 60%;
+      margin-left: 5%; }
+    /* line 595, scss/main.scss */
+    .contact-info-div p {
+      margin: 1% 0 0 5%; }
+    /* line 598, scss/main.scss */
+    .contact-info-div h2 {
+      margin-left: 5%; }
+  /* line 602, scss/main.scss */
+  .delivery-payment-div {
+    width: 40%;
+    height: 55%;
+    padding-bottom: 5%;
+    margin-bottom: 5%; }
+    /* line 607, scss/main.scss */
+    .delivery-payment-div h2 {
+      margin-bottom: 10%; }
+    /* line 610, scss/main.scss */
+    .delivery-payment-div p {
+      margin-bottom: 7%; }
+  /* line 614, scss/main.scss */
+  #confirm-order-button {
+    cursor: pointer;
+    text-align: center;
+    background-color: #d5bccf;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    padding: 3% 4% 3% 4%;
+    font-family: "Oswald", sans-serif;
+    width: 40%;
+    margin-bottom: -1%; } }
+
+/* BEHANDLAR DIN ORDER ANIMATION */
+/* line 623, scss/main.scss */
+#loading-screen {
+  width: 100vh;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; }
+  /* line 632, scss/main.scss */
+  #loading-screen #loading-screen-bar {
+    border: 3px solid black;
+    height: 5%;
+    width: 80%;
+    position: relative;
+    top: -225px;
+    border-radius: 5%;
+    z-index: 100; }
+    /* line 640, scss/main.scss */
+    #loading-screen #loading-screen-bar #loading-bar-box {
+      display: inline-block;
+      height: 100%;
+      width: 1%;
+      opacity: .9;
+      z-index: 1;
+      background-color: #61abce;
+      animation: bar-animation 3s infinite ease-in;
+      position: relative; }
+  /* line 651, scss/main.scss */
+  #loading-screen p {
+    position: relative;
+    margin: 2%;
+    margin-right: 0;
+    font-size: 4rem; }
+  @media screen and (max-width: 768px) {
+    /* line 658, scss/main.scss */
+    #loading-screen .dots {
+      margin: 0;
+      position: absolute;
+      top: 105px;
+      right: 75px; }
+    /* line 664, scss/main.scss */
+    #loading-screen .dots::before, #loading-screen .dots::after {
+      content: '.';
+      display: inline-block; }
+    /* line 668, scss/main.scss */
+    #loading-screen .dots::before {
+      animation: dot-anim-before 2s infinite ease-in; }
+    /* line 671, scss/main.scss */
+    #loading-screen .dots::after {
+      animation: dot-anim-after 2s infinite ease-in;
+      animation-delay: 1s; } }
+
+@keyframes dot-anim-after {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  75%,
+  100% {
+    opacity: 0; }
+  25% {
+    opacity: 1; } }
+
+@keyframes dot-anim-before {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  75%,
+  100% {
+    opacity: 0; }
+  25% {
+    opacity: 1; } }
+
+@keyframes bar-animation {
+  0% {
+    width: 0%; }
+  50% {
+    width: 50%; }
+  75% {
+    width: 60%; }
+  100% {
+    width: 100%; } }
+
+/* ORDER BEKRÄFTELSE */
+/* line 710, scss/main.scss */
+#confirm-page-container, #order-input-text-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
+  height: 100%;
+  align-items: center;
+  font-size: 1.1rem; }
+  @media screen and (min-width: 769px) {
+    /* line 715, scss/main.scss */
+    #confirm-page-container #order-input-text-div, #order-input-text-div #order-input-text-div {
+      width: 50%; } }
+  /* line 720, scss/main.scss */
+  #confirm-page-container #confirm-logo-banner, #order-input-text-div #confirm-logo-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    background-color: #d5bccf;
+    box-shadow: 1px 1px 5px grey; }
+    /* line 728, scss/main.scss */
+    #confirm-page-container #confirm-logo-banner h2, #order-input-text-div #confirm-logo-banner h2 {
+      transform: rotate(-10deg);
+      font-size: 5rem;
+      margin: 0;
+      margin-bottom: 25px;
+      color: white; }
+  /* line 736, scss/main.scss */
+  #confirm-page-container h1, #order-input-text-div h1 {
+    margin-bottom: 5%;
+    text-align: center;
+    text-shadow: 0.5px 0.5px 0px grey; }
+  /* line 741, scss/main.scss */
+  #confirm-page-container p, #order-input-text-div p {
+    text-align: center;
+    display: flex;
+    margin: 0;
+    margin-bottom: 10px;
+    justify-content: center;
+    width: 90%;
+    text-shadow: 0.5px 0.5px 0px grey; }
+  /* line 750, scss/main.scss */
+  #confirm-page-container #p2, #order-input-text-div #p2 {
+    font-size: 1rem;
+    margin-bottom: 20px; }
+  /* line 754, scss/main.scss */
+  #confirm-page-container #order-box-div, #confirm-page-container #order-delivery-div, #order-input-text-div #order-box-div, #order-input-text-div #order-delivery-div {
+    background-color: #e9e0e0;
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    box-shadow: 1px 1px 5px grey; }
+    /* line 764, scss/main.scss */
+    #confirm-page-container #order-box-div div, #confirm-page-container #order-delivery-div div, #order-input-text-div #order-box-div div, #order-input-text-div #order-delivery-div div {
+      border: 1px solid #c7c5c5;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center; }
+      /* line 772, scss/main.scss */
+      #confirm-page-container #order-box-div div #p-order-date, #confirm-page-container #order-box-div div #p-delivery-adress, #confirm-page-container #order-box-div div #p-order-number, #confirm-page-container #order-box-div div #p-delivery-sum, #confirm-page-container #order-delivery-div div #p-order-date, #confirm-page-container #order-delivery-div div #p-delivery-adress, #confirm-page-container #order-delivery-div div #p-order-number, #confirm-page-container #order-delivery-div div #p-delivery-sum, #order-input-text-div #order-box-div div #p-order-date, #order-input-text-div #order-box-div div #p-delivery-adress, #order-input-text-div #order-box-div div #p-order-number, #order-input-text-div #order-box-div div #p-delivery-sum, #order-input-text-div #order-delivery-div div #p-order-date, #order-input-text-div #order-delivery-div div #p-delivery-adress, #order-input-text-div #order-delivery-div div #p-order-number, #order-input-text-div #order-delivery-div div #p-delivery-sum {
+        margin-top: 5px;
+        font-size: 1.2rem;
+        opacity: 1; }
+      /* line 777, scss/main.scss */
+      #confirm-page-container #order-box-div div .lower-ptag, #confirm-page-container #order-delivery-div div .lower-ptag, #order-input-text-div #order-box-div div .lower-ptag, #order-input-text-div #order-delivery-div div .lower-ptag {
+        padding-bottom: 5%; }
+      /* line 780, scss/main.scss */
+      #confirm-page-container #order-box-div div p, #confirm-page-container #order-delivery-div div p, #order-input-text-div #order-box-div div p, #order-input-text-div #order-delivery-div div p {
+        font-size: 1rem;
+        margin: 0;
+        opacity: .9; }
+  /* line 787, scss/main.scss */
+  #confirm-page-container #order-delivery-div, #order-input-text-div #order-delivery-div {
+    height: auto;
+    margin-bottom: 1%; }
+
+/* line 792, scss/main.scss */
+.product-confirm-text-div {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  text-align: center; }
+  /* line 797, scss/main.scss */
+  .product-confirm-text-div h1 {
+    margin: 0; }
+  /* line 800, scss/main.scss */
+  .product-confirm-text-div h3 {
+    margin: 0;
+    margin-top: 50px;
+    width: 100%; }
+
+/* FOOTER */
+/* line 809, scss/main.scss */
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
+  align-items: center;
+  margin-top: 5%; }
+  /* line 813, scss/main.scss */
+  footer div {
+    margin-bottom: 4%; }
+  /* line 816, scss/main.scss */
+  footer a {
+    color: black;
+    text-decoration: none; }
+  /* line 820, scss/main.scss */
+  footer a:hover {
+    color: grey; }
+
+/* line 824, scss/main.scss */
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
+  align-items: center; }
+
+/* line 828, scss/main.scss */
+.copyright {
+  font-style: italic;
+  font-size: 0.8rem; }
+
+@media screen and (min-width: 769px) {
+  /* line 834, scss/main.scss */
+  footer {
+    margin-top: 1%; }
+    /* line 836, scss/main.scss */
+    footer div {
+      margin-bottom: 2%; }
+  /* line 840, scss/main.scss */
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    /* line 844, scss/main.scss */
+    .links a {
+      margin-right: 1%;
+      margin-left: 1%; } }
