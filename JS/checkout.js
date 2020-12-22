@@ -145,6 +145,7 @@ function fauxPayment() {
  
  ($(".container-checkout-form")).empty();
  ($(".nav-bar-container")).empty();
+ ($("footer")).detach();
  
  ($("<div>"))
     .attr("id","loading-screen")
