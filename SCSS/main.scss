@@ -808,46 +808,43 @@ button:hover {
 /* FOOTER */ 
 
 footer {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
+  @include flex-full-width-column-container;
   align-items: center;
-  flex-direction: column;
-  font-family: $font-family;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  .social-media {
-margin-top: 2%;
+  margin-top: 5%;
+  div {
+    margin-bottom: 4%;
   }
-  .help-links {
-    margin-top: 3%;
-    display: flex;
-flex-direction: column;
-align-items: center;
   a {
-    text-decoration: none;
     color: $text-color;
-    margin-bottom: 2%;
-    a:hover {
-      background-color: $link-hover-color;
-    }
+    text-decoration: none;
   }
+    a:hover {
+      color: $link-hover-color;
+  }
+}
+.links {
+    @include flex-full-width-column-container;
+    align-items: center;
   }
   .copyright {
     font-style: italic;
-    font-size: 12px;
-    padding: 4%;
+    font-size: 0.8rem;
   }
-}
-@include tablets-up {
-  footer {
-   @include flex-full-width-wrap-container;
-    font-family: $font-family;
-    margin-top: 2%;
-    margin-bottom: 2%;
-.help-links {
-  display: flex;
-  flex-direction: row;
-}  
-}
-}
+
+  @include tablets-up {
+    footer {
+      margin-top: 1%;
+      div {
+        margin-bottom: 2%;
+      }
+    }
+    .links {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     a{
+       margin-right: 1%;
+       margin-left: 1%;
+     }
+    }
+  }

@@ -998,49 +998,49 @@ p {
 /* FOOTER */
 /* line 810, scss/main.scss */
 footer {
-  display: flex;
   width: 100%;
-  flex-wrap: wrap;
-  align-items: center;
+  display: flex;
   flex-direction: column;
   font-family: "Oswald", sans-serif;
-  margin-top: 2%;
-  margin-bottom: 2%; }
-  /* line 819, scss/main.scss */
-  footer .social-media {
-    margin-top: 2%; }
-  /* line 822, scss/main.scss */
-  footer .help-links {
-    margin-top: 3%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    /* line 827, scss/main.scss */
-    footer .help-links a {
-      text-decoration: none;
-      color: black;
-      margin-bottom: 2%; }
-      /* line 831, scss/main.scss */
-      footer .help-links a a:hover {
-        background-color: grey; }
-  /* line 836, scss/main.scss */
-  footer .copyright {
-    font-style: italic;
-    font-size: 12px;
-    padding: 4%; }
+  align-items: center;
+  margin-top: 5%; }
+  /* line 814, scss/main.scss */
+  footer div {
+    margin-bottom: 4%; }
+  /* line 817, scss/main.scss */
+  footer a {
+    color: black;
+    text-decoration: none; }
+  /* line 821, scss/main.scss */
+  footer a:hover {
+    color: grey; }
+
+/* line 825, scss/main.scss */
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
+  align-items: center; }
+
+/* line 829, scss/main.scss */
+.copyright {
+  font-style: italic;
+  font-size: 0.8rem; }
 
 @media screen and (min-width: 769px) {
-  /* line 843, scss/main.scss */
+  /* line 835, scss/main.scss */
   footer {
-    width: 100%;
+    margin-top: 1%; }
+    /* line 837, scss/main.scss */
+    footer div {
+      margin-bottom: 2%; }
+  /* line 841, scss/main.scss */
+  .links {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    font-family: "Oswald", sans-serif;
-    font-family: "Oswald", sans-serif;
-    margin-top: 2%;
-    margin-bottom: 2%; }
-    /* line 848, scss/main.scss */
-    footer .help-links {
-      display: flex;
-      flex-direction: row; } }
+    flex-direction: row;
+    justify-content: center; }
+    /* line 845, scss/main.scss */
+    .links a {
+      margin-right: 1%;
+      margin-left: 1%; } }

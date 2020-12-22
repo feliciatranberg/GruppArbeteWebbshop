@@ -43,7 +43,6 @@
     font-family: $font-family;
 }
 
-
   @mixin flex-full-width-wrap-container {
     width: 100%;
     display: flex;
@@ -112,7 +111,6 @@
       }
     }
 
-
   @mixin keyframes-hero-banner {
     @keyframes slideTwoAnim {
       0%{opacity:0;}
@@ -135,7 +133,6 @@
     box-shadow: 1px 1px 5px grey;
   }
 
-  
   @mixin text-shadow {
     text-shadow: 0.5px 0.5px 0px grey;
   }
