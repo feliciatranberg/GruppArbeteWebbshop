@@ -542,7 +542,7 @@ button:hover {
   #confirm-order-button {
     @include button-medium;
     width: 80%; 
-    margin-bottom: 8%;
+    margin-bottom: 2%;
   }
   #confirm-order-button:hover {
   background-color: $button-hover-color;
@@ -593,8 +593,8 @@ button:hover {
     }
     #confirm-order-button {
       @include button-medium;
-      width: 40%; 
-      margin-bottom: 8%;
+      width: 40%;  
+      margin-bottom: -1%;
     }
 }
 
