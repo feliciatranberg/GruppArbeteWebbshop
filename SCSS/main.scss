@@ -437,17 +437,8 @@ button:focus {
     @include shadow;     
   } 
 } 
-  
-// /*
-// Style for Validation Message
-// */
-// #username-error, #email-error {
-//   color: #d9534f;
-//   padding: 12px;
-//   display: none;
-// }
 
-/* PRODUKT FORM */
+/* PRODUKTER KASSASIDA */
 
 .container-checkout-form {
   margin-top: 15%;
@@ -515,12 +506,10 @@ button:hover {
 }
 }
 
-/* FORM */
+/* DINA UPPGIFTER KASSASISA */
 
 #my-form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+ @include flex-full-width-column-container;
   align-items: center;
   margin-top: 7%;
 } 
@@ -554,8 +543,6 @@ button:hover {
     @include button-medium;
     width: 80%; 
     margin-bottom: 8%;
-
-
   }
   #confirm-order-button:hover {
   background-color: $button-hover-color;
@@ -563,7 +550,6 @@ button:hover {
   #confirm-order-button:focus {
    outline: none;
     }
-  
 
 @include tablets-up {
   #my-form {
@@ -575,7 +561,6 @@ button:hover {
     justify-content: center;
     margin-top: 4%;
     margin-bottom: 4%;
-    
   }
     .contact-info-div {
       width: 40%;
@@ -599,7 +584,6 @@ button:hover {
       height: 55%;
       padding-bottom: 5%;
       margin-bottom: 5%;
-  
       h2 {
         margin-bottom: 10%
       }
@@ -612,14 +596,9 @@ button:hover {
       width: 40%; 
       margin-bottom: 8%;
     }
-    #confirm-order-button:hover {
-    background-color: $button-hover-color;
-    }
-    #confirm-order-button:focus {
-      outline: none;
-      }
 }
 
+/* BEHANDLAR DIN ORDER ANIMATION */
 
 #loading-screen{
   width: 100vh;
@@ -655,6 +634,7 @@ button:hover {
     margin-right: 0;
     font-size: 4rem;
   }
+  @include phone-only {  
  .dots{
     margin:0;
     position: absolute;
@@ -695,87 +675,6 @@ button:hover {
     opacity: 1;
   }
 }
-@keyframes bar-animation {
-  0% { width: 0%;}
-  50%{  width: 50%;}
-  75%{width: 60%;}
-  100% {
-    width: 100%;
-  }
-}
-@include tablets-up {    
-#loading-screen{
-  width: 100vh;
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  #loading-screen-bar{
-    border: 3px solid black;
-    height: 5%;
-    width: 80%;
-    position:relative;
-    top: -225px;
-    border-radius: 5%;
-    z-index: 100;
-    #loading-bar-box{
-      display: inline-block;
-      height: 100%;
-      width: 1%;
-      opacity: .9;
-      z-index: 1;
-      background-color: rgb(97, 171, 206);
-      animation: bar-animation 3s infinite ease-in;
-      position: relative;
-    }
-  }
-  p{
-    position: relative;
-    margin-right: 0;
-    font-size: 4rem;
-    margin-bottom: 25%;
-  }
- .dots{
-    position: absolute;
-    top: 12px;
-    right: 370px;
-   
- } 
- .dots::before, .dots::after {
-  content: '.';
-  display: inline-block; 
-}
- .dots::before{
-  animation: dot-anim-before 2s infinite ease-in;
-} 
- .dots::after{
-  animation: dot-anim-after 2s infinite ease-in;
-  animation-delay: 1s;
-} 
-}
-@keyframes dot-anim-after {
-  0% { opacity: 0;}
-  50%{  opacity: 1;}
-  75%,
-  100% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-}
-@keyframes dot-anim-before {
-  0% { opacity: 0;}
-  50%{  opacity: 1;}
-  75%,
-  100% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
 }
 @keyframes bar-animation {
   0% { width: 0%;}
@@ -785,18 +684,12 @@ button:hover {
     width: 100%;
   }
 }
-}
 
-
-//Orderconfirm
+/* ORDER BEKRÄFTELSE */
 
 #confirm-page-container,#order-input-text-div {
+  @include flex-full-width-column-container;
   height: 100%;
-  width: 100%;
-  //border: 5px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
   font-size: 1.1rem;
 #order-input-text-div{
@@ -838,7 +731,6 @@ button:hover {
     font-size: 1rem;
     margin-bottom: 20px;
   }
-
   #order-box-div, #order-delivery-div{
     background-color: rgb(233, 224, 224);
     width: 90%;
@@ -871,15 +763,12 @@ button:hover {
         opacity: .9;
       }
     }
-
   }
-
   #order-delivery-div{
     height: auto;
     margin-bottom: 1%;
   }
   }
-  
   .product-confirm-text-div{
     display: flex;
     flex-direction: column;
@@ -887,16 +776,13 @@ button:hover {
     text-align: center;
     h1{
       margin: 0;
-      
     }
     h3{
-     
       margin: 0;
       margin-top: 50px;
       width: 100%;
     }
   }
-
 #total-display-row-div{
   margin-top: 5%;
   text-align: center;
@@ -915,19 +801,11 @@ button:hover {
     margin: 5px;
   }
 }
-
 .hidden{
   display: none;
 }  
 
-/*Footer CSS*/
-/*
-.nav-bar-container {
-  @include flex-full-width-nowrap-fixed-container;
-  @include tablets-up {
-    position: static;
-  }
-*/
+/* FOOTER */ 
 
 footer {
   display: flex;
@@ -961,13 +839,9 @@ align-items: center;
     padding: 4%;
   }
 }
-
-
 @include tablets-up {
   footer {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
+   @include flex-full-width-wrap-container;
     font-family: $font-family;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -977,69 +851,3 @@ align-items: center;
 }  
 }
 }
-
-
-
-
-
-
-// //MEDIA  FOOTER
-
-// @include phone-only {
-//   .about-us-links,
-//   .more-links {
-//     display: none;
-//   }
-// }
-// @include tablets-up {
-// }
-// .social-payment-icons {
-//   display: flex;
-//   justify-content: center;
-//   margin-bottom: 3%;
-// }
-
-// .footer-bar-container-links {
-//   display: flex;
-//   width: 100%;
-//   justify-content: space-evenly;
-//   z-index: 1000;
-//   background-color: white;
-//   font-family: $font-family;
-//   a {
-//     text-align: center;
-//     padding: 12px 0;
-//     transition: all 0.3s ease;
-//     color: $text-color;
-//     font-size: 20px;
-//     text-decoration: none;
-//   }
-//   a:hover {
-//     color: $link-hover-color;
-//   }
-// }
-
-// .faq-container,
-// .student-container {
-//   h4,
-//   h1, table {
-//     padding: 40px;
-//     display: flex;
-//     justify-content: center;
-//   }
-// }
-// .track-id {
-//   padding-top: 15px;
-//   display: flex;
-//   justify-content: space-evenly;
-//   padding-bottom: 15px;
-//   .track-id-button:hover {
-//     cursor: pointer;
-//   }
-// }
-// .colored-table-row-first{
-//   background-color:  #c3e0e6;
-// }
-// .colored-table-row-second{
-//   background-color:  #71c5d6;
-// }

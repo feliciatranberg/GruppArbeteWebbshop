@@ -589,16 +589,16 @@ p {
     margin-top: 3%;
     box-shadow: 1px 1px 5px grey; } }
 
-/* PRODUKT FORM */
-/* line 452, scss/main.scss */
+/* PRODUKTER KASSASIDA */
+/* line 443, scss/main.scss */
 .container-checkout-form {
   margin-top: 15%; }
 
-/* line 455, scss/main.scss */
+/* line 446, scss/main.scss */
 .checkout-products {
   width: 100%; }
 
-/* line 458, scss/main.scss */
+/* line 449, scss/main.scss */
 .product-Div {
   width: 100%;
   display: flex;
@@ -607,23 +607,23 @@ p {
   font-family: "Oswald", sans-serif;
   justify-content: center;
   background-color: #f1f1f1; }
-  /* line 462, scss/main.scss */
+  /* line 453, scss/main.scss */
   .product-Div img {
     width: 60%;
     box-shadow: none; }
 
-/* line 467, scss/main.scss */
+/* line 458, scss/main.scss */
 .product-text-div {
   width: 40%; }
-  /* line 469, scss/main.scss */
+  /* line 460, scss/main.scss */
   .product-text-div h5 {
     margin-left: 5%;
     font-size: 1.2rem; }
-  /* line 473, scss/main.scss */
+  /* line 464, scss/main.scss */
   .product-text-div h1, .product-text-div span {
     margin-left: 5%;
     margin-top: -4%; }
-  /* line 477, scss/main.scss */
+  /* line 468, scss/main.scss */
   .product-text-div button {
     cursor: pointer;
     text-align: center;
@@ -634,24 +634,24 @@ p {
     padding: 1%;
     font-family: "Oswald", sans-serif;
     padding: 2%; }
-  /* line 481, scss/main.scss */
+  /* line 472, scss/main.scss */
   .product-text-div button:hover {
     background-color: #edd1e7; }
-  /* line 484, scss/main.scss */
+  /* line 475, scss/main.scss */
   .product-text-div button:focus {
     outline: none; }
 
 @media screen and (min-width: 769px) {
-  /* line 490, scss/main.scss */
+  /* line 481, scss/main.scss */
   .container-checkout-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 0; }
-  /* line 496, scss/main.scss */
+  /* line 487, scss/main.scss */
   .checkout-products {
     width: 100%; }
-  /* line 499, scss/main.scss */
+  /* line 490, scss/main.scss */
   .product-Div {
     width: 100%;
     display: flex;
@@ -659,30 +659,31 @@ p {
     justify-content: space-evenly;
     font-family: "Oswald", sans-serif;
     justify-content: center; }
-    /* line 502, scss/main.scss */
+    /* line 493, scss/main.scss */
     .product-Div img {
       width: 25%; }
-    /* line 505, scss/main.scss */
+    /* line 496, scss/main.scss */
     .product-Div .product-text-div {
       width: 30%; }
-      /* line 507, scss/main.scss */
+      /* line 498, scss/main.scss */
       .product-Div .product-text-div h5 {
         margin-left: 10%; }
-      /* line 510, scss/main.scss */
+      /* line 501, scss/main.scss */
       .product-Div .product-text-div h1, .product-Div .product-text-div span {
         margin-left: 10%;
         margin-top: -4%; } }
 
-/* FORM */
-/* line 520, scss/main.scss */
+/* DINA UPPGIFTER KASSASISA */
+/* line 511, scss/main.scss */
 #my-form {
   width: 100%;
   display: flex;
   flex-direction: column;
+  font-family: "Oswald", sans-serif;
   align-items: center;
   margin-top: 7%; }
 
-/* line 527, scss/main.scss */
+/* line 516, scss/main.scss */
 .contact-info-div {
   background-color: #f1f1f1;
   width: 90%;
@@ -690,15 +691,15 @@ p {
   padding: 7% 0 7% 0;
   display: flex;
   flex-direction: column; }
-  /* line 534, scss/main.scss */
+  /* line 523, scss/main.scss */
   .contact-info-div input {
     width: 60%;
     margin-left: 5%; }
-  /* line 538, scss/main.scss */
+  /* line 527, scss/main.scss */
   .contact-info-div p {
     margin: 1% 0 0 7%; }
 
-/* line 542, scss/main.scss */
+/* line 531, scss/main.scss */
 .delivery-payment-div {
   background-color: #f1f1f1;
   width: 90%;
@@ -706,11 +707,11 @@ p {
   padding: 7% 0 7% 0;
   display: flex;
   flex-direction: column; }
-  /* line 549, scss/main.scss */
+  /* line 538, scss/main.scss */
   .delivery-payment-div h2 {
     margin-bottom: 10%; }
 
-/* line 553, scss/main.scss */
+/* line 542, scss/main.scss */
 #confirm-order-button {
   cursor: pointer;
   text-align: center;
@@ -723,16 +724,16 @@ p {
   width: 80%;
   margin-bottom: 8%; }
 
-/* line 560, scss/main.scss */
+/* line 547, scss/main.scss */
 #confirm-order-button:hover {
   background-color: #edd1e7; }
 
-/* line 563, scss/main.scss */
+/* line 550, scss/main.scss */
 #confirm-order-button:focus {
   outline: none; }
 
 @media screen and (min-width: 769px) {
-  /* line 569, scss/main.scss */
+  /* line 555, scss/main.scss */
   #my-form {
     width: 90%;
     display: flex;
@@ -742,36 +743,36 @@ p {
     justify-content: center;
     margin-top: 4%;
     margin-bottom: 4%; }
-  /* line 580, scss/main.scss */
+  /* line 565, scss/main.scss */
   .contact-info-div {
     width: 40%;
     height: 55%;
     margin-bottom: 0;
     padding-bottom: 5%;
     padding-left: 5%; }
-    /* line 586, scss/main.scss */
+    /* line 571, scss/main.scss */
     .contact-info-div input {
       width: 60%;
       margin-left: 5%; }
-    /* line 590, scss/main.scss */
+    /* line 575, scss/main.scss */
     .contact-info-div p {
       margin: 1% 0 0 5%; }
-    /* line 593, scss/main.scss */
+    /* line 578, scss/main.scss */
     .contact-info-div h2 {
       margin-left: 5%; }
-  /* line 597, scss/main.scss */
+  /* line 582, scss/main.scss */
   .delivery-payment-div {
     width: 40%;
     height: 55%;
     padding-bottom: 5%;
     margin-bottom: 5%; }
-    /* line 603, scss/main.scss */
+    /* line 587, scss/main.scss */
     .delivery-payment-div h2 {
       margin-bottom: 10%; }
-    /* line 606, scss/main.scss */
+    /* line 590, scss/main.scss */
     .delivery-payment-div p {
       margin-bottom: 7%; }
-  /* line 610, scss/main.scss */
+  /* line 594, scss/main.scss */
   #confirm-order-button {
     cursor: pointer;
     text-align: center;
@@ -782,15 +783,10 @@ p {
     padding: 3% 4% 3% 4%;
     font-family: "Oswald", sans-serif;
     width: 40%;
-    margin-bottom: 8%; }
-  /* line 615, scss/main.scss */
-  #confirm-order-button:hover {
-    background-color: #edd1e7; }
-  /* line 618, scss/main.scss */
-  #confirm-order-button:focus {
-    outline: none; } }
+    margin-bottom: 8%; } }
 
-/* line 624, scss/main.scss */
+/* BEHANDLAR DIN ORDER ANIMATION */
+/* line 603, scss/main.scss */
 #loading-screen {
   width: 100vh;
   height: 100vh;
@@ -799,7 +795,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start; }
-  /* line 633, scss/main.scss */
+  /* line 612, scss/main.scss */
   #loading-screen #loading-screen-bar {
     border: 3px solid black;
     height: 5%;
@@ -808,7 +804,7 @@ p {
     top: -225px;
     border-radius: 5%;
     z-index: 100; }
-    /* line 641, scss/main.scss */
+    /* line 620, scss/main.scss */
     #loading-screen #loading-screen-bar #loading-bar-box {
       display: inline-block;
       height: 100%;
@@ -818,29 +814,30 @@ p {
       background-color: #61abce;
       animation: bar-animation 3s infinite ease-in;
       position: relative; }
-  /* line 652, scss/main.scss */
+  /* line 631, scss/main.scss */
   #loading-screen p {
     position: relative;
     margin: 2%;
     margin-right: 0;
     font-size: 4rem; }
-  /* line 658, scss/main.scss */
-  #loading-screen .dots {
-    margin: 0;
-    position: absolute;
-    top: 105px;
-    right: 75px; }
-  /* line 664, scss/main.scss */
-  #loading-screen .dots::before, #loading-screen .dots::after {
-    content: '.';
-    display: inline-block; }
-  /* line 668, scss/main.scss */
-  #loading-screen .dots::before {
-    animation: dot-anim-before 2s infinite ease-in; }
-  /* line 671, scss/main.scss */
-  #loading-screen .dots::after {
-    animation: dot-anim-after 2s infinite ease-in;
-    animation-delay: 1s; }
+  @media screen and (max-width: 768px) {
+    /* line 638, scss/main.scss */
+    #loading-screen .dots {
+      margin: 0;
+      position: absolute;
+      top: 105px;
+      right: 75px; }
+    /* line 644, scss/main.scss */
+    #loading-screen .dots::before, #loading-screen .dots::after {
+      content: '.';
+      display: inline-block; }
+    /* line 648, scss/main.scss */
+    #loading-screen .dots::before {
+      animation: dot-anim-before 2s infinite ease-in; }
+    /* line 651, scss/main.scss */
+    #loading-screen .dots::after {
+      animation: dot-anim-after 2s infinite ease-in;
+      animation-delay: 1s; } }
 
 @keyframes dot-anim-after {
   0% {
@@ -874,101 +871,21 @@ p {
   100% {
     width: 100%; } }
 
-@media screen and (min-width: 769px) {
-  /* line 707, scss/main.scss */
-  #loading-screen {
-    width: 100vh;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start; }
-    /* line 715, scss/main.scss */
-    #loading-screen #loading-screen-bar {
-      border: 3px solid black;
-      height: 5%;
-      width: 80%;
-      position: relative;
-      top: -225px;
-      border-radius: 5%;
-      z-index: 100; }
-      /* line 723, scss/main.scss */
-      #loading-screen #loading-screen-bar #loading-bar-box {
-        display: inline-block;
-        height: 100%;
-        width: 1%;
-        opacity: .9;
-        z-index: 1;
-        background-color: #61abce;
-        animation: bar-animation 3s infinite ease-in;
-        position: relative; }
-    /* line 734, scss/main.scss */
-    #loading-screen p {
-      position: relative;
-      margin-right: 0;
-      font-size: 4rem;
-      margin-bottom: 25%; }
-    /* line 740, scss/main.scss */
-    #loading-screen .dots {
-      position: absolute;
-      top: 12px;
-      right: 370px; }
-    /* line 746, scss/main.scss */
-    #loading-screen .dots::before, #loading-screen .dots::after {
-      content: '.';
-      display: inline-block; }
-    /* line 750, scss/main.scss */
-    #loading-screen .dots::before {
-      animation: dot-anim-before 2s infinite ease-in; }
-    /* line 753, scss/main.scss */
-    #loading-screen .dots::after {
-      animation: dot-anim-after 2s infinite ease-in;
-      animation-delay: 1s; }
-  @keyframes dot-anim-after {
-    0% {
-      opacity: 0; }
-    50% {
-      opacity: 1; }
-    75%,
-    100% {
-      opacity: 0; }
-    25% {
-      opacity: 1; } }
-  @keyframes dot-anim-before {
-    0% {
-      opacity: 0; }
-    50% {
-      opacity: 1; }
-    75%,
-    100% {
-      opacity: 0; }
-    25% {
-      opacity: 1; } }
-  @keyframes bar-animation {
-    0% {
-      width: 0%; }
-    50% {
-      width: 50%; }
-    75% {
-      width: 60%; }
-    100% {
-      width: 100%; } } }
-
-/* line 793, scss/main.scss */
+/* ORDER BEKRÄFTELSE */
+/* line 690, scss/main.scss */
 #confirm-page-container, #order-input-text-div {
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  font-family: "Oswald", sans-serif;
+  height: 100%;
   align-items: center;
   font-size: 1.1rem; }
   @media screen and (min-width: 769px) {
-    /* line 802, scss/main.scss */
+    /* line 695, scss/main.scss */
     #confirm-page-container #order-input-text-div, #order-input-text-div #order-input-text-div {
       width: 50%; } }
-  /* line 807, scss/main.scss */
+  /* line 700, scss/main.scss */
   #confirm-page-container #confirm-logo-banner, #order-input-text-div #confirm-logo-banner {
     display: flex;
     justify-content: center;
@@ -977,19 +894,19 @@ p {
     height: 15%;
     background-color: #d5bccf;
     box-shadow: 1px 1px 5px grey; }
-    /* line 815, scss/main.scss */
+    /* line 708, scss/main.scss */
     #confirm-page-container #confirm-logo-banner h2, #order-input-text-div #confirm-logo-banner h2 {
       transform: rotate(-10deg);
       font-size: 5rem;
       margin: 0;
       margin-bottom: 25px;
       color: white; }
-  /* line 823, scss/main.scss */
+  /* line 716, scss/main.scss */
   #confirm-page-container h1, #order-input-text-div h1 {
     margin-bottom: 5%;
     text-align: center;
     text-shadow: 0.5px 0.5px 0px grey; }
-  /* line 828, scss/main.scss */
+  /* line 721, scss/main.scss */
   #confirm-page-container p, #order-input-text-div p {
     text-align: center;
     display: flex;
@@ -998,11 +915,11 @@ p {
     justify-content: center;
     width: 90%;
     text-shadow: 0.5px 0.5px 0px grey; }
-  /* line 837, scss/main.scss */
+  /* line 730, scss/main.scss */
   #confirm-page-container #p2, #order-input-text-div #p2 {
     font-size: 1rem;
     margin-bottom: 20px; }
-  /* line 842, scss/main.scss */
+  /* line 734, scss/main.scss */
   #confirm-page-container #order-box-div, #confirm-page-container #order-delivery-div, #order-input-text-div #order-box-div, #order-input-text-div #order-delivery-div {
     background-color: #e9e0e0;
     width: 90%;
@@ -1013,7 +930,7 @@ p {
     font-size: 1rem;
     margin-bottom: 25px;
     box-shadow: 1px 1px 5px grey; }
-    /* line 852, scss/main.scss */
+    /* line 744, scss/main.scss */
     #confirm-page-container #order-box-div div, #confirm-page-container #order-delivery-div div, #order-input-text-div #order-box-div div, #order-input-text-div #order-delivery-div div {
       border: 1px solid #c7c5c5;
       width: 50%;
@@ -1022,40 +939,40 @@ p {
       flex-direction: column;
       justify-content: flex-start;
       align-items: center; }
-      /* line 860, scss/main.scss */
+      /* line 752, scss/main.scss */
       #confirm-page-container #order-box-div div #p-order-date, #confirm-page-container #order-box-div div #p-delivery-adress, #confirm-page-container #order-box-div div #p-order-number, #confirm-page-container #order-box-div div #p-delivery-sum, #confirm-page-container #order-delivery-div div #p-order-date, #confirm-page-container #order-delivery-div div #p-delivery-adress, #confirm-page-container #order-delivery-div div #p-order-number, #confirm-page-container #order-delivery-div div #p-delivery-sum, #order-input-text-div #order-box-div div #p-order-date, #order-input-text-div #order-box-div div #p-delivery-adress, #order-input-text-div #order-box-div div #p-order-number, #order-input-text-div #order-box-div div #p-delivery-sum, #order-input-text-div #order-delivery-div div #p-order-date, #order-input-text-div #order-delivery-div div #p-delivery-adress, #order-input-text-div #order-delivery-div div #p-order-number, #order-input-text-div #order-delivery-div div #p-delivery-sum {
         margin-top: 5px;
         font-size: 1.2rem;
         opacity: 1; }
-      /* line 865, scss/main.scss */
+      /* line 757, scss/main.scss */
       #confirm-page-container #order-box-div div .lower-ptag, #confirm-page-container #order-delivery-div div .lower-ptag, #order-input-text-div #order-box-div div .lower-ptag, #order-input-text-div #order-delivery-div div .lower-ptag {
         padding-bottom: 5%; }
-      /* line 868, scss/main.scss */
+      /* line 760, scss/main.scss */
       #confirm-page-container #order-box-div div p, #confirm-page-container #order-delivery-div div p, #order-input-text-div #order-box-div div p, #order-input-text-div #order-delivery-div div p {
         font-size: 1rem;
         margin: 0;
         opacity: .9; }
-  /* line 877, scss/main.scss */
+  /* line 767, scss/main.scss */
   #confirm-page-container #order-delivery-div, #order-input-text-div #order-delivery-div {
     height: auto;
     margin-bottom: 1%; }
 
-/* line 883, scss/main.scss */
+/* line 772, scss/main.scss */
 .product-confirm-text-div {
   display: flex;
   flex-direction: column;
   width: auto;
   text-align: center; }
-  /* line 888, scss/main.scss */
+  /* line 777, scss/main.scss */
   .product-confirm-text-div h1 {
     margin: 0; }
-  /* line 892, scss/main.scss */
+  /* line 780, scss/main.scss */
   .product-confirm-text-div h3 {
     margin: 0;
     margin-top: 50px;
     width: 100%; }
 
-/* line 900, scss/main.scss */
+/* line 786, scss/main.scss */
 #total-display-row-div {
   margin-top: 5%;
   text-align: center;
@@ -1064,29 +981,22 @@ p {
   align-items: center;
   flex-direction: column;
   background-color: #f1f1f1; }
-  /* line 908, scss/main.scss */
+  /* line 794, scss/main.scss */
   #total-display-row-div #total-display-inner-div {
     padding-bottom: 10px; }
-  /* line 911, scss/main.scss */
+  /* line 797, scss/main.scss */
   #total-display-row-div p {
     margin: 5px; }
-  /* line 914, scss/main.scss */
+  /* line 800, scss/main.scss */
   #total-display-row-div h2 {
     margin: 5px; }
 
-/* line 919, scss/main.scss */
+/* line 804, scss/main.scss */
 .hidden {
   display: none; }
 
-/*Footer CSS*/
-/*
-.nav-bar-container {
-  @include flex-full-width-nowrap-fixed-container;
-  @include tablets-up {
-    position: static;
-  }
-*/
-/* line 932, scss/main.scss */
+/* FOOTER */
+/* line 810, scss/main.scss */
 footer {
   display: flex;
   width: 100%;
@@ -1096,39 +1006,41 @@ footer {
   font-family: "Oswald", sans-serif;
   margin-top: 2%;
   margin-bottom: 2%; }
-  /* line 941, scss/main.scss */
+  /* line 819, scss/main.scss */
   footer .social-media {
     margin-top: 2%; }
-  /* line 944, scss/main.scss */
+  /* line 822, scss/main.scss */
   footer .help-links {
     margin-top: 3%;
     display: flex;
     flex-direction: column;
     align-items: center; }
-    /* line 949, scss/main.scss */
+    /* line 827, scss/main.scss */
     footer .help-links a {
       text-decoration: none;
       color: black;
       margin-bottom: 2%; }
-      /* line 953, scss/main.scss */
+      /* line 831, scss/main.scss */
       footer .help-links a a:hover {
         background-color: grey; }
-  /* line 958, scss/main.scss */
+  /* line 836, scss/main.scss */
   footer .copyright {
     font-style: italic;
     font-size: 12px;
     padding: 4%; }
 
 @media screen and (min-width: 769px) {
-  /* line 967, scss/main.scss */
+  /* line 843, scss/main.scss */
   footer {
-    display: flex;
     width: 100%;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: "Oswald", sans-serif;
     font-family: "Oswald", sans-serif;
     margin-top: 2%;
     margin-bottom: 2%; }
-    /* line 974, scss/main.scss */
+    /* line 848, scss/main.scss */
     footer .help-links {
       display: flex;
       flex-direction: row; } }
