@@ -704,6 +704,11 @@ button:hover {
     width: 100%;
   }
 }
+@include tablets-up {
+    .dots {
+        display: none;  
+    }
+} 
 
 /* ORDER BEKRÄFTELSE */
 

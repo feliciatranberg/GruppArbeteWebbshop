@@ -893,8 +893,13 @@ p {
   100% {
     width: 100%; } }
 
+@media screen and (min-width: 769px) {
+  /* line 708, scss/main.scss */
+  .dots {
+    display: none; } }
+
 /* ORDER BEKRÄFTELSE */
-/* line 710, scss/main.scss */
+/* line 715, scss/main.scss */
 #confirm-page-container, #order-input-text-div {
   width: 100%;
   display: flex;
@@ -904,10 +909,10 @@ p {
   align-items: center;
   font-size: 1.1rem; }
   @media screen and (min-width: 769px) {
-    /* line 715, scss/main.scss */
+    /* line 720, scss/main.scss */
     #confirm-page-container #order-input-text-div, #order-input-text-div #order-input-text-div {
       width: 50%; } }
-  /* line 720, scss/main.scss */
+  /* line 725, scss/main.scss */
   #confirm-page-container #confirm-logo-banner, #order-input-text-div #confirm-logo-banner {
     display: flex;
     justify-content: center;
@@ -916,19 +921,19 @@ p {
     height: 15%;
     background-color: #d5bccf;
     box-shadow: 1px 1px 5px grey; }
-    /* line 728, scss/main.scss */
+    /* line 733, scss/main.scss */
     #confirm-page-container #confirm-logo-banner h2, #order-input-text-div #confirm-logo-banner h2 {
       transform: rotate(-10deg);
       font-size: 5rem;
       margin: 0;
       margin-bottom: 25px;
       color: white; }
-  /* line 736, scss/main.scss */
+  /* line 741, scss/main.scss */
   #confirm-page-container h1, #order-input-text-div h1 {
     margin-bottom: 5%;
     text-align: center;
     text-shadow: 0.5px 0.5px 0px grey; }
-  /* line 741, scss/main.scss */
+  /* line 746, scss/main.scss */
   #confirm-page-container p, #order-input-text-div p {
     text-align: center;
     display: flex;
@@ -937,11 +942,11 @@ p {
     justify-content: center;
     width: 90%;
     text-shadow: 0.5px 0.5px 0px grey; }
-  /* line 750, scss/main.scss */
+  /* line 755, scss/main.scss */
   #confirm-page-container #p2, #order-input-text-div #p2 {
     font-size: 1rem;
     margin-bottom: 20px; }
-  /* line 754, scss/main.scss */
+  /* line 759, scss/main.scss */
   #confirm-page-container #order-box-div, #confirm-page-container #order-delivery-div, #order-input-text-div #order-box-div, #order-input-text-div #order-delivery-div {
     background-color: #e9e0e0;
     width: 90%;
@@ -952,7 +957,7 @@ p {
     font-size: 1rem;
     margin-bottom: 25px;
     box-shadow: 1px 1px 5px grey; }
-    /* line 764, scss/main.scss */
+    /* line 769, scss/main.scss */
     #confirm-page-container #order-box-div div, #confirm-page-container #order-delivery-div div, #order-input-text-div #order-box-div div, #order-input-text-div #order-delivery-div div {
       border: 1px solid #c7c5c5;
       width: 50%;
@@ -961,41 +966,41 @@ p {
       flex-direction: column;
       justify-content: flex-start;
       align-items: center; }
-      /* line 772, scss/main.scss */
+      /* line 777, scss/main.scss */
       #confirm-page-container #order-box-div div #p-order-date, #confirm-page-container #order-box-div div #p-delivery-adress, #confirm-page-container #order-box-div div #p-order-number, #confirm-page-container #order-box-div div #p-delivery-sum, #confirm-page-container #order-delivery-div div #p-order-date, #confirm-page-container #order-delivery-div div #p-delivery-adress, #confirm-page-container #order-delivery-div div #p-order-number, #confirm-page-container #order-delivery-div div #p-delivery-sum, #order-input-text-div #order-box-div div #p-order-date, #order-input-text-div #order-box-div div #p-delivery-adress, #order-input-text-div #order-box-div div #p-order-number, #order-input-text-div #order-box-div div #p-delivery-sum, #order-input-text-div #order-delivery-div div #p-order-date, #order-input-text-div #order-delivery-div div #p-delivery-adress, #order-input-text-div #order-delivery-div div #p-order-number, #order-input-text-div #order-delivery-div div #p-delivery-sum {
         margin-top: 5px;
         font-size: 1.2rem;
         opacity: 1; }
-      /* line 777, scss/main.scss */
+      /* line 782, scss/main.scss */
       #confirm-page-container #order-box-div div .lower-ptag, #confirm-page-container #order-delivery-div div .lower-ptag, #order-input-text-div #order-box-div div .lower-ptag, #order-input-text-div #order-delivery-div div .lower-ptag {
         padding-bottom: 5%; }
-      /* line 780, scss/main.scss */
+      /* line 785, scss/main.scss */
       #confirm-page-container #order-box-div div p, #confirm-page-container #order-delivery-div div p, #order-input-text-div #order-box-div div p, #order-input-text-div #order-delivery-div div p {
         font-size: 1rem;
         margin: 0;
         opacity: .9; }
-  /* line 787, scss/main.scss */
+  /* line 792, scss/main.scss */
   #confirm-page-container #order-delivery-div, #order-input-text-div #order-delivery-div {
     height: auto;
     margin-bottom: 1%; }
 
-/* line 792, scss/main.scss */
+/* line 797, scss/main.scss */
 .product-confirm-text-div {
   display: flex;
   flex-direction: column;
   width: auto;
   text-align: center; }
-  /* line 797, scss/main.scss */
+  /* line 802, scss/main.scss */
   .product-confirm-text-div h1 {
     margin: 0; }
-  /* line 800, scss/main.scss */
+  /* line 805, scss/main.scss */
   .product-confirm-text-div h3 {
     margin: 0;
     margin-top: 50px;
     width: 100%; }
 
 /* FOOTER */
-/* line 809, scss/main.scss */
+/* line 814, scss/main.scss */
 footer {
   width: 100%;
   display: flex;
@@ -1003,18 +1008,18 @@ footer {
   font-family: "Oswald", sans-serif;
   align-items: center;
   margin-top: 5%; }
-  /* line 813, scss/main.scss */
+  /* line 818, scss/main.scss */
   footer div {
     margin-bottom: 4%; }
-  /* line 816, scss/main.scss */
+  /* line 821, scss/main.scss */
   footer a {
     color: black;
     text-decoration: none; }
-  /* line 820, scss/main.scss */
+  /* line 825, scss/main.scss */
   footer a:hover {
     color: grey; }
 
-/* line 824, scss/main.scss */
+/* line 829, scss/main.scss */
 .links {
   width: 100%;
   display: flex;
@@ -1022,24 +1027,24 @@ footer {
   font-family: "Oswald", sans-serif;
   align-items: center; }
 
-/* line 828, scss/main.scss */
+/* line 833, scss/main.scss */
 .copyright {
   font-style: italic;
   font-size: 0.8rem; }
 
 @media screen and (min-width: 769px) {
-  /* line 834, scss/main.scss */
+  /* line 839, scss/main.scss */
   footer {
     margin-top: 1%; }
-    /* line 836, scss/main.scss */
+    /* line 841, scss/main.scss */
     footer div {
       margin-bottom: 2%; }
-  /* line 840, scss/main.scss */
+  /* line 845, scss/main.scss */
   .links {
     display: flex;
     flex-direction: row;
     justify-content: center; }
-    /* line 844, scss/main.scss */
+    /* line 849, scss/main.scss */
     .links a {
       margin-right: 1%;
       margin-left: 1%; } }
