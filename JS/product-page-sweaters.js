@@ -108,7 +108,7 @@ $(function() {
                                  $("#cartEmptyMessage").toggleClass("hidden");
                             } 
                            else {
-                                 window.location.href = "./html/checkout";
+                                 window.location.href = "../html/checkout.html";
                             }
                    } 
                  else {

@@ -109,7 +109,7 @@ $(function() {
                                  $("#cartEmptyMessage").toggleClass("hidden");
                             } 
                            else {
-                                 window.location.href = "/HTML/checkout.html";
+                                 window.location.href = "../html/checkout.html";
                             }
                    } 
                  else {
