@@ -25,7 +25,7 @@ $(function () {
       .attr("id", "goToCheckout")
       .html("Gå till kassan")
       .on("click", () => {
-            window.location.href = "/HTML/checkout.html";
+            window.location.href = "./checkout.html";
           })
       .appendTo(shoppingCartDiv);
 
@@ -40,7 +40,7 @@ $(function () {
                       $("#cartEmptyMessage").toggleClass("hidden");
                  } 
                 else {
-                      window.location.href = "/HTML/checkout.html";
+                      window.location.href = "../html/checkout.html";
                  }
         } 
       else {
@@ -78,7 +78,7 @@ function checkoutCreator(i, item) {
               .addClass("shoppingCartImgDiv")
               .appendTo($(checkout));
 
-              $("<img>").attr("src", item.image).appendTo($(shoppingCartImgDiv));
+              $("<img>").attr("src","../images"+ item.path+ item.image).appendTo($(shoppingCartImgDiv));
 
               $("<h3>").html(item.size).appendTo($(shoppingCartImgDiv));
 

@@ -1,5 +1,6 @@
+//@import {"../images/sweaters"};
 class shopItem {
-  constructor(type, id, name, color, size, price, image, description, stockAvailable,quantity,duplicate) {
+  constructor(type, id, name, color, size, price, image, description, stockAvailable,quantity,duplicate,path) {
       this.type = type;
       this.id = id;
       this.name = name;
@@ -11,16 +12,17 @@ class shopItem {
       this.stockAvailable = stockAvailable;  
       this.quantity = quantity;
       this.duplicate = duplicate;
+      this.path = path;
   }
 }
 
 
-let shirt1 = new shopItem("Sweater","1:1","Fierce Fleece","Grön","Small",600, "/images/sweaters/sweater-1.jpg","Fierce Fleece tröja",true,0,false)
-let shirt2 = new shopItem("Sweater","1:2","Watchtower","Lila","Small",600, "/images/sweaters/sweater-2.jpg","Watchtower tröja",true,0,false)
-let shirt3 = new shopItem("Sweater","2:1","Classic Pure","Svart","Small",600, "/images/sweaters/sweater-3.jpg","Classic Pure tröja",true,0,false)
-let shirt4 = new shopItem("Hoodie","2:2","Sweet Big Loose","Blå","Small",600, "/images/sweaters/sweater-4.jpg","Sweet Big Loose hoodie",true,0,false)
-let shirt5 = new shopItem("Sweater","2:2","Fierce Fleece","Grön","Small",600, "/images/sweaters/sweater-5.jpg","Fierce Fleece tröja",true,0,false)
-let shirt6 = new shopItem("Sweater","2:2","Multiverse","Blå","Small",600, "/images/sweaters/sweater-6.jpg","Multiverse tröja",true,0,false)
+let shirt1 = new shopItem("Sweater","1:1","Fierce Fleece","Grön","Small",600,  "/sweater-1.jpg","Fierce Fleece tröja",true,0,false,"/sweaters/")
+let shirt2 = new shopItem("Sweater","1:2","Watchtower","Lila","Small",600, "sweater-2.jpg","Watchtower tröja",true,0,false,"/sweaters/")
+let shirt3 = new shopItem("Sweater","2:1","Classic Pure","Svart","Small",600, "sweater-3.jpg","Classic Pure tröja",true,0,false,"/sweaters/")
+let shirt4 = new shopItem("Hoodie","2:2","Sweet Big Loose","Blå","Small",600, "sweater-4.jpg","Sweet Big Loose hoodie",true,0,false,"/sweaters/")
+let shirt5 = new shopItem("Sweater","2:2","Fierce Fleece","Grön","Small",600, "sweater-5.jpg","Fierce Fleece tröja",true,0,false,"/sweaters/")
+let shirt6 = new shopItem("Sweater","2:2","Multiverse","Blå","Small",600, "sweater-6.jpg","Multiverse tröja",true,0,false,"/sweaters/")
 
 let tshirtProducter = [shirt1,shirt2,shirt3,shirt4,shirt5,shirt6]
 let totalCount = false;
@@ -59,7 +61,7 @@ $(function() {
                 
 
                 ($("<img>"))
-                .attr("src",item.image)
+                .attr("src","../images/" + item.path + item.image)
                 .addClass("productImage")
                 .appendTo($(itemDiv));
            
@@ -91,7 +93,7 @@ $(function() {
                   .attr("id","goToCheckout")
                   .html("Gå till kassan")
                   .on("click",()=>{
-                       window.location.href = "checkout.html";
+                       window.location.href = "./checkout.html";
                    })
                  .appendTo(shoppingCartDiv);
 
@@ -106,7 +108,7 @@ $(function() {
                                  $("#cartEmptyMessage").toggleClass("hidden");
                             } 
                            else {
-                                 window.location.href = "/HTML/checkout.html";
+                                 window.location.href = "./html/checkout";
                             }
                    } 
                  else {
@@ -144,7 +146,7 @@ function checkoutCreator(i, item) {
               .addClass("shoppingCartImgDiv")
               .appendTo($(checkout));
 
-              $("<img>").attr("src", item.image).appendTo($(shoppingCartImgDiv));
+              $("<img>").attr("src","../images"+ item.path+ item.image).appendTo($(shoppingCartImgDiv));
 
               $("<h3>").html(item.size).appendTo($(shoppingCartImgDiv));
 

@@ -71,7 +71,7 @@ localStorage.removeItem("itemObject")
             .appendTo(checkoutProductsDiv);
 
             ($("<img>"))
-            .attr("src",item.image)
+            .attr("src","../images" + item.path +item.image)
             .addClass("productImage")
             .appendTo($(productDiv));
 

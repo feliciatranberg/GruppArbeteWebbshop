@@ -1,5 +1,5 @@
 class shopItem {
-  constructor(type, id, name, color, size, price, image, description, stockAvailable,quantity,duplicate) {
+  constructor(type, id, name, color, size, price, image, description, stockAvailable,quantity,duplicate, path) {
       this.type = type;
       this.id = id;
       this.name = name;
@@ -11,16 +11,17 @@ class shopItem {
       this.stockAvailable = stockAvailable;  
       this.quantity = quantity;
       this.duplicate = duplicate;
+      this.path = path;
   }
 }
 
 
-let shirt1 = new shopItem("T-shirt","1:1","BG Logo","Rosa","Small",300, "/images/t-shirts/t-shirt-1.jpg","BG Logo t-shirt",true,0,false)
-let shirt2 = new shopItem("T-shirt","1:2","Supersize Me","Svart","Small",300, "/images/t-shirts/t-shirt-2.jpg","Supersize Me t-shirt",true,0,false)
-let shirt3 = new shopItem("T-shirt","2:1","Chakra","Grå","Small",300, "/images/t-shirts/t-shirt-3.jpg","Chakra T-shirt",true,0,false)
-let shirt4 = new shopItem("T-shirt","2:2","Supersize Me","Beige","Small",300, "/images/t-shirts/t-shirt-4.jpg","Supersize Me t-shirt",true,0,false)
-let shirt5 = new shopItem("T-shirt","2:2","Subtle Tie Dye","Rosa","Small",300, "/images/t-shirts/t-shirt-5.jpg","Subtle Tie Dye t-shirt",true,0,false)
-let shirt6 = new shopItem("T-shirt","2:2","Chakra","Vit/Svart","Small",300, "/images/t-shirts/t-shirt-6.jpg","Chakra T-shirt",true,0,false)
+let shirt1 = new shopItem("T-shirt","1:1","BG Logo","Rosa","Small",300, "t-shirt-1.jpg","BG Logo t-shirt",true,0,false, "/t-shirts/")
+let shirt2 = new shopItem("T-shirt","1:2","Supersize Me","Svart","Small",300, "t-shirt-2.jpg","Supersize Me t-shirt",true,0,false, "/t-shirts/")
+let shirt3 = new shopItem("T-shirt","2:1","Chakra","Grå","Small",300, "t-shirt-3.jpg","Chakra T-shirt",true,0,false, "/t-shirts/")
+let shirt4 = new shopItem("T-shirt","2:2","Supersize Me","Beige","Small",300, "t-shirt-4.jpg","Supersize Me t-shirt",true,0,false, "/t-shirts/")
+let shirt5 = new shopItem("T-shirt","2:2","Subtle Tie Dye","Rosa","Small",300, "t-shirt-5.jpg","Subtle Tie Dye t-shirt",true,0,false, "/t-shirts/")
+let shirt6 = new shopItem("T-shirt","2:2","Chakra","Vit/Svart","Small",300, "t-shirt-6.jpg","Chakra T-shirt",true,0,false, "/t-shirts/")
 
 let tshirtProducter = [shirt1,shirt2,shirt3,shirt4,shirt5,shirt6]
 //let checkoutArr = [];
@@ -61,7 +62,7 @@ $(function() {
                 
 
                 ($("<img>"))
-                .attr("src",item.image)
+                .attr("src","../images"+ item.path+ item.image)
                 .addClass("productImage")
                 .appendTo($(itemDiv));
            
@@ -93,7 +94,7 @@ $(function() {
                   .attr("id","goToCheckout")
                   .html("Gå till kassan")
                   .on("click",()=>{
-                       window.location.href = "checkout.html";
+                       window.location.href = "./checkout.html";
                    })
                  .appendTo(shoppingCartDiv);
 
@@ -146,7 +147,7 @@ function checkoutCreator(i, item) {
               .addClass("shoppingCartImgDiv")
               .appendTo($(checkout));
 
-              $("<img>").attr("src", item.image).appendTo($(shoppingCartImgDiv));
+              $("<img>").attr("src","../images"+ item.path+ item.image).appendTo($(shoppingCartImgDiv));
 
               $("<h3>").html(item.size).appendTo($(shoppingCartImgDiv));
 

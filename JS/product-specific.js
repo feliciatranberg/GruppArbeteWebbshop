@@ -21,7 +21,7 @@ $(function(){
 
     let sPCW = ("#specificProductContentwrap");
     ($("<img>"))
-    .attr("src",specificProduct.image)
+    .attr("src","../images/" + specificProduct.path +  specificProduct.image)
     .appendTo(sPCW);
 
     ($("<div>"))
@@ -137,7 +137,7 @@ $(function(){
    .attr("id","goToCheckout")
    .html("Gå till kassan")
    .on("click",()=>{
-    window.location.href = "checkout.html";
+    window.location.href = "./checkout.html";
   })
    .appendTo(shoppingCartDiv);
   
@@ -193,7 +193,7 @@ function checkoutCreator(i,item){
                     .appendTo($(checkout));
 
                     ($("<img>"))
-                    .attr("src",item.image)
+                    .attr("src","../images"+ item.path+ item.image)
                     .appendTo($(shoppingCartImgDiv));
 
               $("<h3>").html(item.size).appendTo($(shoppingCartImgDiv));
@@ -428,7 +428,7 @@ function finalCheckoutList(){
           .appendTo(checkoutProductsDiv);
 
           ($("<img>"))
-          .attr("src",item.image)
+          .attr("src","../images"+ item.path+ item.image)
           .addClass("productImage")
           .appendTo($(productDiv));
 
